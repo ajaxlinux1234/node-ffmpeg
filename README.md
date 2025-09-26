@@ -2,12 +2,16 @@
 
 ZX-based CLI tools for working with videos via globally installed `ffmpeg`.
 
-Currently includes one command: `down-rm-watermark`.
+Currently includes commands: `down-rm-watermark`, `history-person`, `ai-remove-watermark`.
 
 ## Prerequisites
 
 - Node.js 18+ and npm
 - A global `ffmpeg` available in your PATH
+- For `ai-remove-watermark`:
+  - `python3` with `venv` and `pip`
+  - Internet access to install Python packages on first run (PyTorch CPU wheels and `lama-cleaner`)
+  - Optional but recommended: ImageMagick (`convert`) for fast mask generation; otherwise it falls back to ffmpeg drawbox
 
 ## Install
 
@@ -23,9 +27,11 @@ Optionally link the CLI globally for convenience:
 npm link
 ```
 
-This will make `down-rm-watermark` available on your PATH.
+This will make the CLI available on your PATH.
 
 ## Usage
+
+### 1) down-rm-watermark
 
 Download an mp4 from a URL into `input/down-rm-watermark/` with a millisecond timestamp filename, blur a patch at the bottom-right to cover watermark text, and output to `output/`:
 
@@ -85,3 +91,78 @@ The blur region is defined as a percentage of the video dimensions and should wo
 
 - The command preserves audio by copying it (`-c:a copy`).
 - If the URL is not reachable or the download fails, `curl` will retry up to 3 times.
+
+---
+
+### 2) history-person
+
+Uses `config.json` to drive the workflow (download, add titles/subtitles via ASS, compose background music). See the template in `config.json` under `"history-person"`.
+
+Run:
+
+```bash
+node-ffmpeg-tools history-person
+```
+
+---
+
+### 3) ai-remove-watermark (AI inpainting)
+
+AI-based watermark removal that keeps the original video resolution, aspect ratio, frame rate, and color info as much as possible. The pipeline is:
+
+1. Download or resolve input video into `input/ai-remove-watermark/` (remote URLs are deduped via a manifest; files named as `<milliseconds>.mp4`).
+2. Extract frames with ffmpeg (no scaling), preserving frame rate.
+3. Generate a static mask at the bottom-right area (default heuristic). You can replace the mask with your custom `mask.png` in the working cache if needed.
+4. Run LaMa inpainting (via `lama-cleaner`) on each frame to remove watermark pixels.
+5. Reassemble frames into a video and mux original audio back. We attempt to keep pixel format and color metadata; codec defaults to `libx264` if original codec not mapped.
+
+First run will set up a Python virtual environment under `.cache/ai-remove-watermark/venv` and install dependencies (PyTorch CPU wheels, `lama-cleaner`). This can take several minutes.
+
+Command line usage:
+
+```bash
+node-ffmpeg-tools ai-remove-watermark "https://example.com/video.mp4"
+# or
+node-ffmpeg-tools ai-remove-watermark --url "https://example.com/video.mp4"
+```
+
+Config file usage:
+
+```json
+{
+  "ai-remove-watermark": {
+    "url": "https://example.com/video.mp4"
+  }
+}
+```
+
+Then run without parameters:
+
+```bash
+node-ffmpeg-tools ai-remove-watermark
+```
+
+Output directory structure (simplified):
+
+```
+input/
+  ai-remove-watermark/
+    1758868423130.mp4
+output/
+  ai-remove-watermark/
+    1758868423130_ai_rmwm.mp4
+.cache/
+  ai-remove-watermark/
+    venv/                 # python venv for LaMa
+    <video-id>/
+      frames/             # extracted frames
+      inpainted/          # AI cleaned frames
+      mask.png            # generated default mask
+```
+
+Notes:
+
+- The tool does not change the original resolution or aspect ratio.
+- Frame rate is preserved when rebuilding the video.
+- Original audio is copied back (`-c:a copy`).
+- If you prefer a custom watermark region, replace the generated `mask.png` in the cache working directory before processing, or update the implementation to accept a custom mask path.

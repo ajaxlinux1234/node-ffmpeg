@@ -2,6 +2,7 @@
 import 'zx/globals';
 import runDownRmWatermark from '../lib/down-rm-watermark.mjs';
 import runHistoryPerson from '../lib/history-person.mjs';
+import runAiRemoveWatermark from '../lib/ai-remove-watermark.mjs';
 
 async function loadConfig() {
   try {
@@ -18,7 +19,7 @@ async function loadConfig() {
 }
 
 function printHelp() {
-  console.log(`\nnode-ffmpeg-tools <command> [options]\n\nCommands:\n  down-rm-watermark [url]     Download mp4 and blur bottom-right watermark\n  history-person              Process history person video with titles and effects\n\nOptions for down-rm-watermark:\n  --url, -u <url>             Video URL (can also be provided positionally)\n  --bg-music, -b <file>       Path to background audio file (mp3/wav/etc).\n                              If omitted, uses config.json at down-rm-watermark.bg-music if present.\n\nOptions for history-person:\n  Uses configuration from config.json under "history-person" section.\n  Required config fields: url, title, sectionTitle, bg-music\n\nExamples:\n  node-ffmpeg-tools down-rm-watermark https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark -b assets/bgm.mp3 https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark  # Uses URL (and bg-music) from config.json if present\n  node-ffmpeg-tools history-person     # Uses config.json history-person section\n`);
+  console.log(`\nnode-ffmpeg-tools <command> [options]\n\nCommands:\n  down-rm-watermark [url]     Download mp4 and blur bottom-right watermark\n  history-person              Process history person video with titles and effects\n  ai-remove-watermark [url]   AI inpainting to remove watermark; keeps original resolution/fps\n\nOptions for down-rm-watermark:\n  --url, -u <url>             Video URL (can also be provided positionally)\n  --bg-music, -b <file>       Path to background audio file (mp3/wav/etc).\n                              If omitted, uses config.json at down-rm-watermark.bg-music if present.\n\nOptions for history-person:\n  Uses configuration from config.json under "history-person" section.\n  Required config fields: url, title, sectionTitle, bg-music\n\nOptions for ai-remove-watermark:\n  --url, -u <url>             Video URL (can also be provided positionally)\n  If omitted, uses config.json at "ai-remove-watermark.url" if present.\n\nExamples:\n  node-ffmpeg-tools down-rm-watermark https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark -b assets/bgm.mp3 https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark  # Uses URL (and bg-music) from config.json if present\n  node-ffmpeg-tools history-person     # Uses config.json history-person section\n  node-ffmpeg-tools ai-remove-watermark https://example.com/video.mp4\n  node-ffmpeg-tools ai-remove-watermark  # Uses config.json ai-remove-watermark.url\n`);
 }
 
 (async () => {
@@ -64,6 +65,20 @@ function printHelp() {
         
         console.log('Using history-person configuration from config.json');
         await runHistoryPerson(config['history-person']);
+        break;
+      }
+      case 'ai-remove-watermark': {
+        let url = argv.url || argv.u || rest[0];
+        if (!url && config['ai-remove-watermark']?.url) {
+          url = config['ai-remove-watermark'].url;
+          console.log('Using URL from config.json (ai-remove-watermark.url)');
+        }
+        if (!url) {
+          console.error('\nUsage: node-ffmpeg-tools ai-remove-watermark <url>');
+          console.error('Or add URL to config.json under "ai-remove-watermark.url"');
+          process.exit(1);
+        }
+        await runAiRemoveWatermark(url);
         break;
       }
       default:

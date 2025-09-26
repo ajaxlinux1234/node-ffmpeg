@@ -18,5 +18,18 @@
     ],
     "watermark": "@人物传记史",
     "bg-music": "input/history-person/bg-music.mp3"
+  },
+  "ai-remove-watermark": {
+    "url": "output/history-person/1758868423130_10b9525ce467.mp4",
+    "debug": true,
+    "mask": {
+      "autodetect": "full-text",
+      "inpaint_radius": 14,
+      "dilate_px": 16,
+      "extra_expand_px": 6,
+      "extra_regions": [
+        { "x": 6, "y": 6, "w": 220, "h": 120 }
+      ]
+    }
   }
 }
