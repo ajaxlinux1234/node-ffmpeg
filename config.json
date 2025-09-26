@@ -1,0 +1,22 @@
+{
+  "down-rm-watermark": {
+    "url": "https://aigc-idea-platform.cdn.bcebos.com/miaoying_video/shadow_i2v_1280x704_20250925_160634_a024gnii_2X_32fps_generate_metadata.mp4?authorization=bce-auth-v1%2FALTAKpTC4weJ6py821WCyek9FC%2F2025-09-25T08%3A06%3A41Z%2F-1%2F%2F612a44bb17040c579d19ab812adda61a6163d21f5bb02231b32c335a6e958b5b",
+    "bg-music": "bg-music.mp3"
+  },
+  "history-person": {
+    "url": "https://v3-artist.vlabvod.com/52600539220beffe0db4780a090a86c1/68df63c5/video/tos/cn/tos-cn-v-148450/og4WFzSilYglQEjIOAi0JKbBQ6hiZAkRfxaDF3/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5985&bt=5985&cs=0&ds=12&ft=5QYTUxhhe6BMyqNCj3kJD12Nzj&mime_type=video_mp4&qs=0&rc=OGQ0NDszPGlnZjY8PGkzOkBpM3JucHE5cjU1NjczNDM7M0AxNF4wM14xXzExL2MtLWM1YSNxXzFtMmRzZl9hLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1758865698&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20250926134818291573060B1A903415C2",
+    "title": "黄金配角吴孟达",
+    "sectionTitle": [
+      "1953年，福建厦门，童年时光",
+      "1973年，无线电视艺员训练班，梦想启航",
+      "1979年，凭《楚留香传奇》“胡铁花”一角，崭露头角",
+      "1980年代后期，人生低谷，沉淀反思",
+      "1989年，与周星驰合作《盖世豪侠》，开启黄金搭档时代",
+      "1990年代，黄金配角，巅峰之作（如《天若有情》《少林足球》）",
+      "2000年后，北上发展，敬业楷模",
+      "2021年，永远的金牌配角"
+    ],
+    "watermark": "@人物传记史",
+    "bg-music": "input/history-person/bg-music.mp3"
+  }
+}

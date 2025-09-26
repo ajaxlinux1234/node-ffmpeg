@@ -1,0 +1,16 @@
+{
+  "name": "node-ffmpeg-tools",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "ZX-based CLI tools for working with videos via ffmpeg",
+  "bin": {
+    "node-ffmpeg-tools": "bin/cli.mjs"
+  },
+  "scripts": {
+    "prepare": "chmod +x bin/cli.mjs"
+  },
+  "dependencies": {
+    "zx": "^8.1.6"
+  }
+}
