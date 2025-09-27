@@ -8,9 +8,9 @@
     "node-ffmpeg-tools": "bin/cli.mjs"
   },
   "scripts": {
-    "prepare": "chmod +x bin/cli.mjs"
+    "prepare": "node -e \"process.platform === 'darwin' ? process.exit(0) : process.exit(1)\" && chmod +x bin/cli.mjs || echo \"Skipping chmod on non-macOS systems\""
   },
   "dependencies": {
-    "zx": "^8.1.6"
+    "zx": "^8.8.4"
   }
 }

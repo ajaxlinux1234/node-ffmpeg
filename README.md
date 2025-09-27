@@ -8,10 +8,22 @@ Currently includes commands: `down-rm-watermark`, `history-person`, `ai-remove-w
 
 - Node.js 18+ and npm
 - A global `ffmpeg` available in your PATH
+  - **Windows**: Install from [ffmpeg.org](https://ffmpeg.org/download.html#build-windows) or using [Chocolatey](https://chocolatey.org/): `choco install ffmpeg`
+  - **macOS**: Install via [Homebrew](https://brew.sh/): `brew install ffmpeg`
+  - **Linux**: Install via your package manager, e.g., `sudo apt install ffmpeg` (Ubuntu/Debian)
 - For `ai-remove-watermark`:
   - `python3` with `venv` and `pip`
   - Internet access to install Python packages on first run (PyTorch CPU wheels and `lama-cleaner`)
   - Optional but recommended: ImageMagick (`convert`) for fast mask generation; otherwise it falls back to ffmpeg drawbox
+
+## Platform Compatibility
+
+This tool is designed to work cross-platform on Windows, macOS, and Linux with the following considerations:
+
+- **File permissions**: The `prepare` script automatically handles platform-specific file permission requirements
+- **Path handling**: All file paths are handled cross-platform using Node.js path module
+- **Command execution**: Uses zx library for cross-platform shell command execution
+- **Dependencies**: Requires globally installed `ffmpeg` and optionally `python3`
 
 ## Install
 
