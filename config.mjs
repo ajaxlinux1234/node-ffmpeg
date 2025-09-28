@@ -7,15 +7,15 @@ export default {
     url: "input/history-person/康熙大帝.mp4",
     title: "{{千古一帝}}-康熙",
     titleAnimation: "sweep_slow", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
-    sectionTitleAnimation: "flash", // 分镜字幕动画效果，可选值同titleAnimation
+    sectionTitleAnimation: "fade", // 分镜字幕动画效果，可选值同titleAnimation
     sectionTitle: [
-      "1654年在北京紫禁城幼年登基",
-      "1661年在孝庄太皇太后指导下学习为君之道",
-      "1669年以摔跤少年智擒权臣鳌拜",
-      "1684年亲临{{黄河堤坝}}视察水利工程",
-      "1696年御驾亲征奠定{{漠北}}胜局",
-      "1712年推行{{仁政}}减轻百姓负担",
-      "1722年去世{{精神与功业永垂史册}}",
+      "1654年\n北京紫禁城\n幼年登基",
+      "1661年\n孝庄太皇太后指导下\n学习为君之道",
+      "1669年\n以摔跤少年\n智擒权臣鳌拜",
+      "1684年\n亲临{{黄河堤坝}}\n视察水利工程",
+      "1696年\n御驾亲征\n奠定{{漠北}}胜局",
+      "1712年\n推行{{仁政}}\n减轻百姓负担",
+      "1722年\n去世\n精神与功业永垂史册",
     ],
     watermark: "@人物传记史",
     "bg-music": "input/history-person/bg-music.mp3",
