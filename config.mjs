@@ -6,7 +6,8 @@ export default {
   "history-person": {
     url: "input/history-person/康熙大帝.mp4",
     title: "{{千古一帝}}-康熙",
-    titleAnimation: "slide", // 可选值: "flash", "fade", "scale", "slide", "none"
+    titleAnimation: "sweep_slow", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
+    sectionTitleAnimation: "flash", // 分镜字幕动画效果，可选值同titleAnimation
     sectionTitle: [
       "1654年在北京紫禁城幼年登基",
       "1661年在孝庄太皇太后指导下学习为君之道",
