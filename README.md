@@ -58,7 +58,7 @@ node-ffmpeg-tools down-rm-watermark -u "https://example.com/video.mp4"
 
 ### Config file usage:
 
-Create or edit `config.json` in the project root:
+Create or edit `config.mjs` in the project root:
 
 ```json
 {
@@ -74,7 +74,7 @@ Then run without parameters:
 node-ffmpeg-tools down-rm-watermark
 ```
 
-The CLI will automatically use the URL from config.json when no URL is provided via command line.
+The CLI will automatically use the URL from config.mjs when no URL is provided via command line.
 
 Output directory structure:
 
@@ -84,7 +84,7 @@ input/
     1695891234567_c58f53744bfd.mp4  # original downloaded file
 output/
     1695891234568_c58f53744bfd.mp4  # processed file with blurred watermark
-config.json                         # configuration file
+config.mjs                         # configuration file
 ```
 
 ## How it works
@@ -108,7 +108,7 @@ The blur region is defined as a percentage of the video dimensions and should wo
 
 ### 2) history-person
 
-Uses `config.json` to drive the workflow (download, add titles/subtitles via ASS, compose background music). See the template in `config.json` under `"history-person"`.
+Uses `config.mjs` to drive the workflow (download, add titles/subtitles via ASS, compose background music). See the template in `config.mjs` under `"history-person"`.
 
 Run:
 
