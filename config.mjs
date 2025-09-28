@@ -5,7 +5,7 @@ export default {
   },
   "history-person": {
     "url": "https://v26-artist.vlabvod.com/cfb53ce6ee16c4e02ab042bf6e68dd18/68e11754/video/tos/cn/tos-cn-v-148450/oAgcezWeDRIXmGBDCgGvUkL7ZUerAkdQhyu6IO/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5977&bt=5977&cs=0&ds=12&ft=5QYTUxhhe6BMyqBrT3kJD12Nzj&mime_type=video_mp4&qs=0&rc=Nzs4Njk0NDhoNmhkZDk0ZkBpamgzOnE5cjl3NjczNDM7M0AxMi0zMTUxXzIxYDJiMDAzYSMyaG5gMmRjbV9hLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1758977196&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20250927204636F2919C19D2D202D3C407",
-    "title": "世界喜剧大师-卓别林",
+    "title": "{{世界喜剧大师}}-卓别林",
     "sectionTitle": [
       "1889年在{{贫民窟}}与{{音乐厅后台}}成长",
       "1914年创造出经典的流浪汉形象",
