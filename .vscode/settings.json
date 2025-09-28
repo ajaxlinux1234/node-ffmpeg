@@ -1,0 +1,31 @@
+{
+  "eslint.validate": ["javascript", "typescript"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[json]": {
+    "editor.formatOnSave": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.words": [
+    "cnname",
+    "codeadd",
+    "Cuid",
+    "Emittery",
+    "enname",
+    "onwarn",
+    "popconfirm"
+  ],
+  "winopacity.opacity": 50,
+  "[markdown]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "i18n-ally.localesPaths": ["src/i18n"]
+}
