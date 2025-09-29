@@ -91,4 +91,82 @@ export default {
       start: 25,
     },
   ],
+  "auto-deepseek-jimeng": {
+    deepseek: {
+      url: "https://chat.deepseek.com/", // 要无头浏览器打开的deepseek网站
+      persistLogin: true, // 是否保持登录状态（使用浏览器用户数据目录）
+      login_selector: {
+        // 进入deepseek登录页面后，如果发现能选择到下列元素，表示未登录，就选择账号密码元素
+        username: `input[placeholder="请输入手机号/邮箱地址"]`,
+        password: `input[placeholder="请输入密码"]`,
+        login_button: `div[role="button"]`,
+        username_password_tab: `div.ds-tab + div`,
+      },
+      login_data: {
+        // 选择完账号密码元素后，输入账号密码, 然后点击登录按钮
+        username: "13683514587",
+        password: "zhongguo1234..A",
+      },
+      chat_selector: `textarea[placeholder="给 DeepSeek 发送消息 "]`, // 登录完成后进入聊天页面，首先选择发送消息的输入框选择器
+      send_chat_selector: `'input[type="file"] + div'`, // 录入完消息后，发送消息的按钮选择器
+      send_msg_template: `中国人面孔，电影风格，不要出现军用，警察等特殊字眼，{{name}}, 从出生到现在{{timeNum}}个关键时间点, 要特别注意人物服饰要符合历史事实,{{timeNum}}段视频生成提示词, 以及各个镜头画面之间的转换方式或运动方式, 视频镜头要是电影写实风格,比例9:16, 各段视频描述要与{{name}}的长相类似, 各段视频描述要写上人物年龄, 视频提示词不要显示国徽, 人民大会堂等政治信息, 严格生成{{timeNum}}段视频生成提示词，提示词为中文，运镜要是高级运镜，每句话前面都加上"中国人面孔，像{{name}}，生成图片要符合实际生活场景"`,
+      send_msg_template_data: {
+        // 把send_msg_template中的{{name}}和{{timeNum}}替换为实际值, 然后把send_msg_template内容输入到chat_selector中
+        name: "邓稼先",
+        timeNum: 10,
+      },
+      get_deepseek_result_time: 10 * 4.5, // 等待deepseek返回结果的时间, 单位为秒
+      deepseek_result_txt_fn: () => {
+        // 尝试多种选择器来获取DeepSeek的回复内容
+        const selectors = [
+          'div[class*="ds-markdown"] p',
+          'div.ds-markdown p', 
+          '[class*="markdown"] p',
+          '.message-content p',
+          '[data-testid*="message"] p',
+          'div[role="presentation"] p'
+        ];
+        
+        let elements = [];
+        for (const selector of selectors) {
+          elements = [...document.querySelectorAll(selector)];
+          if (elements.length > 0) {
+            console.log(`✅ 使用选择器找到内容: ${selector}, 共 ${elements.length} 个元素`);
+            break;
+          }
+        }
+        
+        if (elements.length === 0) {
+          console.warn('⚠️ 未找到任何内容元素，尝试获取所有文本');
+          // 如果都找不到，尝试获取页面上所有的段落
+          elements = [...document.querySelectorAll('p')];
+        }
+        
+        const results = elements
+          .map((one) => one.innerText?.trim())
+          .filter(text => text && text.length > 10) // 过滤空白和太短的文本
+          .filter(text => 
+            text.includes('第') && text.includes('段') || // 包含段落标识
+            text.includes('视频生成提示词') || // 包含提示词标识
+            text.includes('镜头转换') || // 包含镜头标识
+            text.includes('中国人面孔') // 包含我们要求的前缀
+          );
+          
+        console.log(`📊 提取到 ${results.length} 段相关内容`);
+        return results;
+      },
+    },
+    jimeng: {
+      name: "邓稼先",
+      url: "https://jimeng.jianying.com/ai-tool/home?type=image", // 打开即梦图片生成首页
+      login_selector: {
+        login_button: `#SiderMenuLogin`,
+        agree_policy: `div.zoomModal-enter-done .lv-btn-primary`,
+      },
+      generate_button_selector: `#AIGeneratedRecord`, // 点击生成按钮
+      img_generate_input_selector: `textarea:last-child`, // 选择页面最后一个textarea输入框
+      img_generate_input_send_selector: `.lv-btn-primary`, // 发送按钮
+      gernerate_img_result_selector: `div[data-index="*"]`, // 生成结果
+    },
+  },
 };

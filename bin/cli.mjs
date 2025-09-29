@@ -5,6 +5,7 @@ import runHistoryPerson from '../lib/history-person.mjs';
 import runAiRemoveWatermark from '../lib/ai-remove-watermark.mjs';
 import runMergeVideo from '../lib/merge-video.mjs';
 import runClipAudio from '../lib/clip-audio.mjs';
+import runAutoDeepseekJimeng, { clearBrowserData } from '../lib/auto-deepseek-jimeng.mjs';
 import config from '../config.mjs';
 
 async function loadConfig() {
@@ -17,7 +18,7 @@ async function loadConfig() {
 }
 
 function printHelp() {
-  console.log(`\nnode-ffmpeg-tools <command> [options]\n\nCommands:\n  down-rm-watermark [url]     Download mp4 and blur bottom-right watermark\n  history-person              Process history person video with titles and effects\n  ai-remove-watermark [url]   AI inpainting to remove watermark; keeps original resolution/fps\n  merge-video                 Merge multiple videos with transition effects\n  clip-audio                  Clip audio files from specified start time\n\nOptions for down-rm-watermark:\n  --url, -u <url>             Video URL (can also be provided positionally)\n  --bg-music, -b <file>       Path to background audio file (mp3/wav/etc).\n                              If omitted, uses config.mjs at down-rm-watermark.bg-music if present.\n\nOptions for history-person:\n  Uses configuration from config.mjs under "history-person" section.\n  Required config fields: url, title, sectionTitle, bg-music\n\nOptions for ai-remove-watermark:\n  --url, -u <url>             Video URL (can also be provided positionally)\n  If omitted, uses config.mjs at "ai-remove-watermark.url" if present.\n\nOptions for merge-video:\n  Uses configuration from config.mjs under "merge-video" section.\n  Required config fields: urls (array of video URLs/paths), switch (transition effect)\n  Supported transitions: 叠化, 淡入淡出, 推拉, 擦除, 无转场\n\nOptions for clip-audio:\n  Uses configuration from config.mjs under "clip-audio" section.\n  Required config fields: array of {url, start?, duration?, output?}\n  - url: audio file path or URL (required)\n  - start: start time in seconds (default: 0)\n  - duration: clip duration in seconds (optional, clips to end if not specified)\n  - output: custom output filename (optional, auto-generated if not specified)\n\nExamples:\n  node-ffmpeg-tools down-rm-watermark https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark -b assets/bgm.mp3 https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark  # Uses URL (and bg-music) from config.mjs if present\n  node-ffmpeg-tools history-person     # Uses config.mjs history-person section\n  node-ffmpeg-tools ai-remove-watermark https://example.com/video.mp4\n  node-ffmpeg-tools ai-remove-watermark  # Uses config.mjs ai-remove-watermark.url\n  node-ffmpeg-tools merge-video         # Uses config.mjs merge-video section\n  node-ffmpeg-tools clip-audio          # Uses config.mjs clip-audio section\n`);
+  console.log(`\nnode-ffmpeg-tools <command> [options]\n\nCommands:\n  down-rm-watermark [url]     Download mp4 and blur bottom-right watermark\n  history-person              Process history person video with titles and effects\n  ai-remove-watermark [url]   AI inpainting to remove watermark; keeps original resolution/fps\n  merge-video                 Merge multiple videos with transition effects\n  clip-audio                  Clip audio files from specified start time\n  auto-deepseek-jimeng        Automate DeepSeek chat to generate video prompts\n  clear-browser-data          Clear saved browser login data for DeepSeek\n\nOptions for down-rm-watermark:\n  --url, -u <url>             Video URL (can also be provided positionally)\n  --bg-music, -b <file>       Path to background audio file (mp3/wav/etc).\n                              If omitted, uses config.mjs at down-rm-watermark.bg-music if present.\n\nOptions for history-person:\n  Uses configuration from config.mjs under "history-person" section.\n  Required config fields: url, title, sectionTitle, bg-music\n\nOptions for ai-remove-watermark:\n  --url, -u <url>             Video URL (can also be provided positionally)\n  If omitted, uses config.mjs at "ai-remove-watermark.url" if present.\n\nOptions for merge-video:\n  Uses configuration from config.mjs under "merge-video" section.\n  Required config fields: urls (array of video URLs/paths), switch (transition effect)\n  Supported transitions: 叠化, 淡入淡出, 推拉, 擦除, 无转场\n\nOptions for clip-audio:\n  Uses configuration from config.mjs under "clip-audio" section.\n  Required config fields: array of {url, start?, duration?, output?}\n  - url: audio file path or URL (required)\n  - start: start time in seconds (default: 0)\n  - duration: clip duration in seconds (optional, clips to end if not specified)\n  - output: custom output filename (optional, auto-generated if not specified)\n\nOptions for auto-deepseek-jimeng:\n  Uses configuration from config.mjs under "auto-deepseek-jimeng" section.\n  Automates DeepSeek chat using headless browser to generate video prompts.\n  Required config fields: deepseek.url, deepseek.chat_selector, deepseek.send_msg_template, etc.\n\nExamples:\n  node-ffmpeg-tools down-rm-watermark https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark -b assets/bgm.mp3 https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark  # Uses URL (and bg-music) from config.mjs if present\n  node-ffmpeg-tools history-person     # Uses config.mjs history-person section\n  node-ffmpeg-tools ai-remove-watermark https://example.com/video.mp4\n  node-ffmpeg-tools ai-remove-watermark  # Uses config.mjs ai-remove-watermark.url\n  node-ffmpeg-tools merge-video         # Uses config.mjs merge-video section\n  node-ffmpeg-tools clip-audio          # Uses config.mjs clip-audio section\n  node-ffmpeg-tools auto-deepseek-jimeng # Uses config.mjs auto-deepseek-jimeng section\n`);
 }
 
 (async () => {
@@ -105,6 +106,27 @@ function printHelp() {
         
         console.log('Using clip-audio configuration from config.mjs');
         await runClipAudio(config['clip-audio']);
+        break;
+      }
+      case 'auto-deepseek-jimeng': {
+        if (!config['auto-deepseek-jimeng']) {
+          console.error('\nError: No "auto-deepseek-jimeng" configuration found in config.mjs');
+          console.error('Please add auto-deepseek-jimeng configuration with deepseek settings');
+          process.exit(1);
+        }
+        
+        console.log('Using auto-deepseek-jimeng configuration from config.mjs');
+        await runAutoDeepseekJimeng(config['auto-deepseek-jimeng']);
+        break;
+      }
+      case 'clear-browser-data': {
+        console.log('🧹 正在清理浏览器用户数据...');
+        const success = await clearBrowserData();
+        if (success) {
+          console.log('✅ 浏览器数据清理完成！下次运行 auto-deepseek-jimeng 时将需要重新登录');
+        } else {
+          console.log('❌ 浏览器数据清理失败，请检查权限或手动删除 browser-data 目录');
+        }
         break;
       }
       default:

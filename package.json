@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "zx": "^8.8.4",
-    "fs-extra": "^11.2.0"
+    "fs-extra": "^11.2.0",
+    "puppeteer": "^21.0.0"
   }
 }
