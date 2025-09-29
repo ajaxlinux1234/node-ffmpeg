@@ -75,4 +75,18 @@ export default {
       extra_regions: [{ x: 6, y: 6, w: 220, h: 120 }],
     },
   },
+  "clip-audio": [
+    {
+      url: "input/clip-audio/韩磊 - 向天再借五百年.mp3",
+      start: 22,
+    },
+    {
+      url: "input/clip-audio/栀子花开.mp3",
+      start: 25,
+    },
+    {
+      url: "input/clip-audio/屠洪刚 - 精忠报国.mp3",
+      start: 25,
+    },
+  ],
 };
