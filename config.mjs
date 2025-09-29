@@ -55,7 +55,9 @@ export default {
     //  "2021年/91岁\n金黄的稻浪在风中起伏\n向袁老致敬"
     //]
     watermark: "@人物传记史",
-    "bg-music": "input/history-person/bg-music.mp3",
+    "bg-music": "music/韩磊 - 向天再借五百年_start22s_clip.mp3",
+    // 栀子花开_start25s_clip
+    // 屠洪刚 - 精忠报国_start25s_clip
   },
   "merge-video": {
     urls: [
