@@ -1,15 +1,17 @@
-const prompt =
-  "中国人面孔，电影风格，不要出现汉字军，警察等特殊字眼, 标题, 画面提示,当前镜头到下一镜头之间的大师级转换画面或运动方式,分别在不同的段落";
-const num = 10;
+const transform =
+  "当前镜头到下一镜头之间要结合视频描述词生成一种一定要明确是哪种运镜,不一定是电影运镜只要是高级运镜都可以,例如一镜到底的大师级转换画面或运动方式";
 const name = "邓稼先";
+const prompt = `中国人面孔，像${name}, 电影风格，不要出现汉字军，警察等特殊字眼, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落`;
+const num = 10;
 export default {
   "down-rm-watermark": {
     url: "https://aigc-idea-platform.cdn.bcebos.com/miaoying_video/shadow_i2v_1280x704_20250925_160634_a024gnii_2X_32fps_generate_metadata.mp4?authorization=bce-auth-v1%2FALTAKpTC4weJ6py821WCyek9FC%2F2025-09-25T08%3A06%3A41Z%2F-1%2F%2F612a44bb17040c579d19ab812adda61a6163d21f5bb02231b32c335a6e958b5b",
     "bg-music": "bg-music.mp3",
   },
   "history-person": {
+    name,
     url: "input/history-person/袁隆平.mp4",
-    title: "国士无双袁隆平",
+    title: `民族脊梁\n{{${name}}}`,
     // 快乐传递者何炅
     // 国士无双袁隆平
     titleAnimation: "sweep_slow", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
@@ -59,7 +61,7 @@ export default {
       "2021年/91岁\n金黄的稻浪在风中起伏\n向袁老致敬",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/屠洪刚 - 精忠报国_start25s_clip.mp3",
+    "bg-music": "music/韩磊 - 向天再借五百年_start22s_clip.mp3",
     // 栀子花开_start25s_clip
     // 屠洪刚 - 精忠报国_start25s_clip
   },
@@ -114,7 +116,7 @@ export default {
       side_selector: `a`,
       chat_selector: `textarea[placeholder="给 DeepSeek 发送消息 "]`, // 登录完成后进入聊天页面，首先选择发送消息的输入框选择器
       send_chat_selector: `'input[type="file"] + div'`, // 录入完消息后，发送消息的按钮选择器
-      send_msg_template: `${prompt}，{{name}}, 从出生到现在{{timeNum}}个关键时间点, 要特别注意人物服饰要符合历史事实,{{timeNum}}段视频生成提示词, 以及各个镜头画面之间的转换方式或运动方式, 视频镜头要是电影写实风格,比例9:16, 各段视频描述要与{{name}}的长相类似, 各段视频描述要写上人物年龄, 视频提示词不要显示国徽, 人民大会堂等政治信息, 严格生成{{timeNum}}段视频生成提示词，提示词为中文，运镜要是高级运镜，每句话前面都加上"中国人面孔，像{{name}}，生成图片要符合实际生活场景"`,
+      send_msg_template: `${prompt}，{{name}}, 从出生到现在{{timeNum}}个关键时间点, 要特别注意人物服饰要符合历史事实,{{timeNum}}段视频生成提示词, 以及各个镜头画面之间的转换方式或运动方式, 视频镜头要是电影写实风格,比例9:16, 各段视频描述要与{{name}}的长相类似, 各段视频描述要写上人物年龄, 视频提示词不要显示国徽, 人民大会堂等政治信息, 严格生成{{timeNum}}段视频生成提示词，提示词为中文，每句话前面都加上"中国人面孔，像{{name}}，生成图片要符合实际生活场景"`,
       send_msg_template_data: {
         // 把send_msg_template中的{{name}}和{{timeNum}}替换为实际值, 然后把send_msg_template内容输入到chat_selector中
         name,
@@ -124,8 +126,8 @@ export default {
       deepseek_result_txt_fn: () => {
         const num = 10;
         const navPrompt =
-          "中国人面孔，电影风格，不要出现汉字军，警察等特殊字眼";
-        
+          "中国人面孔，像邓稼先, 电影风格，不要出现汉字军，警察等特殊字眼, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一";
+
         // 实现 takeRight 函数，不依赖 lodash
         function takeRight(arr, n) {
           if (!Array.isArray(arr) || arr.length === 0) return [];
@@ -141,22 +143,26 @@ export default {
         const allSelectors = [
           "strong span",
           "strong",
-          "b span", 
+          "b span",
           "b",
           "[class*='message'] strong",
           "[class*='content'] strong",
           "[class*='reply'] strong",
           ".markdown strong",
           "div[data-testid] strong",
-          "p strong"
+          "p strong",
         ];
 
         let titles = [];
         for (const selector of allSelectors) {
           const elements = [...document.querySelectorAll(selector)];
           if (elements.length > 0) {
-            console.log(`✅ 找到 ${elements.length} 个元素使用选择器: ${selector}`);
-            titles = elements.map(el => el.innerText).filter(text => text && text.trim().length > 0);
+            console.log(
+              `✅ 找到 ${elements.length} 个元素使用选择器: ${selector}`
+            );
+            titles = elements
+              .map((el) => el.innerText)
+              .filter((text) => text && text.trim().length > 0);
             if (titles.length >= num) break;
           }
         }
@@ -171,35 +177,54 @@ export default {
           "[class*='message'] span",
           "[class*='content'] span",
           ".markdown span",
-          ".markdown p"
+          ".markdown p",
         ];
 
         let prompts = [];
         for (const selector of promptSelectors) {
           const elements = [...document.querySelectorAll(selector)];
           const filtered = elements
-            .map(el => el.innerText)
-            .filter(text => text && (text.includes("画面提示") || text.includes("画面内容") || text.includes("画面描述")));
-          
+            .map((el) => el.innerText)
+            .filter(
+              (text) =>
+                text &&
+                (text.includes("画面提示") ||
+                  text.includes("画面内容") ||
+                  text.includes("画面描述"))
+            );
+
           if (filtered.length > 0) {
-            console.log(`✅ 找到 ${filtered.length} 个画面提示使用选择器: ${selector}`);
+            console.log(
+              `✅ 找到 ${filtered.length} 个画面提示使用选择器: ${selector}`
+            );
             prompts = filtered;
             if (prompts.length >= num) break;
           }
         }
 
-        console.log(`📊 提取到 ${prompts.length} 个画面提示:`, prompts.slice(0, 2));
+        console.log(
+          `📊 提取到 ${prompts.length} 个画面提示:`,
+          prompts.slice(0, 2)
+        );
 
         // 提取运镜方式
         let shots = [];
         for (const selector of promptSelectors) {
           const elements = [...document.querySelectorAll(selector)];
           const filtered = elements
-            .map(el => el.innerText)
-            .filter(text => text && (text.includes("运镜方式") || text.includes("运镜") || text.includes("镜头运动")));
-          
+            .map((el) => el.innerText)
+            .filter(
+              (text) =>
+                text &&
+                (text.includes("运镜方式") ||
+                  text.includes("运镜") ||
+                  text.includes("镜头运动"))
+            );
+
           if (filtered.length > 0) {
-            console.log(`✅ 找到 ${filtered.length} 个运镜方式使用选择器: ${selector}`);
+            console.log(
+              `✅ 找到 ${filtered.length} 个运镜方式使用选择器: ${selector}`
+            );
             shots = filtered;
             if (shots.length >= num) break;
           }
@@ -210,37 +235,46 @@ export default {
         // 如果没有找到结构化内容，尝试提取整个回复内容
         if (titles.length === 0 && prompts.length === 0 && shots.length === 0) {
           console.log("⚠️ 未找到结构化内容，尝试提取整个回复...");
-          
+
           const messageSelectors = [
             "[class*='message-content']",
-            "[class*='chat-message']", 
+            "[class*='chat-message']",
             "[class*='reply']",
             "[class*='response']",
             ".markdown",
             "[role='assistant']",
-            "div[data-testid*='message']"
+            "div[data-testid*='message']",
           ];
 
           for (const selector of messageSelectors) {
             const elements = [...document.querySelectorAll(selector)];
             if (elements.length > 0) {
-              console.log(`🔍 找到消息容器: ${selector}, 数量: ${elements.length}`);
+              console.log(
+                `🔍 找到消息容器: ${selector}, 数量: ${elements.length}`
+              );
               const lastMessage = elements[elements.length - 1];
               const fullText = lastMessage.innerText;
               console.log("📝 完整回复内容长度:", fullText.length);
-              console.log("📝 回复内容预览:", fullText.substring(0, 200) + "...");
-              
+              console.log(
+                "📝 回复内容预览:",
+                fullText.substring(0, 200) + "..."
+              );
+
               // 尝试从完整文本中解析结构化内容
-              const lines = fullText.split('\n').filter(line => line.trim().length > 0);
+              const lines = fullText
+                .split("\n")
+                .filter((line) => line.trim().length > 0);
               console.log(`📊 分割后得到 ${lines.length} 行内容`);
-              
+
               // 简单返回前几行作为标题
               if (lines.length > 0) {
-                return lines.slice(0, Math.min(num, lines.length)).map((line, index) => ({
-                  title: line.trim(),
-                  prompt: `${line.trim()},${navPrompt}`,
-                  shot: `运镜方式${index + 1}`
-                }));
+                return lines
+                  .slice(0, Math.min(num, lines.length))
+                  .map((line, index) => ({
+                    title: line.trim(),
+                    prompt: `${line.trim()},${navPrompt}`,
+                    shot: `运镜方式${index + 1}`,
+                  }));
               }
               break;
             }
@@ -250,16 +284,18 @@ export default {
         // 取最后的结果
         const finalTitles = takeRight(titles, num + 1);
         if (finalTitles.length > 0) finalTitles.pop();
-        
+
         const finalPrompts = takeRight(prompts, num);
         const finalShots = takeRight(shots, num);
 
-        console.log(`🎯 最终结果: ${finalTitles.length} 个标题, ${finalPrompts.length} 个提示, ${finalShots.length} 个运镜`);
+        console.log(
+          `🎯 最终结果: ${finalTitles.length} 个标题, ${finalPrompts.length} 个提示, ${finalShots.length} 个运镜`
+        );
 
         return finalTitles.map((title, index) => {
           return {
             title: title,
-            prompt: `${title},${finalPrompts[index] || ''},${navPrompt}`,
+            prompt: `${title},${finalPrompts[index] || ""},${navPrompt}`,
             shot: finalShots[index] || `运镜方式${index + 1}`,
           };
         });
