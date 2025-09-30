@@ -1,3 +1,6 @@
+const prompt =
+  "中国人面孔，电影风格，不要出现汉字军，警察等特殊字眼, 标题,画面提示,运镜方式分别在不同的段落";
+const num = 10;
 export default {
   "down-rm-watermark": {
     url: "https://aigc-idea-platform.cdn.bcebos.com/miaoying_video/shadow_i2v_1280x704_20250925_160634_a024gnii_2X_32fps_generate_metadata.mp4?authorization=bce-auth-v1%2FALTAKpTC4weJ6py821WCyek9FC%2F2025-09-25T08%3A06%3A41Z%2F-1%2F%2F612a44bb17040c579d19ab812adda61a6163d21f5bb02231b32c335a6e958b5b",
@@ -107,53 +110,56 @@ export default {
         username: "13683514587",
         password: "zhongguo1234..A",
       },
+      side_selector: `a`,
       chat_selector: `textarea[placeholder="给 DeepSeek 发送消息 "]`, // 登录完成后进入聊天页面，首先选择发送消息的输入框选择器
       send_chat_selector: `'input[type="file"] + div'`, // 录入完消息后，发送消息的按钮选择器
-      send_msg_template: `中国人面孔，电影风格，不要出现军用，警察等特殊字眼，{{name}}, 从出生到现在{{timeNum}}个关键时间点, 要特别注意人物服饰要符合历史事实,{{timeNum}}段视频生成提示词, 以及各个镜头画面之间的转换方式或运动方式, 视频镜头要是电影写实风格,比例9:16, 各段视频描述要与{{name}}的长相类似, 各段视频描述要写上人物年龄, 视频提示词不要显示国徽, 人民大会堂等政治信息, 严格生成{{timeNum}}段视频生成提示词，提示词为中文，运镜要是高级运镜，每句话前面都加上"中国人面孔，像{{name}}，生成图片要符合实际生活场景"`,
+      send_msg_template: `${prompt}，{{name}}, 从出生到现在{{timeNum}}个关键时间点, 要特别注意人物服饰要符合历史事实,{{timeNum}}段视频生成提示词, 以及各个镜头画面之间的转换方式或运动方式, 视频镜头要是电影写实风格,比例9:16, 各段视频描述要与{{name}}的长相类似, 各段视频描述要写上人物年龄, 视频提示词不要显示国徽, 人民大会堂等政治信息, 严格生成{{timeNum}}段视频生成提示词，提示词为中文，运镜要是高级运镜，每句话前面都加上"中国人面孔，像{{name}}，生成图片要符合实际生活场景"`,
       send_msg_template_data: {
         // 把send_msg_template中的{{name}}和{{timeNum}}替换为实际值, 然后把send_msg_template内容输入到chat_selector中
         name: "邓稼先",
-        timeNum: 10,
+        timeNum: num,
       },
-      get_deepseek_result_time: 10 * 4.5, // 等待deepseek返回结果的时间, 单位为秒
+      get_deepseek_result_time: num * 4.5, // 等待deepseek返回结果的时间, 单位为秒
       deepseek_result_txt_fn: () => {
+        const num = 10;
+        const navPrompt =
+          "中国人面孔，电影风格，不要出现汉字军，警察等特殊字眼";
+        // 实现 takeRight 函数，不依赖 lodash
+        function takeRight(arr, n) {
+          if (!Array.isArray(arr) || arr.length === 0) return [];
+          return arr.slice(Math.max(0, arr.length - n));
+        }
+
         // 尝试多种选择器来获取DeepSeek的回复内容
-        const selectors = [
-          'div[class*="ds-markdown"] p',
-          'div.ds-markdown p', 
-          '[class*="markdown"] p',
-          '.message-content p',
-          '[data-testid*="message"] p',
-          'div[role="presentation"] p'
-        ];
-        
-        let elements = [];
-        for (const selector of selectors) {
-          elements = [...document.querySelectorAll(selector)];
-          if (elements.length > 0) {
-            console.log(`✅ 使用选择器找到内容: ${selector}, 共 ${elements.length} 个元素`);
-            break;
-          }
-        }
-        
-        if (elements.length === 0) {
-          console.warn('⚠️ 未找到任何内容元素，尝试获取所有文本');
-          // 如果都找不到，尝试获取页面上所有的段落
-          elements = [...document.querySelectorAll('p')];
-        }
-        
-        const results = elements
-          .map((one) => one.innerText?.trim())
-          .filter(text => text && text.length > 10) // 过滤空白和太短的文本
-          .filter(text => 
-            text.includes('第') && text.includes('段') || // 包含段落标识
-            text.includes('视频生成提示词') || // 包含提示词标识
-            text.includes('镜头转换') || // 包含镜头标识
-            text.includes('中国人面孔') // 包含我们要求的前缀
-          );
-          
-        console.log(`📊 提取到 ${results.length} 段相关内容`);
-        return results;
+        const title = takeRight(
+          [...document.querySelectorAll("strong span")].map(
+            (one) => one.innerText
+          ),
+          num + 1
+        );
+        title.pop();
+        const prompt = takeRight(
+          [...document.querySelectorAll("span")]
+            .map((one) => one.innerText)
+            .filter(
+              (one) => one.startsWith("画面提示") || one.startsWith("画面内容")
+            ),
+          num
+        );
+
+        const shot = takeRight(
+          [...document.querySelectorAll("span")]
+            .map((one) => one.innerText)
+            .filter((one) => one.startsWith("运镜方式")),
+          num
+        );
+        return title.map((one, index) => {
+          return {
+            title: one,
+            prompt: `${one},${prompt[index]},${navPrompt}`,
+            shot: shot[index],
+          };
+        });
       },
     },
     jimeng: {
@@ -166,7 +172,7 @@ export default {
       generate_button_selector: `#AIGeneratedRecord`, // 点击生成按钮
       img_generate_input_selector: `textarea:last-child`, // 选择页面最后一个textarea输入框
       img_generate_input_send_selector: `.lv-btn-primary`, // 发送按钮
-      gernerate_img_result_selector: `div[data-index="*"]`, // 生成结果
+      gernerate_img_result_selector: `div[style="--aspect-ratio: 0.5625;"]`, // 生成结果
     },
   },
 };
