@@ -125,40 +125,142 @@ export default {
         const num = 10;
         const navPrompt =
           "中国人面孔，电影风格，不要出现汉字军，警察等特殊字眼";
+        
         // 实现 takeRight 函数，不依赖 lodash
         function takeRight(arr, n) {
           if (!Array.isArray(arr) || arr.length === 0) return [];
           return arr.slice(Math.max(0, arr.length - n));
         }
 
-        // 尝试多种选择器来获取DeepSeek的回复内容
-        const title = takeRight(
-          [...document.querySelectorAll("strong span")].map(
-            (one) => one.innerText
-          ),
-          num + 1
-        );
-        title.pop();
-        const prompt = takeRight(
-          [...document.querySelectorAll("span")]
-            .map((one) => one.innerText)
-            .filter(
-              (one) => one.startsWith("画面提示") || one.startsWith("画面内容")
-            ),
-          num
-        );
+        // 调试：输出页面信息
+        console.log("🔍 开始提取 DeepSeek 回复内容...");
+        console.log("📄 当前页面标题:", document.title);
+        console.log("🔗 当前页面URL:", window.location.href);
 
-        const shot = takeRight(
-          [...document.querySelectorAll("span")]
-            .map((one) => one.innerText)
-            .filter((one) => one.startsWith("运镜方式")),
-          num
-        );
-        return title.map((one, index) => {
+        // 尝试多种选择器来获取DeepSeek的回复内容
+        const allSelectors = [
+          "strong span",
+          "strong",
+          "b span", 
+          "b",
+          "[class*='message'] strong",
+          "[class*='content'] strong",
+          "[class*='reply'] strong",
+          ".markdown strong",
+          "div[data-testid] strong",
+          "p strong"
+        ];
+
+        let titles = [];
+        for (const selector of allSelectors) {
+          const elements = [...document.querySelectorAll(selector)];
+          if (elements.length > 0) {
+            console.log(`✅ 找到 ${elements.length} 个元素使用选择器: ${selector}`);
+            titles = elements.map(el => el.innerText).filter(text => text && text.trim().length > 0);
+            if (titles.length >= num) break;
+          }
+        }
+
+        console.log(`📊 提取到 ${titles.length} 个标题:`, titles.slice(0, 3));
+
+        // 提取画面提示
+        const promptSelectors = [
+          "span",
+          "p",
+          "div",
+          "[class*='message'] span",
+          "[class*='content'] span",
+          ".markdown span",
+          ".markdown p"
+        ];
+
+        let prompts = [];
+        for (const selector of promptSelectors) {
+          const elements = [...document.querySelectorAll(selector)];
+          const filtered = elements
+            .map(el => el.innerText)
+            .filter(text => text && (text.includes("画面提示") || text.includes("画面内容") || text.includes("画面描述")));
+          
+          if (filtered.length > 0) {
+            console.log(`✅ 找到 ${filtered.length} 个画面提示使用选择器: ${selector}`);
+            prompts = filtered;
+            if (prompts.length >= num) break;
+          }
+        }
+
+        console.log(`📊 提取到 ${prompts.length} 个画面提示:`, prompts.slice(0, 2));
+
+        // 提取运镜方式
+        let shots = [];
+        for (const selector of promptSelectors) {
+          const elements = [...document.querySelectorAll(selector)];
+          const filtered = elements
+            .map(el => el.innerText)
+            .filter(text => text && (text.includes("运镜方式") || text.includes("运镜") || text.includes("镜头运动")));
+          
+          if (filtered.length > 0) {
+            console.log(`✅ 找到 ${filtered.length} 个运镜方式使用选择器: ${selector}`);
+            shots = filtered;
+            if (shots.length >= num) break;
+          }
+        }
+
+        console.log(`📊 提取到 ${shots.length} 个运镜方式:`, shots.slice(0, 2));
+
+        // 如果没有找到结构化内容，尝试提取整个回复内容
+        if (titles.length === 0 && prompts.length === 0 && shots.length === 0) {
+          console.log("⚠️ 未找到结构化内容，尝试提取整个回复...");
+          
+          const messageSelectors = [
+            "[class*='message-content']",
+            "[class*='chat-message']", 
+            "[class*='reply']",
+            "[class*='response']",
+            ".markdown",
+            "[role='assistant']",
+            "div[data-testid*='message']"
+          ];
+
+          for (const selector of messageSelectors) {
+            const elements = [...document.querySelectorAll(selector)];
+            if (elements.length > 0) {
+              console.log(`🔍 找到消息容器: ${selector}, 数量: ${elements.length}`);
+              const lastMessage = elements[elements.length - 1];
+              const fullText = lastMessage.innerText;
+              console.log("📝 完整回复内容长度:", fullText.length);
+              console.log("📝 回复内容预览:", fullText.substring(0, 200) + "...");
+              
+              // 尝试从完整文本中解析结构化内容
+              const lines = fullText.split('\n').filter(line => line.trim().length > 0);
+              console.log(`📊 分割后得到 ${lines.length} 行内容`);
+              
+              // 简单返回前几行作为标题
+              if (lines.length > 0) {
+                return lines.slice(0, Math.min(num, lines.length)).map((line, index) => ({
+                  title: line.trim(),
+                  prompt: `${line.trim()},${navPrompt}`,
+                  shot: `运镜方式${index + 1}`
+                }));
+              }
+              break;
+            }
+          }
+        }
+
+        // 取最后的结果
+        const finalTitles = takeRight(titles, num + 1);
+        if (finalTitles.length > 0) finalTitles.pop();
+        
+        const finalPrompts = takeRight(prompts, num);
+        const finalShots = takeRight(shots, num);
+
+        console.log(`🎯 最终结果: ${finalTitles.length} 个标题, ${finalPrompts.length} 个提示, ${finalShots.length} 个运镜`);
+
+        return finalTitles.map((title, index) => {
           return {
-            title: one,
-            prompt: `${one},${prompt[index]},${navPrompt}`,
-            shot: shot[index],
+            title: title,
+            prompt: `${title},${finalPrompts[index] || ''},${navPrompt}`,
+            shot: finalShots[index] || `运镜方式${index + 1}`,
           };
         });
       },
