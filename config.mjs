@@ -1,6 +1,7 @@
 const prompt =
-  "中国人面孔，电影风格，不要出现汉字军，警察等特殊字眼, 标题,画面提示,运镜方式分别在不同的段落";
+  "中国人面孔，电影风格，不要出现汉字军，警察等特殊字眼, 标题, 画面提示,当前镜头到下一镜头之间的大师级转换画面或运动方式,分别在不同的段落";
 const num = 10;
+const name = "邓稼先";
 export default {
   "down-rm-watermark": {
     url: "https://aigc-idea-platform.cdn.bcebos.com/miaoying_video/shadow_i2v_1280x704_20250925_160634_a024gnii_2X_32fps_generate_metadata.mp4?authorization=bce-auth-v1%2FALTAKpTC4weJ6py821WCyek9FC%2F2025-09-25T08%3A06%3A41Z%2F-1%2F%2F612a44bb17040c579d19ab812adda61a6163d21f5bb02231b32c335a6e958b5b",
@@ -116,7 +117,7 @@ export default {
       send_msg_template: `${prompt}，{{name}}, 从出生到现在{{timeNum}}个关键时间点, 要特别注意人物服饰要符合历史事实,{{timeNum}}段视频生成提示词, 以及各个镜头画面之间的转换方式或运动方式, 视频镜头要是电影写实风格,比例9:16, 各段视频描述要与{{name}}的长相类似, 各段视频描述要写上人物年龄, 视频提示词不要显示国徽, 人民大会堂等政治信息, 严格生成{{timeNum}}段视频生成提示词，提示词为中文，运镜要是高级运镜，每句话前面都加上"中国人面孔，像{{name}}，生成图片要符合实际生活场景"`,
       send_msg_template_data: {
         // 把send_msg_template中的{{name}}和{{timeNum}}替换为实际值, 然后把send_msg_template内容输入到chat_selector中
-        name: "邓稼先",
+        name,
         timeNum: num,
       },
       get_deepseek_result_time: num * 4.5, // 等待deepseek返回结果的时间, 单位为秒
@@ -163,7 +164,7 @@ export default {
       },
     },
     jimeng: {
-      name: "邓稼先",
+      name,
       url: "https://jimeng.jianying.com/ai-tool/home?type=image", // 打开即梦图片生成首页
       login_selector: {
         login_button: `#SiderMenuLogin`,
@@ -173,6 +174,21 @@ export default {
       img_generate_input_selector: `textarea:last-child`, // 选择页面最后一个textarea输入框
       img_generate_input_send_selector: `.lv-btn-primary`, // 发送按钮
       gernerate_img_result_selector: `div[style="--aspect-ratio: 0.5625;"]`, // 生成结果
+    },
+    "jimeng-video-generator": {
+      url: "https://jimeng.jianying.com/ai-tool/home?type=video", // 1.打开即梦视频生成首页
+      generate_button_selector: `#AIGeneratedRecord`, // 点击生成按钮
+      video_generate_select_trigger_selector: ".lv-typography", // 首尾帧选择器范围
+      video_generate_select_trigger_text: "首尾帧", // 点击包含"首尾帧"的元素
+      video_generate_select_item_text: "智能多帧", // 点击包含"智能多帧"的元素, 切换成智能多帧模式
+      video_generate_select_item_selector: ".lv-typography", // 智能多帧选择器范围
+      video_generate_upload_text: "第1帧", // 点击包含"第1帧"的元素
+      video_generate_shot_text_btn_selector: 'input[type="file"]', // 点击第一个的class为.reference-upload-eclumn的div元素
+      video_generate_shot_input_selector: ".lv-popover-inner-content textarea", // 选择textarea输入框, 按照正序输入processed_data.json中的segments中的shot.输入完成后点击第二个包含"5s"的div元素, 输入第二个shot
+      video_generate_shot_input_confirm_text: "确认", // 在每次输入shot后点击包含"确认"的div元素, 接着点击第二个class为.reference-upload-eclumn的div元素, 输入第二个shot, 然后点击包含"确认"的div元素
+      video_generate_shot_input_confirm_select:
+        ".lv-popover-inner-content .lv-btn-shape-square", // 在每次输入shot后点击包含"确认"的div元素, 接着点击第二个class为.reference-upload-eclumn的div元素, 输入第二个shot, 然后点击包含"确认"的div元素
+      video_generate_shot_selector: ".lv-typography", // 5s元素选择器范围
     },
   },
 };
