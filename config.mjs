@@ -10,11 +10,11 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1759325333220_merged.mp4",
-    title: `中国原子弹之父${name}`,
+    url: "output/merge-video/merged_1759331937876_merged.mp4",
+    title: `中国原子弹之父\n{{${name}}}`,
     // 快乐传递者何炅
     // 国士无双袁隆平
-    titleAnimation: "slide", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
+    titleAnimation: "sweep_fast", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
     sectionTitleAnimation: "sweep_glow", // 分镜字幕动画效果，可选值同titleAnimation
     
     // 视频质量配置
