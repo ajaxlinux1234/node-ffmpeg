@@ -15,5 +15,8 @@
     "lodash-es": "^4.17.21",
     "puppeteer": "^21.0.0",
     "zx": "^8.8.4"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
   }
 }
