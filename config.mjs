@@ -10,26 +10,26 @@ export default {
   },
   "history-person": {
     name,
-    url: "https://v6-artist.vlabvod.com/873b6af3bac638528ef7e4b86f275f1b/68e52737/video/tos/cn/tos-cn-v-148450/oQaOBtHGfIkevBL7HJ1r3fhjIAEmDCDGRQ6DhF/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5961&bt=5961&cs=0&ds=12&ft=5QYTUxhhe6BMyqUrY-kJD12Nzj&mime_type=video_mp4&qs=0&rc=ZThkODRnZzM5ZGdkaWc4ZkBpM3FueW05cmt4NjczNDM7M0BgNl8tMl82NmExL181YDYtYSNmNGMtMmRzaWFhLS1kNDBzcw%3D%3D&btag=c0000e00020000&dy_q=1759243402&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20250930224322A9C7EE0EC51C64F8CAB7",
-    title: `民族脊梁{{${name}}}`,
+    url: "input/history-person/燧人氏.mp4",
+    title: `三皇五帝之燧人氏`,
     // 快乐传递者何炅
     // 国士无双袁隆平
-    titleAnimation: "sweep_neon", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
+    titleAnimation: "sweep_slow", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
     sectionTitleAnimation: "sweep_glow", // 分镜字幕动画效果，可选值同titleAnimation
     sectionTitle: [
-      "1924年/0岁\n安徽怀宁传统民居卧房\n邓稼先 出生",
-      "1931年/7岁\n徽州传统私塾学堂\n临摹明代刻本算法统宗",
-      "1938年/14岁\n北平第四中学天文台\n观测星空立志科学报国",
-      "1945年/21岁\n西南联大铁皮顶实验室\n在简陋条件下坚持物理实验",
-      "1948年/24岁\n克利夫兰总统号远洋客轮\n阅读物理评论期刊",
-      "1953年/29岁\n普渡大学物理实验室\n获得物理学博士学位",
-      "1956年/32岁\n中苏国际列车软卧包厢\n毅然回国投身祖国建设",
-      "1962年/38岁\n西北科研基地窑洞\n秘密参与原子弹研制工作",
-      "1970年/46岁\n九院阶梯教室\n主持氢弹理论设计会议",
-      "1980年/56岁\n家中书房\n抱病坚持核武器小型化研究",
+      "公元前50000年/0岁\n燧人氏于原始部落降生",
+      "公元前49970年/30岁\n青年燧人氏观察自然现象\n对火产生好奇",
+      "公元前49950年/50岁\n发明钻木取火\n首次主动创造火种",
+      "公元前49945年/55岁\n将取火技术传授给族人",
+      "公元前49940年/60岁\n教民熟食\n提升部落健康水平",
+      "公元前49920年/80岁\n利用火塘\n带领族人建造更宜居的半地穴式房屋",
+      "公元前49900年/100岁\n利用火制作出第一批原始陶器",
+      "公元前49880年/120岁\n发明结绳记事\n为信息传递奠定基础",
+      "公元前49860年/140岁\n晚年燧人氏\n将智慧与领导权交给下一代",
+      "公元前49850年/150岁\n传递希望的火种\n燧人氏去世",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/韩磊 - 向天再借五百年_start22s_clip.mp3",
+    "bg-music": "music/屠洪刚 - 精忠报国_start25s_clip.mp3",
     // 栀子花开_start25s_clip
     // 屠洪刚 - 精忠报国_start25s_clip
   },
