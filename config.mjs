@@ -1,6 +1,6 @@
 const transform =
   "当前镜头到下一镜头之间要结合视频描述词生成一种一定要明确是哪种运镜,不一定是电影运镜只要是高级运镜都可以,例如一镜到底的大师级转换画面或运动方式";
-const name = "中国航天之父-钱学森";
+const name = "钱学森";
 const prompt = `中国人面孔，像${name}, 电影风格，不要出现汉字军，警察等特殊字眼, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落`;
 const historyNum = 16;
 export default {
@@ -18,21 +18,21 @@ export default {
     sectionTitleAnimation: "sweep_glow", // 分镜字幕动画效果，可选值同titleAnimation
     sectionTitle: [
       "1911年/0岁\n杭州祖宅\n出生时刻",
-      "1919年/8岁\n小学课堂\n算术演算",
-      "1929年/18岁\n交通大学\n工程绘图",
-      "1934年/23岁\n清华考场\n留学考试",
-      "1935年/24岁\n麻省理工\n风洞实验",
+      "1923年/12岁\n北师大附中\n课堂听讲",
+      "1929年/18岁\n交通大学\n图书馆研读",
+      "1935年/24岁\n麻省理工\n实验室研究",
       "1936年/25岁\n加州理工\n师从冯·卡门",
-      "1939年/28岁\n火箭小组\n发动机测试",
-      "1945年/34岁\n德国考察\n技术研究",
+      "1939年/28岁\n火箭小组\n实验攻关",
+      "1945年/34岁\n德国考察\n技术交流",
       "1949年/38岁\n喷气推进实验室\n课题指导",
       "1955年/44岁\n归国邮轮\n眺望东方",
-      "1956年/45岁\n中科院\n规划论证",
+      "1956年/45岁\n中科院\n制定规划",
       "1960年/49岁\n研究所\n理论推导",
-      "1970年/59岁\n发射观测点\n仰望星空",
-      "1978年/67岁\n大学讲堂\n系统工程课",
+      "1966年/55岁\n科研基地\n现场指导",
+      "1970年/59岁\n发射场\n观摩首星",
+      "1978年/67岁\n大学讲堂\n培育后学",
       "1986年/75岁\n书房\n著书立说",
-      "1999年/88岁\n家中书房\n阅读思考",
+      "1991年/80岁\n家中\n坚持研究",
     ],
     watermark: "@人物传记史",
     "bg-music": "music/韩磊 - 向天再借五百年_start22s_clip.mp3",
@@ -41,7 +41,7 @@ export default {
   },
   "merge-video": {
     urls: [
-      "input/history-person/中国航天之父-钱学森.mp4",
+      "input/history-person/钱学森.mp4",
       "https://v26-artist.vlabvod.com/137d8827aadf3b99cab30e69e778a6c5/68e5f41a/video/tos/cn/tos-cn-v-148450/okf3ulwhbAAiWmbIQE2BxWJNEhyQX0tOBDgciz/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6011&bt=6011&cs=0&ds=12&ft=5QYTUxhhe6BMyqKDUYkJD12Nzj&mime_type=video_mp4&qs=0&rc=aGVlM2RmNDNlMztoaDw7NkBpajd1bWs5cnJlNjczNDM7M0A2MGA2My8vNWIxYC4zNWFgYSNhYGZkMmRjZmJhLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1759295868&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=2025100113174809DCEC539D771AFE0373",
     ],
     switch: "叠化", // 支持：叠化、淡入淡出、推拉、擦除、无转场
@@ -99,7 +99,7 @@ export default {
       get_deepseek_result_time: historyNum * 4.5, // 等待deepseek返回结果的时间, 单位为秒
       deepseek_result_txt_fn: () => {
         const historyNum = 16;
-        const name = "中国航天之父-钱学森";
+        const name = "钱学森";
         const navPrompt = `比例9:16，中国人面孔，像${name}, 电影风格，不要出现汉字军，警察等特殊字眼, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一`;
 
         // 实现 takeRight 函数，不依赖 lodash
@@ -164,7 +164,7 @@ export default {
       gernerate_img_result_selector: `div[style="--aspect-ratio: 0.5625;"]`, // 生成结果
     },
     "jimeng-video-generator": {
-      generate_section: 1, // 由于即梦智能多镜一次最多上传10张图片, 所以需要分多次上传, 此参数表示是要上传的第几次
+      generate_section: 2, // 由于即梦智能多镜一次最多上传10张图片, 所以需要分多次上传, 此参数表示是要上传的第几次
       url: "https://jimeng.jianying.com/ai-tool/home?type=video", // 1.打开即梦视频生成首页
       generate_button_selector: `#AIGeneratedRecord`, // 点击生成按钮
       video_generate_select_trigger_selector: ".lv-typography", // 首尾帧选择器范围
