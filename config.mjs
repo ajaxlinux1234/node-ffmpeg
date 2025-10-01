@@ -1,7 +1,7 @@
 const transform =
   "当前镜头到下一镜头之间要结合视频描述词生成一种一定要明确是哪种运镜,不一定是电影运镜只要是高级运镜都可以,例如一镜到底的大师级转换画面或运动方式";
 const name = "邓稼先";
-const prompt = `中国人面孔，像${name}, 电影风格，不要出现汉字军，警察等特殊字眼, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落, 第十段是"1980年/56岁|家中书房|抱病坚持核武器小型化研究"`;
+const prompt = `中国人面孔，像${name}, 电影风格，不要出现汉字军，警察等特殊字眼, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落`;
 const historyNum = 16;
 export default {
   "down-rm-watermark": {
@@ -17,21 +17,21 @@ export default {
     titleAnimation: "sweep_slow", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
     sectionTitleAnimation: "sweep_glow", // 分镜字幕动画效果，可选值同titleAnimation
     sectionTitle: [
-      "1924年/0岁\n怀宁祖宅卧房\n出生安睡",,
-      "1931年/7岁\n私塾学堂\n启蒙识字",,
-      "1937年/13岁\n中学校园\n天文观测",,
-      "1941年/17岁\n大学图书馆\n深夜研读",,
-      "1945年/21岁\n联大实验室\n仪器操作",,
-      "1948年/24岁\n远洋客轮\n负笈西洋",,
-      "1952年/28岁\n普渡大学\n课题研究",,
-      "1955年/31岁\n研究所\n数据分析",,
-      "1958年/34岁\n科研基地\n理论推导",,
-      "1980年/56岁\n家中书房\n抱病坚持核武器小型化研究",,
-      "1962年/38岁\n实验场地\n现场计算",,
-      "1966年/42岁\n研究所\n方案研讨",,
-      "1970年/46岁\n大学讲堂\n教书育人",,
-      "1974年/50岁\n实验室\n指导后辈",,
-      "1978年/54岁\n书房\n著书立说",,
+      "1924年/0岁\n怀宁祖宅卧房\n出生安睡",
+      "1931年/7岁\n私塾学堂\n启蒙识字",
+      "1937年/13岁\n中学校园\n天文观测",
+      "1941年/17岁\n大学图书馆\n深夜研读",
+      "1945年/21岁\n联大实验室\n仪器操作",
+      "1948年/24岁\n远洋客轮\n负笈西洋",
+      "1952年/28岁\n普渡大学\n课题研究",
+      "1955年/31岁\n研究所\n数据分析",
+      "1958年/34岁\n科研基地\n理论推导",
+      "1980年/56岁\n家中书房\n抱病坚持核武器小型化研究",
+      "1962年/38岁\n实验场地\n现场计算",
+      "1966年/42岁\n研究所\n方案研讨",
+      "1970年/46岁\n大学讲堂\n教书育人",
+      "1974年/50岁\n实验室\n指导后辈",
+      "1978年/54岁\n书房\n著书立说",
       "1982年/58岁\n医院病房\n坚持工作",
     ],
     watermark: "@人物传记史",
@@ -41,10 +41,10 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v9-artist.vlabvod.com/ac0373e9326286f2cb269017a3ca0352/68e36176/video/tos/cn/tos-cn-v-148450/oMWLIhsTRBJbJPgaxRi3Ag0QnDaQyAtbEgfMai/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5964&bt=5964&cs=0&ds=12&ft=5QYTUxhhe6BMyqx9j-kJD12Nzj&mime_type=video_mp4&qs=0&rc=Ojc3ZDs1PDllZzlpZzs1NUBpM2w0bXE5cjs1NjczNDM7M0BfNjBhNDU2NV4xXmEyNjM2YSNqaXA2MmRzX2FhLS1kNC9zcw%3D%3D&btag=c0000e00020000&dy_q=1759127241&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20250929142721B8E2821AAAB76F4CBBDE",
-      "https://v9-artist.vlabvod.com/f1d3ff87036bab6500fe40ec69aaa8b0/68e3623f/video/tos/cn/tos-cn-v-148450/oMy0DEAsRgEmOhBGTCtLre8IRiGBE6k4PAeey4/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5996&bt=5996&cs=0&ds=12&ft=5QYTUxhhe6BMyqDuj-kJD12Nzj&mime_type=video_mp4&qs=0&rc=MzZlZTU1ZWg6ZzxnZzw4O0BpM2Y1bWs5cjQ1NjczNDM7M0AzYGI1M2ItXmMxMS8vMzNhYSNkcGVkMmRzY2FhLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1759127452&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=2025092914305206734F9D23ECFE58F38D",
+      "input/history-person/邓稼先.mp4",
+      "https://v26-artist.vlabvod.com/137d8827aadf3b99cab30e69e778a6c5/68e5f41a/video/tos/cn/tos-cn-v-148450/okf3ulwhbAAiWmbIQE2BxWJNEhyQX0tOBDgciz/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6011&bt=6011&cs=0&ds=12&ft=5QYTUxhhe6BMyqKDUYkJD12Nzj&mime_type=video_mp4&qs=0&rc=aGVlM2RmNDNlMztoaDw7NkBpajd1bWs5cnJlNjczNDM7M0A2MGA2My8vNWIxYC4zNWFgYSNhYGZkMmRjZmJhLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1759295868&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=2025100113174809DCEC539D771AFE0373",
     ],
-    switch: "推拉", // 支持：叠化、淡入淡出、推拉、擦除、无转场
+    switch: "叠化", // 支持：叠化、淡入淡出、推拉、擦除、无转场
   },
   "ai-remove-watermark": {
     url: "output/history-person/1758868423130_10b9525ce467.mp4",
@@ -99,8 +99,8 @@ export default {
       get_deepseek_result_time: historyNum * 4.5, // 等待deepseek返回结果的时间, 单位为秒
       deepseek_result_txt_fn: () => {
         const historyNum = 16;
-        const navPrompt =
-          "中国人面孔，像邓稼先, 电影风格，不要出现汉字军，警察等特殊字眼, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一";
+        const name = "邓稼先";
+        const navPrompt = `中国人面孔，像${name}, 电影风格，不要出现汉字军，警察等特殊字眼, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一`;
 
         // 实现 takeRight 函数，不依赖 lodash
         function takeRight(arr, n) {
@@ -161,6 +161,7 @@ export default {
       gernerate_img_result_selector: `div[style="--aspect-ratio: 0.5625;"]`, // 生成结果
     },
     "jimeng-video-generator": {
+      generate_section: 2, // 由于即梦智能多镜一次最多上传10张图片, 所以需要分多次上传, 此参数表示是要上传的第几次
       url: "https://jimeng.jianying.com/ai-tool/home?type=video", // 1.打开即梦视频生成首页
       generate_button_selector: `#AIGeneratedRecord`, // 点击生成按钮
       video_generate_select_trigger_selector: ".lv-typography", // 首尾帧选择器范围
