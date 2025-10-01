@@ -14,8 +14,8 @@ export default {
     title: `民族脊梁{{${name}}}`,
     // 快乐传递者何炅
     // 国士无双袁隆平
-    titleAnimation: "sweep_diamond", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
-    sectionTitleAnimation: "fade", // 分镜字幕动画效果，可选值同titleAnimation
+    titleAnimation: "sweep_neon", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
+    sectionTitleAnimation: "sweep_glow", // 分镜字幕动画效果，可选值同titleAnimation
     sectionTitle: [
       "1924年/0岁\n安徽怀宁传统民居卧房\n邓稼先 出生",
       "1931年/7岁\n徽州传统私塾学堂\n临摹明代刻本算法统宗",
