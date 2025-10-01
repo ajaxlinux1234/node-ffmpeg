@@ -1,6 +1,6 @@
 const transform =
   "当前镜头到下一镜头之间要结合视频描述词生成一种一定要明确是哪种运镜,不一定是电影运镜只要是高级运镜都可以,例如一镜到底的大师级转换画面或运动方式";
-const name = "钱三强";
+const name = "钱学森";
 const prompt = `中国人面孔，像${name}, 电影风格，不要出现汉字军，警察等特殊字眼, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落`;
 const historyNum = 16;
 export default {
@@ -10,12 +10,15 @@ export default {
   },
   "history-person": {
     name,
-    url: "input/history-person/邓稼先.mp4",
-    title: `民族脊梁${name}`,
+    url: "input/history-person/钱学森.mp4",
+    title: `航天之父${name}\n{{圆了中国人民的}}\n{{航天梦}}`,
     // 快乐传递者何炅
     // 国士无双袁隆平
     titleAnimation: "sweep_slow", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
     sectionTitleAnimation: "sweep_glow", // 分镜字幕动画效果，可选值同titleAnimation
+    
+    // 视频质量配置
+    qualityMode: "high", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理)
     sectionTitle: [
       "1913年/0岁\n绍兴祖宅\n出生时刻",
       "1920年/7岁\n私塾学堂\n启蒙识字",
@@ -99,7 +102,7 @@ export default {
       get_deepseek_result_time: historyNum * 4.5, // 等待deepseek返回结果的时间, 单位为秒
       deepseek_result_txt_fn: () => {
         const historyNum = 16;
-        const name = "钱三强";
+        const name = "钱学森";
         const navPrompt = `比例9:16，中国人面孔，像${name}, 电影风格，不要出现汉字军，警察等特殊字眼, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 生成的图中不要包含任何地图相关的物品包括中国地图以及世界地图,也不要包含条约相关的`;
 
         // 实现 takeRight 函数，不依赖 lodash
