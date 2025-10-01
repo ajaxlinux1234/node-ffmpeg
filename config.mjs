@@ -1,8 +1,8 @@
 const transform =
   "当前镜头到下一镜头之间要结合视频描述词生成一种一定要明确是哪种运镜,不一定是电影运镜只要是高级运镜都可以,例如一镜到底的大师级转换画面或运动方式";
-const name = "钱学森";
-const prompt = `中国人面孔，像${name}, 电影风格，不要出现汉字军，警察等特殊字眼, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落`;
-const historyNum = 16;
+const name = "钱三强";
+const prompt = `中国人面孔，像${name}, 电影风格，不要出现汉字军，警察等特殊字眼, 出现情况要是当时的实际情况, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落`;
+const historyNum = 12;
 export default {
   "down-rm-watermark": {
     url: "https://aigc-idea-platform.cdn.bcebos.com/miaoying_video/shadow_i2v_1280x704_20250925_160634_a024gnii_2X_32fps_generate_metadata.mp4?authorization=bce-auth-v1%2FALTAKpTC4weJ6py821WCyek9FC%2F2025-09-25T08%3A06%3A41Z%2F-1%2F%2F612a44bb17040c579d19ab812adda61a6163d21f5bb02231b32c335a6e958b5b",
@@ -10,11 +10,11 @@ export default {
   },
   "history-person": {
     name,
-    url: "input/history-person/钱学森.mp4",
-    title: `航天之父${name}\n{{圆了中国人民的}}\n{{航天梦}}`,
+    url: "output/merge-video/merged_1759325333220_merged.mp4",
+    title: `中国原子弹之父${name}`,
     // 快乐传递者何炅
     // 国士无双袁隆平
-    titleAnimation: "sweep_slow", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
+    titleAnimation: "slide", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
     sectionTitleAnimation: "sweep_glow", // 分镜字幕动画效果，可选值同titleAnimation
     
     // 视频质量配置
@@ -22,20 +22,16 @@ export default {
     sectionTitle: [
       "1913年/0岁\n绍兴祖宅\n出生时刻",
       "1920年/7岁\n私塾学堂\n启蒙识字",
-      "1929年/16岁\n北京大学\n物理实验",
-      "1932年/19岁\n清华校园\n学术探讨",
-      "1937年/24岁\n巴黎大学\n实验室研究",
-      "1938年/25岁\n居里实验室\n师从居里夫人",
-      "1940年/27岁\n研究所\n核物理探索",
-      "1946年/33岁\n英国考察\n学术交流",
-      "1948年/35岁\n归国邮轮\n眺望祖国",
-      "1950年/37岁\n中科院\n组建团队",
-      "1955年/42岁\n研究所\n理论推导",
-      "1959年/46岁\n实验室\n指导实验",
-      "1964年/51岁\n科研基地\n技术攻关",
-      "1970年/57岁\n大学讲堂\n培育后学",
-      "1978年/65岁\n书房\n著书立说",
-      "1985年/72岁\n实验室\n传承指导",
+      "1929年/16岁\n孔德学校\n物理启蒙",
+      "1936年/23岁\n清华大学\n毕业研究",
+      "1937年/24岁\n巴黎大学\n留学深造",
+      "1940年/27岁\n居里实验室\n核物理研究",
+      "1946年/33岁\n法国研究所\n发现三分裂",
+      "1948年/35岁\n归国邮轮\n毅然回国",
+      "1950年/37岁\n中科院\n筹建研究所",
+      "1959年/46岁\n原子能所\n培养团队",
+      "1964年/51岁\n科研基地\n技术指导",
+      "1978年/65岁\n大学讲堂\n教书育人",
     ],
     watermark: "@人物传记史",
     "bg-music": "music/屠洪刚 - 精忠报国_start25s_clip.mp3",
@@ -44,8 +40,8 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v3-artist.vlabvod.com/6520012db231952ad66d141528acd9eb/68e64a08/video/tos/cn/tos-cn-v-148450/oM7ZydXioBI7bg50JkQEgCXipfzITBDhABwAQ1/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5967&bt=5967&cs=0&ds=12&ft=5QYTUxhhe6BMyqQ77YkJD12Nzj&mime_type=video_mp4&qs=0&rc=aWk1Ozk6NzY8Zjc7OTVoNkBpM3U6OHU5cjNqNjczNDM7M0BiLl9iYDMzXzIxXy0xXzBjYSNsX29mMmRza2JhLS1kNC9zcw%3D%3D&btag=c0000e00020000&dy_q=1759317851&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251001192411F18F036200F773C95E1E",
-      "https://v6-artist.vlabvod.com/f66e21996e2ac338ff50086f5993dbcf/68e64c82/video/tos/cn/tos-cn-v-148450/oUSgdFHMH3XdDEbrBfkBRbHigCE4AvfIEoWjQI/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6002&bt=6002&cs=0&ds=12&ft=5QYTUxhhe6BMyq.t6YkJD12Nzj&mime_type=video_mp4&qs=0&rc=NDNpODo5OmU0N2g6ZzQ4ZEBpMzU5dms5cm1rNjczNDM7M0A1X2NfMzJhXjYxLmNiLTNeYSMvNGYyMmQ0MGJhLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1759318500&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202510011935004DD15598137122AE8438",
+      "https://v26-artist.vlabvod.com/0d2b9fb3eeeb5fc1d062af2da552f857/68e666ff/video/tos/cn/tos-cn-v-148450/ogggQf9RDAHoFxDHDdEKSRIt3BCEM7ogfEBlrS/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5962&bt=5962&cs=0&ds=12&ft=5QYTUxhhe6BMyqoWPYkJD12Nzj&mime_type=video_mp4&qs=0&rc=OmkzODtpOjZpNTY4ODY5aUBpandoN3k5cmpsNjczNDM7M0AzMWJeYmNjXy8xMS4wM18uYSNxZTUzMmRzaWJhLS1kNC9zcw%3D%3D&btag=c0000e00020000&dy_q=1759325266&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251001212746FCF0AC638694C04844F6",
+      "https://v26-artist.vlabvod.com/2ef749edc5212b2a0820a7ec39011102/68e666dc/video/tos/cn/tos-cn-v-148450/o0eddcDkBQCItEAfuTGtEREuuIHXUKDdlLmOne/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6307&bt=6307&cs=0&ds=12&ft=5QYTUxhhe6BMyqoWPYkJD12Nzj&mime_type=video_mp4&qs=0&rc=NGQ7OGdmNDQ2NDk0OjMzZ0BpM2dueXU5cnJsNjczNDM7M0AyMDMvLy02X2ExYmAxNTQyYSNnNmdrMmRjaWJhLS1kNC9zcw%3D%3D&btag=c0000e00008000&dy_q=1759325266&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251001212746FCF0AC638694C04844F6",
     ],
     switch: "无转场", // 支持：叠化、淡入淡出、推拉、擦除、无转场
   },
@@ -101,9 +97,9 @@ export default {
       },
       get_deepseek_result_time: historyNum * 4.5, // 等待deepseek返回结果的时间, 单位为秒
       deepseek_result_txt_fn: () => {
-        const historyNum = 16;
-        const name = "钱学森";
-        const navPrompt = `比例9:16，中国人面孔，像${name}, 电影风格，不要出现汉字军，警察等特殊字眼, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 生成的图中不要包含任何地图相关的物品包括中国地图以及世界地图,也不要包含条约相关的`;
+        const historyNum = 12;
+        const name = "钱三强";
+        const navPrompt = `比例9:16，中国人面孔，像${name}, 电影风格，不要出现汉字军，警察等特殊字眼, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 生成的图中不要包含任何地图相关的物品,也不要包含条约相关的, 任何位置都不要出现地图`;
 
         // 实现 takeRight 函数，不依赖 lodash
         function takeRight(arr, n) {
