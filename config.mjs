@@ -1,6 +1,6 @@
 const transform =
   "当前镜头到下一镜头之间要结合视频描述词生成一种一定要明确是哪种运镜,不一定是电影运镜只要是高级运镜都可以,例如一镜到底的大师级转换画面或运动方式";
-const name = "钱学森";
+const name = "钱三强";
 const prompt = `中国人面孔，像${name}, 电影风格，不要出现汉字军，警察等特殊字眼, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落`;
 const historyNum = 16;
 export default {
@@ -17,22 +17,22 @@ export default {
     titleAnimation: "sweep_slow", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
     sectionTitleAnimation: "sweep_glow", // 分镜字幕动画效果，可选值同titleAnimation
     sectionTitle: [
-      "1911年/0岁\n杭州祖宅\n出生时刻",
-      "1923年/12岁\n北师大附中\n课堂听讲",
-      "1929年/18岁\n交通大学\n图书馆研读",
-      "1935年/24岁\n麻省理工\n实验室研究",
-      "1936年/25岁\n加州理工\n师从冯·卡门",
-      "1939年/28岁\n火箭小组\n实验攻关",
-      "1945年/34岁\n德国考察\n技术交流",
-      "1949年/38岁\n喷气推进实验室\n课题指导",
-      "1955年/44岁\n归国邮轮\n眺望东方",
-      "1956年/45岁\n中科院\n制定规划",
-      "1960年/49岁\n研究所\n理论推导",
-      "1966年/55岁\n科研基地\n现场指导",
-      "1970年/59岁\n发射场\n观摩首星",
-      "1978年/67岁\n大学讲堂\n培育后学",
-      "1986年/75岁\n书房\n著书立说",
-      "1991年/80岁\n家中\n坚持研究",
+      "1913年/0岁\n绍兴祖宅\n出生时刻",
+      "1920年/7岁\n私塾学堂\n启蒙识字",
+      "1929年/16岁\n北京大学\n物理实验",
+      "1932年/19岁\n清华校园\n学术探讨",
+      "1937年/24岁\n巴黎大学\n实验室研究",
+      "1938年/25岁\n居里实验室\n师从居里夫人",
+      "1940年/27岁\n研究所\n核物理探索",
+      "1946年/33岁\n英国考察\n学术交流",
+      "1948年/35岁\n归国邮轮\n眺望祖国",
+      "1950年/37岁\n中科院\n组建团队",
+      "1955年/42岁\n研究所\n理论推导",
+      "1959年/46岁\n实验室\n指导实验",
+      "1964年/51岁\n科研基地\n技术攻关",
+      "1970年/57岁\n大学讲堂\n培育后学",
+      "1978年/65岁\n书房\n著书立说",
+      "1985年/72岁\n实验室\n传承指导",
     ],
     watermark: "@人物传记史",
     "bg-music": "music/韩磊 - 向天再借五百年_start22s_clip.mp3",
@@ -41,10 +41,10 @@ export default {
   },
   "merge-video": {
     urls: [
-      "input/history-person/钱学森.mp4",
-      "https://v26-artist.vlabvod.com/137d8827aadf3b99cab30e69e778a6c5/68e5f41a/video/tos/cn/tos-cn-v-148450/okf3ulwhbAAiWmbIQE2BxWJNEhyQX0tOBDgciz/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6011&bt=6011&cs=0&ds=12&ft=5QYTUxhhe6BMyqKDUYkJD12Nzj&mime_type=video_mp4&qs=0&rc=aGVlM2RmNDNlMztoaDw7NkBpajd1bWs5cnJlNjczNDM7M0A2MGA2My8vNWIxYC4zNWFgYSNhYGZkMmRjZmJhLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1759295868&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=2025100113174809DCEC539D771AFE0373",
+      "https://v3-artist.vlabvod.com/6520012db231952ad66d141528acd9eb/68e64a08/video/tos/cn/tos-cn-v-148450/oM7ZydXioBI7bg50JkQEgCXipfzITBDhABwAQ1/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5967&bt=5967&cs=0&ds=12&ft=5QYTUxhhe6BMyqQ77YkJD12Nzj&mime_type=video_mp4&qs=0&rc=aWk1Ozk6NzY8Zjc7OTVoNkBpM3U6OHU5cjNqNjczNDM7M0BiLl9iYDMzXzIxXy0xXzBjYSNsX29mMmRza2JhLS1kNC9zcw%3D%3D&btag=c0000e00020000&dy_q=1759317851&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251001192411F18F036200F773C95E1E",
+      "https://v6-artist.vlabvod.com/f66e21996e2ac338ff50086f5993dbcf/68e64c82/video/tos/cn/tos-cn-v-148450/oUSgdFHMH3XdDEbrBfkBRbHigCE4AvfIEoWjQI/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6002&bt=6002&cs=0&ds=12&ft=5QYTUxhhe6BMyq.t6YkJD12Nzj&mime_type=video_mp4&qs=0&rc=NDNpODo5OmU0N2g6ZzQ4ZEBpMzU5dms5cm1rNjczNDM7M0A1X2NfMzJhXjYxLmNiLTNeYSMvNGYyMmQ0MGJhLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1759318500&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202510011935004DD15598137122AE8438",
     ],
-    switch: "叠化", // 支持：叠化、淡入淡出、推拉、擦除、无转场
+    switch: "无转场", // 支持：叠化、淡入淡出、推拉、擦除、无转场
   },
   "ai-remove-watermark": {
     url: "output/history-person/1758868423130_10b9525ce467.mp4",
@@ -99,8 +99,8 @@ export default {
       get_deepseek_result_time: historyNum * 4.5, // 等待deepseek返回结果的时间, 单位为秒
       deepseek_result_txt_fn: () => {
         const historyNum = 16;
-        const name = "钱学森";
-        const navPrompt = `比例9:16，中国人面孔，像${name}, 电影风格，不要出现汉字军，警察等特殊字眼, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一`;
+        const name = "钱三强";
+        const navPrompt = `比例9:16，中国人面孔，像${name}, 电影风格，不要出现汉字军，警察等特殊字眼, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 生成的图中不要包含任何地图相关的物品包括中国地图以及世界地图,也不要包含条约相关的`;
 
         // 实现 takeRight 函数，不依赖 lodash
         function takeRight(arr, n) {
