@@ -1,7 +1,7 @@
 const transform =
   "当前镜头到下一镜头之间要结合视频描述词生成一种一定要一镜到底, 运镜的转换是当前人物在当前场景到下一个场景的合理转换,要是大师级转换";
-const name = "中国核潜艇之父黄旭华";
-const prompt = `中国人面孔，像${name}, 电影风格，人物出生的镜头换下, 不要跟上下文中的重复, 从出生到去世, 各个镜头采用一镜到底, 不要出现汉字军，警察党旗,核潜艇等特殊字眼, 搜索资料,要是完全符合即梦生图和视频的提示词, 出现情况要是当时的实际情况, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落, 画面提示跟运镜方式都要新起个段落`;
+const name = "中国氢弹之父于敏";
+const prompt = `中国人面孔，像${name}, 电影风格，人物出生的镜头换下, 不要跟上下文中的重复, 不要讲去世, 各个镜头采用一镜到底, 不要出现汉字军，警察党旗,核潜艇, 遗像等特殊字眼, 搜索资料,要是完全符合即梦生图和视频的提示词, 出现情况要是当时的实际情况, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落, 画面提示跟运镜方式都要新起个段落`;
 const historyNum = 13;
 const accountId = 2;
 export default {
@@ -21,19 +21,19 @@ export default {
     // 视频质量配置
     qualityMode: "high", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理)
     sectionTitle: [
-      "1926/0岁 \n 广东汕尾医家宅院 \n 婴儿降生",
-      "1938/12岁 \n 粤北迁徙山路 \n 战时跋涉求学",
-      "1945/19岁 \n 重庆防空洞课堂 \n 钻研船舶知识",
-      "1949/23岁 \n 上海交通大学 \n 毕业投身建设",
-      "1958/32岁 \n 北方研究所 \n 接受特殊任务",
-      "1965/39岁 \n 渤海试验基地 \n 技术论证计算",
-      "1970/44岁 \n 大型装配车间 \n 重要项目督导",
-      "1988/62岁 \n 南方试验场 \n 参与关键测试",
-      "1994/68岁 \n 武汉研究所 \n 培养科技人才",
-      "2006/80岁 \n 大学校园 \n 学术指导传承",
-      "2018/92岁 \n 海滨长廊 \n 追忆奋斗岁月",
-      "2021/95岁 \n 家中书房 \n 捐赠设立基金",
-      "2023/97岁 \n 广东汕尾故乡 \n 晚年静养生活",
+      "1926/0岁\n河北宁河老宅\n婴儿降生",
+      "1938/12岁\n天津耀华中学\n战火苦读",
+      "1944/18岁\n北京大学图书馆\n物理启蒙",
+      "1949/23岁\n北京研究所\n理论攻关",
+      "1951/25岁\n中科院近代物理所\n原子核理论研究",
+      "1961/35岁\n简朴办公室\n受命新任务",
+      "1965/39岁\n上海华东计算所\n氢弹原理突破",
+      "1967/41岁\n西北基地\n见证氢弹试验成功",
+      "1980/54岁\n实验室\n开拓新领域",
+      "1988/62岁\n国际学术会议\n首次公开交流",
+      "1999/73岁\n颁奖典礼\n获功勋奖章",
+      "2015/89岁\n家中书房\n获最高科学技术奖",
+      "2018/92岁\n自家庭院\n晚年静思",
     ],
     watermark: "@人物传记史",
     "bg-music": "music/屠洪刚 - 精忠报国_start25s_clip.mp3",
@@ -42,8 +42,8 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v3-artist.vlabvod.com/7aed83039dffb50081ca7995a0dafd5c/68e74412/video/tos/cn/tos-cn-v-148450/owuigsLYevEL9sf8BCGkR7vtDMRADC2OCAIaet/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5958&bt=5958&cs=0&ds=12&ft=5QYTUxhhe6BMyqPD5YkJD12Nzj&mime_type=video_mp4&qs=0&rc=PDVnNGhkNWg7Ojs5ZGk1PEBpamV0bHU5cnMzNjczNDM7M0AwMzJfLzUxX2MxLTNgNWFfYSMyZXI2MmRjYmNhLS1kNC9zcw%3D%3D&btag=c0000e00020000&dy_q=1759381861&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251002131101F649008792036DEA5DDB",
-      "https://v26-artist.vlabvod.com/2e7dfbda003df46fa2ae2af34f469608/68e7442f/video/tos/cn/tos-cn-v-148450/oUBObvAeDLqskCGC7RhhD0AtMIgAeB3GReCZcJ/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6143&bt=6143&cs=0&ds=12&ft=5QYTUxhhe6BMyq~e5YkJD12Nzj&mime_type=video_mp4&qs=0&rc=NzMzZGRlNGU6aDY3Njo2O0Bpamd1Z3I5cjczNjczNDM7M0AxYmExYS5fXjMxLTMvMy1jYSNxaWs1MmQ0Z2NhLS1kNDBzcw%3D%3D&btag=c0000e00010000&dy_q=1759381920&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202510021312007DEEACBE459D28637499",
+      "https://v26-artist.vlabvod.com/c18b266c24bd039e12242a3db84595bb/68e76f05/video/tos/cn/tos-cn-v-148450/okg11zofBoExuDAUBWDekIFjYjW3gS6Q64MzIH/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6010&bt=6010&cs=0&ds=12&ft=5QYTUxhhe6BMyqNHnYkJD12Nzj&mime_type=video_mp4&qs=0&rc=OTw5NTo3NTc5aGU7NTM0PEBpM3RncHc5cmY2NjczNDM7M0AtMjI0LS8zNV4xNTRgYGJfYSNuMWliMmRzMWNhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1759392866&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202510021614264AFB9A46A2184065B0C9",
+      "https://v3-artist.vlabvod.com/81bc8bddec4ef7b19e4ef5ac605432f9/68e76f29/video/tos/cn/tos-cn-v-148450/owGhBa8MGQeeDDROkaTeOvIG8CSk7QkqXgWTIA/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6180&bt=6180&cs=0&ds=12&ft=5QYTUxhhe6BMyqC0nYkJD12Nzj&mime_type=video_mp4&qs=0&rc=NGRmNDM0OTw3ZjRpZjU5O0Bpamx0bHk5cjU2NjczNDM7M0BgNjYzMi9hNV4xLWIwNGJiYSM0Li9oMmRjNmNhLS1kNDBzcw%3D%3D&btag=c0000e00010000&dy_q=1759392922&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251002161522B1BDCE81C149BC313C78",
     ],
     switch: "无转场", // 支持：叠化、淡入淡出、推拉、擦除、无转场
   },
@@ -118,8 +118,8 @@ export default {
       get_deepseek_result_time: historyNum * 10, // 等待deepseek返回结果的时间, 单位为秒
       deepseek_result_txt_fn: () => {
         const historyNum = 13;
-        const name = "中国核潜艇之父黄旭华";
-        const navPrompt = `比例9:16，中国人面孔，像${name}, 电影风格，不要出现汉字军，警察等特殊字眼, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 生成的图中不要包含任何地图相关的物品,也不要包含条约相关的, 任何位置都不要出现地图`;
+        const name = "中国氢弹之父于敏";
+        const navPrompt = `比例9:16，中国人面孔，像${name}, 电影风格，不要出现汉字军，警察遗像不要出现病房医院等特殊字眼, 任何地方都不要出现地图, 人物的衣服不要破洞, 物品服饰场景等要符合那个年代的场景, 衣服不要破洞, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 生成的图中不要包含任何地图相关的物品,也不要包含条约相关的, 任何位置都不要出现地图`;
 
         // 实现 takeRight 函数，不依赖 lodash
         function takeRight(arr, n) {
@@ -127,14 +127,23 @@ export default {
           return arr.slice(Math.max(0, arr.length - n));
         }
 
-        const originTitle = takeRight(
-          Array.from(document.querySelectorAll("span"))
-            .map((one) => one.innerText)
-            .filter((one) => one.includes("|") && /^\d/.test(one)),
-          historyNum
-        );
+        const originTitle =
+          takeRight(
+            Array.from(document.querySelectorAll("span"))
+              .map((one) => one.innerText)
+              .filter((one) => /^\d/.test(one) && one.includes("|")),
+            historyNum
+          ) ||
+          takeRight(
+            Array.from(document.querySelectorAll("span"))
+              .map((one) => one.innerText)
+              .filter((one) => one.includes("|") && /^\d/.test(one)),
+            historyNum
+          );
 
-        const title = originTitle.map((one) => one.replaceAll("|", "\n"));
+        const title = originTitle.map((one) =>
+          one.replaceAll("|", "\n").replaceAll("\t", "\n").replaceAll('"', "'")
+        );
 
         const globalPrompt = Array.from(
           Array.from(document.querySelectorAll("ul"))
@@ -194,8 +203,9 @@ export default {
     "jimeng-video-generator": {
       accountId, // 使用账号2
       generate_section: 2, // 由于即梦智能多镜一次最多上传10张图片, 所以需要分多次上传, 此参数表示是要上传的第几次
+      generate_section_num: 8, // 分批上传一次section要上传多少张
       url: "https://jimeng.jianying.com/ai-tool/home?type=video", // 1.打开即梦视频生成首页
-      generate_button_selector: `#AIGeneratedRecord`, // 点击生成按钮
+      generate_button_selector: `#AIGeneratedRecord`, // 点击生按钮
       video_generate_select_trigger_selector: ".lv-typography", // 首尾帧选择器范围
       video_generate_select_trigger_text: "首尾帧", // 点击包含"首尾帧"的元素
       video_generate_select_item_text: "智能多帧", // 点击包含"智能多帧"的元素, 切换成智能多帧模式
