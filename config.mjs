@@ -11,8 +11,8 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1759331937876_merged.mp4",
-    title: `中国原子弹之父\n{{${name}}}`,
+    url: "output/merge-video/merged_1759382276354_merged.mp4",
+    title: `中国核潜艇之父\n{{黄旭华}}\n让中国成为第五个\n拥有{{核潜艇}}的国家`,
     // 快乐传递者何炅
     // 国士无双袁隆平
     titleAnimation: "sweep_fast", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
