@@ -30,7 +30,7 @@ export default {
       "1965/39岁\n上海华东计算所\n氢弹原理突破",
       "1967/41岁\n西北基地\n见证氢弹试验成功",
       "1980/54岁\n实验室\n开拓新领域",
-      "1988/62岁\n国际学术会议\n首次公开交流"
+      "1988/62岁\n国际学术会议\n首次公开交流",
     ],
     watermark: "@人物传记史",
     "bg-music": "music/屠洪刚 - 精忠报国_start25s_clip.mp3",
@@ -39,7 +39,7 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v6-artist.vlabvod.com/baa62b7b07a223a062afd586544073bd/68e7750a/video/tos/cn/tos-cn-v-148450/oUSgdFHMH3XdDEbrBfkBRbHigCE4AvfIEoWjQI/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6002&bt=6002&cs=0&ds=12&ft=5QYTUxhhe6BMyqBNnYkJD12Nzj&mime_type=video_mp4&qs=0&rc=NDNpODo5OmU0N2g6ZzQ4ZEBpMzU5dms5cm1rNjczNDM7M0A1X2NfMzJhXjYxLmNiLTNeYSMvNGYyMmQ0MGJhLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1759394412&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251002164012ACD597A2478A58FF5BC4",
+      "https://v6-artist.vlabvod.com/c62aa2448491a02a3fe94a52bed2e80f/68e77519/video/tos/cn/tos-cn-v-148450/oM7ZydXioBI7bg50JkQEgCXipfzITBDhABwAQ1/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5967&bt=5967&cs=0&ds=12&ft=5QYTUxhhe6BMyqBNnYkJD12Nzj&mime_type=video_mp4&qs=0&rc=aWk1Ozk6NzY8Zjc7OTVoNkBpM3U6OHU5cjNqNjczNDM7M0BiLl9iYDMzXzIxXy0xXzBjYSNsX29mMmRza2JhLS1kNC9zcw%3D%3D&btag=c0000e00020000&dy_q=1759394412&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251002164012ACD597A2478A58FF5BC4",
       "https://v26-artist.vlabvod.com/f18ff2f562866e915b5f127258a06167/68e77420/video/tos/cn/tos-cn-v-148450/okf3ulwhbAAiWmbIQE2BxWJNEhyQX0tOBDgciz/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6011&bt=6011&cs=0&ds=12&ft=5QYTUxhhe6BMyqqenYkJD12Nzj&mime_type=video_mp4&qs=0&rc=aGVlM2RmNDNlMztoaDw7NkBpajd1bWs5cnJlNjczNDM7M0A2MGA2My8vNWIxYC4zNWFgYSNhYGZkMmRjZmJhLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1759394178&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=2025100216361882FE7E28394F5123C56D",
     ],
     switch: "无转场", // 支持：叠化、淡入淡出、推拉、擦除、无转场
