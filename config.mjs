@@ -11,8 +11,8 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1759331937876_merged.mp4",
-    title: `中国原子弹之父\n{{${name}}}`,
+    url: "output/merge-video/merged_1759393136769_merged.mp4",
+    title: `中国氢弹之父\n{{于敏}}\n让中国成为第四个\n拥有{{氢弹技术}}的国家`,
     // 快乐传递者何炅
     // 国士无双袁隆平
     titleAnimation: "sweep_fast", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
@@ -30,10 +30,7 @@ export default {
       "1965/39岁\n上海华东计算所\n氢弹原理突破",
       "1967/41岁\n西北基地\n见证氢弹试验成功",
       "1980/54岁\n实验室\n开拓新领域",
-      "1988/62岁\n国际学术会议\n首次公开交流",
-      "1999/73岁\n颁奖典礼\n获功勋奖章",
-      "2015/89岁\n家中书房\n获最高科学技术奖",
-      "2018/92岁\n自家庭院\n晚年静思",
+      "1988/62岁\n国际学术会议\n首次公开交流"
     ],
     watermark: "@人物传记史",
     "bg-music": "music/屠洪刚 - 精忠报国_start25s_clip.mp3",
