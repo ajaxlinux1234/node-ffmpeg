@@ -53,6 +53,23 @@ export default {
       extra_regions: [{ x: 6, y: 6, w: 220, h: 120 }],
     },
   },
+  filter: {
+    input: "output/merge-video/merged_1759325333220_merged.mp4",
+    // output: "output/filter/custom_output.mp4", // 可选，不指定则自动生成
+    preset: "cinematic-teal-orange", // 预设滤镜名称，使用 --list 查看所有可用滤镜
+    // customFilter: "eq=contrast=1.2:saturation=1.3", // 自定义滤镜字符串，与preset二选一
+    quality: "high", // high, medium, low
+    keepAudio: true, // 是否保留音频
+  },
+  "convert-3d": {
+    input: "output/filter/merged_1759325333220_merged_cinematic-teal-orange.mp4",
+    // output: "output/convert-3d/custom_3d.mp4", // 可选，不指定则自动生成
+    mode: "anaglyph-red-cyan", // 3D模式，使用 --list 查看所有可用模式
+    // 可选模式: anaglyph-red-cyan, anaglyph-green-magenta, side-by-side, top-bottom
+    depth: 0.3, // 深度强度 0.0-1.0，值越大3D效果越明显
+    quality: "high", // high, medium, low
+    keepAudio: true, // 是否保留音频
+  },
   "clip-audio": [
     {
       url: "input/clip-audio/韩磊 - 向天再借五百年.mp3",
