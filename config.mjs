@@ -1,8 +1,9 @@
 const transform =
-  "当前镜头到下一镜头之间要结合视频描述词生成一种一定要明确是哪种运镜,不一定是电影运镜只要是高级运镜都可以,例如一镜到底的大师级转换画面或运动方式";
-const name = "钱三强";
-const prompt = `中国人面孔，像${name}, 电影风格，不要出现汉字军，警察等特殊字眼, 出现情况要是当时的实际情况, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落`;
-const historyNum = 12;
+  "当前镜头到下一镜头之间要结合视频描述词生成一种一定要一镜到底, 运镜的转换是当前人物在当前场景到下一个场景的合理转换,要是大师级转换";
+const name = "中国核潜艇之父黄旭华";
+const prompt = `中国人面孔，像${name}, 电影风格，人物出生的镜头换下, 不要跟上下文中的重复, 从出生到去世, 各个镜头采用一镜到底, 不要出现汉字军，警察党旗,核潜艇等特殊字眼, 搜索资料,要是完全符合即梦生图和视频的提示词, 出现情况要是当时的实际情况, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落, 画面提示跟运镜方式都要新起个段落`;
+const historyNum = 13;
+const accountId = 2;
 export default {
   "down-rm-watermark": {
     url: "https://aigc-idea-platform.cdn.bcebos.com/miaoying_video/shadow_i2v_1280x704_20250925_160634_a024gnii_2X_32fps_generate_metadata.mp4?authorization=bce-auth-v1%2FALTAKpTC4weJ6py821WCyek9FC%2F2025-09-25T08%3A06%3A41Z%2F-1%2F%2F612a44bb17040c579d19ab812adda61a6163d21f5bb02231b32c335a6e958b5b",
@@ -16,22 +17,23 @@ export default {
     // 国士无双袁隆平
     titleAnimation: "sweep_fast", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
     sectionTitleAnimation: "sweep_glow", // 分镜字幕动画效果，可选值同titleAnimation
-    
+
     // 视频质量配置
     qualityMode: "high", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理)
     sectionTitle: [
-      "1913年/0岁\n绍兴祖宅\n出生时刻",
-      "1920年/7岁\n私塾学堂\n启蒙识字",
-      "1929年/16岁\n孔德学校\n物理启蒙",
-      "1936年/23岁\n清华大学\n毕业研究",
-      "1937年/24岁\n巴黎大学\n留学深造",
-      "1940年/27岁\n居里实验室\n核物理研究",
-      "1946年/33岁\n法国研究所\n发现三分裂",
-      "1948年/35岁\n归国邮轮\n毅然回国",
-      "1950年/37岁\n中科院\n筹建研究所",
-      "1959年/46岁\n原子能所\n培养团队",
-      "1964年/51岁\n科研基地\n技术指导",
-      "1978年/65岁\n大学讲堂\n教书育人",
+      "1926/0岁 \n 广东汕尾医家宅院 \n 婴儿降生",
+      "1938/12岁 \n 粤北迁徙山路 \n 战时跋涉求学",
+      "1945/19岁 \n 重庆防空洞课堂 \n 钻研船舶知识",
+      "1949/23岁 \n 上海交通大学 \n 毕业投身建设",
+      "1958/32岁 \n 北方研究所 \n 接受特殊任务",
+      "1965/39岁 \n 渤海试验基地 \n 技术论证计算",
+      "1970/44岁 \n 大型装配车间 \n 重要项目督导",
+      "1988/62岁 \n 南方试验场 \n 参与关键测试",
+      "1994/68岁 \n 武汉研究所 \n 培养科技人才",
+      "2006/80岁 \n 大学校园 \n 学术指导传承",
+      "2018/92岁 \n 海滨长廊 \n 追忆奋斗岁月",
+      "2021/95岁 \n 家中书房 \n 捐赠设立基金",
+      "2023/97岁 \n 广东汕尾故乡 \n 晚年静养生活",
     ],
     watermark: "@人物传记史",
     "bg-music": "music/屠洪刚 - 精忠报国_start25s_clip.mp3",
@@ -40,8 +42,8 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v26-artist.vlabvod.com/0d2b9fb3eeeb5fc1d062af2da552f857/68e666ff/video/tos/cn/tos-cn-v-148450/ogggQf9RDAHoFxDHDdEKSRIt3BCEM7ogfEBlrS/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5962&bt=5962&cs=0&ds=12&ft=5QYTUxhhe6BMyqoWPYkJD12Nzj&mime_type=video_mp4&qs=0&rc=OmkzODtpOjZpNTY4ODY5aUBpandoN3k5cmpsNjczNDM7M0AzMWJeYmNjXy8xMS4wM18uYSNxZTUzMmRzaWJhLS1kNC9zcw%3D%3D&btag=c0000e00020000&dy_q=1759325266&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251001212746FCF0AC638694C04844F6",
-      "https://v26-artist.vlabvod.com/2ef749edc5212b2a0820a7ec39011102/68e666dc/video/tos/cn/tos-cn-v-148450/o0eddcDkBQCItEAfuTGtEREuuIHXUKDdlLmOne/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6307&bt=6307&cs=0&ds=12&ft=5QYTUxhhe6BMyqoWPYkJD12Nzj&mime_type=video_mp4&qs=0&rc=NGQ7OGdmNDQ2NDk0OjMzZ0BpM2dueXU5cnJsNjczNDM7M0AyMDMvLy02X2ExYmAxNTQyYSNnNmdrMmRjaWJhLS1kNC9zcw%3D%3D&btag=c0000e00008000&dy_q=1759325266&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251001212746FCF0AC638694C04844F6",
+      "https://v3-artist.vlabvod.com/7aed83039dffb50081ca7995a0dafd5c/68e74412/video/tos/cn/tos-cn-v-148450/owuigsLYevEL9sf8BCGkR7vtDMRADC2OCAIaet/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5958&bt=5958&cs=0&ds=12&ft=5QYTUxhhe6BMyqPD5YkJD12Nzj&mime_type=video_mp4&qs=0&rc=PDVnNGhkNWg7Ojs5ZGk1PEBpamV0bHU5cnMzNjczNDM7M0AwMzJfLzUxX2MxLTNgNWFfYSMyZXI2MmRjYmNhLS1kNC9zcw%3D%3D&btag=c0000e00020000&dy_q=1759381861&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251002131101F649008792036DEA5DDB",
+      "https://v26-artist.vlabvod.com/2e7dfbda003df46fa2ae2af34f469608/68e7442f/video/tos/cn/tos-cn-v-148450/oUBObvAeDLqskCGC7RhhD0AtMIgAeB3GReCZcJ/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6143&bt=6143&cs=0&ds=12&ft=5QYTUxhhe6BMyq~e5YkJD12Nzj&mime_type=video_mp4&qs=0&rc=NzMzZGRlNGU6aDY3Njo2O0Bpamd1Z3I5cjczNjczNDM7M0AxYmExYS5fXjMxLTMvMy1jYSNxaWs1MmQ0Z2NhLS1kNDBzcw%3D%3D&btag=c0000e00010000&dy_q=1759381920&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202510021312007DEEACBE459D28637499",
     ],
     switch: "无转场", // 支持：叠化、淡入淡出、推拉、擦除、无转场
   },
@@ -65,7 +67,8 @@ export default {
     keepAudio: true, // 是否保留音频
   },
   "convert-3d": {
-    input: "output/filter/merged_1759325333220_merged_cinematic-teal-orange.mp4",
+    input:
+      "output/filter/merged_1759325333220_merged_cinematic-teal-orange.mp4",
     // output: "output/convert-3d/custom_3d.mp4", // 可选，不指定则自动生成
     mode: "anaglyph-red-cyan", // 3D模式，使用 --list 查看所有可用模式
     // 可选模式: anaglyph-red-cyan, anaglyph-green-magenta, side-by-side, top-bottom
@@ -112,10 +115,10 @@ export default {
         name,
         timeNum: historyNum,
       },
-      get_deepseek_result_time: historyNum * 4.5, // 等待deepseek返回结果的时间, 单位为秒
+      get_deepseek_result_time: historyNum * 10, // 等待deepseek返回结果的时间, 单位为秒
       deepseek_result_txt_fn: () => {
-        const historyNum = 12;
-        const name = "钱三强";
+        const historyNum = 13;
+        const name = "中国核潜艇之父黄旭华";
         const navPrompt = `比例9:16，中国人面孔，像${name}, 电影风格，不要出现汉字军，警察等特殊字眼, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 生成的图中不要包含任何地图相关的物品,也不要包含条约相关的, 任何位置都不要出现地图`;
 
         // 实现 takeRight 函数，不依赖 lodash
@@ -124,11 +127,12 @@ export default {
           return arr.slice(Math.max(0, arr.length - n));
         }
 
-        const originTitle = Array.from(
-          Array.from(document.querySelectorAll("ol"))
-            .pop()
-            .querySelectorAll("span")
-        ).map((one) => one.innerText);
+        const originTitle = takeRight(
+          Array.from(document.querySelectorAll("span"))
+            .map((one) => one.innerText)
+            .filter((one) => one.includes("|") && /^\d/.test(one)),
+          historyNum
+        );
 
         const title = originTitle.map((one) => one.replaceAll("|", "\n"));
 
@@ -137,14 +141,22 @@ export default {
             .pop()
             .querySelectorAll("span")
         )
-          .map((one) => one.innerText)
+          .map((one) =>
+            one.innerText
+              .replaceAll(/-,?/g, "")
+              .replaceAll("\n", "")
+              .replaceAll(/\d,?/g, "")
+          )
           .join();
 
         const prompt = takeRight(
           [...document.querySelectorAll("span")]
             .map((one) => one.innerText)
             .filter(
-              (one) => one.startsWith("画面提示") || one.startsWith("画面内容")
+              (one) =>
+                one.startsWith("画面提示") ||
+                one.startsWith("画面内容") ||
+                one.startsWith("中国人面孔")
             ),
           historyNum
         );
@@ -165,7 +177,7 @@ export default {
       },
     },
     jimeng: {
-      accountId: 1,
+      accountId,
       name,
       url: "https://jimeng.jianying.com/ai-tool/home?type=image", // 打开即梦图片生成首页
       login_selector: {
@@ -180,6 +192,7 @@ export default {
       gernerate_img_result_selector: `div[style="--aspect-ratio: 0.5625;"]`, // 生成结果
     },
     "jimeng-video-generator": {
+      accountId, // 使用账号2
       generate_section: 2, // 由于即梦智能多镜一次最多上传10张图片, 所以需要分多次上传, 此参数表示是要上传的第几次
       url: "https://jimeng.jianying.com/ai-tool/home?type=video", // 1.打开即梦视频生成首页
       generate_button_selector: `#AIGeneratedRecord`, // 点击生成按钮
