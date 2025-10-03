@@ -1,9 +1,11 @@
+import jimengVideoConfig from "./jimeng-video-config.mjs";
+
 const transform =
-  "当前镜头到下一镜头之间要结合视频描述词生成一种一定要一镜到底, 运镜的转换是当前人物在当前场景到下一个场景的合理转换,要是大师级转换";
-const name = "中国氢弹之父于敏";
-const prompt = `中国人面孔，像${name}, 电影风格，人物出生的镜头换下, 不要跟上下文中的重复, 不要讲去世, 各个镜头采用一镜到底, 不要出现汉字军，警察党旗,核潜艇, 遗像等特殊字眼, 搜索资料,要是完全符合即梦生图和视频的提示词, 出现情况要是当时的实际情况, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落, 画面提示跟运镜方式都要新起个段落`;
+  "当前镜头到下一镜头之间要结合视频描述词生成一种一定要一镜到底, 运镜的转换是当前人物在当前场景到下一个场景的合理转换,要是大师级转换, 从一个镜头到另一个镜头的转换细节是: 主人物自然从一个场景到另一个场景, 一定要自然, 而且都要是主人物, 运镜转换描述一定是主人物从一个场景到下一个场景, 例如邓稼先从婴儿状态(出生场景)跑着去学校(另一场景)上学, 所有运镜转化的中心都是只描述主人物从一个场景到另一个场景的过渡, 并且主人物的表情要自然贴合当时的场景";
+const name = "日本人却对抗日战争做出贡献的伊田助男";
+const prompt = `中国人面孔，像${name}, 电影风格，生成图片一定要是人物正脸全身照, 人物出生的镜头换下, 不要跟上下文中的重复, 不要讲去世, 各个镜头采用一镜到底, 不要出现汉字军，军国主义, 警察党旗,核潜艇, 遗像等特殊字眼, 搜索资料,要是完全符合即梦生图和视频的提示词, 出现情况要是当时的实际情况, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落, 画面提示跟运镜方式都要新起个段落`;
 const historyNum = 13;
-const accountId = 2;
+const accountId = 3;
 export default {
   "down-rm-watermark": {
     url: "https://aigc-idea-platform.cdn.bcebos.com/miaoying_video/shadow_i2v_1280x704_20250925_160634_a024gnii_2X_32fps_generate_metadata.mp4?authorization=bce-auth-v1%2FALTAKpTC4weJ6py821WCyek9FC%2F2025-09-25T08%3A06%3A41Z%2F-1%2F%2F612a44bb17040c579d19ab812adda61a6163d21f5bb02231b32c335a6e958b5b",
@@ -21,16 +23,19 @@ export default {
     // 视频质量配置
     qualityMode: "high", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理)
     sectionTitle: [
-      "1926/0岁\n河北宁河老宅\n婴儿降生",
-      "1938/12岁\n天津耀华中学\n战火苦读",
-      "1944/18岁\n北京大学图书馆\n物理启蒙",
-      "1949/23岁\n北京研究所\n理论攻关",
-      "1951/25岁\n中科院近代物理所\n原子核理论研究",
-      "1961/35岁\n简朴办公室\n受命新任务",
-      "1965/39岁\n上海华东计算所\n氢弹原理突破",
-      "1967/41岁\n西北基地\n见证氢弹试验成功",
-      "1980/54岁\n实验室\n开拓新领域",
-      "1988/62岁\n国际学术会议\n首次公开交流",
+      "1909/0岁\n日本乡村传统住宅\n婴儿降生",
+      "1916/7岁\n乡村私塾\n学习写字",
+      "1922/13岁\n中学校园\n阅读进步书籍",
+      "1926/17岁\n工厂车间\n参与夜校学习",
+      "1929/20岁\n医疗培训所\n学习救护知识",
+      "1932/23岁\n码头仓库\n搬运物资",
+      "1933/24岁\n东北山区\n执行运输任务",
+      "1933/24岁\n村庄附近\n接触新思想",
+      "1934/25岁\n驻地宿舍\n深夜思考",
+      "1934/25岁\n货运卡车\n整理物品",
+      "1934/25岁\n白桦林\n做出重要抉择",
+      "1934/25岁\n小溪边\n书写重要文件",
+      "1934/25岁\n历史画卷\n精神永存",
     ],
     watermark: "@人物传记史",
     "bg-music": "music/屠洪刚 - 精忠报国_start25s_clip.mp3",
@@ -39,8 +44,8 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v6-artist.vlabvod.com/c62aa2448491a02a3fe94a52bed2e80f/68e77519/video/tos/cn/tos-cn-v-148450/oM7ZydXioBI7bg50JkQEgCXipfzITBDhABwAQ1/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5967&bt=5967&cs=0&ds=12&ft=5QYTUxhhe6BMyqBNnYkJD12Nzj&mime_type=video_mp4&qs=0&rc=aWk1Ozk6NzY8Zjc7OTVoNkBpM3U6OHU5cjNqNjczNDM7M0BiLl9iYDMzXzIxXy0xXzBjYSNsX29mMmRza2JhLS1kNC9zcw%3D%3D&btag=c0000e00020000&dy_q=1759394412&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251002164012ACD597A2478A58FF5BC4",
-      "https://v26-artist.vlabvod.com/f18ff2f562866e915b5f127258a06167/68e77420/video/tos/cn/tos-cn-v-148450/okf3ulwhbAAiWmbIQE2BxWJNEhyQX0tOBDgciz/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6011&bt=6011&cs=0&ds=12&ft=5QYTUxhhe6BMyqqenYkJD12Nzj&mime_type=video_mp4&qs=0&rc=aGVlM2RmNDNlMztoaDw7NkBpajd1bWs5cnJlNjczNDM7M0A2MGA2My8vNWIxYC4zNWFgYSNhYGZkMmRjZmJhLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1759394178&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=2025100216361882FE7E28394F5123C56D",
+      "https://v3-artist.vlabvod.com/d842e1b2b757b89d79987a0e34311bc5/68e9015b/video/tos/cn/tos-cn-v-148450/okMbfU80Bfj4RX0OdXaCk5EgQvRBjgiADK906f/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5978&bt=5978&cs=0&ds=12&ft=5QYTUxhhe6BMyql~EYkJD12Nzj&mime_type=video_mp4&qs=0&rc=aGRmODg6ZWhpM2dpaWc7N0BpMzt5cXU5cjp2NjczNDM7M0BfLTUzYS41XmAxMjUxMi9eYSNwMi82MmQ0YWNhLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1759495859&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251003205059FC7DBC9E043F44C62731",
+      "https://v3-artist.vlabvod.com/e2bc76aed1747d1ee16442021b70c095/68e8febe/video/tos/cn/tos-cn-v-148450/oQdBgEMWW2XtvifefDPBkCSOmvcAiGB8AR4ACQ/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6086&bt=6086&cs=0&ds=12&ft=5QYTUxhhe6BMyqrzEYkJD12Nzj&mime_type=video_mp4&qs=0&rc=ODllNjQ1Zzo4ZTY5ZDg5OkBpM2xoZm85cjh2NjczNDM7M0A1M140Ly9iXjQxMC0yMDQtYSNwMS1yMmRrNWNhLS1kNDBzcw%3D%3D&btag=c0000e00010000&dy_q=1759495210&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251003204010C8B933E5E0D542585B63",
     ],
     switch: "无转场", // 支持：叠化、淡入淡出、推拉、擦除、无转场
   },
@@ -115,8 +120,8 @@ export default {
       get_deepseek_result_time: historyNum * 10, // 等待deepseek返回结果的时间, 单位为秒
       deepseek_result_txt_fn: () => {
         const historyNum = 13;
-        const name = "中国氢弹之父于敏";
-        const navPrompt = `比例9:16，中国人面孔，像${name}, 电影风格，不要出现汉字军，警察遗像不要出现病房医院等特殊字眼, 任何地方都不要出现地图, 人物的衣服不要破洞, 物品服饰场景等要符合那个年代的场景, 衣服不要破洞, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 生成的图中不要包含任何地图相关的物品,也不要包含条约相关的, 任何位置都不要出现地图`;
+        const name = "日本人却对抗日战争做出贡献的伊田助男";
+        const navPrompt = `比例9:16，中国人面孔，像${name}, 电影风格，不要出现汉字军, 生成图片一定要是人物正脸全身照,警察遗像不要出现病房医院等特殊字眼, 任何地方都不要出现地图, 人物的衣服不要破洞, 物品服饰场景等要符合那个年代的场景, 衣服不要破洞, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 生成的图中不要包含任何地图相关的物品,也不要包含条约相关的, 任何位置都不要出现地图`;
 
         // 实现 takeRight 函数，不依赖 lodash
         function takeRight(arr, n) {
@@ -177,7 +182,7 @@ export default {
           return {
             title: one,
             prompt: `${originTitle[index]},${prompt[index]},${navPrompt}, ${globalPrompt}`,
-            shot: shot[index],
+            shot: `图片中的人物通过以下方式转化到下一个场景:${shot[index]}`,
           };
         });
       },
@@ -197,23 +202,21 @@ export default {
       img_generate_input_send_selector: `.lv-btn-primary`, // 发送按钮
       gernerate_img_result_selector: `div[style="--aspect-ratio: 0.5625;"]`, // 生成结果
     },
-    "jimeng-video-generator": {
-      accountId, // 使用账号2
-      generate_section: 2, // 由于即梦智能多镜一次最多上传10张图片, 所以需要分多次上传, 此参数表示是要上传的第几次
-      generate_section_num: 8, // 分批上传一次section要上传多少张
-      url: "https://jimeng.jianying.com/ai-tool/home?type=video", // 1.打开即梦视频生成首页
-      generate_button_selector: `#AIGeneratedRecord`, // 点击生按钮
-      video_generate_select_trigger_selector: ".lv-typography", // 首尾帧选择器范围
-      video_generate_select_trigger_text: "首尾帧", // 点击包含"首尾帧"的元素
-      video_generate_select_item_text: "智能多帧", // 点击包含"智能多帧"的元素, 切换成智能多帧模式
-      video_generate_select_item_selector: ".lv-typography", // 智能多帧选择器范围
-      video_generate_upload_text: "第1帧", // 点击包含"第1帧"的元素
-      video_generate_shot_text_btn_selector: 'input[type="file"]', // 点击第一个的class为.reference-upload-eclumn的div元素
-      video_generate_shot_input_selector: ".lv-popover-inner-content textarea", // 选择textarea输入框, 按照正序输入processed_data.json中的segments中的shot.输入完成后点击第二个包含"5s"的div元素, 输入第二个shot
-      video_generate_shot_input_confirm_text: "确认", // 在每次输入shot后点击包含"确认"的div元素, 接着点击第二个class为.reference-upload-eclumn的div元素, 输入第二个shot, 然后点击包含"确认"的div元素
-      video_generate_shot_input_confirm_select:
-        ".lv-popover-inner-content .lv-btn-shape-square", // 在每次输入shot后点击包含"确认"的div元素, 接着点击第二个class为.reference-upload-eclumn的div元素, 输入第二个shot, 然后点击包含"确认"的div元素
-      video_generate_shot_selector: ".lv-typography", // 5s元素选择器范围
-    },
+    // 从外部配置文件导入 jimeng-video-generator 配置
+    "jimeng-video-generator": jimengVideoConfig["jimeng-video-generator"],
+  },
+
+  // 图片优化配置
+  "optimize-image": {
+    inputDir: "outputSource/邓稼先", // 输入目录
+    outputDir: "output/optimized", // 输出目录
+    quality: 60, // 压缩质量 (1-100)，90为高质量压缩
+    formats: ["jpg", "jpeg", "png", "webp", "bmp", "tiff"], // 支持的格式
+    recursive: true, // 是否递归处理子目录
+    keepOriginal: true, // 是否保留原文件（如果压缩后更大）
+    outputFormat: "auto", // 输出格式: "auto"(保持原格式), "jpg", "png", "webp"
+    maxWidth: 1920, // 最大宽度，超过则缩放
+    maxHeight: 1080, // 最大高度，超过则缩放
+    aggressive: true, // 激进模式：更低质量但更小文件
   },
 };
