@@ -7,6 +7,8 @@ const prompt = `中国人面孔，像${name}, 电影风格，生成图片一定�
 const historyNum = 13;
 const accountId = 3;
 export default {
+  // 全局配置
+  cleanOutputHistory: true, // 是否在每次运行命令前清理output历史数据，默认为true
   "down-rm-watermark": {
     url: "https://aigc-idea-platform.cdn.bcebos.com/miaoying_video/shadow_i2v_1280x704_20250925_160634_a024gnii_2X_32fps_generate_metadata.mp4?authorization=bce-auth-v1%2FALTAKpTC4weJ6py821WCyek9FC%2F2025-09-25T08%3A06%3A41Z%2F-1%2F%2F612a44bb17040c579d19ab812adda61a6163d21f5bb02231b32c335a6e958b5b",
     "bg-music": "bg-music.mp3",
