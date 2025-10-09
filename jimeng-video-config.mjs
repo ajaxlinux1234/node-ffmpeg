@@ -1,5 +1,5 @@
 // 即梦视频生成器配置文件
-const accountId = 3;
+const accountId = 2;
 
 export default {
   "jimeng-video-generator": {
