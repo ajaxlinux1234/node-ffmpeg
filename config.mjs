@@ -1,54 +1,101 @@
+import jimengVideoConfig from "./jimeng-video-config.mjs";
+
 const transform =
-  "当前镜头到下一镜头之间要结合视频描述词生成一种一定要一镜到底, 运镜的转换是当前人物在当前场景到下一个场景的合理转换,要是大师级转换";
-const name = "钱学森";
-const prompt = `中国人面孔，像${name}, 电影风格，人物出生的镜头换下, 不要跟上下文中的重复, 不要讲去世, 各个镜头采用一镜到底, 不要出现汉字军，警察党旗,核潜艇, 遗像等特殊字眼, 搜索资料,要是完全符合即梦生图和视频的提示词, 出现情况要是当时的实际情况, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落, 画面提示跟运镜方式都要新起个段落`;
+  "当前镜头到下一镜头之间要结合视频描述词生成一种一定要一镜到底, 运镜的转换是当前人物在当前场景到下一个场景的合理转换,要是大师级转换, 从一个镜头到另一个镜头的转换细节是: 主人物自然从一个场景到另一个场景, 一定要自然, 而且都要是主人物, 运镜转换描述一定是主人物从一个场景到下一个场景, 例如邓稼先从婴儿状态(出生场景)走去学校(另一场景)上学, 人物特写运镜, 所有运镜转化的中心都是只描述主人物从一个场景到另一个场景的过渡, 并且主人物的表情要自然贴合当时的场景";
+const name = "抗日战争国际共产主义战士山田一郎生平";
+const prompt = `中国人面孔，像${name}, 电影风格，生成图片一定要是人物正脸照, 生成的图片任何地方都不要出现地图, 人物出生的镜头换下, 不要跟上下文中的重复, 不要讲去世, 各个镜头采用一镜到底, 不要出现汉字军，军国主义, 警察党旗,核潜艇, 遗像等特殊字眼, 不要出现直播间, 搜索资料,要是完全符合即梦生图和视频的提示词, 出现情况要是当时的实际情况, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落, 画面提示跟运镜方式都要新起个段落`;
 const historyNum = 13;
 const accountId = 2;
 export default {
+  // 全局配置
+  cleanOutputHistory: false, // 是否在每次运行命令前清理output历史数据，默认为true
   "down-rm-watermark": {
     url: "https://aigc-idea-platform.cdn.bcebos.com/miaoying_video/shadow_i2v_1280x704_20250925_160634_a024gnii_2X_32fps_generate_metadata.mp4?authorization=bce-auth-v1%2FALTAKpTC4weJ6py821WCyek9FC%2F2025-09-25T08%3A06%3A41Z%2F-1%2F%2F612a44bb17040c579d19ab812adda61a6163d21f5bb02231b32c335a6e958b5b",
     "bg-music": "bg-music.mp3",
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1759394694154_merged.mp4",
-    title: `航天之父${name}\n{{圆了中国人民的}}\n{{航天梦}}`,
+    url: "output/merge-video/merged_1759593750482_merged.mp4",
+    title: `抗日战争\n最小的烈士\n小萝卜头的故事`,
+    useBabyCry: true,
+    titleDuration: 15, // 全局标题显示时长（秒），不设置则贯穿整个视频
+    endTitle: "", // 结尾标题
+    endTitleDuration: 10, // 结尾标题显示时长（秒）- 延长打字机音效时间
+    endTitleAnimation: "typewriter", // 结尾标题动画效果：打字机效果
+    endTitleSound: "typewriter", // 结尾标题声音效果：打字机声音
+    disclaimerText: "AIGC生成 无真人肖像 只为致敬", // 底部免责声明文字（30px斜体，底部10%位置）
     // 快乐传递者何炅
     // 国士无双袁隆平
-    titleAnimation: "sweep_fast", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
-    sectionTitleAnimation: "sweep_glow", // 分镜字幕动画效果，可选值同titleAnimation
+    titleAnimation: "sweep_slow", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
+    sectionTitleAnimation: "sweep_slow", // 分镜字幕动画效果，可选值同titleAnimation
 
     // 视频质量配置
-    qualityMode: "high", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理)
+    qualityMode: "high", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理), "turbo"(极速处理)
+
+    // 性能优化配置
+    enableSpeedOptimization: true, // 启用速度优化：多线程+预设优化
+    skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionTitle: [
-      "1911年/0岁\n杭州祖宅\n出生时刻",
-      "1923年/12岁\n北师大附中\n课堂听讲",
-      "1929年/18岁\n交通大学\n图书馆研读",
-      "1935年/24岁\n麻省理工\n实验室研究",
-      "1936年/25岁\n加州理工\n师从冯·卡门",
-      "1939年/28岁\n火箭小组\n实验攻关",
-      "1945年/34岁\n德国考察\n技术交流",
-      "1949年/38岁\n喷气推进实验室\n课题指导",
-      "1955年/44岁\n归国邮轮\n眺望东方",
-      "1956年/45岁\n中科院\n制定规划",
-      "1960年/49岁\n研究所\n理论推导",
-      "1966年/55岁\n科研基地\n现场指导",
-      "1970年/59岁\n发射场\n观摩首星",
-      "1978年/67岁\n大学讲堂\n培育后学",
-      "1986年/75岁\n书房\n著书立说",
-      "1991年/80岁\n家中\n坚持研究",
+      "1915/0岁\n日本东京律师家庭\n婴儿出生",
+      "1921/6岁\n东京小学校\n课堂学习",
+      "1930/15岁\n中学实验室\n化学实验",
+      "1937/22岁\n东京帝国大学\n毕业典礼",
+      "1938/23岁\n同爱纪念医院\n医学研究",
+      "1939/24岁\n山东梁山战场\n头部受伤被俘",
+      "1940/25岁\n太行山村落\n接受思想教育",
+      "1941/26岁\n八路军医院\n带病救治伤员",
+      "1942/27岁\n野战医院\n研发替代药品",
+      "1943/28岁\n太行根据地\n宣誓加入中共",
+      "1944/29岁\n反战同盟\n编写宣传材料",
+      "1946/31岁\n回国码头\n告别战友",
+      "1950/35岁\n东京医院\n任院长服务民众",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/屠洪刚 - 精忠报国_start25s_clip.mp3",
+    "bg-music": "music/追梦赤子心.mp3",
     // 栀子花开_start25s_clip
     // 屠洪刚 - 精忠报国_start25s_clip
   },
   "merge-video": {
     urls: [
-      "https://v6-artist.vlabvod.com/c62aa2448491a02a3fe94a52bed2e80f/68e77519/video/tos/cn/tos-cn-v-148450/oM7ZydXioBI7bg50JkQEgCXipfzITBDhABwAQ1/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5967&bt=5967&cs=0&ds=12&ft=5QYTUxhhe6BMyqBNnYkJD12Nzj&mime_type=video_mp4&qs=0&rc=aWk1Ozk6NzY8Zjc7OTVoNkBpM3U6OHU5cjNqNjczNDM7M0BiLl9iYDMzXzIxXy0xXzBjYSNsX29mMmRza2JhLS1kNC9zcw%3D%3D&btag=c0000e00020000&dy_q=1759394412&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251002164012ACD597A2478A58FF5BC4",
-      "https://v26-artist.vlabvod.com/f18ff2f562866e915b5f127258a06167/68e77420/video/tos/cn/tos-cn-v-148450/okf3ulwhbAAiWmbIQE2BxWJNEhyQX0tOBDgciz/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6011&bt=6011&cs=0&ds=12&ft=5QYTUxhhe6BMyqqenYkJD12Nzj&mime_type=video_mp4&qs=0&rc=aGVlM2RmNDNlMztoaDw7NkBpajd1bWs5cnJlNjczNDM7M0A2MGA2My8vNWIxYC4zNWFgYSNhYGZkMmRjZmJhLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1759394178&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=2025100216361882FE7E28394F5123C56D",
+      "https://v9-artist.vlabvod.com/f31daa339c18257dd78ec51c16621dc3/68ea7ea3/video/tos/cn/tos-cn-v-148450/oUDgrCeI9BhejBgMPIEfG4IJ63QzLrcYGfnQhC/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5975&bt=5975&cs=0&ds=12&ft=5QYTUxhhe6BMyqc4W~kJD12Nzj&mime_type=video_mp4&qs=0&rc=NGY0aDc5Nmk6ZDdpOTc1NkBpM29xeHk5cnJuNjczNDM7M0AwMjAtMDA1X2MxNDNeY2IvYSNsbHJnMmQ0NGRhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1759593467&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251004235747EA23AC7F881685048E8A",
+      "https://v3-artist.vlabvod.com/ee7afffffc436472a7ede1cb6f20c9e8/68ea7f27/video/tos/cn/tos-cn-v-148450/o4ZhDofmRIGOO4BYRCwLLvkIE9GQp9keFAegIu/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6092&bt=6092&cs=0&ds=12&ft=5QYTUxhhe6BMyqA0W~kJD12Nzj&mime_type=video_mp4&qs=0&rc=aDw1ZTpnMzM1aDs1M2g6NEBpamZ3OXA5cjNuNjczNDM7M0A2YGBjLmEzX2AxYzMzYjQvYSNzcnEyMmRrNmRhLS1kNDBzcw%3D%3D&btag=c0000e00010000&dy_q=1759593619&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251005000019D9455952BE9DE3230C97",
     ],
-    switch: "无转场", // 支持：叠化、淡入淡出、推拉、擦除、无转场
+    switch: "无转场", // 历史人物专用转场效果
+    // 可选转场效果：
+    // 基础效果：叠化、淡入淡出、推拉、擦除、无转场
+    // 历史人物专用：时光流转、岁月如歌、历史回眸、命运转折、精神传承、时代变迁、心路历程、光影交错
+    //
+    // 转场效果应用场景：
+    // • 时光流转 - 适用于跨越多年的人生阶段转换，如从童年到青年、从求学到工作等重要人生节点
+    // • 岁月如歌 - 适用于温馨的成长历程，如家庭生活、求学经历、师生情谊等温暖时光的衔接
+    // • 历史回眸 - 适用于重大历史事件的庄重呈现，如重要发现、历史性时刻、国家大事等严肃场景
+    // • 命运转折 - 适用于人物命运的重大转折，如人生选择、事业转向、历史机遇等戏剧性时刻
+    // • 精神传承 - 适用于表现人物精神品质的传承，如师承关系、价值观传递、精神财富延续
+    // • 时代变迁 - 适用于不同历史时期的宏大叙事，如社会变革、时代背景转换、历史进程推进
+    // • 心路历程 - 适用于人物内心世界的细腻变化，如思想觉悟、情感波动、心理成长过程
+    // • 光影交错 - 适用于现实与回忆的交织呈现，如追忆往昔、对比今昔、时空穿越效果
+  },
+  "extract-audio": {
+    url: "outputSource/伊田助男.mp4", // 视频文件路径或URL
+    format: "mp3", // 输出音频格式: mp3, wav, aac, flac, ogg, m4a
+    quality: "high", // 音频质量: high, medium, low
+    // 可选参数：
+    // startTime: 10,     // 开始时间(秒)
+    // duration: 30,      // 提取时长(秒)
+    // channels: 2,       // 声道数 (1=单声道, 2=立体声)
+    // sampleRate: 44100, // 采样率 (44100, 48000等)
+  },
+  "merge-audio-video": {
+    videoUrl: "outputSource/伊田最终版.mp4", // 视频文件路径或URL
+    audioUrl: "output/extract-audio/伊田助男_extracted_1759548361253.mp3", // 音频文件路径或URL
+    position: "end", // 音频位置模式: overlay, replace, start, end
+    volume: 1.0, // 音频音量 (0.0-2.0)
+    // 可选参数：
+    // audioDelay: 0,    // 音频延迟(秒)
+    // videoDelay: 0,    // 视频延迟(秒)
+    // trimAudio: false, // 裁剪音频到视频长度
+    // trimVideo: false, // 裁剪视频到音频长度
+    // fadeDuration: 2.0 // 淡入淡出时长(秒)
   },
   "ai-remove-watermark": {
     url: "output/history-person/1758868423130_10b9525ce467.mp4",
@@ -121,8 +168,8 @@ export default {
       get_deepseek_result_time: historyNum * 10, // 等待deepseek返回结果的时间, 单位为秒
       deepseek_result_txt_fn: () => {
         const historyNum = 13;
-        const name = "中国氢弹之父于敏";
-        const navPrompt = `比例9:16，中国人面孔，像${name}, 电影风格，不要出现汉字军，警察遗像不要出现病房医院等特殊字眼, 任何地方都不要出现地图, 人物的衣服不要破洞, 物品服饰场景等要符合那个年代的场景, 衣服不要破洞, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 生成的图中不要包含任何地图相关的物品,也不要包含条约相关的, 任何位置都不要出现地图`;
+        const name = "抗日战争国际共产主义战士山田一郎生平";
+        const navPrompt = `比例9:16，中国人面孔，像${name}, 电影风格，不要出现汉字军, 生成图片一定要是人物正脸照,警察遗像不要出现病房医院等特殊字眼, 任何地方都不要出现地图, 人物的衣服不要破洞, 物品服饰场景等要符合那个年代的场景, 衣服不要破洞, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 生成的图中不要包含任何地图相关的物品,也不要包含条约相关的, 任何位置都不要出现地图`;
 
         // 实现 takeRight 函数，不依赖 lodash
         function takeRight(arr, n) {
@@ -149,7 +196,7 @@ export default {
         );
 
         const globalPrompt = Array.from(
-          Array.from(document.querySelectorAll("ul"))
+          Array.from(document.querySelectorAll("ol"))
             .pop()
             .querySelectorAll("span")
         )
@@ -182,8 +229,8 @@ export default {
         return title.map((one, index) => {
           return {
             title: one,
-            prompt: `${originTitle[index]},${prompt[index]},${navPrompt}, ${globalPrompt}`,
-            shot: shot[index],
+            prompt: `${originTitle[index]},${prompt[index]},${navPrompt}, ${globalPrompt}, 参考图片跟生成的人物图片50%相似度, 一定不要太相似否则会侵权`,
+            shot: `图片中的人物通过以下方式转化到下一个场景:${index === 0 ? "图中的宝宝哭泣" : ""}${shot[index]}`,
           };
         });
       },
@@ -191,6 +238,7 @@ export default {
     jimeng: {
       accountId,
       name,
+      downloadImg: false,
       url: "https://jimeng.jianying.com/ai-tool/home?type=image", // 打开即梦图片生成首页
       login_selector: {
         login_button: `#SiderMenuLogin`,
@@ -200,26 +248,29 @@ export default {
       aspect_ratio_trigger_selector: `div[role="combobox"] ~ button`, // 比例选择器触发按钮
       aspect_ratio_selector: `.lv-radio:last-of-type`, // 比例选择器
       img_generate_input_selector: `textarea:last-child`, // 选择页面最后一个textarea输入框
+      reference_upload_column_selector: `.reference-upload-eclumn`, // 参考图片上传列
+      reference_img_container:
+        'div [style="--reference-count: 2; --reference-item-gap: 4px; --reference-item-offset: 3px;"]',
+      reference_img_close:
+        'div [style="--reference-count: 2; --reference-item-gap: 4px; --reference-item-offset: 3px;"] svg',
       img_generate_input_send_selector: `.lv-btn-primary`, // 发送按钮
       gernerate_img_result_selector: `div[style="--aspect-ratio: 0.5625;"]`, // 生成结果
     },
-    "jimeng-video-generator": {
-      accountId, // 使用账号2
-      generate_section: 2, // 由于即梦智能多镜一次最多上传10张图片, 所以需要分多次上传, 此参数表示是要上传的第几次
-      generate_section_num: 8, // 分批上传一次section要上传多少张
-      url: "https://jimeng.jianying.com/ai-tool/home?type=video", // 1.打开即梦视频生成首页
-      generate_button_selector: `#AIGeneratedRecord`, // 点击生按钮
-      video_generate_select_trigger_selector: ".lv-typography", // 首尾帧选择器范围
-      video_generate_select_trigger_text: "首尾帧", // 点击包含"首尾帧"的元素
-      video_generate_select_item_text: "智能多帧", // 点击包含"智能多帧"的元素, 切换成智能多帧模式
-      video_generate_select_item_selector: ".lv-typography", // 智能多帧选择器范围
-      video_generate_upload_text: "第1帧", // 点击包含"第1帧"的元素
-      video_generate_shot_text_btn_selector: 'input[type="file"]', // 点击第一个的class为.reference-upload-eclumn的div元素
-      video_generate_shot_input_selector: ".lv-popover-inner-content textarea", // 选择textarea输入框, 按照正序输入processed_data.json中的segments中的shot.输入完成后点击第二个包含"5s"的div元素, 输入第二个shot
-      video_generate_shot_input_confirm_text: "确认", // 在每次输入shot后点击包含"确认"的div元素, 接着点击第二个class为.reference-upload-eclumn的div元素, 输入第二个shot, 然后点击包含"确认"的div元素
-      video_generate_shot_input_confirm_select:
-        ".lv-popover-inner-content .lv-btn-shape-square", // 在每次输入shot后点击包含"确认"的div元素, 接着点击第二个class为.reference-upload-eclumn的div元素, 输入第二个shot, 然后点击包含"确认"的div元素
-      video_generate_shot_selector: ".lv-typography", // 5s元素选择器范围
-    },
+    // 从外部配置文件导入 jimeng-video-generator 配置
+    "jimeng-video-generator": jimengVideoConfig["jimeng-video-generator"],
+  },
+
+  // 图片优化配置
+  "optimize-image": {
+    inputDir: "outputSource/邓稼先", // 输入目录
+    outputDir: "output/optimized", // 输出目录
+    quality: 60, // 压缩质量 (1-100)，90为高质量压缩
+    formats: ["jpg", "jpeg", "png", "webp", "bmp", "tiff"], // 支持的格式
+    recursive: true, // 是否递归处理子目录
+    keepOriginal: true, // 是否保留原文件（如果压缩后更大）
+    outputFormat: "auto", // 输出格式: "auto"(保持原格式), "jpg", "png", "webp"
+    maxWidth: 1920, // 最大宽度，超过则缩放
+    maxHeight: 1080, // 最大高度，超过则缩放
+    aggressive: true, // 激进模式：更低质量但更小文件
   },
 };
