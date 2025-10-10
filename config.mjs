@@ -2,8 +2,8 @@ import jimengVideoConfig from "./jimeng-video-config.mjs";
 
 const transform =
   "当前镜头到下一镜头之间要结合视频描述词生成一种一定要一镜到底, 运镜的转换是当前人物在当前场景到下一个场景的合理转换,要是大师级转换, 从一个镜头到另一个镜头的转换细节是: 主人物自然从一个场景到另一个场景, 一定要自然, 而且都要是主人物, 运镜转换描述一定是主人物从一个场景到下一个场景, 例如邓稼先从婴儿状态(出生场景)走去学校(另一场景)上学, 人物特写运镜, 所有运镜转化的中心都是只描述主人物从一个场景到另一个场景的过渡, 并且主人物的表情要自然贴合当时的场景";
-const name = "抗日战争国际共产主义战士山田一郎生平";
-const prompt = `中国人面孔，像${name}, 电影风格，生成图片一定要是人物正脸照, 生成的图片任何地方都不要出现地图, 人物出生的镜头换下, 不要跟上下文中的重复, 不要讲去世, 各个镜头采用一镜到底, 不要出现汉字军，军国主义, 警察党旗,核潜艇, 遗像等特殊字眼, 不要出现直播间, 搜索资料,要是完全符合即梦生图和视频的提示词, 出现情况要是当时的实际情况, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落, 画面提示跟运镜方式都要新起个段落`;
+const name = "爱国育人永流芳，物理天才李政道的一生";
+const prompt = `中国人面孔, 电影风格，生成图片一定要是人物正脸照, 生成的图片任何地方都不要出现地图, 人物出生的镜头换下, 不要跟上下文中的重复, 不要讲去世, 各个镜头采用一镜到底, 不要出现汉字军，军国主义, 警察党旗,核潜艇, 遗像等特殊字眼, 不要出现直播间, 搜索资料,要是完全符合即梦生图和视频的提示词, 出现情况要是当时的实际情况, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落, 画面提示跟运镜方式都要新起个段落, 画面提示词不要涉及国家领导人, 画面提示词中不涉及人物名称, 男性用一位男性,另一位男人,女性用一位女性,另一位女性来代替`;
 const historyNum = 13;
 const accountId = 2;
 export default {
@@ -16,7 +16,7 @@ export default {
   "history-person": {
     name,
     url: "output/merge-video/merged_1759593750482_merged.mp4",
-    title: `抗日战争\n最小的烈士\n小萝卜头的故事`,
+    title: `爱国育人永流芳\n物理天才\n李政道的一生`,
     useBabyCry: true,
     titleDuration: 15, // 全局标题显示时长（秒），不设置则贯穿整个视频
     endTitle: "", // 结尾标题
@@ -36,22 +36,22 @@ export default {
     enableSpeedOptimization: true, // 启用速度优化：多线程+预设优化
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionTitle: [
-      "1915/0岁\n日本东京律师家庭\n婴儿出生",
-      "1921/6岁\n东京小学校\n课堂学习",
-      "1930/15岁\n中学实验室\n化学实验",
-      "1937/22岁\n东京帝国大学\n毕业典礼",
-      "1938/23岁\n同爱纪念医院\n医学研究",
-      "1939/24岁\n山东梁山战场\n头部受伤被俘",
-      "1940/25岁\n太行山村落\n接受思想教育",
-      "1941/26岁\n八路军医院\n带病救治伤员",
-      "1942/27岁\n野战医院\n研发替代药品",
-      "1943/28岁\n太行根据地\n宣誓加入中共",
-      "1944/29岁\n反战同盟\n编写宣传材料",
-      "1946/31岁\n回国码头\n告别战友",
-      "1950/35岁\n东京医院\n任院长服务民众",
+      "1926年/0岁 \n 江南宅院·新生 \n 婴儿安睡于传统摇篮",
+      "1943年/17岁 \n 抗战时期·苦读 \n 油灯下研读物理著作",
+      "1946年/20岁 \n 大学教室·钻研 \n 黑板前演算理论物理",
+      "1950年/24岁 \n 芝加哥实验室·探索 \n 记录粒子对撞数据",
+      "1956年/30岁 \n 研究办公室·思辨 \n 与同事探讨物理定律",
+      "1957年/31岁 \n 颁奖大厅·荣光 \n 接受科学最高荣誉",
+      "1972年/46岁 \n 学术讲堂·交流 \n 向听众讲解物理前沿",
+      "1979年/53岁 \n 中美教室·育人 \n 指导青年学子深造",
+      "1985年/59岁 \n 科研院所·规划 \n 研讨科学装置设计",
+      "1998年/72岁 \n 苏州园林·传承 \n 与学子探讨艺术与科学",
+      "2006年/80岁 \n 大学讲台·启迪 \n 阐释宇宙奥秘",
+      "2014年/88岁 \n 书斋灯下·笔耕 \n 撰写科学建言手稿",
+      "2023年/97岁 \n 海湾晨光·凝望 \n 眺望远方沉思",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/追梦赤子心.mp3",
+    "bg-music": "music/屠洪刚 - 精忠报国_start25s_clip.mp3",
     // 栀子花开_start25s_clip
     // 屠洪刚 - 精忠报国_start25s_clip
   },
@@ -144,6 +144,7 @@ export default {
     deepseek: {
       url: "https://chat.deepseek.com/", // 要无头浏览器打开的deepseek网站
       persistLogin: true, // 是否保持登录状态（使用浏览器用户数据目录）
+      getConfig: false,
       login_selector: {
         // 进入deepseek登录页面后，如果发现能选择到下列元素，表示未登录，就选择账号密码元素
         username: `input[placeholder="请输入手机号/邮箱地址"]`,
@@ -159,7 +160,7 @@ export default {
       side_selector: `a`,
       chat_selector: `textarea[placeholder="给 DeepSeek 发送消息 "]`, // 登录完成后进入聊天页面，首先选择发送消息的输入框选择器
       send_chat_selector: `'input[type="file"] + div'`, // 录入完消息后，发送消息的按钮选择器
-      send_msg_template: `${prompt}，{{name}}, 从出生到现在{{timeNum}}个关键时间点, 要特别注意人物服饰要符合历史事实,{{timeNum}}段视频生成提示词, 以及各个镜头画面之间的转换方式或运动方式, 视频镜头要是电影写实风格,比例9:16, 各段视频描述要与{{name}}的长相类似, 各段视频描述要写上人物年龄, 视频提示词不要显示国徽, 人民大会堂等政治信息, 严格生成{{timeNum}}段视频生成提示词，提示词为中文，每句话前面都加上"中国人面孔，像{{name}}，生成图片要符合实际生活场景"`,
+      send_msg_template: `${prompt}，{{name}}, 从出生到现在{{timeNum}}个关键时间点, 要特别注意人物服饰要符合历史事实,{{timeNum}}段视频生成提示词, 以及各个镜头画面之间的转换方式或运动方式, 视频镜头要是电影写实风格,比例9:16, 各段视频描述要与{{name}}的长相类似, 各段视频描述要写上人物年龄, 视频提示词不要显示国徽, 人民大会堂等政治信息, 严格生成{{timeNum}}段视频生成提示词，提示词为中文，每句话前面都加上"生成图片要符合实际生活场景"`,
       send_msg_template_data: {
         // 把send_msg_template中的{{name}}和{{timeNum}}替换为实际值, 然后把send_msg_template内容输入到chat_selector中
         name,
@@ -168,7 +169,7 @@ export default {
       get_deepseek_result_time: historyNum * 10, // 等待deepseek返回结果的时间, 单位为秒
       deepseek_result_txt_fn: () => {
         const historyNum = 13;
-        const name = "抗日战争国际共产主义战士山田一郎生平";
+        const name = "爱国育人永流芳，物理天才李政道的一生";
         const navPrompt = `比例9:16，中国人面孔，像${name}, 电影风格，不要出现汉字军, 生成图片一定要是人物正脸照,警察遗像不要出现病房医院等特殊字眼, 任何地方都不要出现地图, 人物的衣服不要破洞, 物品服饰场景等要符合那个年代的场景, 衣服不要破洞, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 生成的图中不要包含任何地图相关的物品,也不要包含条约相关的, 任何位置都不要出现地图`;
 
         // 实现 takeRight 函数，不依赖 lodash
@@ -206,30 +207,50 @@ export default {
               .replaceAll("\n", "")
               .replaceAll(/\d,?/g, "")
           )
-          .join();
+          .join(" ");
 
-        const prompt = takeRight(
-          [...document.querySelectorAll("span")]
-            .map((one) => one.innerText)
-            .filter(
-              (one) =>
-                one.startsWith("画面提示") ||
-                one.startsWith("画面内容") ||
-                one.startsWith("中国人面孔")
-            ),
-          historyNum
-        );
+        const prompt =
+          takeRight(
+            [...document.querySelectorAll("li")]
+              .map((one) => one.innerText)
+              .filter(
+                (one) =>
+                  one.startsWith("画面提示") ||
+                  one.startsWith("画面内容") ||
+                  one.startsWith("中国人面孔")
+              ),
+            historyNum
+          ) ||
+          takeRight(
+            [...document.querySelectorAll("span")]
+              .map((one) => one.innerText)
+              .filter(
+                (one) =>
+                  one.startsWith("画面提示") ||
+                  one.startsWith("画面内容") ||
+                  one.startsWith("中国人面孔")
+              ),
+            historyNum
+          );
 
-        const shot = takeRight(
-          [...document.querySelectorAll("span")]
-            .map((one) => one.innerText)
-            .filter((one) => one.startsWith("运镜方式")),
-          historyNum
-        );
+        const shot =
+          takeRight(
+            [...document.querySelectorAll("li")]
+              .map((one) => one.innerText)
+              .filter((one) => one.startsWith("运镜方式")),
+            historyNum
+          ) ||
+          takeRight(
+            [...document.querySelectorAll("span")]
+              .map((one) => one.innerText)
+              .filter((one) => one.startsWith("运镜方式")),
+            historyNum
+          );
         return title.map((one, index) => {
           return {
             title: one,
-            prompt: `${originTitle[index]},${prompt[index]},${navPrompt}, ${globalPrompt}, 参考图片跟生成的人物图片50%相似度, 一定不要太相似否则会侵权`,
+            // prompt: `${originTitle[index]},${prompt[index]} ${navPrompt}, ${globalPrompt}, 参考图片跟生成的人物图片50%相似度, 一定不要太相似否则会侵权`,
+            prompt: `${originTitle[index]},${prompt[index]}`,
             shot: `图片中的人物通过以下方式转化到下一个场景:${index === 0 ? "图中的宝宝哭泣" : ""}${shot[index]}`,
           };
         });
@@ -238,7 +259,7 @@ export default {
     jimeng: {
       accountId,
       name,
-      downloadImg: false,
+      downloadImg: true,
       url: "https://jimeng.jianying.com/ai-tool/home?type=image", // 打开即梦图片生成首页
       login_selector: {
         login_button: `#SiderMenuLogin`,
