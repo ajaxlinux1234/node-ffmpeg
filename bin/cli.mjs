@@ -6,6 +6,7 @@ import runAiRemoveWatermark from '../lib/ai-remove-watermark.mjs';
 import runMergeVideo from '../lib/merge-video.mjs';
 import runClipAudio from '../lib/clip-audio.mjs';
 import runAutoDeepseekJimeng, { clearBrowserData } from '../lib/auto-deepseek-jimeng.mjs';
+import { runJimengVideoFlow } from '../lib/jimeng-video-generator.mjs';
 import runFilter, { listFilters } from '../lib/filter.mjs';
 import runConvert3D, { list3DModes } from '../lib/convert-3d.mjs';
 import runOptimizeImage from '../lib/optimize-image.mjs';
@@ -25,7 +26,7 @@ async function loadConfig() {
 
 function printHelp() {
   console.log(`\nnode-ffmpeg-tools <command> [options]\n\nCommands:\n  down-rm-watermark [url]     Download mp4 and blur bottom-right watermark\n  history-person              Process history person video with titles and effects\n  ai-remove-watermark [url]   AI inpainting to remove watermark; keeps original resolution/fps\n  merge-video                 Merge multiple videos with transition effects\n  clip-audio                  Clip audio files from specified start time\n  extract-audio               Extract audio from video files with format conversion
-  merge-audio-video           Merge audio and video files with position control\n  auto-deepseek-jimeng        Automate DeepSeek chat to generate video prompts\n  filter                      Apply various filters to videos (cinematic, vintage, artistic, etc.)\n  convert-3d                  Convert 2D video to 3D (anaglyph, side-by-side, top-bottom)\n  optimize-image              Batch optimize images with lossless compression\n  clear-browser-data          Clear saved browser login data for DeepSeek\n\nGlobal Options:\n  cleanOutputHistory          Automatically clean output directory before running commands (default: true)\n                              Set to false in config.mjs to disable: cleanOutputHistory: false\n\nOptions for down-rm-watermark:\n  --url, -u <url>             Video URL (can also be provided positionally)\n  --bg-music, -b <file>       Path to background audio file (mp3/wav/etc).\n                              If omitted, uses config.mjs at down-rm-watermark.bg-music if present.\n\nOptions for history-person:\n  Uses configuration from config.mjs under "history-person" section.\n  Required config fields: url, title, sectionTitle, bg-music\n\nOptions for ai-remove-watermark:\n  --url, -u <url>             Video URL (can also be provided positionally)\n  If omitted, uses config.mjs at "ai-remove-watermark.url" if present.\n\nOptions for merge-video:\n  Uses configuration from config.mjs under "merge-video" section.\n  Required config fields: urls (array of video URLs/paths), switch (transition effect)\n  Supported transitions: 叠化, 淡入淡出, 推拉, 擦除, 无转场\n\nOptions for clip-audio:\n  Uses configuration from config.mjs under "clip-audio" section.\n  Required config fields: array of {url, start?, duration?, output?}\n  - url: audio file path or URL (required)\n  - start: start time in seconds (default: 0)\n  - duration: clip duration in seconds (optional, clips to end if not specified)\n  - output: custom output filename (optional, auto-generated if not specified)\n\nOptions for extract-audio:\n  Uses configuration from config.mjs under "extract-audio" section.\n  Required config fields: url (video file path or URL)\n  Optional fields: format, quality, startTime, duration, channels, sampleRate\n  - format: output audio format (mp3, wav, aac, flac, ogg, m4a) - default: mp3\n  - quality: audio quality (high, medium, low) - default: high\n  - startTime: start time in seconds (optional)\n  - duration: extract duration in seconds (optional)\n  - channels: number of audio channels (1=mono, 2=stereo) (optional)\n  - sampleRate: audio sample rate (44100, 48000, etc.) (optional)\n\nOptions for merge-audio-video:\n  Uses configuration from config.mjs under "merge-audio-video" section.\n  Required config fields: videoUrl, audioUrl (video and audio file paths or URLs)\n  Optional fields: position, volume, audioDelay, videoDelay, trimAudio, trimVideo\n  - position: audio position mode (overlay, replace, start, end) - default: overlay\n  - volume: audio volume (0.0-2.0) - default: 1.0\n  - audioDelay: audio delay in seconds (optional)\n  - videoDelay: video delay in seconds (optional)\n  - trimAudio: trim audio to video length (true/false)\n  - trimVideo: trim video to audio length (true/false)\n\nOptions for auto-deepseek-jimeng:\n  Uses configuration from config.mjs under "auto-deepseek-jimeng" section.\n  Automates DeepSeek chat using headless browser to generate video prompts.\n  Required config fields: deepseek.url, deepseek.chat_selector, deepseek.send_msg_template, etc.\n\nExamples:\n  node-ffmpeg-tools down-rm-watermark https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark -b assets/bgm.mp3 https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark  # Uses URL (and bg-music) from config.mjs if present\n  node-ffmpeg-tools history-person     # Uses config.mjs history-person section\n  node-ffmpeg-tools ai-remove-watermark https://example.com/video.mp4\n  node-ffmpeg-tools ai-remove-watermark  # Uses config.mjs ai-remove-watermark.url\n  node-ffmpeg-tools merge-video         # Uses config.mjs merge-video section\n  node-ffmpeg-tools clip-audio          # Uses config.mjs clip-audio section\n  node-ffmpeg-tools auto-deepseek-jimeng # Uses config.mjs auto-deepseek-jimeng section\n`);
+  merge-audio-video           Merge audio and video files with position control\n  auto-deepseek-jimeng        Automate DeepSeek chat to generate video prompts\n  jimeng-video-generator      Generate videos using Jimeng with batch image upload and shot descriptions\n  filter                      Apply various filters to videos (cinematic, vintage, artistic, etc.)\n  convert-3d                  Convert 2D video to 3D (anaglyph, side-by-side, top-bottom)\n  optimize-image              Batch optimize images with lossless compression\n  clear-browser-data          Clear saved browser login data for DeepSeek\n\nGlobal Options:\n  cleanOutputHistory          Automatically clean output directory before running commands (default: true)\n                              Set to false in config.mjs to disable: cleanOutputHistory: false\n\nOptions for down-rm-watermark:\n  --url, -u <url>             Video URL (can also be provided positionally)\n  --bg-music, -b <file>       Path to background audio file (mp3/wav/etc).\n                              If omitted, uses config.mjs at down-rm-watermark.bg-music if present.\n\nOptions for history-person:\n  Uses configuration from config.mjs under "history-person" section.\n  Required config fields: url, title, sectionTitle, bg-music\n\nOptions for ai-remove-watermark:\n  --url, -u <url>             Video URL (can also be provided positionally)\n  If omitted, uses config.mjs at "ai-remove-watermark.url" if present.\n\nOptions for merge-video:\n  Uses configuration from config.mjs under "merge-video" section.\n  Required config fields: urls (array of video URLs/paths), switch (transition effect)\n  Supported transitions: 叠化, 淡入淡出, 推拉, 擦除, 无转场\n\nOptions for clip-audio:\n  Uses configuration from config.mjs under "clip-audio" section.\n  Required config fields: array of {url, start?, duration?, output?}\n  - url: audio file path or URL (required)\n  - start: start time in seconds (default: 0)\n  - duration: clip duration in seconds (optional, clips to end if not specified)\n  - output: custom output filename (optional, auto-generated if not specified)\n\nOptions for extract-audio:\n  Uses configuration from config.mjs under "extract-audio" section.\n  Required config fields: url (video file path or URL)\n  Optional fields: format, quality, startTime, duration, channels, sampleRate\n  - format: output audio format (mp3, wav, aac, flac, ogg, m4a) - default: mp3\n  - quality: audio quality (high, medium, low) - default: high\n  - startTime: start time in seconds (optional)\n  - duration: extract duration in seconds (optional)\n  - channels: number of audio channels (1=mono, 2=stereo) (optional)\n  - sampleRate: audio sample rate (44100, 48000, etc.) (optional)\n\nOptions for merge-audio-video:\n  Uses configuration from config.mjs under "merge-audio-video" section.\n  Required config fields: videoUrl, audioUrl (video and audio file paths or URLs)\n  Optional fields: position, volume, audioDelay, videoDelay, trimAudio, trimVideo\n  - position: audio position mode (overlay, replace, start, end) - default: overlay\n  - volume: audio volume (0.0-2.0) - default: 1.0\n  - audioDelay: audio delay in seconds (optional)\n  - videoDelay: video delay in seconds (optional)\n  - trimAudio: trim audio to video length (true/false)\n  - trimVideo: trim video to audio length (true/false)\n\nOptions for auto-deepseek-jimeng:\n  Uses configuration from config.mjs under "auto-deepseek-jimeng" section.\n  Automates DeepSeek chat using headless browser to generate video prompts.\n  Required config fields: deepseek.url, deepseek.chat_selector, deepseek.send_msg_template, etc.\n\nExamples:\n  node-ffmpeg-tools down-rm-watermark https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark -b assets/bgm.mp3 https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark  # Uses URL (and bg-music) from config.mjs if present\n  node-ffmpeg-tools history-person     # Uses config.mjs history-person section\n  node-ffmpeg-tools ai-remove-watermark https://example.com/video.mp4\n  node-ffmpeg-tools ai-remove-watermark  # Uses config.mjs ai-remove-watermark.url\n  node-ffmpeg-tools merge-video         # Uses config.mjs merge-video section\n  node-ffmpeg-tools clip-audio          # Uses config.mjs clip-audio section\n  node-ffmpeg-tools auto-deepseek-jimeng # Uses config.mjs auto-deepseek-jimeng section\n`);
 }
 
 (async () => {
@@ -47,6 +48,7 @@ function printHelp() {
     'extract-audio',
     'merge-audio-video',
     'auto-deepseek-jimeng',
+    'jimeng-video-generator',
     'filter',
     'convert-3d',
     'optimize-image'
@@ -144,6 +146,35 @@ function printHelp() {
         
         console.log('Using auto-deepseek-jimeng configuration from config.mjs');
         await runAutoDeepseekJimeng(config['auto-deepseek-jimeng']);
+        break;
+      }
+      case 'jimeng-video-generator': {
+        if (!config['jimeng-video-generator']) {
+          console.error('\nError: No "jimeng-video-generator" configuration found in config.mjs');
+          console.error('Please add jimeng-video-generator configuration with required settings');
+          process.exit(1);
+        }
+        
+        // 检查是否有 processed_data.json 文件
+        const processedDataPath = './output/' + (config['jimeng-video-generator'].name || 'default') + '/processed_data.json';
+        let processedData;
+        try {
+          const fs = await import('fs/promises');
+          const data = await fs.readFile(processedDataPath, 'utf8');
+          processedData = JSON.parse(data);
+          console.log(`✅ 找到 processed_data.json 文件，包含 ${processedData.segments?.length || 0} 个段落`);
+        } catch (error) {
+          console.error(`\nError: 无法读取 processed_data.json 文件: ${processedDataPath}`);
+          console.error('请先运行 auto-deepseek-jimeng 命令生成数据，或检查文件路径是否正确');
+          process.exit(1);
+        }
+        
+        console.log('Using jimeng-video-generator configuration from config.mjs');
+        await runJimengVideoFlow(
+          config['jimeng-video-generator'], 
+          processedData, 
+          config['jimeng-video-generator'].name || 'default'
+        );
         break;
       }
       case 'filter': {
