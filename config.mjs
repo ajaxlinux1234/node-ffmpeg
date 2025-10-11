@@ -2,9 +2,9 @@ import jimengVideoConfig from "./jimeng-video-config.mjs";
 
 const transform =
   "当前镜头到下一镜头之间要结合视频描述词生成一种一定要一镜到底, 运镜的转换是当前人物在当前场景到下一个场景的合理转换,要是大师级转换, 从一个镜头到另一个镜头的转换细节是: 主人物自然从一个场景到另一个场景, 一定要自然, 而且都要是主人物, 运镜转换描述一定是主人物从一个场景到下一个场景, 例如邓稼先从婴儿状态(出生场景)走去学校(另一场景)上学, 人物特写运镜, 所有运镜转化的中心都是只描述主人物从一个场景到另一个场景的过渡, 并且主人物的表情要自然贴合当时的场景";
-const name = "爱国育人永流芳，物理天才李政道的一生";
+const name = "航天之父钱学森的一生";
 const prompt = `中国人面孔, 电影风格，生成图片一定要是人物正脸照, 生成的图片任何地方都不要出现地图, 人物出生的镜头换下, 不要跟上下文中的重复, 不要讲去世, 各个镜头采用一镜到底, 不要出现汉字军，军国主义, 警察党旗,核潜艇, 遗像等特殊字眼, 不要出现直播间, 搜索资料,要是完全符合即梦生图和视频的提示词, 出现情况要是当时的实际情况, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落, 画面提示跟运镜方式都要新起个段落, 画面提示词不要涉及国家领导人, 画面提示词中不涉及人物名称, 男性用一位男性,另一位男人,女性用一位女性,另一位女性来代替`;
-const historyNum = 7;
+const historyNum = 13;
 const accountId = 1;
 export default {
   // 全局配置
@@ -37,14 +37,19 @@ export default {
     enableSpeedOptimization: true, // 启用速度优化：多线程+预设优化
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionTitle: [
-      "少年李政道\n努力研究",
-      "1943年/17岁 \n 浙西山村·夜读 \n 油灯下苦读物理典籍",
-      "1946年/20岁 \n 大学校园·求索 \n 梧桐树下捧读外文专著",
-      "1957年/31岁 \n 斯德哥尔摩·荣光 \n 庄重接受诺贝尔奖章",
-      "1979年/53岁 \n 中美教室·育人 \n 耐心指导青年学子",
-      "1985年/59岁 \n 实验室·奠基 \n 研讨对撞机设计蓝图",
-      "2006年/80岁 \n 大学讲堂·传承 \n 阐释宇宙暗能量理论",
-      "2023年/97岁 \n 海湾晨光·凝望 \n 眺望远方沉思人生",
+      "1911年/0岁 \n 杭州宅院·新生 \n 婴儿安睡于传统摇篮",
+      "1929年/18岁 \n 交通大学·苦读 \n 图书馆内钻研工程书籍",
+      "1935年/24岁 \n 麻省理工·深造 \n 实验室记录风洞数据",
+      "1945年/34岁 \n 德国考察·探索 \n 查阅火箭技术资料",
+      "1955年/44岁 \n 归国轮船·眺望 \n 手持书卷凝望远方",
+      "1956年/45岁 \n 北京讲堂·授课 \n 向科研人员讲解航天知识",
+      "1960年/49岁 \n 西北基地·指导 \n 研讨火箭设计图纸",
+      "1966年/55岁 \n 发射场·见证 \n 观测导弹试验数据",
+      "1970年/59岁 \n 指挥中心·关注 \n 观看卫星发射实况",
+      "1978年/67岁 \n 大学讲台·育人 \n 指导青年学子",
+      "1985年/74岁 \n 书房·笔耕 \n 撰写系统科学论著",
+      "1995年/84岁 \n 实验室·交流 \n 与科研团队讨论创新理论",
+      "2007年/96岁 \n 家中·沉思 \n 安坐窗前回忆毕生事业",
     ],
     watermark: "@人物传记史",
     "bg-music": "music/我记得你眼里的依恋.mp3",
@@ -164,8 +169,8 @@ export default {
       },
       get_deepseek_result_time: historyNum * 10, // 等待deepseek返回结果的时间, 单位为秒
       deepseek_result_txt_fn: () => {
-        const historyNum = 7;
-        const name = "爱国育人永流芳，物理天才李政道的一生";
+        const historyNum = 13;
+        const name = "航天之父钱学森的一生";
         const navPrompt = `比例9:16，中国人面孔，像${name}, 电影风格，不要出现汉字军, 生成图片一定要是人物正脸照,警察遗像不要出现病房医院等特殊字眼, 任何地方都不要出现地图, 人物的衣服不要破洞, 物品服饰场景等要符合那个年代的场景, 衣服不要破洞, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 生成的图中不要包含任何地图相关的物品,也不要包含条约相关的, 任何位置都不要出现地图`;
 
         // 实现 takeRight 函数，不依赖 lodash
@@ -246,7 +251,7 @@ export default {
           return {
             title: one,
             // prompt: `${originTitle[index]},${prompt[index]} ${navPrompt}, ${globalPrompt}, 参考图片跟生成的人物图片50%相似度, 一定不要太相似否则会侵权`,
-            prompt: `${originTitle[index]},${prompt[index]}`,
+            prompt: `${originTitle[index]},${prompt[index]},中国人面孔`,
             shot: `图片中的人物通过以下方式转化到下一个场景:${index === 0 ? "图中的宝宝哭泣" : ""}${shot[index]}`,
           };
         });
@@ -261,6 +266,7 @@ export default {
         login_button: `#SiderMenuLogin`,
         agree_policy: `div.zoomModal-enter-done .lv-btn-primary`,
       },
+      useImgUrl: true,
       generate_button_selector: `#AIGeneratedRecord`, // 点击生成按钮
       aspect_ratio_trigger_selector: `div[role="combobox"] ~ button`, // 比例选择器触发按钮
       aspect_ratio_selector: `.lv-radio:last-of-type`, // 比例选择器
@@ -272,6 +278,23 @@ export default {
         'div [style="--reference-count: 2; --reference-item-gap: 4px; --reference-item-offset: 3px;"] svg',
       img_generate_input_send_selector: `.lv-btn-primary`, // 发送按钮
       gernerate_img_result_selector: `div[style="--aspect-ratio: 0.5625;"]`, // 生成结果
+      img_result_urls: () => {
+        const length = 13;
+        const allImgBox = Array.from(
+          document.querySelectorAll(`div[style="--aspect-ratio: 0.5625;"]`)
+        );
+        const urls = [];
+        while (urls.length < length && allImgBox.length > 0) {
+          const one = allImgBox.pop();
+          if (one && one.querySelector("img")) {
+            const imgSrc = one.querySelector("img").src;
+            if (imgSrc && imgSrc.startsWith("http")) {
+              urls.unshift(imgSrc);
+            }
+          }
+        }
+        return urls;
+      },
     },
     // 从外部配置文件导入 jimeng-video-generator 配置
     "jimeng-video-generator": jimengVideoConfig["jimeng-video-generator"],
