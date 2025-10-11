@@ -1,6 +1,6 @@
 // 即梦视频生成器配置文件
-const accountId = 2;
-const lang = "zh-tw";
+export const accountId = 1;
+const lang = "zh";
 const textMap = {
   zh: {
     url: "https://jimeng.jianying.com/ai-tool/home?type=video",
@@ -30,8 +30,9 @@ export default {
   "jimeng-video-generator": {
     name: "钱学森", // 项目名称，用于查找 processed_data.json 文件
     accountId, // 使用账号2
+    persistLogin: true, // 是否启用登录状态持久化，默认为true
     generate_section: 1, // 由于即梦智能多镜一次最多上传10张图片, 所以需要分多次上传, 此参数表示是要上传的第几次
-    generate_section_num: 9, // 分批上传一次section要上传多少张
+    generate_section_num: 4, // 分批上传一次section要上传多少张
     useShot: false, // 是否使用运镜描述，false表示不填运镜词
     url,
     video_generate_select_trigger_text,

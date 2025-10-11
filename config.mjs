@@ -1,11 +1,10 @@
-import jimengVideoConfig from "./jimeng-video-config.mjs";
+import jimengVideoConfig, { accountId } from "./jimeng-video-config.mjs";
 
 const transform =
   "当前镜头到下一镜头之间要结合视频描述词生成一种一定要一镜到底, 运镜的转换是当前人物在当前场景到下一个场景的合理转换,要是大师级转换, 从一个镜头到另一个镜头的转换细节是: 主人物自然从一个场景到另一个场景, 一定要自然, 而且都要是主人物, 运镜转换描述一定是主人物从一个场景到下一个场景, 例如邓稼先从婴儿状态(出生场景)走去学校(另一场景)上学, 人物特写运镜, 所有运镜转化的中心都是只描述主人物从一个场景到另一个场景的过渡, 并且主人物的表情要自然贴合当时的场景";
-const name = "航天之父钱学森的一生";
-const prompt = `中国人面孔, 电影风格，生成图片一定要是人物正脸照, 生成的图片任何地方都不要出现地图, 人物出生的镜头换下, 不要跟上下文中的重复, 不要讲去世, 各个镜头采用一镜到底, 不要出现汉字军，军国主义, 警察党旗,核潜艇, 遗像等特殊字眼, 不要出现直播间, 搜索资料,要是完全符合即梦生图和视频的提示词, 出现情况要是当时的实际情况, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落, 画面提示跟运镜方式都要新起个段落, 画面提示词不要涉及国家领导人, 画面提示词中不涉及人物名称, 男性用一位男性,另一位男人,女性用一位女性,另一位女性来代替`;
+const name = "人民的好局长任长霞打击罪犯的一生";
+const prompt = `中国人面孔, 电影风格，生成图片一定要是人物正脸照, 生成的图片任何地方都不要出现地图, 不要跟上下文中的重复, 不要讲去世, 各个镜头采用一镜到底, 不要出现汉字军，军国主义, 警察党旗,核潜艇, 遗像等特殊字眼, 不要出现直播间, 搜索资料,要是完全符合即梦生图和视频的提示词, 出现情况要是当时的实际情况, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落, 画面提示跟运镜方式都要新起个段落, 画面提示词不要涉及国家领导人, 画面提示词中不涉及人物名称, 男性用一位男性,另一位男人,女性用一位女性,另一位女性来代替`;
 const historyNum = 13;
-const accountId = 1;
 export default {
   // 全局配置
   cleanOutputHistory: false, // 是否在每次运行命令前清理output历史数据，默认为true
@@ -15,12 +14,11 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1760091696491_merged.mp4",
-    title: `{{爱国育人永流芳}}\n{{物理天才}}\n李政道的一生`,
+    url: "output/merge-video/merged_1760161130084_merged.mp4",
+    title: `{{人民的好局长}}\n任长霞\n打击罪犯的一生`,
     useBabyCry: false,
     titleDuration: 15, // 全局标题显示时长（秒），不设置则贯穿整个视频
-    endTitle:
-      "李政道:\n科学没有国界\n但科学家有祖国\n培养人才要像种树一样\n既要提供阳光雨露\n也要经历风雨考验", // 结尾标题
+    endTitle: "任长霞:公安，公安\n心中只有‘公’\n人民才能‘安’。", // 结尾标题
     endTitleDuration: 10, // 结尾标题显示时长（秒）- 延长打字机音效时间
     endTitleAnimation: "typewriter", // 结尾标题动画效果：打字机效果
     endTitleSound: "typewriter", // 结尾标题声音效果：打字机声音
@@ -37,31 +35,31 @@ export default {
     enableSpeedOptimization: true, // 启用速度优化：多线程+预设优化
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionTitle: [
-      "1911年/0岁 \n 杭州宅院·新生 \n 婴儿安睡于传统摇篮",
-      "1929年/18岁 \n 交通大学·苦读 \n 图书馆内钻研工程书籍",
-      "1935年/24岁 \n 麻省理工·深造 \n 实验室记录风洞数据",
-      "1945年/34岁 \n 德国考察·探索 \n 查阅火箭技术资料",
-      "1955年/44岁 \n 归国轮船·眺望 \n 手持书卷凝望远方",
-      "1956年/45岁 \n 北京讲堂·授课 \n 向科研人员讲解航天知识",
-      "1960年/49岁 \n 西北基地·指导 \n 研讨火箭设计图纸",
-      "1966年/55岁 \n 发射场·见证 \n 观测导弹试验数据",
-      "1970年/59岁 \n 指挥中心·关注 \n 观看卫星发射实况",
-      "1978年/67岁 \n 大学讲台·育人 \n 指导青年学子",
-      "1985年/74岁 \n 书房·笔耕 \n 撰写系统科学论著",
-      "1995年/84岁 \n 实验室·交流 \n 与科研团队讨论创新理论",
-      "2007年/96岁 \n 家中·沉思 \n 安坐窗前回忆毕生事业",
+      "1983年/20岁 \n 警校训练场·立志 \n 在晨光中练习警械使用",
+      "1985年/22岁 \n 派出所初任·学习 \n 在户籍窗口为群众办理业务",
+      "1989年/26岁 \n 刑侦队办公室·钻研 \n 熬夜分析案件卷宗",
+      "1993年/30岁 \n 犯罪现场·取证 \n 在案发现场仔细收集证据",
+      "1996年/33岁 \n 审讯室·较量 \n 与犯罪嫌疑人智慧周旋",
+      "1999年/36岁 \n 打黑前线·指挥 \n 部署重要抓捕行动",
+      "2001年/38岁 \n 就任局长·担当 \n 在简单仪式上接过重任",
+      "2002年/39岁 \n 街头接访·倾听 \n 与普通群众亲切交谈",
+      "2003年/40岁 \n 扫黑现场·突袭 \n 亲自带队执行抓捕任务",
+      "2004年/41岁 \n 群众家中·慰问 \n 探望案件受害人家属",
+      "2004年/41岁 \n 办公室深夜·操劳 \n 在灯光下批阅重要文件",
+      "2004年/41岁 \n 基层视察·关怀 \n 检查派出所装备情况",
+      "2004年/41岁 \n 工作会议·部署 \n 与同事们研讨案件侦破",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/我记得你眼里的依恋.mp3",
+    "bg-music": "music/我记得你眼里的依恋_start22s_clip.mp3",
     // 栀子花开_start25s_clip
     // 屠洪刚 - 精忠报国_start25s_clip
   },
   "merge-video": {
     urls: [
-      "output/爱国育人永流芳，物理天才李政道的一生/李政道.mp4",
-      "https://v3-artist.vlabvod.com/33b5ae75b9057cac278bde211ba0d2c5/68f216d9/video/tos/cn/tos-cn-v-148450/oMe8ubXG0CBLRkeQgID9rrkv43hAGRe6GODRI3/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5999&bt=5999&cs=0&ds=12&ft=5QYTUxhhe6BMyqcT-LkJD12Nzj&mime_type=video_mp4&qs=0&rc=ZTY8NDVmODk4NWczNDtoOUBpanhreXQ5cmRnNjczNDM7M0AuXjIzMV5jXy8xYy1hMWI1YSM0LmhyMmRzbGhhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1760091195&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251010181315151D8323472B03E8E1FD",
+      "https://v3-artist.vlabvod.com/6e6a685101c818569d184c4d473efbac/68f323a1/video/tos/cn/tos-cn-v-148450/ocEpcKjENEDfQEpIbCFRk63DAnEQdBzOfe0Ogj/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5981&bt=5981&cs=0&ds=12&ft=5QYTUxhhe6BMyqmIsLkJD12Nzj&mime_type=video_mp4&qs=0&rc=NGRmZTs1ZmZnZjdlNGY6OUBpajd4ams5cnF4NjczNDM7M0A2YTY0YmEtNmAxMGI2LzIuYSNnLWdmMmQ0ZWhhLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1760159993&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202510111319522903D055C5A9EA8802F1",
+      "https://v6-artist.vlabvod.com/00bd870fc1f156549c705bd8e228d25e/68f3254a/video/tos/cn/tos-cn-v-148450/o8R6qQOeRjB7MSrpCqFEAqDhO0kDul3EI5fQEe/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6084&bt=6084&cs=0&ds=12&ft=5QYTUxhhe6BMyqaKsLkJD12Nzj&mime_type=video_mp4&qs=0&rc=Z2Q4Ozw3ZGg0PGU3NzY8Z0BpMzxwZG85cjt4NjczNDM7M0A1NC4wY2FjXmExM15hNmE1YSNjZDNiMmRjaWhhLS1kNC9zcw%3D%3D&btag=c0000e00010000&dy_q=1760160438&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251011132717B5A0C8265ACF940344FA",
     ],
-    switch: "时光流转", // 历史人物专用转场效果
+    switch: "无转场", // 历史人物专用转场效果
     // 可选转场效果：
     // 基础效果：叠化、淡入淡出、推拉、擦除、无转场
     // 历史人物专用：时光流转、岁月如歌、历史回眸、命运转折、精神传承、时代变迁、心路历程、光影交错
@@ -129,16 +127,8 @@ export default {
   },
   "clip-audio": [
     {
-      url: "input/clip-audio/韩磊 - 向天再借五百年.mp3",
+      url: "input/clip-audio/我记得你眼里的依恋.mp3",
       start: 22,
-    },
-    {
-      url: "input/clip-audio/栀子花开.mp3",
-      start: 25,
-    },
-    {
-      url: "input/clip-audio/屠洪刚 - 精忠报国.mp3",
-      start: 25,
     },
   ],
   "auto-deepseek-jimeng": {
@@ -161,7 +151,7 @@ export default {
       side_selector: `a`,
       chat_selector: `textarea[placeholder="给 DeepSeek 发送消息 "]`, // 登录完成后进入聊天页面，首先选择发送消息的输入框选择器
       send_chat_selector: `'input[type="file"] + div'`, // 录入完消息后，发送消息的按钮选择器
-      send_msg_template: `${prompt}，{{name}}, 从出生到现在{{timeNum}}个关键时间点, 要特别注意人物服饰要符合历史事实,{{timeNum}}段视频生成提示词, 以及各个镜头画面之间的转换方式或运动方式, 视频镜头要是电影写实风格,比例9:16, 各段视频描述要与{{name}}的长相类似, 各段视频描述要写上人物年龄, 视频提示词不要显示国徽, 人民大会堂等政治信息, 严格生成{{timeNum}}段视频生成提示词，提示词为中文，每句话前面都加上"生成图片要符合实际生活场景"`,
+      send_msg_template: `${prompt}，{{name}}, 根据主题${name}现在{{timeNum}}个关键时间点, 时间点是从${name}开始到${name}结束, 要特别注意人物服饰要符合历史事实,{{timeNum}}段视频生成提示词, 以及各个镜头画面之间的转换方式或运动方式, 视频镜头要是电影写实风格,比例9:16, 各段视频描述要与{{name}}的长相类似, 各段视频描述要写上人物年龄, 视频提示词不要显示国徽, 人民大会堂等政治信息, 严格生成{{timeNum}}段视频生成提示词，提示词为中文，每句话前面都加上"生成图片要符合实际生活场景"`,
       send_msg_template_data: {
         // 把send_msg_template中的{{name}}和{{timeNum}}替换为实际值, 然后把send_msg_template内容输入到chat_selector中
         name,
@@ -170,7 +160,7 @@ export default {
       get_deepseek_result_time: historyNum * 10, // 等待deepseek返回结果的时间, 单位为秒
       deepseek_result_txt_fn: () => {
         const historyNum = 13;
-        const name = "航天之父钱学森的一生";
+        const name = "人民的好局长任长霞打击罪犯的一生";
         const navPrompt = `比例9:16，中国人面孔，像${name}, 电影风格，不要出现汉字军, 生成图片一定要是人物正脸照,警察遗像不要出现病房医院等特殊字眼, 任何地方都不要出现地图, 人物的衣服不要破洞, 物品服饰场景等要符合那个年代的场景, 衣服不要破洞, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 生成的图中不要包含任何地图相关的物品,也不要包含条约相关的, 任何位置都不要出现地图`;
 
         // 实现 takeRight 函数，不依赖 lodash
@@ -251,7 +241,7 @@ export default {
           return {
             title: one,
             // prompt: `${originTitle[index]},${prompt[index]} ${navPrompt}, ${globalPrompt}, 参考图片跟生成的人物图片50%相似度, 一定不要太相似否则会侵权`,
-            prompt: `${originTitle[index]},${prompt[index]},中国人面孔`,
+            prompt: `${originTitle[index]},${prompt[index]}像中国人`,
             shot: `图片中的人物通过以下方式转化到下一个场景:${index === 0 ? "图中的宝宝哭泣" : ""}${shot[index]}`,
           };
         });
@@ -259,14 +249,15 @@ export default {
     },
     jimeng: {
       accountId,
+      persistLogin: true, // 是否启用登录状态持久化，默认为true
       name,
-      downloadImg: true,
+      downloadImg: false,
       url: "https://jimeng.jianying.com/ai-tool/home?type=image", // 打开即梦图片生成首页
       login_selector: {
         login_button: `#SiderMenuLogin`,
         agree_policy: `div.zoomModal-enter-done .lv-btn-primary`,
       },
-      useImgUrl: true,
+      useImgUrl: false, // 直接下载页面url, 不模拟来手动下载
       generate_button_selector: `#AIGeneratedRecord`, // 点击生成按钮
       aspect_ratio_trigger_selector: `div[role="combobox"] ~ button`, // 比例选择器触发按钮
       aspect_ratio_selector: `.lv-radio:last-of-type`, // 比例选择器
@@ -279,18 +270,15 @@ export default {
       img_generate_input_send_selector: `.lv-btn-primary`, // 发送按钮
       gernerate_img_result_selector: `div[style="--aspect-ratio: 0.5625;"]`, // 生成结果
       img_result_urls: () => {
-        const length = 13;
-        const allImgBox = Array.from(
-          document.querySelectorAll(`div[style="--aspect-ratio: 0.5625;"]`)
-        );
+        const allImgBox = Array.from(document.querySelectorAll("div[data-id]"));
         const urls = [];
-        while (urls.length < length && allImgBox.length > 0) {
-          const one = allImgBox.pop();
-          if (one && one.querySelector("img")) {
-            const imgSrc = one.querySelector("img").src;
-            if (imgSrc && imgSrc.startsWith("http")) {
-              urls.unshift(imgSrc);
-            }
+        for (const i in allImgBox) {
+          const one = allImgBox[i];
+          const imgSrc = one.querySelector(
+            'img[data-apm-action="ai-generated-image-record-card"]'
+          ).src;
+          if (imgSrc && imgSrc.startsWith("http")) {
+            urls.unshift(imgSrc);
           }
         }
         return urls;
