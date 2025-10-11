@@ -1,11 +1,11 @@
 // 即梦视频生成器配置文件
-const accountId = 2;
+const accountId = 1;
 
 export default {
   "jimeng-video-generator": {
     accountId, // 使用账号2
     generate_section: 1, // 由于即梦智能多镜一次最多上传10张图片, 所以需要分多次上传, 此参数表示是要上传的第几次
-    generate_section_num: 9, // 分批上传一次section要上传多少张
+    generate_section_num: 7, // 分批上传一次section要上传多少张
     url: "https://jimeng.jianying.com/ai-tool/home?type=video", // 1.打开即梦视频生成首页
     video_generate_select_trigger_selector: ".lv-typography", // 首尾帧选择器范围
     video_generate_select_trigger_text: "首尾帧", // 点击包含"首尾帧"的元素

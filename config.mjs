@@ -4,8 +4,8 @@ const transform =
   "当前镜头到下一镜头之间要结合视频描述词生成一种一定要一镜到底, 运镜的转换是当前人物在当前场景到下一个场景的合理转换,要是大师级转换, 从一个镜头到另一个镜头的转换细节是: 主人物自然从一个场景到另一个场景, 一定要自然, 而且都要是主人物, 运镜转换描述一定是主人物从一个场景到下一个场景, 例如邓稼先从婴儿状态(出生场景)走去学校(另一场景)上学, 人物特写运镜, 所有运镜转化的中心都是只描述主人物从一个场景到另一个场景的过渡, 并且主人物的表情要自然贴合当时的场景";
 const name = "爱国育人永流芳，物理天才李政道的一生";
 const prompt = `中国人面孔, 电影风格，生成图片一定要是人物正脸照, 生成的图片任何地方都不要出现地图, 人物出生的镜头换下, 不要跟上下文中的重复, 不要讲去世, 各个镜头采用一镜到底, 不要出现汉字军，军国主义, 警察党旗,核潜艇, 遗像等特殊字眼, 不要出现直播间, 搜索资料,要是完全符合即梦生图和视频的提示词, 出现情况要是当时的实际情况, 物品服饰场景等要符合那个年代的场景, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 标题, 画面提示,${transform},分别在不同的段落, 还有按照"年份/几岁|什么场景|做什么事"的格式生成一份分镜提示词也新起一个段落, 画面提示跟运镜方式都要新起个段落, 画面提示词不要涉及国家领导人, 画面提示词中不涉及人物名称, 男性用一位男性,另一位男人,女性用一位女性,另一位女性来代替`;
-const historyNum = 13;
-const accountId = 2;
+const historyNum = 7;
+const accountId = 1;
 export default {
   // 全局配置
   cleanOutputHistory: false, // 是否在每次运行命令前清理output历史数据，默认为true
@@ -15,11 +15,12 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1759593750482_merged.mp4",
-    title: `爱国育人永流芳\n物理天才\n李政道的一生`,
-    useBabyCry: true,
+    url: "output/merge-video/merged_1760091696491_merged.mp4",
+    title: `{{爱国育人永流芳}}\n{{物理天才}}\n李政道的一生`,
+    useBabyCry: false,
     titleDuration: 15, // 全局标题显示时长（秒），不设置则贯穿整个视频
-    endTitle: "", // 结尾标题
+    endTitle:
+      "李政道:\n科学没有国界\n但科学家有祖国\n培养人才要像种树一样\n既要提供阳光雨露\n也要经历风雨考验", // 结尾标题
     endTitleDuration: 10, // 结尾标题显示时长（秒）- 延长打字机音效时间
     endTitleAnimation: "typewriter", // 结尾标题动画效果：打字机效果
     endTitleSound: "typewriter", // 结尾标题声音效果：打字机声音
@@ -36,31 +37,26 @@ export default {
     enableSpeedOptimization: true, // 启用速度优化：多线程+预设优化
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionTitle: [
-      "1926年/0岁 \n 江南宅院·新生 \n 婴儿安睡于传统摇篮",
-      "1943年/17岁 \n 抗战时期·苦读 \n 油灯下研读物理著作",
-      "1946年/20岁 \n 大学教室·钻研 \n 黑板前演算理论物理",
-      "1950年/24岁 \n 芝加哥实验室·探索 \n 记录粒子对撞数据",
-      "1956年/30岁 \n 研究办公室·思辨 \n 与同事探讨物理定律",
-      "1957年/31岁 \n 颁奖大厅·荣光 \n 接受科学最高荣誉",
-      "1972年/46岁 \n 学术讲堂·交流 \n 向听众讲解物理前沿",
-      "1979年/53岁 \n 中美教室·育人 \n 指导青年学子深造",
-      "1985年/59岁 \n 科研院所·规划 \n 研讨科学装置设计",
-      "1998年/72岁 \n 苏州园林·传承 \n 与学子探讨艺术与科学",
-      "2006年/80岁 \n 大学讲台·启迪 \n 阐释宇宙奥秘",
-      "2014年/88岁 \n 书斋灯下·笔耕 \n 撰写科学建言手稿",
-      "2023年/97岁 \n 海湾晨光·凝望 \n 眺望远方沉思",
+      "少年李政道\n努力研究",
+      "1943年/17岁 \n 浙西山村·夜读 \n 油灯下苦读物理典籍",
+      "1946年/20岁 \n 大学校园·求索 \n 梧桐树下捧读外文专著",
+      "1957年/31岁 \n 斯德哥尔摩·荣光 \n 庄重接受诺贝尔奖章",
+      "1979年/53岁 \n 中美教室·育人 \n 耐心指导青年学子",
+      "1985年/59岁 \n 实验室·奠基 \n 研讨对撞机设计蓝图",
+      "2006年/80岁 \n 大学讲堂·传承 \n 阐释宇宙暗能量理论",
+      "2023年/97岁 \n 海湾晨光·凝望 \n 眺望远方沉思人生",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/屠洪刚 - 精忠报国_start25s_clip.mp3",
+    "bg-music": "music/我记得你眼里的依恋.mp3",
     // 栀子花开_start25s_clip
     // 屠洪刚 - 精忠报国_start25s_clip
   },
   "merge-video": {
     urls: [
-      "https://v9-artist.vlabvod.com/f31daa339c18257dd78ec51c16621dc3/68ea7ea3/video/tos/cn/tos-cn-v-148450/oUDgrCeI9BhejBgMPIEfG4IJ63QzLrcYGfnQhC/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5975&bt=5975&cs=0&ds=12&ft=5QYTUxhhe6BMyqc4W~kJD12Nzj&mime_type=video_mp4&qs=0&rc=NGY0aDc5Nmk6ZDdpOTc1NkBpM29xeHk5cnJuNjczNDM7M0AwMjAtMDA1X2MxNDNeY2IvYSNsbHJnMmQ0NGRhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1759593467&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251004235747EA23AC7F881685048E8A",
-      "https://v3-artist.vlabvod.com/ee7afffffc436472a7ede1cb6f20c9e8/68ea7f27/video/tos/cn/tos-cn-v-148450/o4ZhDofmRIGOO4BYRCwLLvkIE9GQp9keFAegIu/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6092&bt=6092&cs=0&ds=12&ft=5QYTUxhhe6BMyqA0W~kJD12Nzj&mime_type=video_mp4&qs=0&rc=aDw1ZTpnMzM1aDs1M2g6NEBpamZ3OXA5cjNuNjczNDM7M0A2YGBjLmEzX2AxYzMzYjQvYSNzcnEyMmRrNmRhLS1kNDBzcw%3D%3D&btag=c0000e00010000&dy_q=1759593619&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251005000019D9455952BE9DE3230C97",
+      "output/爱国育人永流芳，物理天才李政道的一生/李政道.mp4",
+      "https://v3-artist.vlabvod.com/33b5ae75b9057cac278bde211ba0d2c5/68f216d9/video/tos/cn/tos-cn-v-148450/oMe8ubXG0CBLRkeQgID9rrkv43hAGRe6GODRI3/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5999&bt=5999&cs=0&ds=12&ft=5QYTUxhhe6BMyqcT-LkJD12Nzj&mime_type=video_mp4&qs=0&rc=ZTY8NDVmODk4NWczNDtoOUBpanhreXQ5cmRnNjczNDM7M0AuXjIzMV5jXy8xYy1hMWI1YSM0LmhyMmRzbGhhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1760091195&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251010181315151D8323472B03E8E1FD",
     ],
-    switch: "无转场", // 历史人物专用转场效果
+    switch: "时光流转", // 历史人物专用转场效果
     // 可选转场效果：
     // 基础效果：叠化、淡入淡出、推拉、擦除、无转场
     // 历史人物专用：时光流转、岁月如歌、历史回眸、命运转折、精神传承、时代变迁、心路历程、光影交错
@@ -168,7 +164,7 @@ export default {
       },
       get_deepseek_result_time: historyNum * 10, // 等待deepseek返回结果的时间, 单位为秒
       deepseek_result_txt_fn: () => {
-        const historyNum = 13;
+        const historyNum = 7;
         const name = "爱国育人永流芳，物理天才李政道的一生";
         const navPrompt = `比例9:16，中国人面孔，像${name}, 电影风格，不要出现汉字军, 生成图片一定要是人物正脸照,警察遗像不要出现病房医院等特殊字眼, 任何地方都不要出现地图, 人物的衣服不要破洞, 物品服饰场景等要符合那个年代的场景, 衣服不要破洞, 人物形象国籍形象要统一, 人物发型要跟当时实际的发型统一, 人物使用物品的场景也要符合实际:比如天文望远镜要往天上看, 物品款式要证是当时年代的物品, 不要是现代或者未来的款式, 人物性别要统一, 生成的图中不要包含任何地图相关的物品,也不要包含条约相关的, 任何位置都不要出现地图`;
 
