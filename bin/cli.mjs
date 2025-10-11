@@ -1,25 +1,31 @@
 #!/usr/bin/env node
-import 'zx/globals';
-import runDownRmWatermark from '../lib/down-rm-watermark.mjs';
-import runHistoryPerson from '../lib/history-person.mjs';
-import runAiRemoveWatermark from '../lib/ai-remove-watermark.mjs';
-import runMergeVideo from '../lib/merge-video.mjs';
-import runClipAudio from '../lib/clip-audio.mjs';
-import runAutoDeepseekJimeng, { clearBrowserData } from '../lib/auto-deepseek-jimeng.mjs';
-import { runJimengVideoFlow } from '../lib/jimeng-video-generator.mjs';
-import runFilter, { listFilters } from '../lib/filter.mjs';
-import runConvert3D, { list3DModes } from '../lib/convert-3d.mjs';
-import runOptimizeImage from '../lib/optimize-image.mjs';
-import runExtractAudio, { showExtractAudioHelp } from '../lib/extract-audio.mjs';
-import runMergeAudioVideo, { showMergeAudioVideoHelp } from '../lib/merge-audio-video.mjs';
-import { cleanOutputHistory } from '../lib/utils.mjs';
-import config from '../config.mjs';
+import "zx/globals";
+import runDownRmWatermark from "../lib/down-rm-watermark.mjs";
+import runHistoryPerson from "../lib/history-person/history-person.mjs";
+import runAiRemoveWatermark from "../lib/ai-remove-watermark.mjs";
+import runMergeVideo from "../lib/merge-video.mjs";
+import runClipAudio from "../lib/clip-audio.mjs";
+import runAutoDeepseekJimeng, {
+  clearBrowserData,
+} from "../lib/auto-deepseek-jimeng/auto-deepseek-jimeng.mjs";
+import { runJimengVideoFlow } from "../lib/auto-deepseek-jimeng/jimeng-video-generator.mjs";
+import runFilter, { listFilters } from "../lib/filter.mjs";
+import runConvert3D, { list3DModes } from "../lib/convert-3d.mjs";
+import runOptimizeImage from "../lib/optimize-image.mjs";
+import runExtractAudio, {
+  showExtractAudioHelp,
+} from "../lib/extract-audio.mjs";
+import runMergeAudioVideo, {
+  showMergeAudioVideoHelp,
+} from "../lib/merge-audio-video.mjs";
+import { cleanOutputHistory } from "../lib/utils.mjs";
+import config from "../config.mjs";
 
 async function loadConfig() {
   try {
     return config;
   } catch (err) {
-    console.warn('Warning: Could not load config.mjs:', err.message);
+    console.warn("Warning: Could not load config.mjs:", err.message);
   }
   return {};
 }
@@ -40,18 +46,18 @@ function printHelp() {
 
   // 需要清理output历史数据的命令列表
   const commandsNeedCleanup = [
-    'down-rm-watermark',
-    'history-person', 
-    'ai-remove-watermark',
-    'merge-video',
-    'clip-audio',
-    'extract-audio',
-    'merge-audio-video',
-    'auto-deepseek-jimeng',
-    'jimeng-video-generator',
-    'filter',
-    'convert-3d',
-    'optimize-image'
+    "down-rm-watermark",
+    "history-person",
+    "ai-remove-watermark",
+    "merge-video",
+    "clip-audio",
+    "extract-audio",
+    "merge-audio-video",
+    "auto-deepseek-jimeng",
+    "jimeng-video-generator",
+    "filter",
+    "convert-3d",
+    "optimize-image",
   ];
 
   // 如果是需要清理的命令，先执行清理
@@ -61,242 +67,317 @@ function printHelp() {
 
   try {
     switch (cmd) {
-      case 'down-rm-watermark': {
+      case "down-rm-watermark": {
         let url = argv.url || argv.u || rest[0];
-        let bgMusic = argv['bg-music'] || argv.b;
-        
+        let bgMusic = argv["bg-music"] || argv.b;
+
         // If no URL provided, try to get from config
-        if (!url && config['down-rm-watermark']?.url) {
-          url = config['down-rm-watermark'].url;
-          console.log('Using URL from config.mjs');
+        if (!url && config["down-rm-watermark"]?.url) {
+          url = config["down-rm-watermark"].url;
+          console.log("Using URL from config.mjs");
         }
         // If no bg-music provided, try to get from config
-        if (!bgMusic && config['down-rm-watermark']?.['bg-music']) {
-          bgMusic = config['down-rm-watermark']['bg-music'];
-          console.log('Using bg-music from config.mjs');
+        if (!bgMusic && config["down-rm-watermark"]?.["bg-music"]) {
+          bgMusic = config["down-rm-watermark"]["bg-music"];
+          console.log("Using bg-music from config.mjs");
         }
-        
+
         if (!url) {
-          console.error('\nUsage: node-ffmpeg-tools down-rm-watermark <url>');
-          console.error('Or add URL to config.mjs under "down-rm-watermark.url"');
+          console.error("\nUsage: node-ffmpeg-tools down-rm-watermark <url>");
+          console.error(
+            'Or add URL to config.mjs under "down-rm-watermark.url"'
+          );
           process.exit(1);
         }
         await runDownRmWatermark(url, { bgMusic });
         break;
       }
-      case 'history-person': {
-        if (!config['history-person']) {
-          console.error('\nError: No "history-person" configuration found in config.mjs');
-          console.error('Please add history-person configuration with url, title, sectionTitle, and bg-music fields');
+      case "history-person": {
+        if (!config["history-person"]) {
+          console.error(
+            '\nError: No "history-person" configuration found in config.mjs'
+          );
+          console.error(
+            "Please add history-person configuration with url, title, sectionTitle, and bg-music fields"
+          );
           process.exit(1);
         }
-        
-        console.log('Using history-person configuration from config.mjs');
-        await runHistoryPerson(config['history-person']);
+
+        console.log("Using history-person configuration from config.mjs");
+        await runHistoryPerson(config["history-person"]);
         break;
       }
-      case 'ai-remove-watermark': {
+      case "ai-remove-watermark": {
         let url = argv.url || argv.u || rest[0];
-        if (!url && config['ai-remove-watermark']?.url) {
-          url = config['ai-remove-watermark'].url;
-          console.log('Using URL from config.mjs (ai-remove-watermark.url)');
+        if (!url && config["ai-remove-watermark"]?.url) {
+          url = config["ai-remove-watermark"].url;
+          console.log("Using URL from config.mjs (ai-remove-watermark.url)");
         }
         if (!url) {
-          console.error('\nUsage: node-ffmpeg-tools ai-remove-watermark <url>');
-          console.error('Or add URL to config.mjs under "ai-remove-watermark.url"');
+          console.error("\nUsage: node-ffmpeg-tools ai-remove-watermark <url>");
+          console.error(
+            'Or add URL to config.mjs under "ai-remove-watermark.url"'
+          );
           process.exit(1);
         }
         await runAiRemoveWatermark(url);
         break;
       }
-      case 'merge-video': {
-        if (!config['merge-video']) {
-          console.error('\nError: No "merge-video" configuration found in config.mjs');
-          console.error('Please add merge-video configuration with urls array and switch (transition effect) fields');
+      case "merge-video": {
+        if (!config["merge-video"]) {
+          console.error(
+            '\nError: No "merge-video" configuration found in config.mjs'
+          );
+          console.error(
+            "Please add merge-video configuration with urls array and switch (transition effect) fields"
+          );
           process.exit(1);
         }
-        
-        console.log('Using merge-video configuration from config.mjs');
-        await runMergeVideo(config['merge-video']);
+
+        console.log("Using merge-video configuration from config.mjs");
+        await runMergeVideo(config["merge-video"]);
         break;
       }
-      case 'clip-audio': {
-        if (!config['clip-audio']) {
-          console.error('\nError: No "clip-audio" configuration found in config.mjs');
-          console.error('Please add clip-audio configuration as an array of {url, start?, duration?, output?} objects');
+      case "clip-audio": {
+        if (!config["clip-audio"]) {
+          console.error(
+            '\nError: No "clip-audio" configuration found in config.mjs'
+          );
+          console.error(
+            "Please add clip-audio configuration as an array of {url, start?, duration?, output?} objects"
+          );
           process.exit(1);
         }
-        
-        if (!Array.isArray(config['clip-audio'])) {
+
+        if (!Array.isArray(config["clip-audio"])) {
           console.error('\nError: "clip-audio" configuration must be an array');
-          console.error('Each item should have: {url, start?, duration?, output?}');
+          console.error(
+            "Each item should have: {url, start?, duration?, output?}"
+          );
           process.exit(1);
         }
-        
-        console.log('Using clip-audio configuration from config.mjs');
-        await runClipAudio(config['clip-audio']);
+
+        console.log("Using clip-audio configuration from config.mjs");
+        await runClipAudio(config["clip-audio"]);
         break;
       }
-      case 'auto-deepseek-jimeng': {
-        if (!config['auto-deepseek-jimeng']) {
-          console.error('\nError: No "auto-deepseek-jimeng" configuration found in config.mjs');
-          console.error('Please add auto-deepseek-jimeng configuration with deepseek settings');
+      case "auto-deepseek-jimeng": {
+        if (!config["auto-deepseek-jimeng"]) {
+          console.error(
+            '\nError: No "auto-deepseek-jimeng" configuration found in config.mjs'
+          );
+          console.error(
+            "Please add auto-deepseek-jimeng configuration with deepseek settings"
+          );
           process.exit(1);
         }
-        
-        console.log('Using auto-deepseek-jimeng configuration from config.mjs');
-        await runAutoDeepseekJimeng(config['auto-deepseek-jimeng']);
+
+        console.log("Using auto-deepseek-jimeng configuration from config.mjs");
+        await runAutoDeepseekJimeng(config["auto-deepseek-jimeng"]);
         break;
       }
-      case 'jimeng-video-generator': {
-        if (!config['jimeng-video-generator']) {
-          console.error('\nError: No "jimeng-video-generator" configuration found in config.mjs');
-          console.error('Please add jimeng-video-generator configuration with required settings');
+      case "jimeng-video-generator": {
+        if (!config["jimeng-video-generator"]) {
+          console.error(
+            '\nError: No "jimeng-video-generator" configuration found in config.mjs'
+          );
+          console.error(
+            "Please add jimeng-video-generator configuration with required settings"
+          );
           process.exit(1);
         }
-        
+
         // 检查是否有 processed_data.json 文件
-        const processedDataPath = './output/' + (config['jimeng-video-generator'].name || 'default') + '/processed_data.json';
+        const processedDataPath =
+          "./output/" +
+          (config["jimeng-video-generator"].name || "default") +
+          "/processed_data.json";
         let processedData;
         try {
-          const fs = await import('fs/promises');
-          const data = await fs.readFile(processedDataPath, 'utf8');
+          const fs = await import("fs/promises");
+          const data = await fs.readFile(processedDataPath, "utf8");
           processedData = JSON.parse(data);
-          console.log(`✅ 找到 processed_data.json 文件，包含 ${processedData.segments?.length || 0} 个段落`);
+          console.log(
+            `✅ 找到 processed_data.json 文件，包含 ${processedData.segments?.length || 0} 个段落`
+          );
         } catch (error) {
-          console.error(`\nError: 无法读取 processed_data.json 文件: ${processedDataPath}`);
-          console.error('请先运行 auto-deepseek-jimeng 命令生成数据，或检查文件路径是否正确');
+          console.error(
+            `\nError: 无法读取 processed_data.json 文件: ${processedDataPath}`
+          );
+          console.error(
+            "请先运行 auto-deepseek-jimeng 命令生成数据，或检查文件路径是否正确"
+          );
           process.exit(1);
         }
-        
-        console.log('Using jimeng-video-generator configuration from config.mjs');
+
+        console.log(
+          "Using jimeng-video-generator configuration from config.mjs"
+        );
         await runJimengVideoFlow(
-          config['jimeng-video-generator'], 
-          processedData, 
-          config['jimeng-video-generator'].name || 'default'
+          config["jimeng-video-generator"],
+          processedData,
+          config["jimeng-video-generator"].name || "default"
         );
         break;
       }
-      case 'filter': {
+      case "filter": {
         // 检查是否要列出所有滤镜
         if (argv.list || argv.l) {
           listFilters();
           break;
         }
-        
+
         // 从命令行参数或配置文件获取设置
         const filterConfig = {
           input: argv.input || argv.i || rest[0] || config.filter?.input,
           output: argv.output || argv.o || config.filter?.output,
           preset: argv.preset || argv.p || config.filter?.preset,
           customFilter: argv.custom || argv.c || config.filter?.customFilter,
-          quality: argv.quality || argv.q || config.filter?.quality || 'high',
-          keepAudio: argv['keep-audio'] !== false && config.filter?.keepAudio !== false
+          quality: argv.quality || argv.q || config.filter?.quality || "high",
+          keepAudio:
+            argv["keep-audio"] !== false && config.filter?.keepAudio !== false,
         };
-        
+
         if (!filterConfig.input) {
-          console.error('\nError: 请指定输入视频文件');
-          console.error('使用方法:');
-          console.error('  npx node-ffmpeg-tools filter --list                           # 列出所有滤镜');
-          console.error('  npx node-ffmpeg-tools filter -i input.mp4 -p cinematic-warm  # 使用预设滤镜');
-          console.error('  npx node-ffmpeg-tools filter -i input.mp4 -c "eq=contrast=1.2" # 自定义滤镜');
-          console.error('  或在 config.mjs 中配置 filter 部分\n');
+          console.error("\nError: 请指定输入视频文件");
+          console.error("使用方法:");
+          console.error(
+            "  npx node-ffmpeg-tools filter --list                           # 列出所有滤镜"
+          );
+          console.error(
+            "  npx node-ffmpeg-tools filter -i input.mp4 -p cinematic-warm  # 使用预设滤镜"
+          );
+          console.error(
+            '  npx node-ffmpeg-tools filter -i input.mp4 -c "eq=contrast=1.2" # 自定义滤镜'
+          );
+          console.error("  或在 config.mjs 中配置 filter 部分\n");
           process.exit(1);
         }
-        
+
         if (!filterConfig.preset && !filterConfig.customFilter) {
-          console.error('\nError: 请指定预设滤镜 (--preset) 或自定义滤镜 (--custom)');
-          console.error('使用 --list 查看所有可用的预设滤镜\n');
+          console.error(
+            "\nError: 请指定预设滤镜 (--preset) 或自定义滤镜 (--custom)"
+          );
+          console.error("使用 --list 查看所有可用的预设滤镜\n");
           process.exit(1);
         }
-        
+
         await runFilter(filterConfig);
         break;
       }
-      case 'convert-3d': {
+      case "convert-3d": {
         // 检查是否要列出所有3D模式
         if (argv.list || argv.l) {
           list3DModes();
           break;
         }
-        
+
         // 从命令行参数或配置文件获取设置
         const convert3DConfig = {
-          input: argv.input || argv.i || rest[0] || config['convert-3d']?.input,
-          output: argv.output || argv.o || config['convert-3d']?.output,
-          mode: argv.mode || argv.m || config['convert-3d']?.mode || 'anaglyph-red-cyan',
-          depth: argv.depth || argv.d || config['convert-3d']?.depth || 0.3,
-          quality: argv.quality || argv.q || config['convert-3d']?.quality || 'high',
-          keepAudio: argv['keep-audio'] !== false && config['convert-3d']?.keepAudio !== false
+          input: argv.input || argv.i || rest[0] || config["convert-3d"]?.input,
+          output: argv.output || argv.o || config["convert-3d"]?.output,
+          mode:
+            argv.mode ||
+            argv.m ||
+            config["convert-3d"]?.mode ||
+            "anaglyph-red-cyan",
+          depth: argv.depth || argv.d || config["convert-3d"]?.depth || 0.3,
+          quality:
+            argv.quality || argv.q || config["convert-3d"]?.quality || "high",
+          keepAudio:
+            argv["keep-audio"] !== false &&
+            config["convert-3d"]?.keepAudio !== false,
         };
-        
+
         if (!convert3DConfig.input) {
-          console.error('\nError: 请指定输入视频文件');
-          console.error('使用方法:');
-          console.error('  npx node-ffmpeg-tools convert-3d --list                        # 列出所有3D模式');
-          console.error('  npx node-ffmpeg-tools convert-3d -i input.mp4 -m anaglyph-red-cyan  # 转换为红蓝3D');
-          console.error('  npx node-ffmpeg-tools convert-3d -i input.mp4 -m side-by-side  # 转换为左右3D');
-          console.error('  或在 config.mjs 中配置 convert-3d 部分\n');
+          console.error("\nError: 请指定输入视频文件");
+          console.error("使用方法:");
+          console.error(
+            "  npx node-ffmpeg-tools convert-3d --list                        # 列出所有3D模式"
+          );
+          console.error(
+            "  npx node-ffmpeg-tools convert-3d -i input.mp4 -m anaglyph-red-cyan  # 转换为红蓝3D"
+          );
+          console.error(
+            "  npx node-ffmpeg-tools convert-3d -i input.mp4 -m side-by-side  # 转换为左右3D"
+          );
+          console.error("  或在 config.mjs 中配置 convert-3d 部分\n");
           process.exit(1);
         }
-        
+
         await runConvert3D(convert3DConfig);
         break;
       }
-      case 'optimize-image': {
-        if (!config['optimize-image']) {
-          console.error('\nError: No "optimize-image" configuration found in config.mjs');
-          console.error('Please add optimize-image configuration with inputDir, outputDir, and quality settings');
+      case "optimize-image": {
+        if (!config["optimize-image"]) {
+          console.error(
+            '\nError: No "optimize-image" configuration found in config.mjs'
+          );
+          console.error(
+            "Please add optimize-image configuration with inputDir, outputDir, and quality settings"
+          );
           process.exit(1);
         }
-        
-        console.log('Using optimize-image configuration from config.mjs');
+
+        console.log("Using optimize-image configuration from config.mjs");
         await runOptimizeImage(config);
         break;
       }
-      case 'extract-audio': {
+      case "extract-audio": {
         // 检查是否要显示帮助信息
         if (argv.help || argv.h) {
           showExtractAudioHelp();
           break;
         }
-        
-        if (!config['extract-audio']) {
-          console.error('\nError: No "extract-audio" configuration found in config.mjs');
-          console.error('Please add extract-audio configuration with url and optional format/quality settings');
-          console.error('Or use --help to see configuration examples');
+
+        if (!config["extract-audio"]) {
+          console.error(
+            '\nError: No "extract-audio" configuration found in config.mjs'
+          );
+          console.error(
+            "Please add extract-audio configuration with url and optional format/quality settings"
+          );
+          console.error("Or use --help to see configuration examples");
           process.exit(1);
         }
-        
-        console.log('Using extract-audio configuration from config.mjs');
-        await runExtractAudio(config['extract-audio']);
+
+        console.log("Using extract-audio configuration from config.mjs");
+        await runExtractAudio(config["extract-audio"]);
         break;
       }
-      case 'merge-audio-video': {
+      case "merge-audio-video": {
         // 检查是否要显示帮助信息
         if (argv.help || argv.h) {
           showMergeAudioVideoHelp();
           break;
         }
-        
-        if (!config['merge-audio-video']) {
-          console.error('\nError: No "merge-audio-video" configuration found in config.mjs');
-          console.error('Please add merge-audio-video configuration with videoUrl and audioUrl');
-          console.error('Or use --help to see configuration examples');
+
+        if (!config["merge-audio-video"]) {
+          console.error(
+            '\nError: No "merge-audio-video" configuration found in config.mjs'
+          );
+          console.error(
+            "Please add merge-audio-video configuration with videoUrl and audioUrl"
+          );
+          console.error("Or use --help to see configuration examples");
           process.exit(1);
         }
-        
-        console.log('Using merge-audio-video configuration from config.mjs');
-        await runMergeAudioVideo(config['merge-audio-video']);
+
+        console.log("Using merge-audio-video configuration from config.mjs");
+        await runMergeAudioVideo(config["merge-audio-video"]);
         break;
       }
-      case 'clear-browser-data': {
-        console.log('🧹 正在清理浏览器用户数据...');
+      case "clear-browser-data": {
+        console.log("🧹 正在清理浏览器用户数据...");
         const success = await clearBrowserData();
         if (success) {
-          console.log('✅ 浏览器数据清理完成！下次运行 auto-deepseek-jimeng 时将需要重新登录');
+          console.log(
+            "✅ 浏览器数据清理完成！下次运行 auto-deepseek-jimeng 时将需要重新登录"
+          );
         } else {
-          console.log('❌ 浏览器数据清理失败，请检查权限或手动删除 browser-data 目录');
+          console.log(
+            "❌ 浏览器数据清理失败，请检查权限或手动删除 browser-data 目录"
+          );
         }
         break;
       }
@@ -306,7 +387,7 @@ function printHelp() {
         process.exit(1);
     }
   } catch (err) {
-    console.error('\nError:', err?.message || err);
+    console.error("\nError:", err?.message || err);
     process.exit(1);
   }
 })();
