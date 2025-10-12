@@ -1,10 +1,9 @@
-import jimengVideoConfig, {
-  accountId,
-} from "./lib/auto-deepseek-jimeng/jimeng-video-config.mjs";
 import jimengConfig from "./lib/auto-deepseek-jimeng/jimeng-config.mjs";
 import deepseekConfig from "./lib/auto-deepseek-jimeng/deepseek-config.mjs";
+import baiduConfig from "./lib/auto-deepseek-jimeng/baidu-config.mjs";
+import jimengVideoConfig from "./lib/auto-deepseek-jimeng/jimeng-video-config.mjs";
 
-const name = "人民的好局长任长霞打击罪犯的一生";
+const name = "与中国人民并肩抗日的“日籍同志”-尾崎秀实";
 export default {
   // 全局配置
   cleanOutputHistory: false, // 是否在每次运行命令前清理output历史数据，默认为true
@@ -15,7 +14,7 @@ export default {
   "history-person": {
     name,
     url: "output/merge-video/merged_1760161130084_merged.mp4",
-    title: `{{人民的好局长}}\n任长霞\n打击罪犯的一生`,
+    title: `{{与中国人民并肩抗日的}}\n“日籍同志”\n尾崎秀实`,
     useBabyCry: false,
     titleDuration: 15, // 全局标题显示时长（秒），不设置则贯穿整个视频
     endTitle: "任长霞:公安，公安\n心中只有‘公’\n人民才能‘安’。", // 结尾标题
@@ -35,22 +34,22 @@ export default {
     enableSpeedOptimization: true, // 启用速度优化：多线程+预设优化
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionTitle: [
-      "1983年/20岁 \n 警校训练场·立志 \n 在晨光中练习警体拳",
-      "1985年/22岁 \n 派出所户籍室·服务 \n 耐心解答群众疑问",
-      "1988年/25岁 \n 刑侦队办公室·钻研 \n 深夜分析案件卷宗",
-      "1992年/29岁 \n 案发现场·取证 \n 仔细勘查现场痕迹",
-      "1995年/32岁 \n 审讯室·讯问 \n 与犯罪嫌疑人斗智斗勇",
-      "1998年/35岁 \n 指挥中心·部署 \n 研究案情制定方案",
-      "2001年/38岁 \n 就任仪式·担当 \n 郑重接过工作重任",
-      "2002年/39岁 \n 街头接访·倾听 \n 认真记录群众诉求",
-      "2003年/40岁 \n 抓捕现场·指挥 \n 部署突击收网行动",
-      "2004年/41岁 \n 群众家中·慰问 \n 安抚案件受害家属",
-      "2004年/41岁 \n 办公室深夜·操劳 \n 批阅重要案件文件",
-      "2004年/41岁 \n 基层视察·指导 \n 检查警务装备情况",
-      "2004年/41岁 \n 工作会议·研讨 \n 与同事分析案件进展",
+      "1901年/0岁 \n 东京宅院·新生 \n 婴儿安睡于传统日式襁褓",
+      "1919年/18岁 \n 东京帝大校园·思索 \n 银杏树下阅读马克思主义著作",
+      "1928年/27岁 \n 上海码头·初至 \n 手提皮箱眺望外滩建筑群",
+      "1930年/29岁 \n 内山书店·交流 \n 与中日文化界人士恳切交谈",
+      "1931年/30岁 \n 记者俱乐部·担当 \n 为左翼文化会议提供场地钥匙",
+      "1932年/31岁 \n 北四川路办公室·笔耕 \n 在打字机前撰写时事评论",
+      "1934年/33岁 \n 东京书房·深耕 \n 伏案写作《暴风雨中的中国》书稿",
+      "1937年/36岁 \n 首相官邸·智囊 \n 以顾问身份参与政策研讨",
+      "1939年/38岁 \n 东京会议室·洞察 \n 分析中国抗战形势图表",
+      "1941年/40岁 \n 书房密谈·传递 \n 将重要情报交予联络人员",
+      "1941年/40岁 \n 被捕时刻·从容 \n 在书斋平静面对突如其来的搜查",
+      "1943年/42岁 \n 狱中书写·坚守 \n 借铁窗微光撰写申诉材料",
+      "1944年/43岁 \n 囚室遥望·坚定 \n 凝视窗外飞鸟保持信念",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/我记得你眼里的依恋_start22s_clip.mp3",
+    "bg-music": "music/国际歌.mp3",
     // 栀子花开_start25s_clip
     // 屠洪刚 - 精忠报国_start25s_clip
   },
@@ -132,9 +131,11 @@ export default {
     },
   ],
   "auto-deepseek-jimeng": {
+    imgGenerateType: "jimeng", // jimeng | baidu
     deepseek: deepseekConfig,
     jimeng: jimengConfig,
-    // 从外部配置文件导入 jimeng-video-generator 配置
+    baidu: baiduConfig,
+    // 注释掉视频生成配置，只执行图片生成
     "jimeng-video-generator": jimengVideoConfig["jimeng-video-generator"],
   },
 
