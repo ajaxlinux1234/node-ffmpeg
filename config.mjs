@@ -1,9 +1,10 @@
 import jimengConfig from "./lib/auto-deepseek-jimeng/jimeng-config.mjs";
 import deepseekConfig from "./lib/auto-deepseek-jimeng/deepseek-config.mjs";
 import baiduConfig from "./lib/auto-deepseek-jimeng/baidu-config.mjs";
-import jimengVideoConfig from "./lib/auto-deepseek-jimeng/jimeng-video-config.mjs";
+import jimengVideoConfig, {
+  name,
+} from "./lib/auto-deepseek-jimeng/jimeng-video-config.mjs";
 
-const name = "与中国人民并肩抗日的“日籍同志”-尾崎秀实";
 export default {
   // 全局配置
   cleanOutputHistory: false, // 是否在每次运行命令前清理output历史数据，默认为true
@@ -13,11 +14,11 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1760245853909_merged.mp4",
-    title: `{{与中国人民}}\n{{并肩抗日的}}\n“日籍同志”\n尾崎秀实`,
+    url: "output/filter/merged_1760368202689_merged_cinematic-teal-orange.mp4",
+    title: `航天之父钱学森\n{{第一颗导弹制造之路}}`,
     useBabyCry: false,
     titleDuration: 10, // 全局标题显示时长（秒），不设置则贯穿整个视频
-    endTitle: "尾崎秀实:\n中日应\n超越政治对立\n共同反对帝国主义压迫", // 结尾标题
+    endTitle: "", // 结尾标题
     endTitleDuration: 10, // 结尾标题显示时长（秒）- 延长打字机音效时间
     endTitleAnimation: "typewriter", // 结尾标题动画效果：打字机效果
     endTitleSound: "typewriter", // 结尾标题声音效果：打字机声音
@@ -25,7 +26,7 @@ export default {
     // 快乐传递者何炅
     // 国士无双袁隆平
     titleAnimation: "sweep_slow", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
-    sectionTitleAnimation: "sweep_slow", // 分镜字幕动画效果，可选值同titleAnimation
+    sectionTitleAnimation: "fade", // 分镜字幕动画效果，可选值同titleAnimation
 
     // 视频质量配置
     qualityMode: "high", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理), "turbo"(极速处理)
@@ -33,41 +34,38 @@ export default {
     // 性能优化配置
     enableSpeedOptimization: true, // 启用速度优化：多线程+预设优化
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
-    sectionFirstTitleTime: 2,
+    sectionFirstTitleTime: 3,
     sectionTitle: [
-      "尾崎秀实在被捕前\n撕毁所有重要文件",
-      "1901年/0岁 \n 东京宅院·新生 \n 婴儿安睡于传统日式襁褓",
-      "1919年/18岁 \n 东京帝大校园·思索 \n 银杏树下阅读社会科学著作",
-      "1928年/27岁 \n 上海码头·初至 \n 手提皮箱眺望外滩建筑群",
-      "1930年/29岁 \n 内山书店·交流 \n 与中日文化界人士恳切交谈",
-      "1932年/31岁 \n 报社办公室·笔耕 \n 在打字机前撰写时事评论",
-      "1934年/33岁 \n 东京书房·深耕 \n 伏案写作《暴风雨中的中国》书稿",
-      "1937年/36岁 \n 首相官邸·智囊 \n 以顾问身份参与政策研讨",
-      "1939年/38岁 \n 会议室·洞察 \n 分析中国抗战形势图表",
-      "1941年/40岁 \n 书房密谈·传递 \n 将重要情报交予联络人员",
-      "1941年/40岁 \n 被捕时刻·从容 \n 在书斋平静面对突如其来的搜查",
-      "1943年/42岁 \n 狱中书写·坚守 \n 借铁窗微光撰写申诉材料",
-      "1944年/43岁 \n 囚室遥望·坚定 \n 凝视窗外飞鸟保持信念",
-      "1944年/43岁 \n 最后时刻·平静 \n 整理衣着保持尊严与体面",
+      "1911年/17岁 \n 福州军营·参军 \n 与同乡共举北伐学生军旗帜",
+      "1916年/22岁 \n 保定军校·苦读 \n 以第一名成绩毕业代表致辞",
+      "1929年/35岁 \n 日本军校·钻研 \n 于陆军大学撰写军事著作",
+      "1937年/43岁 \n 武汉珞珈山·授业 \n 主持战地情报训练班",
+      "1940年/46岁 \n 第四战区指挥部·指挥 \n 部署桂南会战反击策略",
+      "1942年/48岁 \n 柳州驻地·营救 \n 保护越南革命者胡志明",
+      "1944年/50岁 \n 黔桂溃退途中·愤慨 \n 目睹难民惨状辞去军职",
+      "1947年/53岁 \n 上海华懋公寓·抉择 \n 与中共代表秘密会面",
+      "1948年/54岁 \n 南京国防部·传递 \n 送交长江布防绝密地图",
+      "1949年/55岁 \n 福州档案室·智守 \n 转移机密文件避免运台",
+      "1949年/55岁 \n 香港码头·告别 \n 拒绝留守毅然登船赴台",
+      "1950年/56岁 \n 台北参谋部·周旋 \n 于敌巢核心传递情报",
+      "1950年/56岁 \n 狱中受刑·不屈 \n 黑暗中以血书写绝命诗",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/国际歌.mp3",
+    "bg-music": "music/屠洪刚 - 精忠报国_start25s_clip.mp3",
     // 栀子花开_start25s_clip
     // 屠洪刚 - 精忠报国_start25s_clip
   },
   "merge-video": {
     urls: [
-      "output/clip-video/1_0s-2s_clipped.mp4",
-      "https://v26-artist.vlabvod.com/c7077590eaed4ba8babbb300e9da4f3e/68f4654e/video/tos/cn/tos-cn-v-148450/ogL1GeLbOIfGRvUgNBRALCsWgpDlk4usfBN0Tn/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5982&bt=5982&cs=0&ds=12&ft=5QYTUxhhe6BMyqEKKLkJD12Nzj&mime_type=video_mp4&qs=0&rc=NzU5aWRoZ2Q4ZmhoZDZpaUBpajttcGw5cnVsNjczNDM7M0BeMzBhYzQzNV4xYGE2MC4uYSMya2xtMmRjZmlhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1760242342&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202510121212227B4F079AE444749AF416",
-      "https://v9-artist.vlabvod.com/19117271f82b7251678326c45b730de5/68f46557/video/tos/cn/tos-cn-v-148450/oUorIrbHSDEqegyOAK6BfFr5qACyvECqBy6qYQ/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6053&bt=6053&cs=0&ds=12&ft=5QYTUxhhe6BMyq4UKLkJD12Nzj&mime_type=video_mp4&qs=0&rc=Z2doZGllNmk3aGY4ZGQzOEBpM3VvanY5cmVsNjczNDM7M0BfNmNeLi5jXy4xYDQuXzNfYSMtcF5uMmRzaWlhLS1kNC9zcw%3D%3D&btag=c0000e00010000&dy_q=1760242371&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202510121212513976A667DEF80AC2046D",
+      "https://v26-artist.vlabvod.com/0119f81332fa99ec1aab4de2e16d7412/68f66645/video/tos/cn/tos-cn-v-148450/oo0C1eKfQ8f4UgQHNvYIEPV3gIIzQgLtIfsaeG/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6023&bt=6023&cs=0&ds=12&ft=5QYTUxhhe6BMyqYBPikJD12Nzj&mime_type=video_mp4&qs=0&rc=NzVnaGg8ZjRkOjdlODUzZ0BpM3lvbXI5cnlsNjczNDM7M0AyMV8uMzIzNV4xNi81YTVeYSMzNF40MmRzZ2phLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1760373671&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202510140041117BD619880971B6DC59BF",
+      "https://v3-artist.vlabvod.com/b18c80971e7d508c9811daace9a69d55/68f6659b/video/tos/cn/tos-cn-v-148450/oE5Z0ZpkhOEiv3KWqwCXvtnZBaEsIWIwvQGiQ/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6015&bt=6015&cs=0&ds=12&ft=5QYTUxhhe6BMyqzUPikJD12Nzj&mime_type=video_mp4&qs=0&rc=OGhoZTY6OTc7N2VnZWg0M0BpM3N3OXE5cnNsNjczNDM7M0A1MzVgLTJgNmAxMTJeLWE1YSNmZmFqMmRraWphLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1760373501&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202510140038211E24014F55F9B1C47E0A",
     ],
     // 方式一：统一转场效果（原有方式，向后兼容）
     // switch: "无转场", // 所有视频之间使用相同的转场效果
 
     // 方式二：分别设置转场效果（新功能）
     transitions: [
-      "时光流转", // 视频1 → 视频2 的转场效果
-      "无转场", // 视频2 → 视频3 的转场效果
+      "无转场", // 视频1 → 视频2 的转场效果
     ],
     // 可选转场效果：
     // 基础效果：叠化、淡入淡出、推拉、擦除、无转场
@@ -117,7 +115,7 @@ export default {
     },
   },
   filter: {
-    input: "output/merge-video/merged_1759325333220_merged.mp4",
+    input: "output/merge-video/merged_1760368202689_merged.mp4",
     // output: "output/filter/custom_output.mp4", // 可选，不指定则自动生成
     preset: "cinematic-teal-orange", // 预设滤镜名称，使用 --list 查看所有可用滤镜
     // customFilter: "eq=contrast=1.2:saturation=1.3", // 自定义滤镜字符串，与preset二选一
@@ -126,7 +124,7 @@ export default {
   },
   "convert-3d": {
     input:
-      "output/filter/merged_1759325333220_merged_cinematic-teal-orange.mp4",
+      "output/filter/merged_1760367082871_merged_cinematic-teal-orange.mp4",
     // output: "output/convert-3d/custom_3d.mp4", // 可选，不指定则自动生成
     mode: "anaglyph-red-cyan", // 3D模式，使用 --list 查看所有可用模式
     // 可选模式: anaglyph-red-cyan, anaglyph-green-magenta, side-by-side, top-bottom
