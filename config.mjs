@@ -14,8 +14,8 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/filter/merged_1760368202689_merged_cinematic-teal-orange.mp4",
-    title: `航天之父钱学森\n{{第一颗导弹制造之路}}`,
+    url: "output/filter/merged_1760625337979_merged_cinematic-teal-orange.mp4",
+    title: `沉默的荣耀\n从{{“体制内高官”}}\n到{{“地下战士”}}\n陈宝仓的{{信仰蜕变之路}}`,
     useBabyCry: false,
     titleDuration: 10, // 全局标题显示时长（秒），不设置则贯穿整个视频
     endTitle: "", // 结尾标题
@@ -34,21 +34,21 @@ export default {
     // 性能优化配置
     enableSpeedOptimization: true, // 启用速度优化：多线程+预设优化
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
-    sectionFirstTitleTime: 3,
+    sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1911年/17岁 \n 福州军营·参军 \n 与同乡共举北伐学生军旗帜",
-      "1916年/22岁 \n 保定军校·苦读 \n 以第一名成绩毕业代表致辞",
-      "1929年/35岁 \n 日本军校·钻研 \n 于陆军大学撰写军事著作",
-      "1937年/43岁 \n 武汉珞珈山·授业 \n 主持战地情报训练班",
-      "1940年/46岁 \n 第四战区指挥部·指挥 \n 部署桂南会战反击策略",
-      "1942年/48岁 \n 柳州驻地·营救 \n 保护越南革命者胡志明",
-      "1944年/50岁 \n 黔桂溃退途中·愤慨 \n 目睹难民惨状辞去军职",
-      "1947年/53岁 \n 上海华懋公寓·抉择 \n 与中共代表秘密会面",
-      "1948年/54岁 \n 南京国防部·传递 \n 送交长江布防绝密地图",
-      "1949年/55岁 \n 福州档案室·智守 \n 转移机密文件避免运台",
-      "1949年/55岁 \n 香港码头·告别 \n 拒绝留守毅然登船赴台",
-      "1950年/56岁 \n 台北参谋部·周旋 \n 于敌巢核心传递情报",
-      "1950年/56岁 \n 狱中受刑·不屈 \n 黑暗中以血书写绝命诗",
+      "1924年/23岁 \n 黄埔军校·淬炼 \n 在训练场上持枪敬练",
+      "1928年/27岁 \n 北伐前线·征战 \n 在战壕中持望远镜观察",
+      "1937年/36岁 \n 淞沪战场·御敌 \n 在前沿阵地指挥作战",
+      "1943年/42岁 \n 昆明驻地·治军 \n 在军营检阅部队训练",
+      "1945年/44岁 \n 受降仪式·见证 \n 庄重出席日军投降仪式",
+      "1947年/46岁 \n 官邸书房·困惑 \n 深夜独坐审阅战报",
+      "1948年/47岁 \n 书房灯下·觉醒 \n 专注研读进步书籍",
+      "1949年/48岁 \n 香港会面·抉择 \n 与友人密谈时局",
+      "1949年/48岁 \n 指挥部·部署 \n 向军官布置重要任务",
+      "1949年/48岁 \n 起义现场·易帜 \n 宣布重要决定",
+      "1950年/49岁 \n 北京会晤·新生 \n 与友人亲切交谈",
+      "1951年/50岁 \n 军校讲堂·育人 \n 为学员讲授军事课程",
+      "1952年/51岁 \n 书房执笔·著述 \n 伏案撰写理论著作",
     ],
     watermark: "@人物传记史",
     "bg-music": "music/屠洪刚 - 精忠报国_start25s_clip.mp3",
@@ -57,8 +57,8 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v26-artist.vlabvod.com/0119f81332fa99ec1aab4de2e16d7412/68f66645/video/tos/cn/tos-cn-v-148450/oo0C1eKfQ8f4UgQHNvYIEPV3gIIzQgLtIfsaeG/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6023&bt=6023&cs=0&ds=12&ft=5QYTUxhhe6BMyqYBPikJD12Nzj&mime_type=video_mp4&qs=0&rc=NzVnaGg8ZjRkOjdlODUzZ0BpM3lvbXI5cnlsNjczNDM7M0AyMV8uMzIzNV4xNi81YTVeYSMzNF40MmRzZ2phLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1760373671&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202510140041117BD619880971B6DC59BF",
-      "https://v3-artist.vlabvod.com/b18c80971e7d508c9811daace9a69d55/68f6659b/video/tos/cn/tos-cn-v-148450/oE5Z0ZpkhOEiv3KWqwCXvtnZBaEsIWIwvQGiQ/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6015&bt=6015&cs=0&ds=12&ft=5QYTUxhhe6BMyqzUPikJD12Nzj&mime_type=video_mp4&qs=0&rc=OGhoZTY6OTc7N2VnZWg0M0BpM3N3OXE5cnNsNjczNDM7M0A1MzVgLTJgNmAxMTJeLWE1YSNmZmFqMmRraWphLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1760373501&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202510140038211E24014F55F9B1C47E0A",
+      "https://v6-artist.vlabvod.com/ea5fdd533aa6eed11da96ee6dc08ba81/68fa371b/video/tos/cn/tos-cn-v-148450/oY4AAxoIhnaDzBbfgmDHPfEaFHSBng8yCUFOsQ/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6005&bt=6005&cs=0&ds=12&ft=5QYTUxhhe6BMyqzWkekJD12Nzj&mime_type=video_mp4&qs=0&rc=ZGgzZWdlNGQ3NTpoOjg1NEBpM2dwbnM5cnNpNjczNDM7M0BeLV4uLmAyXzYxYDY2LTNjYSMyMnEwMmRrbGxhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1760623741&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202510162209008C6A8F6F36D9B2283C3F",
+      "https://v3-artist.vlabvod.com/ae0f8b8866c267d3ea7ec82fef1a280a/68fa3cef/video/tos/cn/tos-cn-v-148450/o0ScWdiEIAgofY8ftAiDxxTzzkI2GHSGBBQBQw/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6038&bt=6038&cs=0&ds=12&ft=5QYTUxhhe6BMyqiR7ekJD12Nzj&mime_type=video_mp4&qs=0&rc=PDs2N2c7O2lpaWdmNTxlNUBpanB1ZWo5cmlqNjczNDM7M0AwYDYuYC1jNS8xM19eYTVfYSNtM2IwMmRzMWxhLS1kNDBzcw%3D%3D&btag=c0000e00010000&dy_q=1760625238&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202510162233580408C304F00ADA317E3C",
     ],
     // 方式一：统一转场效果（原有方式，向后兼容）
     // switch: "无转场", // 所有视频之间使用相同的转场效果
@@ -115,7 +115,7 @@ export default {
     },
   },
   filter: {
-    input: "output/merge-video/merged_1760368202689_merged.mp4",
+    input: "output/merge-video/merged_1760625337979_merged.mp4",
     // output: "output/filter/custom_output.mp4", // 可选，不指定则自动生成
     preset: "cinematic-teal-orange", // 预设滤镜名称，使用 --list 查看所有可用滤镜
     // customFilter: "eq=contrast=1.2:saturation=1.3", // 自定义滤镜字符串，与preset二选一
