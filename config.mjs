@@ -14,8 +14,8 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/filter/merged_1760625337979_merged_cinematic-teal-orange.mp4",
-    title: `沉默的荣耀\n从{{“体制内高官”}}\n到{{“地下战士”}}\n陈宝仓的{{信仰蜕变之路}}`,
+    url: "https://v9-artist.vlabvod.com/a4675ec106ae617b2029c915f7e220f6/6904dcf0/video/tos/cn/tos-cn-v-148450/ooh7YNAEIdGk9GrL02Cd3RoRidfBDOQJI7jeew/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5968&bt=5968&cs=0&ds=12&ft=5QYTUxhhe6BMyqSRblkJD12Nzj&mime_type=video_mp4&qs=0&rc=OGc6OmdlNGZnZjk6OWhnNEBpM3h1dXI5cmV0NjczNDM7M0BfYC0yMzFgXzQxNi0wXi42YSNgZGhrMmRrMXFhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1761321544&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202510242359048874B31E4799BF75EAB2",
+    title: `特朗普母亲\n玛丽·安妮·麦克劳德的\n{{逆袭人生}}`,
     useBabyCry: false,
     titleDuration: 10, // 全局标题显示时长（秒），不设置则贯穿整个视频
     endTitle: "", // 结尾标题
@@ -36,29 +36,29 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1924年/23岁 \n 黄埔军校·淬炼 \n 在训练场上持枪敬练",
-      "1928年/27岁 \n 北伐前线·征战 \n 在战壕中持望远镜观察",
-      "1937年/36岁 \n 淞沪战场·御敌 \n 在前沿阵地指挥作战",
-      "1943年/42岁 \n 昆明驻地·治军 \n 在军营检阅部队训练",
-      "1945年/44岁 \n 受降仪式·见证 \n 庄重出席日军投降仪式",
-      "1947年/46岁 \n 官邸书房·困惑 \n 深夜独坐审阅战报",
-      "1948年/47岁 \n 书房灯下·觉醒 \n 专注研读进步书籍",
-      "1949年/48岁 \n 香港会面·抉择 \n 与友人密谈时局",
-      "1949年/48岁 \n 指挥部·部署 \n 向军官布置重要任务",
-      "1949年/48岁 \n 起义现场·易帜 \n 宣布重要决定",
-      "1950年/49岁 \n 北京会晤·新生 \n 与友人亲切交谈",
-      "1951年/50岁 \n 军校讲堂·育人 \n 为学员讲授军事课程",
-      "1952年/51岁 \n 书房执笔·著述 \n 伏案撰写理论著作",
+      "1920年/0岁\n上海弄堂\n母亲怀抱婴儿",
+      "1927年/7岁\n鸿祥布店\n学徒启蒙",
+      "1937年/17岁\n上海总店\n临危受命",
+      "1950年/30岁\n香港中环\n突破禁运",
+      "1954年/34岁\n太平毛纺\n香港创业",
+      "1964年/44岁\n永新企业\n全球拓展",
+      "1978年/58岁\n珠海荒地\n补偿贸易",
+      "1985年/65岁\n港龙客机\n航空破冰",
+      "1995年/75岁\n浙大校园\n捐资兴教",
+      "1997年/77岁\n宁波光学\n科技报国",
+      "1998年/78岁\n天文台\n星辰命名",
+      "2018年/98岁\n香港书房\n世纪回望",
+      "2021年/101岁\n家中卧室\n永恒落幕",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/屠洪刚 - 精忠报国_start25s_clip.mp3",
+    "bg-music": "music/我记得你眼里的依恋_start22s_clip.mp3",
     // 栀子花开_start25s_clip
     // 屠洪刚 - 精忠报国_start25s_clip
   },
   "merge-video": {
     urls: [
-      "https://v6-artist.vlabvod.com/ea5fdd533aa6eed11da96ee6dc08ba81/68fa371b/video/tos/cn/tos-cn-v-148450/oY4AAxoIhnaDzBbfgmDHPfEaFHSBng8yCUFOsQ/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6005&bt=6005&cs=0&ds=12&ft=5QYTUxhhe6BMyqzWkekJD12Nzj&mime_type=video_mp4&qs=0&rc=ZGgzZWdlNGQ3NTpoOjg1NEBpM2dwbnM5cnNpNjczNDM7M0BeLV4uLmAyXzYxYDY2LTNjYSMyMnEwMmRrbGxhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1760623741&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202510162209008C6A8F6F36D9B2283C3F",
-      "https://v3-artist.vlabvod.com/ae0f8b8866c267d3ea7ec82fef1a280a/68fa3cef/video/tos/cn/tos-cn-v-148450/o0ScWdiEIAgofY8ftAiDxxTzzkI2GHSGBBQBQw/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6038&bt=6038&cs=0&ds=12&ft=5QYTUxhhe6BMyqiR7ekJD12Nzj&mime_type=video_mp4&qs=0&rc=PDs2N2c7O2lpaWdmNTxlNUBpanB1ZWo5cmlqNjczNDM7M0AwYDYuYC1jNS8xM19eYTVfYSNtM2IwMmRzMWxhLS1kNDBzcw%3D%3D&btag=c0000e00010000&dy_q=1760625238&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202510162233580408C304F00ADA317E3C",
+      "https://v26-artist.vlabvod.com/39c5c261caf6fd4dd5ed5210d801e3be/6905b023/video/tos/cn/tos-cn-v-148450/owmqCQDBoBd0chviidNjkSIXHAR8ff7gWBEWPx/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5978&bt=5978&cs=0&ds=12&ft=5QYTUxhhe6BMyqcnGCkJD12Nzj&mime_type=video_mp4&qs=0&rc=ZTk5Ojs0ZDhpaDk5ZWY0OkBpM3Y5b245cnI6NjczNDM7M0BhNDM2XmBfX2IxMS1fXjQ0YSNncmZfMmRzXnJhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1761375611&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202510251500113BB9EF566BF43C6C27A2",
+      "https://v6-artist.vlabvod.com/1f22548a22c98777942642ed6ce6efcc/6905b166/video/tos/cn/tos-cn-v-148450/oIu4wMAffkQHFaXsgDDRLaCQ7EBGFOlW6HcIex/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5841&bt=5841&cs=0&ds=12&ft=5QYTUxhhe6BMyqo9GCkJD12Nzj&mime_type=video_mp4&qs=0&rc=ZDM6aDloZztmM2Q2NGY7ZEBpMzl2a3I5cmY6NjczNDM7M0BhMzAtYV9jXjMxX18yNTExYSMxamJyMmQ0YXJhLS1kNDBzcw%3D%3D&btag=c0000e00010000&dy_q=1761375954&feature_id=a86f30d13437b00b109e4117546eca60&l=20251025150554C24DEC0EE31BAE6F4F31",
     ],
     // 方式一：统一转场效果（原有方式，向后兼容）
     // switch: "无转场", // 所有视频之间使用相同的转场效果
@@ -115,7 +115,7 @@ export default {
     },
   },
   filter: {
-    input: "output/merge-video/merged_1760625337979_merged.mp4",
+    input: "output/merge-video/merged_1761147619437_merged.mp4",
     // output: "output/filter/custom_output.mp4", // 可选，不指定则自动生成
     preset: "cinematic-teal-orange", // 预设滤镜名称，使用 --list 查看所有可用滤镜
     // customFilter: "eq=contrast=1.2:saturation=1.3", // 自定义滤镜字符串，与preset二选一
@@ -134,8 +134,8 @@ export default {
   },
   "clip-audio": [
     {
-      url: "input/clip-audio/我记得你眼里的依恋.mp3",
-      start: 22,
+      url: "input/clip-audio/离别开出花.mp3",
+      start: 20,
     },
   ],
   "clip-video": {
@@ -167,5 +167,18 @@ export default {
     maxWidth: 1920, // 最大宽度，超过则缩放
     maxHeight: 1080, // 最大高度，超过则缩放
     aggressive: true, // 激进模式：更低质量但更小文件
+  },
+
+  // 批量图片裁剪配置（9:16竖屏格式，适合社交媒体）
+  "batch-crop-images": {
+    inputDir: "input/images", // 输入目录，包含要裁剪的图片
+    outputDir: "output/cropped", // 输出目录，保存裁剪后的图片
+    targetAspectRatio: "9:16", // 目标宽高比，适合抖音、快手等竖屏平台
+    cropMode: "center", // 裁剪模式：center(居中)、smart(智能)、entropy(熵裁剪)
+    quality: 90, // 输出质量 1-100，90表示高质量
+    outputFormat: "auto", // 输出格式：auto(保持原格式)、jpg、png、webp
+    recursive: true, // 是否递归处理子目录
+    skipIfExists: true, // 如果输出文件已存在则跳过
+    formats: ["jpg", "jpeg", "png", "webp"], // 支持的图片格式
   },
 };

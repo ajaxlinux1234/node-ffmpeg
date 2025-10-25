@@ -12,7 +12,7 @@ import runAutoDeepseekJimeng, {
 import { runJimengVideoFlow } from "../lib/auto-deepseek-jimeng/jimeng-video-generator.mjs";
 import runFilter, { listFilters } from "../lib/filter.mjs";
 import runConvert3D, { list3DModes } from "../lib/convert-3d.mjs";
-import runOptimizeImage from "../lib/optimize-image.mjs";
+import runBatchCropImages from "../lib/batch-crop-images.mjs";
 import runExtractAudio, {
   showExtractAudioHelp,
 } from "../lib/extract-audio.mjs";
@@ -32,8 +32,7 @@ async function loadConfig() {
 }
 
 function printHelp() {
-  console.log(`\nnode-ffmpeg-tools <command> [options]\n\nCommands:\n  down-rm-watermark [url]     Download mp4 and blur bottom-right watermark\n  history-person              Process history person video with titles and effects\n  ai-remove-watermark [url]   AI inpainting to remove watermark; keeps original resolution/fps\n  merge-video                 Merge multiple videos with transition effects\n  clip-audio                  Clip audio files from specified start time\n  clip-video                  Clip video files with time range batch processing\n  extract-audio               Extract audio from video files with format conversion
-  merge-audio-video           Merge audio and video files with position control\n  auto-deepseek-jimeng        Automate DeepSeek chat to generate video prompts\n  jimeng-video-generator      Generate videos using Jimeng with batch image upload and shot descriptions\n  filter                      Apply various filters to videos (cinematic, vintage, artistic, etc.)\n  convert-3d                  Convert 2D video to 3D (anaglyph, side-by-side, top-bottom)\n  optimize-image              Batch optimize images with lossless compression\n  clear-browser-data          Clear saved browser login data for DeepSeek\n\nGlobal Options:\n  cleanOutputHistory          Automatically clean output directory before running commands (default: true)\n                              Set to false in config.mjs to disable: cleanOutputHistory: false\n\nOptions for down-rm-watermark:\n  --url, -u <url>             Video URL (can also be provided positionally)\n  --bg-music, -b <file>       Path to background audio file (mp3/wav/etc).\n                              If omitted, uses config.mjs at down-rm-watermark.bg-music if present.\n\nOptions for history-person:\n  Uses configuration from config.mjs under "history-person" section.\n  Required config fields: url, title, sectionTitle, bg-music\n\nOptions for ai-remove-watermark:\n  --url, -u <url>             Video URL (can also be provided positionally)\n  If omitted, uses config.mjs at "ai-remove-watermark.url" if present.\n\nOptions for merge-video:\n  Uses configuration from config.mjs under "merge-video" section.\n  Required config fields: urls (array of video URLs/paths), switch (transition effect)\n  Supported transitions: 叠化, 淡入淡出, 推拉, 擦除, 无转场\n\nOptions for clip-audio:\n  Uses configuration from config.mjs under "clip-audio" section.\n  Required config fields: array of {url, start?, duration?, output?}\n  - url: audio file path or URL (required)\n  - start: start time in seconds (default: 0)\n  - duration: clip duration in seconds (optional, clips to end if not specified)\n  - output: custom output filename (optional, auto-generated if not specified)\n\nOptions for extract-audio:\n  Uses configuration from config.mjs under "extract-audio" section.\n  Required config fields: url (video file path or URL)\n  Optional fields: format, quality, startTime, duration, channels, sampleRate\n  - format: output audio format (mp3, wav, aac, flac, ogg, m4a) - default: mp3\n  - quality: audio quality (high, medium, low) - default: high\n  - startTime: start time in seconds (optional)\n  - duration: extract duration in seconds (optional)\n  - channels: number of audio channels (1=mono, 2=stereo) (optional)\n  - sampleRate: audio sample rate (44100, 48000, etc.) (optional)\n\nOptions for merge-audio-video:\n  Uses configuration from config.mjs under "merge-audio-video" section.\n  Required config fields: videoUrl, audioUrl (video and audio file paths or URLs)\n  Optional fields: position, volume, audioDelay, videoDelay, trimAudio, trimVideo\n  - position: audio position mode (overlay, replace, start, end) - default: overlay\n  - volume: audio volume (0.0-2.0) - default: 1.0\n  - audioDelay: audio delay in seconds (optional)\n  - videoDelay: video delay in seconds (optional)\n  - trimAudio: trim audio to video length (true/false)\n  - trimVideo: trim video to audio length (true/false)\n\nOptions for auto-deepseek-jimeng:\n  Uses configuration from config.mjs under "auto-deepseek-jimeng" section.\n  Automates DeepSeek chat using headless browser to generate video prompts.\n  Required config fields: deepseek.url, deepseek.chat_selector, deepseek.send_msg_template, etc.\n\nExamples:\n  node-ffmpeg-tools down-rm-watermark https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark -b assets/bgm.mp3 https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark  # Uses URL (and bg-music) from config.mjs if present\n  node-ffmpeg-tools history-person     # Uses config.mjs history-person section\n  node-ffmpeg-tools ai-remove-watermark https://example.com/video.mp4\n  node-ffmpeg-tools ai-remove-watermark  # Uses config.mjs ai-remove-watermark.url\n  node-ffmpeg-tools merge-video         # Uses config.mjs merge-video section\n  node-ffmpeg-tools clip-audio          # Uses config.mjs clip-audio section\n  node-ffmpeg-tools auto-deepseek-jimeng # Uses config.mjs auto-deepseek-jimeng section\n`);
+  console.log(`\nnode-ffmpeg-tools <command> [options]\n\nCommands:\n  down-rm-watermark [url]     Download mp4 and blur bottom-right watermark\n  history-person              Process history person video with titles and effects\n  ai-remove-watermark [url]   AI inpainting to remove watermark; keeps original resolution/fps\n  merge-video                 Merge multiple videos with transition effects\n  clip-audio                  Clip audio files from specified start time\n  clip-video                  Clip video files with time range batch processing\n  extract-audio               Extract audio from video files with format conversion\n  merge-audio-video           Merge audio and video files with position control\n  auto-deepseek-jimeng        Automate DeepSeek chat to generate video prompts\n  jimeng-video-generator      Generate videos using Jimeng with batch image upload and shot descriptions\n  filter                      Apply various filters to videos (cinematic, vintage, artistic, etc.)\n  optimize-image                  Convert 2D video to 3D (anaglyph, side-by-side, top-bottom)\n  batch-crop-images           Batch crop images to 9:16 aspect ratio for social media\n  clear-browser-data          Clear saved browser login data for DeepSeek\n\nGlobal Options:\n  cleanOutputHistory          Automatically clean output directory before running commands (default: true)\n                              Set to false in config.mjs to disable: cleanOutputHistory: false\n\nOptions for batch-crop-images:\n  Uses configuration from config.mjs under "batch-crop-images" section.\n  Required config fields: inputDir (source directory), outputDir (destination directory)\n  Optional config fields: targetAspectRatio (default: "9:16"), cropMode (center/smart/entropy),\n                         quality (1-100, default: 90), outputFormat (auto/jpg/png/webp)\n\nExamples:\n  node-ffmpeg-tools down-rm-watermark https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark -b assets/bgm.mp3 https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark  # Uses URL (and bg-music) from config.mjs if present\n  node-ffmpeg-tools history-person     # Uses config.mjs history-person section\n  node-ffmpeg-tools ai-remove-watermark https://example.com/video.mp4\n  node-ffmpeg-tools ai-remove-watermark  # Uses config.mjs ai-remove-watermark.url\n  node-ffmpeg-tools merge-video         # Uses config.mjs merge-video section\n  node-ffmpeg-tools clip-audio          # Uses config.mjs clip-audio section\n  node-ffmpeg-tools auto-deepseek-jimeng # Uses config.mjs auto-deepseek-jimeng section\n`);
 }
 
 (async () => {
@@ -58,8 +57,8 @@ function printHelp() {
     "auto-deepseek-jimeng",
     "jimeng-video-generator",
     "filter",
-    "convert-3d",
     "optimize-image",
+    "batch-crop-images",
   ];
 
   // 如果是需要清理的命令，先执行清理
@@ -282,7 +281,7 @@ function printHelp() {
         await runFilter(filterConfig);
         break;
       }
-      case "convert-3d": {
+      case "optimize-image": {
         // 检查是否要列出所有3D模式
         if (argv.list || argv.l) {
           list3DModes();
@@ -291,53 +290,53 @@ function printHelp() {
 
         // 从命令行参数或配置文件获取设置
         const convert3DConfig = {
-          input: argv.input || argv.i || rest[0] || config["convert-3d"]?.input,
-          output: argv.output || argv.o || config["convert-3d"]?.output,
+          input: argv.input || argv.i || rest[0] || config["optimize-image"]?.input,
+          output: argv.output || argv.o || config["optimize-image"]?.output,
           mode:
             argv.mode ||
             argv.m ||
-            config["convert-3d"]?.mode ||
+            config["optimize-image"]?.mode ||
             "anaglyph-red-cyan",
-          depth: argv.depth || argv.d || config["convert-3d"]?.depth || 0.3,
+          depth: argv.depth || argv.d || config["optimize-image"]?.depth || 0.3,
           quality:
-            argv.quality || argv.q || config["convert-3d"]?.quality || "high",
+            argv.quality || argv.q || config["optimize-image"]?.quality || "high",
           keepAudio:
             argv["keep-audio"] !== false &&
-            config["convert-3d"]?.keepAudio !== false,
+            config["optimize-image"]?.keepAudio !== false,
         };
 
         if (!convert3DConfig.input) {
           console.error("\nError: 请指定输入视频文件");
           console.error("使用方法:");
           console.error(
-            "  npx node-ffmpeg-tools convert-3d --list                        # 列出所有3D模式"
+            "  npx node-ffmpeg-tools optimize-image --list                        # 列出所有3D模式"
           );
           console.error(
-            "  npx node-ffmpeg-tools convert-3d -i input.mp4 -m anaglyph-red-cyan  # 转换为红蓝3D"
+            "  npx node-ffmpeg-tools optimize-image -i input.mp4 -m anaglyph-red-cyan  # 转换为红蓝3D"
           );
           console.error(
-            "  npx node-ffmpeg-tools convert-3d -i input.mp4 -m side-by-side  # 转换为左右3D"
+            "  npx node-ffmpeg-tools optimize-image -i input.mp4 -m side-by-side  # 转换为左右3D"
           );
-          console.error("  或在 config.mjs 中配置 convert-3d 部分\n");
+          console.error("  或在 config.mjs 中配置 optimize-image 部分\n");
           process.exit(1);
         }
 
         await runConvert3D(convert3DConfig);
         break;
       }
-      case "optimize-image": {
-        if (!config["optimize-image"]) {
+      case "batch-crop-images": {
+        if (!config["batch-crop-images"]) {
           console.error(
-            '\nError: No "optimize-image" configuration found in config.mjs'
+            '\nError: No "batch-crop-images" configuration found in config.mjs'
           );
           console.error(
-            "Please add optimize-image configuration with inputDir, outputDir, and quality settings"
+            "Please add batch-crop-images configuration with inputDir and outputDir fields"
           );
           process.exit(1);
         }
 
-        console.log("Using optimize-image configuration from config.mjs");
-        await runOptimizeImage(config);
+        console.log("Using batch-crop-images configuration from config.mjs");
+        await runBatchCropImages(config);
         break;
       }
       case "extract-audio": {
