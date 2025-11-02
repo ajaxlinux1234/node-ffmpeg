@@ -14,9 +14,63 @@ export default {
   },
   "history-person": {
     name,
-    url: "https://v9-artist.vlabvod.com/a4675ec106ae617b2029c915f7e220f6/6904dcf0/video/tos/cn/tos-cn-v-148450/ooh7YNAEIdGk9GrL02Cd3RoRidfBDOQJI7jeew/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5968&bt=5968&cs=0&ds=12&ft=5QYTUxhhe6BMyqSRblkJD12Nzj&mime_type=video_mp4&qs=0&rc=OGc6OmdlNGZnZjk6OWhnNEBpM3h1dXI5cmV0NjczNDM7M0BfYC0yMzFgXzQxNi0wXi42YSNgZGhrMmRrMXFhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1761321544&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202510242359048874B31E4799BF75EAB2",
-    title: `特朗普母亲\n玛丽·安妮·麦克劳德的\n{{逆袭人生}}`,
+    url: "https://v6-artist.vlabvod.com/b6b01ea764d4f8a2ea03027785f336b7/69101e82/video/tos/cn/tos-cn-v-148450/oQEyavCQEiQhwII42b9QdGYQBFwwAxjSguIXi/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5953&bt=5953&cs=0&ds=12&ft=5QYTUxhhe6BMyqC4MrVJD12Nzj&mime_type=video_mp4&qs=0&rc=ZDc2NTs4aTk3M2VpOjk0M0BpM2s0O2w5cmpoNzczNDM7M0AzYi42XmEtNTYxLS02XmNeYSMuYy01MmRrNDBhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1762059226&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251102125346789C0DBF314516CC2924",
+    title: `中国地质之父李四光`,
     useBabyCry: false,
+    voiceList: [
+      // {
+      //   duration: [0, 2],
+      //   voice: "蝉叫",
+      // },
+      // {
+      //   duration: [5.5, 7],
+      //   voice: "女人抽泣哭声",
+      // },
+      // {
+      //   duration: [8.5, 10],
+      //   voice: "敲锣声",
+      // },
+      // {
+      //   duration: [13.5, 15],
+      //   voice: "整理东西",
+      // },
+      // {
+      //   duration: [18.5, 20],
+      //   voice: "手推车",
+      // },
+      // {
+      //   duration: [24, 25.5],
+      //   voice: "下雨声",
+      // },
+      // {
+      //   duration: [28.5, 30],
+      //   voice: "街上群众叫卖声",
+      // },
+      // {
+      //   duration: [33.5, 35],
+      //   voice: "东西落地下",
+      // },
+      // {
+      //   duration: [38.5, 40],
+      //   voice: "吃东西声",
+      // },
+      // {
+      //   duration: [43.5, 44.5],
+      //   voice: "求求你",
+      // },
+      // {
+      //   duration: [48.5, 50],
+      //   voice: "冬季走在冰面上",
+      // },
+      // {
+      //   duration: [53.5, 55.5],
+      //   voice: "男人哭泣",
+      // },
+      // {
+      //   duration: [58.5, 60],
+      //   voice: "轻拍衣服",
+      // },
+    ],
     titleDuration: 10, // 全局标题显示时长（秒），不设置则贯穿整个视频
     endTitle: "", // 结尾标题
     endTitleDuration: 10, // 结尾标题显示时长（秒）- 延长打字机音效时间
@@ -26,7 +80,7 @@ export default {
     // 快乐传递者何炅
     // 国士无双袁隆平
     titleAnimation: "sweep_slow", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
-    sectionTitleAnimation: "fade", // 分镜字幕动画效果，可选值同titleAnimation
+    sectionTitleAnimation: "turbo", // 分镜字幕动画效果，可选值同titleAnimation
 
     // 视频质量配置
     qualityMode: "high", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理), "turbo"(极速处理)
@@ -36,36 +90,32 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1920年/0岁\n上海弄堂\n母亲怀抱婴儿",
-      "1927年/7岁\n鸿祥布店\n学徒启蒙",
-      "1937年/17岁\n上海总店\n临危受命",
-      "1950年/30岁\n香港中环\n突破禁运",
-      "1954年/34岁\n太平毛纺\n香港创业",
-      "1964年/44岁\n永新企业\n全球拓展",
-      "1978年/58岁\n珠海荒地\n补偿贸易",
-      "1985年/65岁\n港龙客机\n航空破冰",
-      "1995年/75岁\n浙大校园\n捐资兴教",
-      "1997年/77岁\n宁波光学\n科技报国",
-      "1998年/78岁\n天文台\n星辰命名",
-      "2018年/98岁\n香港书房\n世纪回望",
-      "2021年/101岁\n家中卧室\n永恒落幕",
+      "1895年/6岁\n黄冈私塾\n李四光练字",
+      "1904年/15岁\n武昌考场\n李四光应试",
+      "1918年/29岁\n伯明翰实验室\n李四光研究化石",
+      "1936年/47岁\n黄山冰川\n李四光验证冰蚀遗迹",
+      "1950年/61岁\n归国邮轮\n李四光遥望新中国",
+      "1955年/66岁\n大庆油田\n李四光勘察油脉",
+      "1962年/73岁\n地质研究所\n李四光规划矿带",
+      "1966年/77岁\n邢台震区\n李四光监测地动",
+      "1971年/82岁\n北京书房\n李四光彻夜著述",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/我记得你眼里的依恋_start22s_clip.mp3",
+    "bg-music": "music/如愿_start30s_clip.mp3",
     // 栀子花开_start25s_clip
     // 屠洪刚 - 精忠报国_start25s_clip
   },
   "merge-video": {
     urls: [
-      "https://v26-artist.vlabvod.com/39c5c261caf6fd4dd5ed5210d801e3be/6905b023/video/tos/cn/tos-cn-v-148450/owmqCQDBoBd0chviidNjkSIXHAR8ff7gWBEWPx/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5978&bt=5978&cs=0&ds=12&ft=5QYTUxhhe6BMyqcnGCkJD12Nzj&mime_type=video_mp4&qs=0&rc=ZTk5Ojs0ZDhpaDk5ZWY0OkBpM3Y5b245cnI6NjczNDM7M0BhNDM2XmBfX2IxMS1fXjQ0YSNncmZfMmRzXnJhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1761375611&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202510251500113BB9EF566BF43C6C27A2",
-      "https://v6-artist.vlabvod.com/1f22548a22c98777942642ed6ce6efcc/6905b166/video/tos/cn/tos-cn-v-148450/oIu4wMAffkQHFaXsgDDRLaCQ7EBGFOlW6HcIex/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5841&bt=5841&cs=0&ds=12&ft=5QYTUxhhe6BMyqo9GCkJD12Nzj&mime_type=video_mp4&qs=0&rc=ZDM6aDloZztmM2Q2NGY7ZEBpMzl2a3I5cmY6NjczNDM7M0BhMzAtYV9jXjMxX18yNTExYSMxamJyMmQ0YXJhLS1kNDBzcw%3D%3D&btag=c0000e00010000&dy_q=1761375954&feature_id=a86f30d13437b00b109e4117546eca60&l=20251025150554C24DEC0EE31BAE6F4F31",
+      "https://v26-artist.vlabvod.com/0304607ae6fd7e6985fac72efc39439b/690e1a18/video/tos/cn/tos-cn-v-148450/oAIME02DsAmd7Qg3y8EJUiiAe3B0FgQIBv3doh/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5976&bt=5976&cs=0&ds=12&ft=5QYTUxhhe6BMyq77-rVJD12Nzj&mime_type=video_mp4&qs=0&rc=NTllNTZmNmRnNWk6OmU7ZkBpajhtd2w5cndnNzczNDM7M0BeYTZeMjEtXi8xL141NWItYSNvYHMtMmRrcC9hLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1761927024&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251101001024778D43045C196EF70C67",
+      "https://v3-artist.vlabvod.com/45dd735162ba99172a3c585bbb0fb5d9/690e19d0/video/tos/cn/tos-cn-v-148450/ooKmqsGVQLk5IxCCsgIEqvOdBAbeeD5JSHm4Af/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6071&bt=6071&cs=0&ds=12&ft=5QYTUxhhe6BMyqKJ-rVJD12Nzj&mime_type=video_mp4&qs=0&rc=Zjw5NTs0ZGgzNmg0ZDwzZkBpM2lzO2o5cmRnNzczNDM7M0AyXi0wYTM2Xi8xLjM0NjU0YSNvZ2MuMmRrci9hLS1kNC9zcw%3D%3D&btag=c0000e00010000&dy_q=1761926972&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=2025110100093205FD1B3B9D5D6B2B72FB",
     ],
     // 方式一：统一转场效果（原有方式，向后兼容）
     // switch: "无转场", // 所有视频之间使用相同的转场效果
 
     // 方式二：分别设置转场效果（新功能）
     transitions: [
-      "无转场", // 视频1 → 视频2 的转场效果
+      "无转场", // 视频2 → 视频3 的转场效果
     ],
     // 可选转场效果：
     // 基础效果：叠化、淡入淡出、推拉、擦除、无转场
@@ -104,15 +154,83 @@ export default {
     // fadeDuration: 2.0 // 淡入淡出时长(秒)
   },
   "ai-remove-watermark": {
-    url: "output/history-person/1758868423130_10b9525ce467.mp4",
-    debug: true,
-    mask: {
-      autodetect: "full-text",
-      inpaint_radius: 14,
-      dilate_px: 16,
-      extra_expand_px: 6,
-      extra_regions: [{ x: 6, y: 6, w: 220, h: 120 }],
-    },
+    // 测试单视频模式（向后兼容）
+    // url: "input/ai-remove-watermark/手机洒上水了.mp4",
+    // mask: {
+    //   position: "top-right",
+    //   width_percent: 36,
+    //   height_percent: 5,
+    //   margin: 10,
+    // },
+
+    // 批量处理模式示例（注释掉）
+    videos: [
+      {
+        url: "input/ai-remove-watermark/手机洒上水了.mp4",
+        mask: {
+          position: "top-right",
+          width_percent: 36,
+          height_percent: 5,
+          margin: 10,
+        },
+        title: "{{手机进水}}处理教程",
+        titleAnimation: "sweep_glow",
+      },
+      // {
+      //   url: "input/ai-remove-watermark/手机洒上水了.mp4", // 复用同一个文件测试
+      //   mask: {
+      //     position: "bottom-left",
+      //     width_percent: 20,
+      //     height_percent: 10,
+      //     margin: 20,
+      //   },
+      //   // 没有单独标题，会使用全局标题
+      // },
+    ],
+    //
+    // // 全局标题配置
+    // globalTitle: "AI智能{{去水印}}工具",
+    // globalTitleAnimation: "sweep_fast",
+
+    // 单视频模式示例（注释掉）
+    // url: "input/ai-remove-watermark/手机洒上水了.mp4",
+    // mask: {
+    //   position: "top-right",
+    //   width_percent: 36,
+    //   height_percent: 5,
+    //   margin: 10,
+    // },
+    // title: "{{手机进水}}处理教程",
+    // titleAnimation: "sweep_glow",
+
+    // 批量处理模式示例（注释掉，需要时取消注释）
+    // videos: [
+    //   {
+    //     url: "input/ai-remove-watermark/手机洒上水了.mp4",
+    //     mask: {
+    //       position: "top-right",
+    //       width_percent: 36,
+    //       height_percent: 5,
+    //       margin: 10,
+    //     },
+    //     title: "{{手机进水}}处理教程", // 单独的视频标题
+    //     titleAnimation: "sweep_glow", // 视频专用动画
+    //   },
+    //   {
+    //     url: "input/ai-remove-watermark/另一个视频.mp4",
+    //     mask: {
+    //       position: "bottom-right",
+    //       width_percent: 25,
+    //       height_percent: 8,
+    //       margin: 15,
+    //     },
+    //     // 没有单独标题，会使用全局标题
+    //   },
+    // ],
+    //
+    // // 全局标题配置 - 应用于所有没有单独标题的视频
+    // globalTitle: "AI智能{{去水印}}工具",
+    // globalTitleAnimation: "sweep_fast", // 全局动画效果
   },
   filter: {
     input: "output/merge-video/merged_1761147619437_merged.mp4",
@@ -134,8 +252,8 @@ export default {
   },
   "clip-audio": [
     {
-      url: "input/clip-audio/离别开出花.mp3",
-      start: 20,
+      url: "input/clip-audio/如愿.mp3",
+      start: 30,
     },
   ],
   "clip-video": {

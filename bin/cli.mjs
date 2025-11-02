@@ -32,7 +32,9 @@ async function loadConfig() {
 }
 
 function printHelp() {
-  console.log(`\nnode-ffmpeg-tools <command> [options]\n\nCommands:\n  down-rm-watermark [url]     Download mp4 and blur bottom-right watermark\n  history-person              Process history person video with titles and effects\n  ai-remove-watermark [url]   AI inpainting to remove watermark; keeps original resolution/fps\n  merge-video                 Merge multiple videos with transition effects\n  clip-audio                  Clip audio files from specified start time\n  clip-video                  Clip video files with time range batch processing\n  extract-audio               Extract audio from video files with format conversion\n  merge-audio-video           Merge audio and video files with position control\n  auto-deepseek-jimeng        Automate DeepSeek chat to generate video prompts\n  jimeng-video-generator      Generate videos using Jimeng with batch image upload and shot descriptions\n  filter                      Apply various filters to videos (cinematic, vintage, artistic, etc.)\n  optimize-image                  Convert 2D video to 3D (anaglyph, side-by-side, top-bottom)\n  batch-crop-images           Batch crop images to 9:16 aspect ratio for social media\n  clear-browser-data          Clear saved browser login data for DeepSeek\n\nGlobal Options:\n  cleanOutputHistory          Automatically clean output directory before running commands (default: true)\n                              Set to false in config.mjs to disable: cleanOutputHistory: false\n\nOptions for batch-crop-images:\n  Uses configuration from config.mjs under "batch-crop-images" section.\n  Required config fields: inputDir (source directory), outputDir (destination directory)\n  Optional config fields: targetAspectRatio (default: "9:16"), cropMode (center/smart/entropy),\n                         quality (1-100, default: 90), outputFormat (auto/jpg/png/webp)\n\nExamples:\n  node-ffmpeg-tools down-rm-watermark https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark -b assets/bgm.mp3 https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark  # Uses URL (and bg-music) from config.mjs if present\n  node-ffmpeg-tools history-person     # Uses config.mjs history-person section\n  node-ffmpeg-tools ai-remove-watermark https://example.com/video.mp4\n  node-ffmpeg-tools ai-remove-watermark  # Uses config.mjs ai-remove-watermark.url\n  node-ffmpeg-tools merge-video         # Uses config.mjs merge-video section\n  node-ffmpeg-tools clip-audio          # Uses config.mjs clip-audio section\n  node-ffmpeg-tools auto-deepseek-jimeng # Uses config.mjs auto-deepseek-jimeng section\n`);
+  console.log(
+    `\nnode-ffmpeg-tools <command> [options]\n\nCommands:\n  down-rm-watermark [url]     Download mp4 and blur bottom-right watermark\n  history-person              Process history person video with titles and effects\n  ai-remove-watermark [url]   AI inpainting to remove watermark; keeps original resolution/fps\n  merge-video                 Merge multiple videos with transition effects\n  clip-audio                  Clip audio files from specified start time\n  clip-video                  Clip video files with time range batch processing\n  extract-audio               Extract audio from video files with format conversion\n  merge-audio-video           Merge audio and video files with position control\n  auto-deepseek-jimeng        Automate DeepSeek chat to generate video prompts\n  jimeng-video-generator      Generate videos using Jimeng with batch image upload and shot descriptions\n  filter                      Apply various filters to videos (cinematic, vintage, artistic, etc.)\n  optimize-image                  Convert 2D video to 3D (anaglyph, side-by-side, top-bottom)\n  batch-crop-images           Batch crop images to 9:16 aspect ratio for social media\n  clear-browser-data          Clear saved browser login data for DeepSeek\n\nGlobal Options:\n  cleanOutputHistory          Automatically clean output directory before running commands (default: true)\n                              Set to false in config.mjs to disable: cleanOutputHistory: false\n\nOptions for batch-crop-images:\n  Uses configuration from config.mjs under "batch-crop-images" section.\n  Required config fields: inputDir (source directory), outputDir (destination directory)\n  Optional config fields: targetAspectRatio (default: "9:16"), cropMode (center/smart/entropy),\n                         quality (1-100, default: 90), outputFormat (auto/jpg/png/webp)\n\nExamples:\n  node-ffmpeg-tools down-rm-watermark https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark -b assets/bgm.mp3 https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark  # Uses URL (and bg-music) from config.mjs if present\n  node-ffmpeg-tools history-person     # Uses config.mjs history-person section\n  node-ffmpeg-tools ai-remove-watermark https://example.com/video.mp4\n  node-ffmpeg-tools ai-remove-watermark  # Uses config.mjs ai-remove-watermark.url\n  node-ffmpeg-tools merge-video         # Uses config.mjs merge-video section\n  node-ffmpeg-tools clip-audio          # Uses config.mjs clip-audio section\n  node-ffmpeg-tools auto-deepseek-jimeng # Uses config.mjs auto-deepseek-jimeng section\n`
+  );
 }
 
 (async () => {
@@ -109,19 +111,31 @@ function printHelp() {
         break;
       }
       case "ai-remove-watermark": {
+        const aiConfig = config["ai-remove-watermark"];
         let url = argv.url || argv.u || rest[0];
-        if (!url && config["ai-remove-watermark"]?.url) {
-          url = config["ai-remove-watermark"].url;
+        
+        // 支持批量处理模式
+        if (aiConfig && Array.isArray(aiConfig.videos)) {
+          console.log("Using batch processing mode from config.mjs");
+          await runAiRemoveWatermark(aiConfig);
+          break;
+        }
+        
+        // 向后兼容：单视频模式
+        if (!url && aiConfig?.url) {
+          url = aiConfig.url;
           console.log("Using URL from config.mjs (ai-remove-watermark.url)");
         }
+        
         if (!url) {
           console.error("\nUsage: node-ffmpeg-tools ai-remove-watermark <url>");
-          console.error(
-            'Or add URL to config.mjs under "ai-remove-watermark.url"'
-          );
+          console.error('Or configure in config.mjs under "ai-remove-watermark"');
+          console.error('  Single video: { url: "path/to/video.mp4", mask: {...}, title: "...", titleAnimation: "..." }');
+          console.error('  Batch mode: { videos: [{url: "...", mask: {...}}, ...], globalTitle: "...", globalTitleAnimation: "..." }');
           process.exit(1);
         }
-        await runAiRemoveWatermark(url);
+        
+        await runAiRemoveWatermark(aiConfig || url);
         break;
       }
       case "merge-video": {
@@ -153,7 +167,7 @@ function printHelp() {
         if (!Array.isArray(config["clip-audio"])) {
           console.error('\nError: "clip-audio" configuration must be an array');
           console.error(
-            'Each item should have: {url, start?, duration?, output?}'
+            "Each item should have: {url, start?, duration?, output?}"
           );
           process.exit(1);
         }
@@ -290,7 +304,8 @@ function printHelp() {
 
         // 从命令行参数或配置文件获取设置
         const convert3DConfig = {
-          input: argv.input || argv.i || rest[0] || config["optimize-image"]?.input,
+          input:
+            argv.input || argv.i || rest[0] || config["optimize-image"]?.input,
           output: argv.output || argv.o || config["optimize-image"]?.output,
           mode:
             argv.mode ||
@@ -299,7 +314,10 @@ function printHelp() {
             "anaglyph-red-cyan",
           depth: argv.depth || argv.d || config["optimize-image"]?.depth || 0.3,
           quality:
-            argv.quality || argv.q || config["optimize-image"]?.quality || "high",
+            argv.quality ||
+            argv.q ||
+            config["optimize-image"]?.quality ||
+            "high",
           keepAudio:
             argv["keep-audio"] !== false &&
             config["optimize-image"]?.keepAudio !== false,
