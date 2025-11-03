@@ -90,15 +90,19 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1895年/6岁\n黄冈私塾\n李四光练字",
-      "1904年/15岁\n武昌考场\n李四光应试",
-      "1918年/29岁\n伯明翰实验室\n李四光研究化石",
-      "1936年/47岁\n黄山冰川\n李四光验证冰蚀遗迹",
-      "1950年/61岁\n归国邮轮\n李四光遥望新中国",
-      "1955年/66岁\n大庆油田\n李四光勘察油脉",
-      "1962年/73岁\n地质研究所\n李四光规划矿带",
-      "1966年/77岁\n邢台震区\n李四光监测地动",
-      "1971年/82岁\n北京书房\n李四光彻夜著述",
+      "1936年/0岁 \n 广西南宁医院 \n 黄令仪出生",
+      "1943年/7岁 \n 桂林防空洞 \n 蜷缩身姿躲避日军轰炸",
+      "1954年/18岁 \n 华中工学院 \n 被电机专业录取",
+      "1958年/22岁 \n 清华大学 \n 调试我国首台半导体二极管",
+      "1965年/29岁 \n 中科院机房 \n 日夜不停测试156组件计算机",
+      "1970年/34岁 \n 酒泉观测站 \n 聆听《东方红》从太空传回",
+      "1989年/53岁 \n 拉斯维加斯 \n 泪眼看芯片展台无一中国制造",
+      "2000年/64岁 \n 纽伦堡展厅 \n 高举国际发明专利银奖证书",
+      "2002年/66岁 \n 中科院超净间 \n 通宵检查龙芯1号版图",
+      "2004年/68岁 \n 微电子所 \n 带领青年团队攻克龙芯2号",
+      "2015年/79岁 \n 国家科技奖礼堂 \n 接受'中国芯终身成就奖'",
+      "2018年/82岁 \n 人民大会堂 \n 触摸龙芯3号植入的北斗模型",
+      "2023年/87岁 \n 北京病房 \n 去世",
     ],
     watermark: "@人物传记史",
     "bg-music": "music/如愿_start30s_clip.mp3",
@@ -107,8 +111,8 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v26-artist.vlabvod.com/0304607ae6fd7e6985fac72efc39439b/690e1a18/video/tos/cn/tos-cn-v-148450/oAIME02DsAmd7Qg3y8EJUiiAe3B0FgQIBv3doh/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5976&bt=5976&cs=0&ds=12&ft=5QYTUxhhe6BMyq77-rVJD12Nzj&mime_type=video_mp4&qs=0&rc=NTllNTZmNmRnNWk6OmU7ZkBpajhtd2w5cndnNzczNDM7M0BeYTZeMjEtXi8xL141NWItYSNvYHMtMmRrcC9hLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1761927024&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251101001024778D43045C196EF70C67",
-      "https://v3-artist.vlabvod.com/45dd735162ba99172a3c585bbb0fb5d9/690e19d0/video/tos/cn/tos-cn-v-148450/ooKmqsGVQLk5IxCCsgIEqvOdBAbeeD5JSHm4Af/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6071&bt=6071&cs=0&ds=12&ft=5QYTUxhhe6BMyqKJ-rVJD12Nzj&mime_type=video_mp4&qs=0&rc=Zjw5NTs0ZGgzNmg0ZDwzZkBpM2lzO2o5cmRnNzczNDM7M0AyXi0wYTM2Xi8xLjM0NjU0YSNvZ2MuMmRrci9hLS1kNC9zcw%3D%3D&btag=c0000e00010000&dy_q=1761926972&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=2025110100093205FD1B3B9D5D6B2B72FB",
+      "https://v26-artist.vlabvod.com/285f71a1a3d7d0558213a3eb005473a8/6911bae8/video/tos/cn/tos-cn-v-148450/oA8Rd8gCfSQ6LAwegDBp3GB4AEADFHdNXI6IBk/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5984&bt=5984&cs=0&ds=12&ft=5QYTUxhhe6BMyq1blmVJD12Nzj&mime_type=video_mp4&qs=0&rc=NmY6O2lkOWdoPDplOjY1OkBpM3hyeGw5cjo7NzczNDM7M0BjYC8vYS9eNTExLTUzM2BjYSNiYXMyMmRjLTFhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1762164800&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202511031813205A2BFDE26CF06AE1C310",
+      "https://v3-artist.vlabvod.com/e543581a10019939c1cae58e8e23bc93/6911bbb4/video/tos/cn/tos-cn-v-148450/oguIC0P6ih7EJiBc7QhI5QggDEOhAkB1DERfgj/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6097&bt=6097&cs=0&ds=12&ft=5QYTUxhhe6BMyq~flmVJD12Nzj&mime_type=video_mp4&qs=0&rc=OTs1NWRnODpkZzQ0OGc4N0BpMzZ1Nm85cjU7NzczNDM7M0AyYS4wXmBhNl8xLmEwMWA2YSNma3FxMmRjLzFhLS1kNDBzcw%3D%3D&btag=c0000e00010000&dy_q=1762165024&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202511031817042B5F77DDB0BB33041580",
     ],
     // 方式一：统一转场效果（原有方式，向后兼容）
     // switch: "无转场", // 所有视频之间使用相同的转场效果
@@ -166,15 +170,15 @@ export default {
     // 批量处理模式示例（注释掉）
     videos: [
       {
-        url: "input/ai-remove-watermark/手机洒上水了.mp4",
+        url: "input/ai-remove-watermark/猫咪外卖员超时.mp4",
         mask: {
           position: "top-right",
           width_percent: 36,
           height_percent: 5,
           margin: 10,
         },
-        title: "{{手机进水}}处理教程",
-        titleAnimation: "sweep_glow",
+        // title: "{{手机进水}}处理教程",
+        // titleAnimation: "sweep_glow",
       },
       // {
       //   url: "input/ai-remove-watermark/手机洒上水了.mp4", // 复用同一个文件测试
