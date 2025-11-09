@@ -14,72 +14,20 @@ export default {
   },
   "history-person": {
     name,
-    url: "https://v6-artist.vlabvod.com/b6b01ea764d4f8a2ea03027785f336b7/69101e82/video/tos/cn/tos-cn-v-148450/oQEyavCQEiQhwII42b9QdGYQBFwwAxjSguIXi/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5953&bt=5953&cs=0&ds=12&ft=5QYTUxhhe6BMyqC4MrVJD12Nzj&mime_type=video_mp4&qs=0&rc=ZDc2NTs4aTk3M2VpOjk0M0BpM2s0O2w5cmpoNzczNDM7M0AzYi42XmEtNTYxLS02XmNeYSMuYy01MmRrNDBhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1762059226&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251102125346789C0DBF314516CC2924",
-    title: `他从侵华日军变成\n中国政府追认的{{日本籍抗日烈士}}\n国际共产战士{{宫川英男}}的一生`,
+    url: "output/merge-video/merged_1762669414670_merged.mp4",
+    title: `中共早期创始人\n李大钊同志的一生`,
     useBabyCry: false,
-    voiceList: [
-      // {
-      //   duration: [0, 2],
-      //   voice: "蝉叫",
-      // },
-      // {
-      //   duration: [5.5, 7],
-      //   voice: "女人抽泣哭声",
-      // },
-      // {
-      //   duration: [8.5, 10],
-      //   voice: "敲锣声",
-      // },
-      // {
-      //   duration: [13.5, 15],
-      //   voice: "整理东西",
-      // },
-      // {
-      //   duration: [18.5, 20],
-      //   voice: "手推车",
-      // },
-      // {
-      //   duration: [24, 25.5],
-      //   voice: "下雨声",
-      // },
-      // {
-      //   duration: [28.5, 30],
-      //   voice: "街上群众叫卖声",
-      // },
-      // {
-      //   duration: [33.5, 35],
-      //   voice: "东西落地下",
-      // },
-      // {
-      //   duration: [38.5, 40],
-      //   voice: "吃东西声",
-      // },
-      // {
-      //   duration: [43.5, 44.5],
-      //   voice: "求求你",
-      // },
-      // {
-      //   duration: [48.5, 50],
-      //   voice: "冬季走在冰面上",
-      // },
-      // {
-      //   duration: [53.5, 55.5],
-      //   voice: "男人哭泣",
-      // },
-      // {
-      //   duration: [58.5, 60],
-      //   voice: "轻拍衣服",
-      // },
-    ],
+    voiceList: [],
     titleDuration: 10, // 全局标题显示时长（秒），不设置则贯穿整个视频
-    endTitle: "{{向优秀的国际共产战士\n宫川英男致敬}}", // 结尾标题
+    endTitle:
+      "李大钊：\n{{吾愿吾亲爱之青年}}\n{{皆为自由之青年}}\n{{进步之青年}}\n{{强毅之青年}}\n{{排难解纷之青年。}}", // 结尾标题
     endTitleDuration: 10, // 结尾标题显示时长（秒）- 延长打字机音效时间
     endTitleAnimation: "typewriter", // 结尾标题动画效果：打字机效果
     endTitleSound: "typewriter", // 结尾标题声音效果：打字机声音
-    disclaimerText: "AIGC生成 无真人肖像 只为致敬", // 底部免责声明文字（30px斜体，底部10%位置）
+    disclaimerText: "", // 底部免责声明文字（30px斜体，底部10%位置）
     // 快乐传递者何炅
     // 国士无双袁隆平
-    titleAnimation: "sweep_slow", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
+    titleAnimation: "sweep_rainbow", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
     sectionTitleAnimation: "turbo", // 分镜字幕动画效果，可选值同titleAnimation
 
     // 视频质量配置
@@ -90,37 +38,36 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1918年/0岁 \n 日本山梨县贫农家庭 \n 宫川英男出生",
-      "1939年/21岁 \n 日本征兵体检站 \n 被征兵入伍",
-      "1941年/23岁 \n 双乳山战场 \n 被八路军俘虏时挣扎嘶吼",
-      "1941年/23岁 \n 八路军驻地 \n 学习《论持久战》日译本",
-      "1942年/24岁 \n 延安窑洞 \n 手握钢板刻写反战传单",
-      "1943年/25岁 \n 津浦铁路线 \n 向日军碉堡投送慰问袋",
-      "1944年/26岁 \n 长清县集市 \n 看到通缉令上自己的肖像",
-      "1945年/27岁 \n 官庄村麦场 \n 向战友展示新编宣传册",
-      "1945年/27岁 \n 万德西官庄 \n 在日军包围中焚烧文件",
-      "1945年/27岁 \n 麦秸垛藏身处 \n 举枪冲出掩护战友突围",
-      "1945年/27岁 \n 万德车站外 \n 中国战友冒雨抢回宫川英男遗体掩埋",
-      "1980年/时空回响 \n 长清烈士陵园 \n 后人纪念宫川英男",
-      "2009年/精神延续 \n 山梨县故乡 \n 宫川英男墓土撒入故土河流",
+      "1889年\n出生农民家庭",
+      "1907年/18岁\n得到亲戚资助\n考入北洋法政专门学堂",
+      "1914年/25岁\n东渡日本求学\n入读日本早稻田大学",
+      "1916年/27岁\n回国投身新文化运动\n参与编辑《新青年》杂志",
+      "1918年/29岁\n担任北京大学图书馆主任\n曾向教员传授马克思理论",
+      "1919年/30岁\n领导五四运动\n抗议巴黎和会的山东决议",
+      "1920年/31岁\n在北京组建共产主义小组\n探索建立无产阶级政党",
+      "1921年/32岁\n参与共产党建立筹备工作\n成为中共主要创始人之一",
+      "1924年/35岁\n前往广州会见孙中山\n促成国共第一次合作",
+      "1926年/37岁\n领导北京反帝反军阀运动\n遭到北洋政府通缉",
+      "1927年/38岁\n被奉系军阀逮捕\n在北京英勇就义",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/如愿_start30s_clip.mp3",
+    "bg-music": "music/国际歌.mp3",
     // 栀子花开_start25s_clip
+    // 国际歌
     // 屠洪刚 - 精忠报国_start25s_clip
   },
   "merge-video": {
     urls: [
-      "https://v9-artist.vlabvod.com/3d08830e58213b9da2186cdea9bda7e9/69144d41/video/tos/cn/tos-cn-v-148450/oYLOAFDQMESdFwgTOEfCD8e0otfoEiOMkEBnZI/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5977&bt=5977&cs=0&ds=12&ft=5QYTUxhhe6BMyqJxHmVJD12Nzj&mime_type=video_mp4&qs=0&rc=NzY8OTQ8OGg3Z2czOTM2ZkBpanlzNHA5cnlrNzczNDM7M0AxMjUzLTQ2XmMxYl5eXmNfYSNnLWxzMmRrMTJhLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1762333337&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202511051702174D6EE5F18579575F3BD6",
-      "https://v19-dreamina.capcutcdn-us.com/fe5b5639caf7005ff934606fcdee411f/690b6a34/video/tos/useast5/tos-useast5-ve-14178-tx/osSBCiUNUx7DNtrBQO7JbvfW2IDFLFEpgIJEec/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12184&bt=6092&cs=0&ft=GADp5Inz7Th80I6PXq8Zmo&mime_type=video_mp4&qs=0&rc=ZzY0PDwzPGU5ZjVlNGZnPEBpajtxZG85cmVrNzYzZzU6NEAyX2EtMmJiX2IxYmA1MjMuYSMxcGdvMmRzXzJhLS1kMy9zcw%3D%3D&vvpl=1&l=20251105091544631276FC7376611939F5&btag=e000b8000",
+      "https://v26-artist.vlabvod.com/04ace7ae749fe9e7d0901a8269b45577/69196cde/video/tos/cn/tos-cn-v-148450/owkIDJG0iiJW6iQQEgBBhOp4BxMdk20QkAGfAi/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5967&bt=5967&cs=0&ds=12&ft=5QYTUxhhe6BMyqaYasVJD12Nzj&mime_type=video_mp4&qs=0&rc=aDc0NjM4aDtmaDs6aDdmOUBpM2s6NHA5cjo2NzczNDM7M0AxYi0uYzJiNWMxMV8yLS1fYSNuZWlfMmRjMTVhLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1762669110&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202511091418303E3E204B0B8A8EAD4794",
+      "https://v9-artist.vlabvod.com/73101673fa62ebce0d3aca9fb98f37ea/69196dbc/video/tos/cn/tos-cn-v-148450/osZGSBIkZgGeADkLQdwOCenguELlDI8IYPN3ec/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6318&bt=6318&cs=0&ds=12&ft=5QYTUxhhe6BMyqLLasVJD12Nzj&mime_type=video_mp4&qs=0&rc=aWc8OGY2ZWhnZDlnPDs7PEBpang2eHM5cjw2NzczNDM7M0BiM2AuM181Xy8xLWMvMWEtYSNfcmIzMmRjMzVhLS1kNC9zcw%3D%3D&btag=c0000e00008000&dy_q=1762669362&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202511091422424B226DA6C1A2010811CE",
     ],
     // 方式一：统一转场效果（原有方式，向后兼容）
-    // switch: "无转场", // 所有视频之间使用相同的转场效果
+    switch: "无转场", // 所有视频之间使用相同的转场效果
 
     // 方式二：分别设置转场效果（新功能）
-    transitions: [
-      "无转场", // 视频2 → 视频3 的转场效果
-    ],
+    // transitions: [
+    //   "无转场", // 视频2 → 视频3 的转场效果
+    // ],
     // 可选转场效果：
     // 基础效果：叠化、淡入淡出、推拉、擦除、无转场
     // 历史人物专用：时光流转、岁月如歌、历史回眸、命运转折、精神传承、时代变迁、心路历程、光影交错
@@ -237,9 +184,10 @@ export default {
     // globalTitleAnimation: "sweep_fast", // 全局动画效果
   },
   filter: {
-    input: "output/merge-video/merged_1761147619437_merged.mp4",
+    input:
+      "output/history-person/merged_1762443658329_merged_720x1280_processed_blurmask.mp4",
     // output: "output/filter/custom_output.mp4", // 可选，不指定则自动生成
-    preset: "cinematic-teal-orange", // 预设滤镜名称，使用 --list 查看所有可用滤镜
+    preset: "historical-portrait", // 历史人物专用滤镜 - 温暖复古的金棕色调
     // customFilter: "eq=contrast=1.2:saturation=1.3", // 自定义滤镜字符串，与preset二选一
     quality: "high", // high, medium, low
     keepAudio: true, // 是否保留音频
@@ -302,5 +250,69 @@ export default {
     recursive: true, // 是否递归处理子目录
     skipIfExists: true, // 如果输出文件已存在则跳过
     formats: ["jpg", "jpeg", "png", "webp"], // 支持的图片格式
+  },
+
+  // 视频帧提取和AI提示词生成配置
+  "get-promot-image-by-video": {
+    videoPath: "input/get-promot-image-by-video/李大钊同志的一生.mp4", // 输入视频路径
+    videoName: "李大钊同志的一生", // 视频名称，用于创建输出目录
+    seconds: [1, 6, 11, 18, 22, 31, 37, 42, 50, 56, 62], // 提取视频帧的时间点（秒）
+    // 豆包AI配置
+    get_title_path: "https://www.doubao.com/chat/28205387237474562", // 图片标题内容获取
+    get_promot_path: "https://www.doubao.com/chat/19187408061685250", // 豆包提示词反推页面
+    image_remove_words_path: "https://www.doubao.com/chat/28058628032259330", // 豆包图像去水印文字页面
+    get_title: false,
+    get_promot: false,
+    get_remove_words: false,
+    get_title_selector_fn: () => {
+      const timeNum = 11;
+      return Array.from(document.querySelectorAll(".auto-hide-last-sibling-br"))
+        .slice(-timeNum)
+        .map((one) =>
+          one.innerText
+            .replaceAll(/\s+/g, "")
+            .replaceAll("|", "\n")
+            .replaceAll("\n无", "")
+            .replaceAll("/0岁", "")
+        );
+    },
+    image_remove_words_fns: [
+      () =>
+        Array.from(document.querySelectorAll("button")).find((one) =>
+          one.innerText.includes("技能")
+        ),
+      () =>
+        Array.from(document.querySelectorAll("button")).find((one) =>
+          one.innerText.includes("技能")
+        ),
+    ],
+    // 可选配置
+    shot: "运镜方式：镜头跟随图中主要人物，图中人物从当前场景走到下一个场景，人物变换为下一场景的主要人物，动态转换流畅自然", // 默认镜头描述
+    waitTime: 60000, // 登录等待时间（毫秒）
+    sendWaitTime: 20000, // 发送后等待AI回复时间（毫秒）
+    generateWaitTime: 30000, // 图片生成等待时间（毫秒）
+    stepTimeout: 60, // 每步骤用户确认超时时间（秒）
+    removeTextPrompt: "去掉图片中的所有颜色的文字和左边的半透明水印", // 去文字提示词
+    getTitlePrompt: `按照"年份/年龄|事情1|事情2"的格式识别输出图片中间的文本内容`,
+    getPromotPrompt: `图片生成提示词反推，不要画面文字`,
+
+    // 自定义选择器函数（可选）
+    img_upload_selector_fn: () =>
+      document.querySelector('div[data-testid="upload_file_button"]') ||
+      document.querySelector('button[data-testid="upload_file_button"]'),
+    file_upload: () =>
+      document.querySelector(
+        'div[data-testid="upload_file_panel_upload_item"]'
+      ),
+    input_selector_fn: () => document.querySelector("textarea"),
+    get_promot_fn: () => {
+      const timeNum = 11; // 对应seconds数组长度
+      return Array.from(document.querySelectorAll(".auto-hide-last-sibling-br"))
+        .slice(-timeNum)
+        .map((one) => {
+          const match = /"prompt":\s*"([^"]*)"/g.exec(one.innerText);
+          return match ? match[1] : "";
+        });
+    },
   },
 };

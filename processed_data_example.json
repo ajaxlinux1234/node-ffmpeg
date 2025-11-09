@@ -1,0 +1,93 @@
+{
+  "videoName": "罗斯福",
+  "segments": [
+    {
+      "id": 1,
+      "timePoint": 1,
+      "imagePath": "frame_1_1s.png",
+      "ocrText": "罗斯福的一生 1882年 出生政商家庭",
+      "title": "罗斯福的一生 - 1882年出生于政商家庭",
+      "prompt": ""
+    },
+    {
+      "id": 2,
+      "timePoint": 5,
+      "imagePath": "frame_2_5s.png", 
+      "ocrText": "童年时期 富裕家庭成长",
+      "title": "童年时期 - 在富裕家庭中成长",
+      "prompt": ""
+    },
+    {
+      "id": 3,
+      "timePoint": 12,
+      "imagePath": "frame_3_12s.png",
+      "ocrText": "求学经历 哈佛大学深造",
+      "title": "求学经历 - 哈佛大学深造",
+      "prompt": ""
+    },
+    {
+      "id": 4,
+      "timePoint": 18,
+      "imagePath": "frame_4_18s.png",
+      "ocrText": "28岁当选纽约州参议员 开启政治生涯",
+      "title": "28岁当选纽约州参议员 - 开启政治生涯",
+      "prompt": ""
+    },
+    {
+      "id": 5,
+      "timePoint": 26,
+      "imagePath": "frame_5_26s.png",
+      "ocrText": "患小儿麻痹症 坚强面对困难",
+      "title": "患小儿麻痹症 - 坚强面对人生困难",
+      "prompt": ""
+    },
+    {
+      "id": 6,
+      "timePoint": 32,
+      "imagePath": "frame_6_32s.png",
+      "ocrText": "政治崛起 成为知名政治家",
+      "title": "政治崛起 - 成为知名政治家",
+      "prompt": ""
+    },
+    {
+      "id": 7,
+      "timePoint": 37,
+      "imagePath": "frame_7_37s.png",
+      "ocrText": "1933年 成为美国总统",
+      "title": "1933年 - 成为美国第32任总统",
+      "prompt": ""
+    },
+    {
+      "id": 8,
+      "timePoint": 43,
+      "imagePath": "frame_8_43s.png",
+      "ocrText": "新政改革 应对经济大萧条",
+      "title": "新政改革 - 应对经济大萧条",
+      "prompt": ""
+    },
+    {
+      "id": 9,
+      "timePoint": 51,
+      "imagePath": "frame_9_51s.png",
+      "ocrText": "59岁 日本偷袭珍珠港 正式对日宣战",
+      "title": "59岁时日本偷袭珍珠港 - 正式对日宣战",
+      "prompt": ""
+    },
+    {
+      "id": 10,
+      "timePoint": 56,
+      "imagePath": "frame_10_56s.png",
+      "ocrText": "二战领导 带领美国走向胜利",
+      "title": "二战领导 - 带领美国走向胜利",
+      "prompt": ""
+    },
+    {
+      "id": 11,
+      "timePoint": 62,
+      "imagePath": "frame_11_62s.png",
+      "ocrText": "1945年 病逝于任期内",
+      "title": "1945年 - 病逝于第四任期内",
+      "prompt": ""
+    }
+  ]
+}

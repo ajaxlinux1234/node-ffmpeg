@@ -87,6 +87,17 @@ npx node-ffmpeg-tools filter -i input.mp4 -c "eq=contrast=1.2:saturation=1.3"
 | `natural` | 自然 | 真实色彩 |
 | `vivid-nature` | 鲜艳自然 | 增强自然色 |
 
+### 历史人物专用
+
+| 滤镜名称 | 效果描述 | 适用场景 |
+|---------|---------|---------|
+| `historical-portrait` | 历史人物肖像 | 温暖复古的历史人物专用滤镜，金棕色调 |
+| `golden-age` | 黄金时代 | 经典黄金时代电影风格，温暖怀旧 |
+| `vintage-documentary` | 复古纪录片 | 纪录片风格的复古效果，适合历史题材 |
+| `sepia-warm` | 温暖棕褐 | 温暖版本的棕褐色效果，更有历史感 |
+| `old-film-grain` | 老胶片颗粒 | 带颗粒感的老胶片效果，历史质感强烈 |
+| `bronze-tone` | 青铜色调 | 青铜色调效果，庄重的历史感 |
+
 ### 夜景效果
 
 | 滤镜名称 | 效果描述 | 适用场景 |
