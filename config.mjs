@@ -14,14 +14,14 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1762669414670_merged.mp4",
-    title: `中共早期创始人\n李大钊同志的一生`,
+    url: "output/merge-video/merged_1762618692436_merged.mp4",
+    title: `The Life of Josip Broz Tito\nthe Yugoslav Proletarian Revolutionary`,
     useBabyCry: false,
     voiceList: [],
     titleDuration: 10, // 全局标题显示时长（秒），不设置则贯穿整个视频
-    endTitle:
-      "李大钊：\n{{吾愿吾亲爱之青年}}\n{{皆为自由之青年}}\n{{进步之青年}}\n{{强毅之青年}}\n{{排难解纷之青年。}}", // 结尾标题
-    endTitleDuration: 10, // 结尾标题显示时长（秒）- 延长打字机音效时间
+    endTitle: "", // 结尾标题
+    // endTitle: "",
+    endTitleDuration: 1, // 结尾标题显示时长（秒）- 延长打字机音效时间
     endTitleAnimation: "typewriter", // 结尾标题动画效果：打字机效果
     endTitleSound: "typewriter", // 结尾标题声音效果：打字机声音
     disclaimerText: "", // 底部免责声明文字（30px斜体，底部10%位置）
@@ -31,24 +31,24 @@ export default {
     sectionTitleAnimation: "turbo", // 分镜字幕动画效果，可选值同titleAnimation
 
     // 视频质量配置
-    qualityMode: "high", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理), "turbo"(极速处理)
+    qualityMode: "turbo", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理), "turbo"(极速处理)
 
     // 性能优化配置
     enableSpeedOptimization: true, // 启用速度优化：多线程+预设优化
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1889年\n出生农民家庭",
-      "1907年/18岁\n得到亲戚资助\n考入北洋法政专门学堂",
-      "1914年/25岁\n东渡日本求学\n入读日本早稻田大学",
-      "1916年/27岁\n回国投身新文化运动\n参与编辑《新青年》杂志",
-      "1918年/29岁\n担任北京大学图书馆主任\n曾向教员传授马克思理论",
-      "1919年/30岁\n领导五四运动\n抗议巴黎和会的山东决议",
-      "1920年/31岁\n在北京组建共产主义小组\n探索建立无产阶级政党",
-      "1921年/32岁\n参与共产党建立筹备工作\n成为中共主要创始人之一",
-      "1924年/35岁\n前往广州会见孙中山\n促成国共第一次合作",
-      "1926年/37岁\n领导北京反帝反军阀运动\n遭到北洋政府通缉",
-      "1927年/38岁\n被奉系军阀逮捕\n在北京英勇就义",
+      "1892\nBorn into a peasant family",
+      "1913/Age 21\nServed in the Austro-Hungarian Army\nFought in World War I",
+      "1920/Age 28\nEngaged in revolutionary activities\nJoined the Communist Party of Yugoslavia",
+      "1928/Age 36\nElected Secretary of the Zagreb City Committee\nLed workers' movements",
+      "1937/Age 45\nBecame the supreme leader of the Communist Party of Yugoslavia\nEngaged in underground activities",
+      "1941/Age 49\nOrganized mountain guerrilla forces\nResisted the Nazis in Serbia",
+      "1945/Age 53\nLed the liberation of the nation\nEstablished the Federal People's Republic of Yugoslavia",
+      "1948/Age 56\nRefused to follow orders from Moscow\nBroke with Stalin",
+      "1961/Age 69\nInitiated the Non-Aligned Movement\nBecame a leader of the Third World",
+      "1965/Age 73\nDeveloped the country with 'Titoism'\nEconomic prosperity accompanied by severe wealth inequality",
+      "1980/Age 88\nDied of illness\nDelegations from 128 countries attended his funeral",
     ],
     watermark: "@人物传记史",
     "bg-music": "music/国际歌.mp3",
@@ -204,8 +204,9 @@ export default {
   },
   "clip-audio": [
     {
-      url: "input/clip-audio/如愿.mp3",
-      start: 30,
+      url: "input/clip-audio/打字声.mp3",
+      start: 3,
+      duration: 3,
     },
   ],
   "clip-video": {
