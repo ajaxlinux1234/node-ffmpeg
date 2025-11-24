@@ -14,14 +14,36 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1762618692436_merged.mp4",
-    title: `The Life of Josip Broz Tito\nthe Yugoslav Proletarian Revolutionary`,
+    url: "output/merge-video/merged_1763988164999_merged.mp4",
+    // title: `The Life of Josip Broz Tito\nthe Yugoslav Proletarian Revolutionary`,
+    title: `美杜莎`,
     useBabyCry: false,
-    voiceList: [],
-    titleDuration: 10, // 全局标题显示时长（秒），不设置则贯穿整个视频
+    voiceList: [
+      {
+        voice: '女孩笑声',
+        duration: [3, 6]
+      },
+       {
+        voice: '鸽子起飞声_start3s_clip',
+        duration: [8, 9]
+      },
+      {
+        voice: '科学实验',
+        duration: [19, 20]
+      },
+       {
+        voice: '海浪声',
+        duration: [36, 40]
+      },
+       {
+        voice: '拔剑声',
+        duration: [54, 55]
+      },
+    ],
+    titleDuration: 5, // 全局标题显示时长（秒），不设置则贯穿整个视频
     endTitle: "", // 结尾标题
     // endTitle: "",
-    endTitleDuration: 1, // 结尾标题显示时长（秒）- 延长打字机音效时间
+    endTitleDuration: 4, // 结尾标题显示时长（秒）- 延长打字机音效时间
     endTitleAnimation: "typewriter", // 结尾标题动画效果：打字机效果
     endTitleSound: "typewriter", // 结尾标题声音效果：打字机声音
     disclaimerText: "", // 底部免责声明文字（30px斜体，底部10%位置）
@@ -38,28 +60,35 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1892\nBorn into a peasant family",
-      "1913/Age 21\nServed in the Austro-Hungarian Army\nFought in World War I",
-      "1920/Age 28\nEngaged in revolutionary activities\nJoined the Communist Party of Yugoslavia",
-      "1928/Age 36\nElected Secretary of the Zagreb City Committee\nLed workers' movements",
-      "1937/Age 45\nBecame the supreme leader of the Communist Party of Yugoslavia\nEngaged in underground activities",
-      "1941/Age 49\nOrganized mountain guerrilla forces\nResisted the Nazis in Serbia",
-      "1945/Age 53\nLed the liberation of the nation\nEstablished the Federal People's Republic of Yugoslavia",
-      "1948/Age 56\nRefused to follow orders from Moscow\nBroke with Stalin",
-      "1961/Age 69\nInitiated the Non-Aligned Movement\nBecame a leader of the Third World",
-      "1965/Age 73\nDeveloped the country with 'Titoism'\nEconomic prosperity accompanied by severe wealth inequality",
-      "1980/Age 88\nDied of illness\nDelegations from 128 countries attended his funeral",
+      "公元前1250年\n美杜莎出生\n父亲是海神、母亲是海妖",
+      "6岁\n是神的孩子\n却是凡人之身",
+      "13岁\n成为雅典娜的侍女",
+      "17岁\n因美貌而受到赞美",
+      "18岁\n波塞冬被她的美貌深深吸引",
+      "在雅典娜神庙中\n被波塞冬占有",
+      "雅典娜目睹一切\n以玷污神殿为由对美杜莎下诅咒",
+      "变成蛇发女妖\n直视她双眼的人会立刻变成石头",
+      "19岁\n逃离到遥远的孤岛\n独自生活",
+      "20岁\n岛上条件艰苦\n逐渐学会生存",
+      "25岁\n失去往日的美丽和尊严\n保持对美好生活的渴望",
+      "26岁\n众勇士登岛挑战\n皆化为岛中石像",
+      "27岁\n珀尔修斯用雅典娜神盾阻挡石化目光\n被珀尔修斯猎杀",
+      "雅典娜将美杜莎头颅\n镶嵌在神盾埃癸斯中央",
+      "成为勇气和力量的象征\n在神话中永存",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/国际歌.mp3",
+    "bg-music": "music/西方神话_start2s_clip.mp3",
+    // Go West-Fancy
+    // 西方神话_start2s_clip
     // 栀子花开_start25s_clip
     // 国际歌
     // 屠洪刚 - 精忠报国_start25s_clip
   },
   "merge-video": {
     urls: [
-      "https://v26-artist.vlabvod.com/04ace7ae749fe9e7d0901a8269b45577/69196cde/video/tos/cn/tos-cn-v-148450/owkIDJG0iiJW6iQQEgBBhOp4BxMdk20QkAGfAi/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5967&bt=5967&cs=0&ds=12&ft=5QYTUxhhe6BMyqaYasVJD12Nzj&mime_type=video_mp4&qs=0&rc=aDc0NjM4aDtmaDs6aDdmOUBpM2s6NHA5cjo2NzczNDM7M0AxYi0uYzJiNWMxMV8yLS1fYSNuZWlfMmRjMTVhLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1762669110&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202511091418303E3E204B0B8A8EAD4794",
-      "https://v9-artist.vlabvod.com/73101673fa62ebce0d3aca9fb98f37ea/69196dbc/video/tos/cn/tos-cn-v-148450/osZGSBIkZgGeADkLQdwOCenguELlDI8IYPN3ec/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6318&bt=6318&cs=0&ds=12&ft=5QYTUxhhe6BMyqLLasVJD12Nzj&mime_type=video_mp4&qs=0&rc=aWc8OGY2ZWhnZDlnPDs7PEBpang2eHM5cjw2NzczNDM7M0BiM2AuM181Xy8xLWMvMWEtYSNfcmIzMmRjMzVhLS1kNC9zcw%3D%3D&btag=c0000e00008000&dy_q=1762669362&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202511091422424B226DA6C1A2010811CE",
+      "https://v3-artist.vlabvod.com/c4896ee1577ca7e2772701bf588c19fb/692c5541/video/tos/cn/tos-cn-v-148450/oQMiaGBpIYzDh1kAHjhBfgpg1GJiQEYQWb10Ea/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6022&bt=6022&cs=0&ds=12&ft=5QYTUxhhe6BMyq-KHcVJD12Nzj&mime_type=video_mp4&qs=0&rc=OGRlNDw1OWYzMzY3PDg3aUBpajo7OW05cjZrNzczNDM7M0A0NWNfLmEyX18xLWIuNV9iYSNoL2dgMmRjaWVhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1763908259&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=2025112322305814ED2472D02371AE8497",
+      "https://v6-artist.vlabvod.com/27f5c5bad64f5eecadebafabb3190248/692c561d/video/tos/cn/tos-cn-v-148450/oAf0pNgsDhBktjGiWGi21IF3g9W2EQA4YlQhSJ/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6028&bt=6028&cs=0&ds=12&ft=5QYTUxhhe6BMyqsVHcVJD12Nzj&mime_type=video_mp4&qs=0&rc=NDlkZzo2MzQ8Mzo4ZDU8O0BpajhuZ3I5cnRrNzczNDM7M0AzXmItX15jXy8xNDEzNWFhYSNyb2k2MmRzamVhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1763908479&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251123223439706FB0174DDBE01F2E4D",
+      "https://v9-artist.vlabvod.com/851aac6364eb69ccedc31cb5bfe8608d/692d8ccd/video/tos/cn/tos-cn-v-148450/owEDTESkmjxdUfQjDBIfpRFUAHQC7Af3EMOsgo/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6290&bt=6290&cs=0&ds=12&ft=5QYTUxhhe6BMyq4RduVJD12Nzj&mime_type=video_mp4&qs=0&rc=OTk3ZWU1aTlmOGZkMztoM0BpMzxxZnU5cnltNzczNDM7M0AwNi8xMGA2X2AxLl80MzQuYSM1czBrMmRzMWVhLS1kNC9zcw%3D%3D&btag=c0000e00008000&dy_q=1763988035&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=2025112420403533FED7F71DFC6600330F"
     ],
     // 方式一：统一转场效果（原有方式，向后兼容）
     switch: "无转场", // 所有视频之间使用相同的转场效果
@@ -83,7 +112,7 @@ export default {
     // • 光影交错 - 适用于现实与回忆的交织呈现，如追忆往昔、对比今昔、时空穿越效果
   },
   "extract-audio": {
-    url: "outputSource/伊田助男.mp4", // 视频文件路径或URL
+    url: "music/1115.mp4", // 视频文件路径或URL
     format: "mp3", // 输出音频格式: mp3, wav, aac, flac, ogg, m4a
     quality: "high", // 音频质量: high, medium, low
     // 可选参数：
@@ -204,9 +233,8 @@ export default {
   },
   "clip-audio": [
     {
-      url: "input/clip-audio/打字声.mp3",
+      url: "sounds/鸽子起飞声.mp3",
       start: 3,
-      duration: 3,
     },
   ],
   "clip-video": {
@@ -255,9 +283,9 @@ export default {
 
   // 视频帧提取和AI提示词生成配置
   "get-promot-image-by-video": {
-    videoPath: "input/get-promot-image-by-video/李大钊同志的一生.mp4", // 输入视频路径
-    videoName: "李大钊同志的一生", // 视频名称，用于创建输出目录
-    seconds: [1, 6, 11, 18, 22, 31, 37, 42, 50, 56, 62], // 提取视频帧的时间点（秒）
+    videoPath: "input/get-promot-image-by-video/20251123-美杜莎.mp4", // 输入视频路径
+    videoName: "20251123-美杜莎", // 视频名称，用于创建输出目录
+    seconds: [1, 5, 10, 14, 20, 25, 32, 35, 40, 45, 49, 55, 59, 65, 70], // 提取视频帧的时间点（秒）
     // 豆包AI配置
     get_title_path: "https://www.doubao.com/chat/28205387237474562", // 图片标题内容获取
     get_promot_path: "https://www.doubao.com/chat/19187408061685250", // 豆包提示词反推页面
@@ -266,9 +294,9 @@ export default {
     get_promot: false,
     get_remove_words: false,
     get_title_selector_fn: () => {
-      const timeNum = 11;
+      const historyNum = 15;
       return Array.from(document.querySelectorAll(".auto-hide-last-sibling-br"))
-        .slice(-timeNum)
+        .slice(-historyNum)
         .map((one) =>
           one.innerText
             .replaceAll(/\s+/g, "")
@@ -288,12 +316,15 @@ export default {
         ),
     ],
     // 可选配置
-    shot: "运镜方式：镜头跟随图中主要人物，图中人物从当前场景走到下一个场景，人物变换为下一场景的主要人物，动态转换流畅自然", // 默认镜头描述
+    shot: "运镜方式：镜头跟随图中主要人物，图中场景缓慢自然变成下一场景伴随着图中人物从当前场景缓慢变成下一个场景的人物，场景变成下一场景，同时人物变换为下一场景的主要人物，动态转换流畅自然", // 默认镜头描述
     waitTime: 60000, // 登录等待时间（毫秒）
     sendWaitTime: 20000, // 发送后等待AI回复时间（毫秒）
     generateWaitTime: 30000, // 图片生成等待时间（毫秒）
     stepTimeout: 60, // 每步骤用户确认超时时间（秒）
-    removeTextPrompt: "去掉图片中的所有颜色的文字和左边的半透明水印", // 去文字提示词
+    removeTextPrompt:
+      "去除这张图片中的所有位置上所有颜色的文字，去除左边半透明水印", // 去文字提示词
+    // getTitlePrompt: `按照"人物名称/国籍/年份|事情1|事情2"的格式识别输出图片中间的文本内容，并输出文本内容`,
+    // getTitlePrompt: `按照"年份/年龄|事情1|事情2"的格式识别输出图片中间的文本内容`,
     getTitlePrompt: `按照"年份/年龄|事情1|事情2"的格式识别输出图片中间的文本内容`,
     getPromotPrompt: `图片生成提示词反推，不要画面文字`,
 
@@ -307,13 +338,52 @@ export default {
       ),
     input_selector_fn: () => document.querySelector("textarea"),
     get_promot_fn: () => {
-      const timeNum = 11; // 对应seconds数组长度
+      const historyNum = 15; // 对应seconds数组长度
       return Array.from(document.querySelectorAll(".auto-hide-last-sibling-br"))
-        .slice(-timeNum)
+        .slice(-historyNum)
         .map((one) => {
           const match = /"prompt":\s*"([^"]*)"/g.exec(one.innerText);
           return match ? match[1] : "";
         });
     },
+  },
+
+  // 声音克隆和文本转语音配置 (使用免费开源模型)
+  "voice-clone": {
+    // 模式选择: "clone"(声音克隆), "tts"(批量TTS), "single"(单个TTS)
+    mode: "tts", // 测试真正的声音克隆功能
+
+    // 引擎选择: "auto"(自动), "true_clone"(真正克隆), "advanced"(智能选择), "edge"(Edge TTS)
+    engine: "edge", // 使用真正的声音克隆
+
+    // 声音克隆模式配置
+    // referenceAudio: "music/20251112-孙中山_extracted_1762957677092.mp3", // 参考音频文件
+    // targetTexts: [
+    //   "这是第一段要克隆的语音内容，测试声音克隆效果。",
+    //   "这是第二段要克隆的语音内容，验证音色一致性。",
+    //   "这是第三段要克隆的语音内容，展示克隆技术。",
+    // ],
+
+    // 批量TTS模式配置 (mode: "tts" 时使用)
+    texts: [
+      "欢迎使用高质量的Edge TTS文本转语音功能。",
+      "这是微软最新的神经网络语音合成技术。",
+      "支持中文晓晓语音和400多种其他语音。",
+    ],
+
+    // 单个TTS模式配置 (mode: "single" 时使用)
+    // text: "这是一段单独的文本转语音内容，测试单个TTS功能。",
+    // outputFile: "output/voice-clone/single_output.wav",
+    // speakerWav: "input/voice-clone/reference_voice.wav", // 可选：用于声音克隆
+
+    // 通用配置
+    language: "zh", // 语言: "zh"(中文), "en"(英文), "multilingual"(多语言)
+    // model: null, // TTS模型，null则自动选择。可用模型请运行: npx node-ffmpeg-tools voice-clone --list-models
+    outputDir: "output/voice-clone", // 输出目录
+
+    // 高级配置
+    // model: "tts_models/zh-CN/baker/tacotron2-DDC-GST", // 指定特定模型
+    // model: "tts_models/en/ljspeech/tacotron2-DDC", // 英文模型
+    // model: "tts_models/multilingual/multi-dataset/xtts_v2", // 多语言模型(支持声音克隆)
   },
 };

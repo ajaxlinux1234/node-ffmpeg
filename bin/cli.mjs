@@ -21,6 +21,7 @@ import runMergeAudioVideo, {
 } from "../lib/merge-audio-video.mjs";
 import { cleanOutputHistory } from "../lib/utils.mjs";
 import { runGetPromotImageByVideo } from "../lib/get-promot-image-by-video.mjs";
+import { runVoiceClone, listAvailableModels } from "../lib/voice-clone.mjs";
 import config from "../config.mjs";
 
 async function loadConfig() {
@@ -34,7 +35,7 @@ async function loadConfig() {
 
 function printHelp() {
   console.log(
-    `\nnode-ffmpeg-tools <command> [options]\n\nCommands:\n  down-rm-watermark [url]     Download mp4 and blur bottom-right watermark\n  history-person              Process history person video with titles and effects\n  ai-remove-watermark [url]   AI inpainting to remove watermark; keeps original resolution/fps\n  merge-video                 Merge multiple videos with transition effects\n  clip-audio                  Clip audio files from specified start time\n  clip-video                  Clip video files with time range batch processing\n  extract-audio               Extract audio from video files with format conversion\n  merge-audio-video           Merge audio and video files with position control\n  auto-deepseek-jimeng        Automate DeepSeek chat to generate video prompts\n  jimeng-video-generator      Generate videos using Jimeng with batch image upload and shot descriptions\n  get-promot-image-by-video   Extract video frames, OCR text recognition, and generate prompts using AI\n  filter                      Apply various filters to videos (cinematic, vintage, artistic, etc.)\n  optimize-image                  Convert 2D video to 3D (anaglyph, side-by-side, top-bottom)\n  batch-crop-images           Batch crop images to 9:16 aspect ratio for social media\n  clear-browser-data          Clear saved browser login data for DeepSeek\n\nGlobal Options:\n  cleanOutputHistory          Automatically clean output directory before running commands (default: true)\n                              Set to false in config.mjs to disable: cleanOutputHistory: false\n\nOptions for batch-crop-images:\n  Uses configuration from config.mjs under "batch-crop-images" section.\n  Required config fields: inputDir (source directory), outputDir (destination directory)\n  Optional config fields: targetAspectRatio (default: "9:16"), cropMode (center/smart/entropy),\n                         quality (1-100, default: 90), outputFormat (auto/jpg/png/webp)\n\nExamples:\n  node-ffmpeg-tools down-rm-watermark https://example.com/video.mp4\n  node-ffmpeg-tools down-rm-watermark -b assets/bgm.mp3 https://example.com/video.mp4\n  node-ffmpeg-tools get-promot-image-by-video\n`
+    `\nnode-ffmpeg-tools <command> [options]\n\nCommands:\n  down-rm-watermark [url]     Download mp4 and blur bottom-right watermark\n  history-person              Process history person video with titles and effects\n  ai-remove-watermark [url]   AI inpainting to remove watermark; keeps original resolution/fps\n  merge-video                 Merge multiple videos with transition effects\n  clip-audio                  Clip audio files from specified start time\n  clip-video                  Clip video files with time range batch processing\n  extract-audio               Extract audio from video files with format conversion\n  merge-audio-video           Merge audio and video files with position control\n  auto-deepseek-jimeng        Automate DeepSeek chat to generate video prompts\n  jimeng-video-generator      Generate videos using Jimeng with batch image upload and shot descriptions\n  get-promot-image-by-video   Extract video frames, OCR text recognition, and generate prompts using AI\n  filter                      Apply various filters to videos (cinematic, vintage, artistic, etc.)\n  optimize-image                  Convert 2D video to 3D (anaglyph, side-by-side, top-bottom)\n  batch-crop-images           Batch crop images to 9:16 aspect ratio for social media\n  voice-clone                 Free voice cloning and text-to-speech using open-source models\n  clear-browser-data          Clear saved browser login data for DeepSeek\n\nGlobal Options:\n  cleanOutputHistory          Automatically clean output directory before running commands (default: true)\n                              Set to false in config.mjs to disable: cleanOutputHistory: false\n\nOptions for voice-clone:\n  --list-models               List all available TTS models\n  Uses configuration from config.mjs under "voice-clone" section.\n  Supports three modes: "clone" (voice cloning), "tts" (batch text-to-speech), "single" (single TTS)\n\nOptions for batch-crop-images:\n  Uses configuration from config.mjs under "batch-crop-images" section.\n  Required config fields: inputDir (source directory), outputDir (destination directory)\n  Optional config fields: targetAspectRatio (default: "9:16"), cropMode (center/smart/entropy),\n                         quality (1-100, default: 90), outputFormat (auto/jpg/png/webp)\n\nExamples:\n  node-ffmpeg-tools voice-clone --list-models                    # List available TTS models\n  node-ffmpeg-tools voice-clone                                  # Run voice cloning from config.mjs\n  node-ffmpeg-tools batch-crop-images                            # Batch crop images to 9:16\n  node-ffmpeg-tools filter --list                               # List available video filters\n  node-ffmpeg-tools optimize-image --list                       # List available 3D conversion modes`
   );
 }
 
@@ -63,6 +64,7 @@ function printHelp() {
     "filter",
     "optimize-image",
     "batch-crop-images",
+    "voice-clone",
   ];
 
   // 如果是需要清理的命令，先执行清理
@@ -416,6 +418,32 @@ function printHelp() {
 
         console.log("Using merge-audio-video configuration from config.mjs");
         await runMergeAudioVideo(config["merge-audio-video"]);
+        break;
+      }
+      case "voice-clone": {
+        // 检查是否要列出所有TTS模型
+        if (argv["list-models"] || argv.l) {
+          await listAvailableModels();
+          break;
+        }
+
+        if (!config["voice-clone"]) {
+          console.error(
+            '\nError: No "voice-clone" configuration found in config.mjs'
+          );
+          console.error(
+            "Please add voice-clone configuration with mode and required settings"
+          );
+          console.error("Supported modes:");
+          console.error('  "clone": Voice cloning with referenceAudio and targetTexts');
+          console.error('  "tts": Batch text-to-speech with texts array');
+          console.error('  "single": Single text-to-speech with text string');
+          console.error("Use --list-models to see available TTS models");
+          process.exit(1);
+        }
+
+        console.log("Using voice-clone configuration from config.mjs");
+        await runVoiceClone(config["voice-clone"]);
         break;
       }
       case "clear-browser-data": {
