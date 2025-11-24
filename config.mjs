@@ -25,7 +25,7 @@ export default {
       },
        {
         voice: '鸽子起飞声_start3s_clip',
-        duration: [8, 9]
+        duration: [8, 10]
       },
       {
         voice: '科学实验',
@@ -53,7 +53,7 @@ export default {
     sectionTitleAnimation: "turbo", // 分镜字幕动画效果，可选值同titleAnimation
 
     // 视频质量配置
-    qualityMode: "turbo", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理), "turbo"(极速处理)
+    qualityMode: "high", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理), "turbo"(极速处理)
 
     // 性能优化配置
     enableSpeedOptimization: true, // 启用速度优化：多线程+预设优化
