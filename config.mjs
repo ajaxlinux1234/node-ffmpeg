@@ -38,17 +38,19 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1892\nBorn into a peasant family",
-      "1913/Age 21\nServed in the Austro-Hungarian Army\nFought in World War I",
-      "1920/Age 28\nEngaged in revolutionary activities\nJoined the Communist Party of Yugoslavia",
-      "1928/Age 36\nElected Secretary of the Zagreb City Committee\nLed workers' movements",
-      "1937/Age 45\nBecame the supreme leader of the Communist Party of Yugoslavia\nEngaged in underground activities",
-      "1941/Age 49\nOrganized mountain guerrilla forces\nResisted the Nazis in Serbia",
-      "1945/Age 53\nLed the liberation of the nation\nEstablished the Federal People's Republic of Yugoslavia",
-      "1948/Age 56\nRefused to follow orders from Moscow\nBroke with Stalin",
-      "1961/Age 69\nInitiated the Non-Aligned Movement\nBecame a leader of the Third World",
-      "1965/Age 73\nDeveloped the country with 'Titoism'\nEconomic prosperity accompanied by severe wealth inequality",
-      "1980/Age 88\nDied of illness\nDelegations from 128 countries attended his funeral",
+      "1974年/0岁 \n 江苏宿迁农村 \n 刘强东出生",
+      "1992年/18岁 \n 北京人民大学门口 \n 带着乡亲凑的学费来上学",
+      "1995年/21岁 \n 北京小餐馆 \n 餐厅倒闭收拾残局",
+      "1998年/24岁 \n 北京中关村 \n 租柜台卖光盘",
+      "2003年/29岁 \n 北京办公室 \n 非典期间发现网上商机",
+      "2007年/33岁 \n 北京工地 \n 亲自建第一个仓库",
+      "2008年/34岁 \n 香港会议室 \n 资金链快断了",
+      "2010年/36岁 \n 北京办公室 \n 和对手打价格战",
+      "2012年/38岁 \n 苏宁电器店 \n 亲自去店里比价格",
+      "2014年/40岁 \n 美国纽约 \n 带领公司去美国上市",
+      "2016年/42岁 \n 河北农村 \n 当村长帮助脱贫",
+      "2018年/44岁 \n 智能仓库 \n 看机器人分拣货物",
+      "2023年/49岁 \n 北京办公室 \n 深夜还在工作",
     ],
     watermark: "@人物传记史",
     "bg-music": "music/国际歌.mp3",
@@ -83,7 +85,7 @@ export default {
     // • 光影交错 - 适用于现实与回忆的交织呈现，如追忆往昔、对比今昔、时空穿越效果
   },
   "extract-audio": {
-    url: "outputSource/伊田助男.mp4", // 视频文件路径或URL
+    url: "outputSource/刘强东演讲.mp4", // 视频文件路径或URL
     format: "mp3", // 输出音频格式: mp3, wav, aac, flac, ogg, m4a
     quality: "high", // 音频质量: high, medium, low
     // 可选参数：
@@ -204,9 +206,9 @@ export default {
   },
   "clip-audio": [
     {
-      url: "input/clip-audio/打字声.mp3",
-      start: 3,
-      duration: 3,
+      url: "output/extract-audio/刘强东演讲_extracted_1763969829729.mp3",
+      start: 0,
+      duration: 15,
     },
   ],
   "clip-video": {
