@@ -361,7 +361,7 @@ export default {
 
   // 视频去重配置
   "video-dedup": {
-    input: "output/merge-video/merged_1760161130084_merged.mp4", // 输入视频路径
+    input: "outputUtils/刘强东.mp4", // 输入视频路径
     // output: "output/video-dedup/custom_output.mp4", // 输出路径（可选，不指定则自动生成）
 
     // 性能配置
@@ -381,13 +381,14 @@ export default {
     // MD5修改 - 修改视频文件MD5值
     modifyMD5: true, // 是否修改MD5
 
-    // 黑边框配置 - 添加上下或左右黑边
+    // 模糊遮罩边框配置 - 添加模糊边框效果
     letterbox: {
       enabled: true, // 是否启用
       top: 40, // 上边框高度（像素）
       bottom: 40, // 下边框高度（像素）
       left: 0, // 左边框宽度（像素）
       right: 0, // 右边框宽度（像素）
+      blurStrength: 15, // 模糊强度 5-30
     },
 
     // 锐化配置 - 适当锐化视频
@@ -461,7 +462,51 @@ export default {
       format: "invisible", // 不可见模式
     },
 
-    quality: "high", // 视频质量: high, medium, low
+    // 色度偏移配置 - 微调色彩空间
+    chromaShift: {
+      enabled: true, // 是否启用
+      strength: "light", // 强度: light, medium, strong
+    },
+
+    // 帧抖动配置 - 微调帧时间戳
+    frameJitter: {
+      enabled: true, // 是否启用
+      amount: 0.001, // 抖动量 0.001-0.01
+    },
+
+    // 像素偏移配置 - 微调像素位置
+    pixelShift: {
+      enabled: true, // 是否启用
+      x: 1, // X轴偏移 0-3像素
+      y: 1, // Y轴偏移 0-3像素
+    },
+
+    // 颗粒感配置 - 胶片颗粒效果
+    grain: {
+      enabled: true, // 是否启用
+      strength: "light", // 强度: light, medium, strong
+      type: "film", // 类型: film, digital
+    },
+
+    // 色彩抖动配置 - 随机色彩微调
+    colorDither: {
+      enabled: true, // 是否启用
+      strength: 0.02, // 抖动强度 0.01-0.05
+    },
+
+    // 边缘增强配置 - 增强画面边缘
+    edgeEnhance: {
+      enabled: true, // 是否启用
+      strength: "light", // 强度: light, medium, strong
+    },
+
+    // 随机裁剪配置 - 微调画面边缘
+    randomCrop: {
+      enabled: true, // 是否启用
+      maxCrop: 5, // 最大裁剪像素 1-10
+    },
+
+    quality: "low", // 视频质量: high, medium, low
     keepAudio: true, // 是否保留音频
   },
 
