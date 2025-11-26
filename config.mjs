@@ -359,6 +359,112 @@ export default {
     },
   },
 
+  // 视频去重配置
+  "video-dedup": {
+    input: "output/merge-video/merged_1760161130084_merged.mp4", // 输入视频路径
+    // output: "output/video-dedup/custom_output.mp4", // 输出路径（可选，不指定则自动生成）
+
+    // 性能配置
+    // enableGPU: true,  // 自动检测并启用GPU加速（默认true）
+    // threads: 0,       // CPU线程数，0为自动（使用75%的CPU核心）
+
+    // 噪点配置 - 添加随机噪点效果
+    sweepLight: {
+      enabled: true, // 是否启用
+      opacity: 0.15, // 噪点强度 0.05-0.3，建议0.1-0.2
+      speed: "medium", // 保留参数（兼容性）
+      angle: null, // 保留参数（兼容性）
+      width: 0.3, // 保留参数（兼容性）
+      color: "white", // 保留参数（兼容性）
+    },
+
+    // MD5修改 - 修改视频文件MD5值
+    modifyMD5: true, // 是否修改MD5
+
+    // 黑边框配置 - 添加上下或左右黑边
+    letterbox: {
+      enabled: true, // 是否启用
+      top: 40, // 上边框高度（像素）
+      bottom: 40, // 下边框高度（像素）
+      left: 0, // 左边框宽度（像素）
+      right: 0, // 右边框宽度（像素）
+    },
+
+    // 锐化配置 - 适当锐化视频
+    sharpen: {
+      enabled: true, // 是否启用
+      strength: "medium", // 强度: light, medium, strong
+    },
+
+    // 降噪配置 - 对视频进行降噪
+    denoise: {
+      enabled: true, // 是否启用
+      strength: "light", // 强度: light, medium, strong
+    },
+
+    // 变速配置 - 可配置的加快变速处理
+    speedChange: {
+      enabled: true, // 是否启用
+      speed: 1.001, // 速度倍数 1.0-1.2（1.05表示加快5%）
+    },
+
+    // 色彩调整配置 - 随机微调色调/饱和度/亮度/对比度
+    colorAdjust: {
+      enabled: false, // 是否启用
+      hue: 0, // 色调偏移 -30到30度，0为随机
+      saturation: 1.0, // 饱和度 0.8-1.2，1.0为随机
+      brightness: 0, // 亮度 -0.1到0.1，0为随机
+      contrast: 1.0, // 对比度 0.9-1.1，1.0为随机
+    },
+
+    // 镜像翻转配置 - 水平或垂直翻转视频
+    flip: {
+      enabled: false, // 是否启用
+      horizontal: false, // 水平翻转
+      vertical: false, // 垂直翻转
+    },
+
+    // 缩放配置 - 微调视频尺寸
+    scale: {
+      enabled: true, // 是否启用
+      scale: 1.01, // 缩放比例 0.95-1.05，1.0为随机
+    },
+
+    // 旋转配置 - 微调视频角度
+    rotate: {
+      enabled: false, // 是否启用
+      angle: 0, // 旋转角度 -5到5度，0为随机
+    },
+
+    // 帧率调整配置 - 改变视频帧率
+    fpsAdjust: {
+      enabled: false, // 是否启用
+      fps: 0, // 目标帧率，0为不改变（如30, 25, 24等）
+    },
+
+    // 模糊配置 - 轻微模糊效果
+    blur: {
+      enabled: true, // 是否启用
+      strength: "light", // 强度: light, medium, strong
+    },
+
+    // 色彩曲线配置 - 应用色彩曲线预设
+    curves: {
+      enabled: true, // 是否启用
+      preset: "darker", // 预设: vintage, darker, lighter, none
+    },
+
+    // 微调亮度配置 - 添加极轻微的随机亮度调整
+    timestamp: {
+      enabled: true, // 是否启用
+      position: "bottom-right", // 保留参数（兼容性）
+      format: "invisible", // 不可见模式
+    },
+
+    quality: "high", // 视频质量: high, medium, low
+    keepAudio: true, // 是否保留音频
+  },
+
   // 声音克隆和文本转语音配置 (使用免费开源模型)
   "voice-clone": {
     // 模式选择: "clone"(声音克隆), "tts"(批量TTS), "single"(单个TTS)
