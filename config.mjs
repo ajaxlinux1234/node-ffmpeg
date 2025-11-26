@@ -20,24 +20,24 @@ export default {
     useBabyCry: false,
     voiceList: [
       {
-        voice: '女孩笑声',
-        duration: [3, 6]
-      },
-       {
-        voice: '鸽子起飞声_start3s_clip',
-        duration: [8, 10]
+        voice: "女孩笑声",
+        duration: [3, 6],
       },
       {
-        voice: '科学实验',
-        duration: [19, 20]
+        voice: "鸽子起飞声_start3s_clip",
+        duration: [8, 10],
       },
-       {
-        voice: '海浪声',
-        duration: [36, 40]
+      {
+        voice: "科学实验",
+        duration: [19, 20],
       },
-       {
-        voice: '拔剑声',
-        duration: [54, 55]
+      {
+        voice: "海浪声",
+        duration: [36, 40],
+      },
+      {
+        voice: "拔剑声",
+        duration: [54, 55],
       },
     ],
     titleDuration: 5, // 全局标题显示时长（秒），不设置则贯穿整个视频
@@ -86,7 +86,7 @@ export default {
     urls: [
       "https://v3-artist.vlabvod.com/c4896ee1577ca7e2772701bf588c19fb/692c5541/video/tos/cn/tos-cn-v-148450/oQMiaGBpIYzDh1kAHjhBfgpg1GJiQEYQWb10Ea/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6022&bt=6022&cs=0&ds=12&ft=5QYTUxhhe6BMyq-KHcVJD12Nzj&mime_type=video_mp4&qs=0&rc=OGRlNDw1OWYzMzY3PDg3aUBpajo7OW05cjZrNzczNDM7M0A0NWNfLmEyX18xLWIuNV9iYSNoL2dgMmRjaWVhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1763908259&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=2025112322305814ED2472D02371AE8497",
       "https://v6-artist.vlabvod.com/27f5c5bad64f5eecadebafabb3190248/692c561d/video/tos/cn/tos-cn-v-148450/oAf0pNgsDhBktjGiWGi21IF3g9W2EQA4YlQhSJ/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6028&bt=6028&cs=0&ds=12&ft=5QYTUxhhe6BMyqsVHcVJD12Nzj&mime_type=video_mp4&qs=0&rc=NDlkZzo2MzQ8Mzo4ZDU8O0BpajhuZ3I5cnRrNzczNDM7M0AzXmItX15jXy8xNDEzNWFhYSNyb2k2MmRzamVhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1763908479&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251123223439706FB0174DDBE01F2E4D",
-      "https://v9-artist.vlabvod.com/851aac6364eb69ccedc31cb5bfe8608d/692d8ccd/video/tos/cn/tos-cn-v-148450/owEDTESkmjxdUfQjDBIfpRFUAHQC7Af3EMOsgo/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6290&bt=6290&cs=0&ds=12&ft=5QYTUxhhe6BMyq4RduVJD12Nzj&mime_type=video_mp4&qs=0&rc=OTk3ZWU1aTlmOGZkMztoM0BpMzxxZnU5cnltNzczNDM7M0AwNi8xMGA2X2AxLl80MzQuYSM1czBrMmRzMWVhLS1kNC9zcw%3D%3D&btag=c0000e00008000&dy_q=1763988035&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=2025112420403533FED7F71DFC6600330F"
+      "https://v9-artist.vlabvod.com/851aac6364eb69ccedc31cb5bfe8608d/692d8ccd/video/tos/cn/tos-cn-v-148450/owEDTESkmjxdUfQjDBIfpRFUAHQC7Af3EMOsgo/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6290&bt=6290&cs=0&ds=12&ft=5QYTUxhhe6BMyq4RduVJD12Nzj&mime_type=video_mp4&qs=0&rc=OTk3ZWU1aTlmOGZkMztoM0BpMzxxZnU5cnltNzczNDM7M0AwNi8xMGA2X2AxLl80MzQuYSM1czBrMmRzMWVhLS1kNC9zcw%3D%3D&btag=c0000e00008000&dy_q=1763988035&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=2025112420403533FED7F71DFC6600330F",
     ],
     // 方式一：统一转场效果（原有方式，向后兼容）
     switch: "无转场", // 所有视频之间使用相同的转场效果
@@ -344,6 +344,112 @@ export default {
           return match ? match[1] : "";
         });
     },
+  },
+
+  // 视频去重配置
+  "video-dedup": {
+    input: "output/merge-video/merged_1760161130084_merged.mp4", // 输入视频路径
+    // output: "output/video-dedup/custom_output.mp4", // 输出路径（可选，不指定则自动生成）
+
+    // 性能配置
+    // enableGPU: true,  // 自动检测并启用GPU加速（默认true）
+    // threads: 0,       // CPU线程数，0为自动（使用75%的CPU核心）
+
+    // 噪点配置 - 添加随机噪点效果
+    sweepLight: {
+      enabled: true, // 是否启用
+      opacity: 0.15, // 噪点强度 0.05-0.3，建议0.1-0.2
+      speed: "medium", // 保留参数（兼容性）
+      angle: null, // 保留参数（兼容性）
+      width: 0.3, // 保留参数（兼容性）
+      color: "white", // 保留参数（兼容性）
+    },
+
+    // MD5修改 - 修改视频文件MD5值
+    modifyMD5: true, // 是否修改MD5
+
+    // 黑边框配置 - 添加上下或左右黑边
+    letterbox: {
+      enabled: true, // 是否启用
+      top: 40, // 上边框高度（像素）
+      bottom: 40, // 下边框高度（像素）
+      left: 0, // 左边框宽度（像素）
+      right: 0, // 右边框宽度（像素）
+    },
+
+    // 锐化配置 - 适当锐化视频
+    sharpen: {
+      enabled: true, // 是否启用
+      strength: "medium", // 强度: light, medium, strong
+    },
+
+    // 降噪配置 - 对视频进行降噪
+    denoise: {
+      enabled: true, // 是否启用
+      strength: "light", // 强度: light, medium, strong
+    },
+
+    // 变速配置 - 可配置的加快变速处理
+    speedChange: {
+      enabled: true, // 是否启用
+      speed: 1.001, // 速度倍数 1.0-1.2（1.05表示加快5%）
+    },
+
+    // 色彩调整配置 - 随机微调色调/饱和度/亮度/对比度
+    colorAdjust: {
+      enabled: false, // 是否启用
+      hue: 0, // 色调偏移 -30到30度，0为随机
+      saturation: 1.0, // 饱和度 0.8-1.2，1.0为随机
+      brightness: 0, // 亮度 -0.1到0.1，0为随机
+      contrast: 1.0, // 对比度 0.9-1.1，1.0为随机
+    },
+
+    // 镜像翻转配置 - 水平或垂直翻转视频
+    flip: {
+      enabled: false, // 是否启用
+      horizontal: false, // 水平翻转
+      vertical: false, // 垂直翻转
+    },
+
+    // 缩放配置 - 微调视频尺寸
+    scale: {
+      enabled: true, // 是否启用
+      scale: 1.01, // 缩放比例 0.95-1.05，1.0为随机
+    },
+
+    // 旋转配置 - 微调视频角度
+    rotate: {
+      enabled: false, // 是否启用
+      angle: 0, // 旋转角度 -5到5度，0为随机
+    },
+
+    // 帧率调整配置 - 改变视频帧率
+    fpsAdjust: {
+      enabled: false, // 是否启用
+      fps: 0, // 目标帧率，0为不改变（如30, 25, 24等）
+    },
+
+    // 模糊配置 - 轻微模糊效果
+    blur: {
+      enabled: true, // 是否启用
+      strength: "light", // 强度: light, medium, strong
+    },
+
+    // 色彩曲线配置 - 应用色彩曲线预设
+    curves: {
+      enabled: true, // 是否启用
+      preset: "darker", // 预设: vintage, darker, lighter, none
+    },
+
+    // 微调亮度配置 - 添加极轻微的随机亮度调整
+    timestamp: {
+      enabled: true, // 是否启用
+      position: "bottom-right", // 保留参数（兼容性）
+      format: "invisible", // 不可见模式
+    },
+
+    quality: "high", // 视频质量: high, medium, low
+    keepAudio: true, // 是否保留音频
   },
 
   // 声音克隆和文本转语音配置 (使用免费开源模型)
