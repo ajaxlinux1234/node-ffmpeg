@@ -14,32 +14,46 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1763988164999_merged.mp4",
+    url: "output/merge-video/merged_1764001006722_merged.mp4",
     // title: `The Life of Josip Broz Tito\nthe Yugoslav Proletarian Revolutionary`,
-    title: `美杜莎`,
+    title: `刘强东\n艰辛创业之路独白`,
     useBabyCry: false,
-    voiceList: [
-      {
-        voice: '女孩笑声',
-        duration: [3, 6]
-      },
-       {
-        voice: '鸽子起飞声_start3s_clip',
-        duration: [8, 10]
-      },
-      {
-        voice: '科学实验',
-        duration: [19, 20]
-      },
-       {
-        voice: '海浪声',
-        duration: [36, 40]
-      },
-       {
-        voice: '拔剑声',
-        duration: [54, 55]
-      },
-    ],
+    
+    // 方式一：手动配置 voiceList（原有方式）
+    // voiceList: [
+    //   {
+    //     voice: '女孩笑声',
+    //     duration: [3, 6]
+    //   },
+    //   {
+    //     voice: '鸽子起飞声_start3s_clip',
+    //     duration: [8, 10]
+    //   },
+    // ],
+    
+    // 方式二：自动使用 lines 目录下的配音文件（新功能）
+    useLines: true, // 启用后会自动读取 output/{name}/lines/ 目录下的 0.mp3, 1.mp3, 2.mp3...
+                    // 并按照 0-5秒、5-10秒、10-15秒... 的顺序自动分配配音
+                    // 注意：启用 useLines 后，voiceList 配置会被覆盖
+    
+    // 定格帧效果配置
+    freezeFrame: 0.01, // 每5秒的最后一帧定格0.2秒，不设置或设为0则禁用
+                      // 例如：0.2 表示在 5s, 10s, 15s... 等时间点定格0.2秒
+    
+    // 定格帧动画效果
+    freezeFrameAnimation: "zoom_in", // 定格帧动画类型
+    // 可选值：
+    // - "none": 无动画
+    // - "zoom_in": 从小到大放大（推荐）
+    // - "zoom_out": 从大到小缩小
+    // - "fade_in": 淡入
+    // - "slide_up": 从下往上滑入
+    // - "slide_down": 从上往下滑入
+    // - "rotate": 旋转
+    // - "pulse": 脉冲（放大缩小循环）
+    // - "shake": 震动
+    // - "blur_in": 从模糊到清晰
+    
     titleDuration: 5, // 全局标题显示时长（秒），不设置则贯穿整个视频
     endTitle: "", // 结尾标题
     // endTitle: "",
@@ -60,7 +74,7 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1974年/0岁 \n 江苏宿迁农村 \n 刘强东出生",
+      "1974年/0岁 \n 江苏宿迁农村 \n 出生",
       "1992年/18岁 \n 北京人民大学门口 \n 带着乡亲凑的学费来上学",
       "1995年/21岁 \n 北京小餐馆 \n 餐厅倒闭收拾残局",
       "1998年/24岁 \n 北京中关村 \n 租柜台卖光盘",
@@ -75,7 +89,7 @@ export default {
       "2023年/49岁 \n 北京办公室 \n 深夜还在工作",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/西方神话_start2s_clip.mp3",
+    "bg-music": "music/追梦赤子心_start13s_clip.mp3",
     // Go West-Fancy
     // 西方神话_start2s_clip
     // 栀子花开_start25s_clip
@@ -84,9 +98,8 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v3-artist.vlabvod.com/c4896ee1577ca7e2772701bf588c19fb/692c5541/video/tos/cn/tos-cn-v-148450/oQMiaGBpIYzDh1kAHjhBfgpg1GJiQEYQWb10Ea/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6022&bt=6022&cs=0&ds=12&ft=5QYTUxhhe6BMyq-KHcVJD12Nzj&mime_type=video_mp4&qs=0&rc=OGRlNDw1OWYzMzY3PDg3aUBpajo7OW05cjZrNzczNDM7M0A0NWNfLmEyX18xLWIuNV9iYSNoL2dgMmRjaWVhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1763908259&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=2025112322305814ED2472D02371AE8497",
-      "https://v6-artist.vlabvod.com/27f5c5bad64f5eecadebafabb3190248/692c561d/video/tos/cn/tos-cn-v-148450/oAf0pNgsDhBktjGiWGi21IF3g9W2EQA4YlQhSJ/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6028&bt=6028&cs=0&ds=12&ft=5QYTUxhhe6BMyqsVHcVJD12Nzj&mime_type=video_mp4&qs=0&rc=NDlkZzo2MzQ8Mzo4ZDU8O0BpajhuZ3I5cnRrNzczNDM7M0AzXmItX15jXy8xNDEzNWFhYSNyb2k2MmRzamVhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1763908479&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251123223439706FB0174DDBE01F2E4D",
-      "https://v9-artist.vlabvod.com/851aac6364eb69ccedc31cb5bfe8608d/692d8ccd/video/tos/cn/tos-cn-v-148450/owEDTESkmjxdUfQjDBIfpRFUAHQC7Af3EMOsgo/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6290&bt=6290&cs=0&ds=12&ft=5QYTUxhhe6BMyq4RduVJD12Nzj&mime_type=video_mp4&qs=0&rc=OTk3ZWU1aTlmOGZkMztoM0BpMzxxZnU5cnltNzczNDM7M0AwNi8xMGA2X2AxLl80MzQuYSM1czBrMmRzMWVhLS1kNC9zcw%3D%3D&btag=c0000e00008000&dy_q=1763988035&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=2025112420403533FED7F71DFC6600330F"
+      "https://v9-artist.vlabvod.com/c01f7823864da2f0915c5192700f3c41/692efd2c/video/tos/cn/tos-cn-v-148450/oAHyw0JwfJALQ5B4DnglE8EQVig3uktdlhiIAF/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5967&bt=5967&cs=0&ds=12&ft=5QYTUxhhe6BMyqRx2uVJD12Nzj&mime_type=video_mp4&qs=0&rc=OjVoaGVlaTszOWU4aGU2Z0BpajpwaGw5cnZ2NzczNDM7M0BgLi9fYDA1NS0xYmIwXzFgYSMvXl5yMmRjMWZhLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1764082308&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=2025112522514844C1973A12223285368E",
+      "https://v6-artist.vlabvod.com/06335445dbefdf20dd09101b5f5a7662/692efdf8/video/tos/cn/tos-cn-v-148450/o4pvDslijBfIcSFBuAjEO2nQHJHxgPfEYNwDE6/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6326&bt=6326&cs=0&ds=12&ft=5QYTUxhhe6BMyq632uVJD12Nzj&mime_type=video_mp4&qs=0&rc=N2ZoZWg3aDhpZmU7Mzk0OEBpM3k2a3E5cnJ2NzczNDM7M0AyYS9fLTMwNmExMjQ1XjAtYSNxMG81MmRzM2ZhLS1kNDBzcw%3D%3D&btag=c0000e00008000&dy_q=1764082542&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251125225542578A4DFDA57B2567A540"
     ],
     // 方式一：统一转场效果（原有方式，向后兼容）
     switch: "无转场", // 所有视频之间使用相同的转场效果
@@ -231,8 +244,8 @@ export default {
   },
   "clip-audio": [
     {
-      url: "sounds/鸽子起飞声.mp3",
-      start: 3,
+      url: "music/追梦赤子心.mp3",
+      start: 13,
     },
   ],
   "clip-video": {
@@ -281,9 +294,9 @@ export default {
 
   // 视频帧提取和AI提示词生成配置
   "get-promot-image-by-video": {
-    videoPath: "input/get-promot-image-by-video/20251123-美杜莎.mp4", // 输入视频路径
-    videoName: "20251123-美杜莎", // 视频名称，用于创建输出目录
-    seconds: [1, 5, 10, 14, 20, 25, 32, 35, 40, 45, 49, 55, 59, 65, 70], // 提取视频帧的时间点（秒）
+    videoPath: "input/get-promot-image-by-video/20251125-马歇尔.mp4", // 输入视频路径
+    videoName: "20251125-马歇尔", // 视频名称，用于创建输出目录
+    seconds: [1, 5.5, 10.5, 17, 23, 29, 35.5, 44, 49, 55.5, 62.5], // 提取视频帧的时间点（秒）
     // 豆包AI配置
     get_title_path: "https://www.doubao.com/chat/28205387237474562", // 图片标题内容获取
     get_promot_path: "https://www.doubao.com/chat/19187408061685250", // 豆包提示词反推页面
@@ -292,7 +305,7 @@ export default {
     get_promot: false,
     get_remove_words: false,
     get_title_selector_fn: () => {
-      const historyNum = 15;
+      const historyNum = 11;
       return Array.from(document.querySelectorAll(".auto-hide-last-sibling-br"))
         .slice(-historyNum)
         .map((one) =>
@@ -336,7 +349,7 @@ export default {
       ),
     input_selector_fn: () => document.querySelector("textarea"),
     get_promot_fn: () => {
-      const historyNum = 15; // 对应seconds数组长度
+      const historyNum = 11; // 对应seconds数组长度
       return Array.from(document.querySelectorAll(".auto-hide-last-sibling-br"))
         .slice(-historyNum)
         .map((one) => {
