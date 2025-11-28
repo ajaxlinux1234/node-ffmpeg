@@ -14,9 +14,9 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1764001006722_merged.mp4",
+    url: "output/merge-video/merged_1764260043325_merged.mp4",
     // title: `The Life of Josip Broz Tito\nthe Yugoslav Proletarian Revolutionary`,
-    title: `刘强东\n艰辛创业之路独白`,
+    title: `  德意志帝国陆军元帅\n提出德国“施利芬计划”\n施里芬的一生`,
     useBabyCry: false,
     
     // 方式一：手动配置 voiceList（原有方式）
@@ -32,16 +32,16 @@ export default {
     // ],
     
     // 方式二：自动使用 lines 目录下的配音文件（新功能）
-    useLines: true, // 启用后会自动读取 output/{name}/lines/ 目录下的 0.mp3, 1.mp3, 2.mp3...
+    useLines: false, // 启用后会自动读取 output/{name}/lines/ 目录下的 0.mp3, 1.mp3, 2.mp3...
                     // 并按照 0-5秒、5-10秒、10-15秒... 的顺序自动分配配音
                     // 注意：启用 useLines 后，voiceList 配置会被覆盖
     
     // 定格帧效果配置
-    freezeFrame: 0.01, // 每5秒的最后一帧定格0.2秒，不设置或设为0则禁用
+    freezeFrame: 0, // 每5秒的最后一帧定格0.2秒，不设置或设为0则禁用
                       // 例如：0.2 表示在 5s, 10s, 15s... 等时间点定格0.2秒
     
     // 定格帧动画效果
-    freezeFrameAnimation: "zoom_in", // 定格帧动画类型
+    freezeFrameAnimation: "none", // 定格帧动画类型
     // 可选值：
     // - "none": 无动画
     // - "zoom_in": 从小到大放大（推荐）
@@ -54,7 +54,7 @@ export default {
     // - "shake": 震动
     // - "blur_in": 从模糊到清晰
     
-    titleDuration: 5, // 全局标题显示时长（秒），不设置则贯穿整个视频
+    titleDuration: 10, // 全局标题显示时长（秒），不设置则贯穿整个视频
     endTitle: "", // 结尾标题
     // endTitle: "",
     endTitleDuration: 4, // 结尾标题显示时长（秒）- 延长打字机音效时间
@@ -74,22 +74,20 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1974年/0岁 \n 江苏宿迁农村 \n 出生",
-      "1992年/18岁 \n 北京人民大学门口 \n 带着乡亲凑的学费来上学",
-      "1995年/21岁 \n 北京小餐馆 \n 餐厅倒闭收拾残局",
-      "1998年/24岁 \n 北京中关村 \n 租柜台卖光盘",
-      "2003年/29岁 \n 北京办公室 \n 非典期间发现网上商机",
-      "2007年/33岁 \n 北京工地 \n 亲自建第一个仓库",
-      "2008年/34岁 \n 香港会议室 \n 资金链快断了",
-      "2010年/36岁 \n 北京办公室 \n 和对手打价格战",
-      "2012年/38岁 \n 苏宁电器店 \n 亲自去店里比价格",
-      "2014年/40岁 \n 美国纽约 \n 带领公司去美国上市",
-      "2016年/42岁 \n 河北农村 \n 当村长帮助脱贫",
-      "2018年/44岁 \n 智能仓库 \n 看机器人分拣货物",
-      "2023年/49岁 \n 北京办公室 \n 深夜还在工作",
+      "1923年\n出生华商家庭",
+      "1936年/13岁\n考入莱佛士书院\n接受顶尖精英教育",
+      "1942年/19岁\n日军占领新加坡\n曾担任日军翻译谋生",
+      "1950年/27岁\n从剑桥大学毕业\n与同学柯玉芝结婚",
+      "1954年/31岁\n回国创立人民行动党\n推动新加坡自治",
+      "1959年/36岁\n赢得总理大选\n领导新加坡自治邦",
+      "1965年/42岁\n被马来西亚联邦驱逐\n新加坡被迫独立",
+      "1968年/45岁\n提出“居者有其屋”\n解决民生住房问题",
+      "1970年/47岁\n打造法治社会和廉洁政府\n良好营商环境吸引大量投资",
+      "1990年/67岁\n卸任总理交棒吴作栋\n完成权力平稳过渡",
+      "2015年/91岁\n因病逝世\n逝世于新加坡",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/追梦赤子心_start13s_clip.mp3",
+    "bg-music": "music/EraTheMass_start10s_clip.mp3",
     // Go West-Fancy
     // 西方神话_start2s_clip
     // 栀子花开_start25s_clip
@@ -98,8 +96,8 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v9-artist.vlabvod.com/c01f7823864da2f0915c5192700f3c41/692efd2c/video/tos/cn/tos-cn-v-148450/oAHyw0JwfJALQ5B4DnglE8EQVig3uktdlhiIAF/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5967&bt=5967&cs=0&ds=12&ft=5QYTUxhhe6BMyqRx2uVJD12Nzj&mime_type=video_mp4&qs=0&rc=OjVoaGVlaTszOWU4aGU2Z0BpajpwaGw5cnZ2NzczNDM7M0BgLi9fYDA1NS0xYmIwXzFgYSMvXl5yMmRjMWZhLS1kNC9zcw%3D%3D&btag=c0000e00018000&dy_q=1764082308&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=2025112522514844C1973A12223285368E",
-      "https://v6-artist.vlabvod.com/06335445dbefdf20dd09101b5f5a7662/692efdf8/video/tos/cn/tos-cn-v-148450/o4pvDslijBfIcSFBuAjEO2nQHJHxgPfEYNwDE6/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6326&bt=6326&cs=0&ds=12&ft=5QYTUxhhe6BMyq632uVJD12Nzj&mime_type=video_mp4&qs=0&rc=N2ZoZWg3aDhpZmU7Mzk0OEBpM3k2a3E5cnJ2NzczNDM7M0AyYS9fLTMwNmExMjQ1XjAtYSNxMG81MmRzM2ZhLS1kNDBzcw%3D%3D&btag=c0000e00008000&dy_q=1764082542&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=20251125225542578A4DFDA57B2567A540"
+      "https://v6-artist.vlabvod.com/8277efef3da2a76403ccbee70e1ad7e9/6931b1ff/video/tos/cn/tos-cn-v-148450/o8oe5xQWIEnfBjdBOdSOoD1CUE99GKOfAkbFgD/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5983&bt=5983&cs=0&ds=12&ft=5QYTUxhhe6BMyqvyGfVJD12Nzj&mime_type=video_mp4&qs=0&rc=ZWVkZWhmODM7NWg0Z2ZoZUBpMzp2eXI5cmk6NzczNDM7M0BjYzE2XmJhNjYxMzIxMjFfYSNfaWtqMmRrYmhhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1764259671&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202511280007514C09FDF31979A79772ED",
+      "https://v26-artist.vlabvod.com/f83d752fb3677ad26a37118ca2da1d20/6931b31c/video/tos/cn/tos-cn-v-148450/oYRDGIAzQDSgGVOIICQdfELP1UO6eBeP9Hk3EL/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6321&bt=6321&cs=0&ds=12&ft=5QYTUxhhe6BMyqovGfVJD12Nzj&mime_type=video_mp4&qs=0&rc=ZTNoaTVkN2RmOWk8OjZkZkBpamltaXk5cjQ6NzczNDM7M0AuMV5fYDA0NjMxNi81Y18yYSNnMF81MmRjZWhhLS1kNC9zcw%3D%3D&btag=c0000e00008000&dy_q=1764259986&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202511280013063F920B1F76B436BB78C3"
     ],
     // 方式一：统一转场效果（原有方式，向后兼容）
     switch: "无转场", // 所有视频之间使用相同的转场效果
@@ -294,9 +292,9 @@ export default {
 
   // 视频帧提取和AI提示词生成配置
   "get-promot-image-by-video": {
-    videoPath: "input/get-promot-image-by-video/20251125-马歇尔.mp4", // 输入视频路径
-    videoName: "20251125-马歇尔", // 视频名称，用于创建输出目录
-    seconds: [1, 5.5, 10.5, 17, 23, 29, 35.5, 44, 49, 55.5, 62.5], // 提取视频帧的时间点（秒）
+    videoPath: "input/get-promot-image-by-video/20251128-亚历山大二世.mp4", // 输入视频路径
+    videoName: "20251128-亚历山大二世", // 视频名称，用于创建输出目录
+    seconds: [0, 7, 14, 21, 28, 35, 42.5, 49, 56, 64.5, 70.5], // 提取视频帧的时间点（秒）
     // 豆包AI配置
     get_title_path: "https://www.doubao.com/chat/28205387237474562", // 图片标题内容获取
     get_promot_path: "https://www.doubao.com/chat/19187408061685250", // 豆包提示词反推页面
@@ -327,7 +325,7 @@ export default {
         ),
     ],
     // 可选配置
-    shot: "运镜方式：镜头跟随图中主要人物，图中场景缓慢自然变成下一场景伴随着图中人物从当前场景缓慢变成下一个场景的人物，场景变成下一场景，同时人物变换为下一场景的主要人物，动态转换流畅自然", // 默认镜头描述
+    shot: "运镜方式：镜头跟随图中主要人物，图中场景缓慢自然变成下一场景伴随着图中人物从当前场景缓慢变成下一个场景的人物，人物不要走动，人物只进行形态和样貌上的变化，场景变成下一场景，同时人物变换为下一场景的主要人物，动态转换流畅自然", // 默认镜头描述
     waitTime: 60000, // 登录等待时间（毫秒）
     sendWaitTime: 20000, // 发送后等待AI回复时间（毫秒）
     generateWaitTime: 30000, // 图片生成等待时间（毫秒）
