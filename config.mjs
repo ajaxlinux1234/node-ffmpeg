@@ -14,11 +14,11 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1764260043325_merged.mp4",
-    // title: `The Life of Josip Broz Tito\nthe Yugoslav Proletarian Revolutionary`,
-    title: `  德意志帝国陆军元帅\n提出德国“施利芬计划”\n施里芬的一生`,
+    url: "output/merge-video/merged_1764396408687_merged.mp4",
+    title: `俄罗斯帝国沙皇|俄国农奴制改革者|亚历山大二世的一生`,
+    titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
-    
+
     // 方式一：手动配置 voiceList（原有方式）
     // voiceList: [
     //   {
@@ -30,16 +30,16 @@ export default {
     //     duration: [8, 10]
     //   },
     // ],
-    
+
     // 方式二：自动使用 lines 目录下的配音文件（新功能）
     useLines: false, // 启用后会自动读取 output/{name}/lines/ 目录下的 0.mp3, 1.mp3, 2.mp3...
-                    // 并按照 0-5秒、5-10秒、10-15秒... 的顺序自动分配配音
-                    // 注意：启用 useLines 后，voiceList 配置会被覆盖
-    
+    // 并按照 0-5秒、5-10秒、10-15秒... 的顺序自动分配配音
+    // 注意：启用 useLines 后，voiceList 配置会被覆盖
+
     // 定格帧效果配置
     freezeFrame: 0, // 每5秒的最后一帧定格0.2秒，不设置或设为0则禁用
-                      // 例如：0.2 表示在 5s, 10s, 15s... 等时间点定格0.2秒
-    
+    // 例如：0.2 表示在 5s, 10s, 15s... 等时间点定格0.2秒
+
     // 定格帧动画效果
     freezeFrameAnimation: "none", // 定格帧动画类型
     // 可选值：
@@ -53,7 +53,7 @@ export default {
     // - "pulse": 脉冲（放大缩小循环）
     // - "shake": 震动
     // - "blur_in": 从模糊到清晰
-    
+
     titleDuration: 10, // 全局标题显示时长（秒），不设置则贯穿整个视频
     endTitle: "", // 结尾标题
     // endTitle: "",
@@ -74,51 +74,34 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1923年\n出生华商家庭",
-      "1936年/13岁\n考入莱佛士书院\n接受顶尖精英教育",
-      "1942年/19岁\n日军占领新加坡\n曾担任日军翻译谋生",
-      "1950年/27岁\n从剑桥大学毕业\n与同学柯玉芝结婚",
-      "1954年/31岁\n回国创立人民行动党\n推动新加坡自治",
-      "1959年/36岁\n赢得总理大选\n领导新加坡自治邦",
-      "1965年/42岁\n被马来西亚联邦驱逐\n新加坡被迫独立",
-      "1968年/45岁\n提出“居者有其屋”\n解决民生住房问题",
-      "1970年/47岁\n打造法治社会和廉洁政府\n良好营商环境吸引大量投资",
-      "1990年/67岁\n卸任总理交棒吴作栋\n完成权力平稳过渡",
-      "2015年/91岁\n因病逝世\n逝世于新加坡",
+      "1818年\n出生于俄国皇室\n开启其人生历程",
+      "1837年/19岁\n从小接受良好教育\n精通四国语言及多门学科",
+      "1841年/23岁\n与德国公主玛丽亚结婚\n巩固俄德联盟",
+      "1855年/37岁\n父亲尼古拉一世病逝\n继位为俄罗斯帝国皇帝",
+      "1856年/38岁\n结束克里米亚战争\n被迫接受黑海中立化",
+      "1861年/43岁\n下定决心推动俄国现代化\n宣布彻底废除农奴制",
+      "1864年/46岁\n向远东和中亚扩张\n确立俄国在中亚的统治",
+      "1867年/49岁\n担心英国夺走阿拉斯加\n以720万美元卖给美国",
+      "1877年/59岁\n第十次俄土战争爆发\n将大片奥斯曼领土纳入版图",
+      "1880年/62岁\n皇后去世仅40天后\n秘密与多尔戈鲁科娃结婚",
+      "1881年/63岁\n遭民意党人炸弹袭击\n身亡",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/EraTheMass_start10s_clip.mp3",
+    "bg-music": "music/民国_start5s_clip.mp3",
     // Go West-Fancy
     // 西方神话_start2s_clip
     // 栀子花开_start25s_clip
     // 国际歌
+    // 民国_start5s_clip
     // 屠洪刚 - 精忠报国_start25s_clip
   },
   "merge-video": {
     urls: [
-      "https://v6-artist.vlabvod.com/8277efef3da2a76403ccbee70e1ad7e9/6931b1ff/video/tos/cn/tos-cn-v-148450/o8oe5xQWIEnfBjdBOdSOoD1CUE99GKOfAkbFgD/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=5983&bt=5983&cs=0&ds=12&ft=5QYTUxhhe6BMyqvyGfVJD12Nzj&mime_type=video_mp4&qs=0&rc=ZWVkZWhmODM7NWg0Z2ZoZUBpMzp2eXI5cmk6NzczNDM7M0BjYzE2XmJhNjYxMzIxMjFfYSNfaWtqMmRrYmhhLS1kNDBzcw%3D%3D&btag=c0000e00018000&dy_q=1764259671&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202511280007514C09FDF31979A79772ED",
-      "https://v26-artist.vlabvod.com/f83d752fb3677ad26a37118ca2da1d20/6931b31c/video/tos/cn/tos-cn-v-148450/oYRDGIAzQDSgGVOIICQdfELP1UO6eBeP9Hk3EL/?a=4066&ch=0&cr=0&dr=0&er=0&lr=display_watermark_aigc&cd=0%7C0%7C0%7C0&br=6321&bt=6321&cs=0&ds=12&ft=5QYTUxhhe6BMyqovGfVJD12Nzj&mime_type=video_mp4&qs=0&rc=ZTNoaTVkN2RmOWk8OjZkZkBpamltaXk5cjQ6NzczNDM7M0AuMV5fYDA0NjMxNi81Y18yYSNnMF81MmRjZWhhLS1kNC9zcw%3D%3D&btag=c0000e00008000&dy_q=1764259986&feature_id=7bed9f9dfbb915a044e5d473759ce9df&l=202511280013063F920B1F76B436BB78C3"
+      "https://v16-cc.capcut.com/2b69849fbc01b45a21d79ef53180085c/6933c6ad/video/tos/alisg/tos-alisg-ve-14178-sg/oktVvpFlEDsoNFexMgQQ5gBGkz5KB4D72IAfJ7/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11846&bt=5923&cs=0&ft=GAAO2Inz7ThQgLVPXq8Zmo&mime_type=video_mp4&qs=0&rc=aTU3aDpmNmdpaTc4aDw3ZEBpM3d0O3c5cnY7NzYzODU6NEBhY2MyMTE0NTUxXi8xLTA0YSNyYGptMmRza2lhLS1kMy1zcw%3D%3D&vvpl=1&l=20251129140037CCECCEC5063143C01015&btag=e00088000",
+      "https://v16-cc.capcut.com/f4a3c665d70f700ebdef38aa4ca4fcf1/6933c12c/video/tos/alisg/tos-alisg-ve-14178-sg/o0qQHYip4ALq4GBDiU6SQhalwdkQ7ERPxIiNt/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12912&bt=6456&cs=0&ft=GAAO2Inz7ThmRLVPXq8Zmo&mime_type=video_mp4&qs=0&rc=O2Q0ZWdoNTM2ODs1Z2hmOkBpM3U3dnI5cjg7NzYzODU6NEAuNmFeLy42NjIxNGM2Y18uYSM1by9qMmQ0YWlhLS1kMy1zcw%3D%3D&vvpl=1&l=2025112913373859714947820370F0769A&btag=e000b0000",
     ],
     // 方式一：统一转场效果（原有方式，向后兼容）
     switch: "无转场", // 所有视频之间使用相同的转场效果
-
-    // 方式二：分别设置转场效果（新功能）
-    // transitions: [
-    //   "无转场", // 视频2 → 视频3 的转场效果
-    // ],
-    // 可选转场效果：
-    // 基础效果：叠化、淡入淡出、推拉、擦除、无转场
-    // 历史人物专用：时光流转、岁月如歌、历史回眸、命运转折、精神传承、时代变迁、心路历程、光影交错
-    //
-    // 转场效果应用场景：
-    // • 时光流转 - 适用于跨越多年的人生阶段转换，如从童年到青年、从求学到工作等重要人生节点
-    // • 岁月如歌 - 适用于温馨的成长历程，如家庭生活、求学经历、师生情谊等温暖时光的衔接
-    // • 历史回眸 - 适用于重大历史事件的庄重呈现，如重要发现、历史性时刻、国家大事等严肃场景
-    // • 命运转折 - 适用于人物命运的重大转折，如人生选择、事业转向、历史机遇等戏剧性时刻
-    // • 精神传承 - 适用于表现人物精神品质的传承，如师承关系、价值观传递、精神财富延续
-    // • 时代变迁 - 适用于不同历史时期的宏大叙事，如社会变革、时代背景转换、历史进程推进
-    // • 心路历程 - 适用于人物内心世界的细腻变化，如思想觉悟、情感波动、心理成长过程
-    // • 光影交错 - 适用于现实与回忆的交织呈现，如追忆往昔、对比今昔、时空穿越效果
   },
   "extract-audio": {
     url: "music/1115.mp4", // 视频文件路径或URL
@@ -242,8 +225,8 @@ export default {
   },
   "clip-audio": [
     {
-      url: "music/追梦赤子心.mp3",
-      start: 13,
+      url: "music/民国.mp3",
+      start: 5,
     },
   ],
   "clip-video": {
@@ -290,6 +273,11 @@ export default {
     formats: ["jpg", "jpeg", "png", "webp"], // 支持的图片格式
   },
 
+  // 自动化视频处理流程配置
+  "merge-options": {
+    name: "20251128-亚历山大二世", // 对应 output/{name}/processed_data.json
+  },
+
   // 视频帧提取和AI提示词生成配置
   "get-promot-image-by-video": {
     videoPath: "input/get-promot-image-by-video/20251128-亚历山大二世.mp4", // 输入视频路径
@@ -311,22 +299,24 @@ export default {
             .replaceAll(/\s+/g, "")
             .replaceAll("|", "\n")
             .replaceAll("\n无", "")
-            .replaceAll("/0岁", "")
+            .replaceAll("/0岁", ""),
         );
     },
     image_remove_words_fns: [
       () =>
         Array.from(document.querySelectorAll("button")).find((one) =>
-          one.innerText.includes("技能")
+          one.innerText.includes("技能"),
         ),
       () =>
         Array.from(document.querySelectorAll("button")).find((one) =>
-          one.innerText.includes("技能")
+          one.innerText.includes("技能"),
         ),
     ],
     // 可选配置
     shot: "运镜方式：镜头跟随图中主要人物，图中场景缓慢自然变成下一场景伴随着图中人物从当前场景缓慢变成下一个场景的人物，人物不要走动，人物只进行形态和样貌上的变化，场景变成下一场景，同时人物变换为下一场景的主要人物，动态转换流畅自然", // 默认镜头描述
     waitTime: 60000, // 登录等待时间（毫秒）
+    pageLoadWaitTime: 3000, // 页面加载后等待时间（毫秒）
+    uploadWaitTime: 5000, // 上传图片后等待时间（毫秒）
     sendWaitTime: 20000, // 发送后等待AI回复时间（毫秒）
     generateWaitTime: 30000, // 图片生成等待时间（毫秒）
     stepTimeout: 60, // 每步骤用户确认超时时间（秒）
@@ -343,7 +333,7 @@ export default {
       document.querySelector('button[data-testid="upload_file_button"]'),
     file_upload: () =>
       document.querySelector(
-        'div[data-testid="upload_file_panel_upload_item"]'
+        'div[data-testid="upload_file_panel_upload_item"]',
       ),
     input_selector_fn: () => document.querySelector("textarea"),
     get_promot_fn: () => {
