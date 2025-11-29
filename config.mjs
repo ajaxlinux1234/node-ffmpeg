@@ -14,8 +14,8 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1764396408687_merged.mp4",
-    title: `俄罗斯帝国沙皇|俄国农奴制改革者|亚历山大二世的一生`,
+    url: "output/merge-video/merged_1764419854034_replaced.mp4",
+    title: `东北王张作霖的一生`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
 
@@ -74,17 +74,17 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1818年\n出生于俄国皇室\n开启其人生历程",
-      "1837年/19岁\n从小接受良好教育\n精通四国语言及多门学科",
-      "1841年/23岁\n与德国公主玛丽亚结婚\n巩固俄德联盟",
-      "1855年/37岁\n父亲尼古拉一世病逝\n继位为俄罗斯帝国皇帝",
-      "1856年/38岁\n结束克里米亚战争\n被迫接受黑海中立化",
-      "1861年/43岁\n下定决心推动俄国现代化\n宣布彻底废除农奴制",
-      "1864年/46岁\n向远东和中亚扩张\n确立俄国在中亚的统治",
-      "1867年/49岁\n担心英国夺走阿拉斯加\n以720万美元卖给美国",
-      "1877年/59岁\n第十次俄土战争爆发\n将大片奥斯曼领土纳入版图",
-      "1880年/62岁\n皇后去世仅40天后\n秘密与多尔戈鲁科娃结婚",
-      "1881年/63岁\n遭民意党人炸弹袭击\n身亡",
+      "1875年\n出生贫农家庭",
+      "1888年/13岁\n父亲张有财被赌徒打死\n为父报仇后亡命天涯",
+      "1894年/19岁\n中日甲午战争爆发\n加入清军任骑兵哨长",
+      "1900年/25岁\n沙俄侵占中国东北\n组织保险团维护村庄治安",
+      "1902年/27岁\n接受清政府招安\n从此开启仕途之路",
+      "1911年/36岁\n带兵入奉天镇压革命党\n清廷授其为关外练兵大臣",
+      "1916年/41岁\n任奉天督军兼省长\n全面掌握奉天军政",
+      "1918年/43岁\n升任为东三省巡阅使\n成为独霸一方的“东北王”",
+      "1922年/47岁\n第一次直奉战争失败\n自行宣布东北自治",
+      "1926年/51岁\n击败冯玉祥进入北京\n被拥立为陆海军大元帅",
+      "1928年/53岁\n乘火车返回奉天行至皇姑屯\n被日本关东军预埋炸弹炸死",
     ],
     watermark: "@人物传记史",
     "bg-music": "music/民国_start5s_clip.mp3",
@@ -97,11 +97,17 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v16-cc.capcut.com/2b69849fbc01b45a21d79ef53180085c/6933c6ad/video/tos/alisg/tos-alisg-ve-14178-sg/oktVvpFlEDsoNFexMgQQ5gBGkz5KB4D72IAfJ7/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11846&bt=5923&cs=0&ft=GAAO2Inz7ThQgLVPXq8Zmo&mime_type=video_mp4&qs=0&rc=aTU3aDpmNmdpaTc4aDw3ZEBpM3d0O3c5cnY7NzYzODU6NEBhY2MyMTE0NTUxXi8xLTA0YSNyYGptMmRza2lhLS1kMy1zcw%3D%3D&vvpl=1&l=20251129140037CCECCEC5063143C01015&btag=e00088000",
-      "https://v16-cc.capcut.com/f4a3c665d70f700ebdef38aa4ca4fcf1/6933c12c/video/tos/alisg/tos-alisg-ve-14178-sg/o0qQHYip4ALq4GBDiU6SQhalwdkQ7ERPxIiNt/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12912&bt=6456&cs=0&ft=GAAO2Inz7ThmRLVPXq8Zmo&mime_type=video_mp4&qs=0&rc=O2Q0ZWdoNTM2ODs1Z2hmOkBpM3U3dnI5cjg7NzYzODU6NEAuNmFeLy42NjIxNGM2Y18uYSM1by9qMmQ0YWlhLS1kMy1zcw%3D%3D&vvpl=1&l=2025112913373859714947820370F0769A&btag=e000b0000",
+      "https://v16-cc.capcut.com/8203f55c3340f388a5fca796ff695ba9/69340eba/video/tos/alisg/tos-alisg-ve-14178-sg/oQYDUYUAE1SiU5IdTG1iiT7v3BHQpArLAaqyd/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11938&bt=5969&cs=0&ft=GAAO2Inz7ThBkDVPXq8Zmo&mime_type=video_mp4&qs=0&rc=Zzk1ZThnOmY5NWZkZzRkPEBpamx0NG85cjNnNzYzODU6NEAyMzM1XjIyX2MxM2EyM2NhYSM2Z2xgMmRrNWlhLS1kMy1zcw%3D%3D&vvpl=1&l=202511291908022D60A7003DDA98ED4E34&btag=e00088000",
+      "https://v16-cc.capcut.com/b36abb35d99d951f6b87842bbe66ba6f/69340e9e/video/tos/alisg/tos-alisg-ve-14178-sg/oECKVaBEvrwSiDVi2dB8UAYCtQUHqw1uisv4I/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12638&bt=6319&cs=0&ft=GAAO2Inz7ThgkDVPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZmlpO2czM2loaWg5aDQzN0BpM3JrZXY5cjVnNzYzODU6NEBiNDJeXzUwXmAxXy01NDAyYSNsX2EyMmRrNWlhLS1kMy1zcw%3D%3D&vvpl=1&l=202511291908042D60A7003DDA98ED4FF4&btag=e000b0000",
     ],
-    // 方式一：统一转场效果（原有方式，向后兼容）
-    switch: "无转场", // 所有视频之间使用相同的转场效果
+    videoReplaceUrls: [
+      {
+        index: 0,
+        timeRange: [0, 10],
+        url: "https://v16-cc.capcut.com/399107f7e6d5ca605c5038fe6f4048ff/69341e3e/video/tos/alisg/tos-alisg-ve-14178-sg/o4RDodSEqvcG8Ce4AVg7ceIqLsbTAQVyBfywHI/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12440&bt=6220&cs=0&ft=GAAO2Inz7Thb67VPXq8Zmo&mime_type=video_mp4&qs=0&rc=Nzk2ODQ7Mzk8ZGg3OGY6OkBpamh3NXY5cmRoNzYzODU6NEA1LTI2LTIvNTUxNi8wMl8uYSNjZnNqMmRrNGlhLS1kMy1zcw%3D%3D&vvpl=1&l=20251129201444B0B10683A70BDEFFBB10&btag=e000b0000",
+      },
+    ],
+    switch: "无转场",
   },
   "extract-audio": {
     url: "music/1115.mp4", // 视频文件路径或URL
@@ -275,7 +281,7 @@ export default {
 
   // 自动化视频处理流程配置
   "merge-options": {
-    name: "20251128-亚历山大二世", // 对应 output/{name}/processed_data.json
+    name, // 对应 output/{name}/processed_data.json
   },
 
   // 视频帧提取和AI提示词生成配置

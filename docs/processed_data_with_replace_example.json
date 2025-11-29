@@ -1,0 +1,28 @@
+{
+  "name": "20251128-张作霖",
+  "timeNum": 11,
+  "urls": [
+    "https://example.com/video1.mp4",
+    "https://example.com/video2.mp4"
+  ],
+  "videoReplaceUrls": [
+    {
+      "index": 0,
+      "url": "https://example.com/long-video.mp4",
+      "timeRange": [10, 50]
+    }
+  ],
+  "title": "东北王张作霖的一生",
+  "segments": [
+    {
+      "title": "1875年\n出生贫农家庭",
+      "prompt": "，",
+      "shot": "运镜方式：镜头跟随图中主要人物..."
+    },
+    {
+      "title": "1888年/13岁\n父亲张有财被赌徒打死\n为父报仇后亡命天涯",
+      "prompt": "，",
+      "shot": "运镜方式：镜头跟随图中主要人物..."
+    }
+  ]
+}
