@@ -45,11 +45,32 @@ export default {
 
   "merge-options": {
     name: "20251128-亚历山大二世", // 对应 output/{name}/processed_data.json
+    highQuality: true, // 默认true，在GPU/内存允许下最大化视频质量
   },
 
   // ... 其他配置 ...
 };
 ```
+
+### 高质量模式说明
+
+`highQuality` 参数控制视频编码质量（默认为 `true`）：
+
+**启用高质量模式 (highQuality: true):**
+- 使用更低的 CRF 值 (10-18)，提供接近无损的画质
+- 使用更慢的编码预设 (veryslow/p7)，优化压缩效率
+- 启用高级编码参数：
+  - NVENC: lookahead, b-frames, spatial/temporal AQ
+  - CPU: tune film, high profile, advanced motion estimation
+- 更高的音频比特率 (256k)
+- 更好的色彩空间处理 (bt709)
+- 需要更多 GPU 内存和处理时间
+
+**禁用高质量模式 (highQuality: false):**
+- 使用标准 CRF 值 (23)，平衡质量和文件大小
+- 使用中等编码预设 (medium/p4)，更快的处理速度
+- 标准音频比特率 (192k)
+- 适合快速处理或资源受限的环境
 
 ### processed_data.json 文件格式
 
@@ -86,12 +107,24 @@ export default {
 ### 2. 运行命令
 
 ```bash
-# 使用配置文件运行
+# 使用配置文件中的 name
 npx node-ffmpeg-tools merge-options
+
+# 使用命令行指定的 name（优先级更高）
+npx node-ffmpeg-tools merge-options --name "20251128-李光耀"
+
+# 同时指定 name 和更新 historyNum
+npx node-ffmpeg-tools merge-options --name "20251128-李光耀" --num 11
 
 # 显示帮助信息
 npx node-ffmpeg-tools merge-options --help
 ```
+
+### 3. 命令行参数优先级
+
+当同时存在配置文件和命令行参数时：
+- `--name` 参数的优先级**高于**配置文件中的 `name`
+- 这样可以在不修改配置文件的情况下处理不同的项目
 
 ### 3. 查看输出
 
@@ -213,6 +246,10 @@ await updateConfigFile(configPath, (content) => {
 2. **文件覆盖**: 如果 `outputUtils/{name}.mp4` 已存在，会被自动覆盖
 3. **中间文件**: 中间生成的文件会保留在各自的输出目录中
 4. **执行时间**: 整个流程可能需要较长时间，取决于视频大小和数量
+5. **高质量模式**: 默认启用，需要更多 GPU 内存和处理时间
+   - 如遇到内存不足或处理过慢，可设置 `highQuality: false`
+   - 高质量模式会显著提升画质，但处理时间可能增加 2-3 倍
+   - 建议在有独立显卡的机器上使用高质量模式
 
 ## 示例
 

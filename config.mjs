@@ -14,8 +14,8 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1764419854034_replaced.mp4",
-    title: `东北王张作霖的一生`,
+    url: "output/merge-video/merged_1764486277263_replaced.mp4",
+    title: `文学巨匠鲁迅的一生`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
 
@@ -74,17 +74,17 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1875年\n出生贫农家庭",
-      "1888年/13岁\n父亲张有财被赌徒打死\n为父报仇后亡命天涯",
-      "1894年/19岁\n中日甲午战争爆发\n加入清军任骑兵哨长",
-      "1900年/25岁\n沙俄侵占中国东北\n组织保险团维护村庄治安",
-      "1902年/27岁\n接受清政府招安\n从此开启仕途之路",
-      "1911年/36岁\n带兵入奉天镇压革命党\n清廷授其为关外练兵大臣",
-      "1916年/41岁\n任奉天督军兼省长\n全面掌握奉天军政",
-      "1918年/43岁\n升任为东三省巡阅使\n成为独霸一方的“东北王”",
-      "1922年/47岁\n第一次直奉战争失败\n自行宣布东北自治",
-      "1926年/51岁\n击败冯玉祥进入北京\n被拥立为陆海军大元帅",
-      "1928年/53岁\n乘火车返回奉天行至皇姑屯\n被日本关东军预埋炸弹炸死",
+      "1881年\n出生儒生家庭",
+      "1894年/13岁\n父亲病重家道中落\n变卖家产为生",
+      "1898年/18岁\n考入江南水师学堂\n接触西方科学思想",
+      "1902年/22岁\n前往日本仙台学医\n立志“救治国人身体”",
+      "1906年/25岁\n受日俄战争刺激\n决定弃医从文唤醒国民精神",
+      "1917年/37岁\n以“鲁迅”为笔名\n发表小说《狂人日记》",
+      "1921年/39岁\n出版《阿Q正传》\n深刻批判国民劣根性",
+      "1926年/45岁\n与师大学生许广平相恋\n成为鲁迅的文学创作伙伴",
+      "1930年/49岁\n担任左翼作家联盟常委\n开始培养青年作家",
+      "1936年/55岁\n身体状况日渐下降\n出版最后作品《故事新编》",
+      "1936年/55岁\n因病逝世\n逝世于上海",
     ],
     watermark: "@人物传记史",
     "bg-music": "music/民国_start5s_clip.mp3",
@@ -97,14 +97,25 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v16-cc.capcut.com/8203f55c3340f388a5fca796ff695ba9/69340eba/video/tos/alisg/tos-alisg-ve-14178-sg/oQYDUYUAE1SiU5IdTG1iiT7v3BHQpArLAaqyd/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11938&bt=5969&cs=0&ft=GAAO2Inz7ThBkDVPXq8Zmo&mime_type=video_mp4&qs=0&rc=Zzk1ZThnOmY5NWZkZzRkPEBpamx0NG85cjNnNzYzODU6NEAyMzM1XjIyX2MxM2EyM2NhYSM2Z2xgMmRrNWlhLS1kMy1zcw%3D%3D&vvpl=1&l=202511291908022D60A7003DDA98ED4E34&btag=e00088000",
-      "https://v16-cc.capcut.com/b36abb35d99d951f6b87842bbe66ba6f/69340e9e/video/tos/alisg/tos-alisg-ve-14178-sg/oECKVaBEvrwSiDVi2dB8UAYCtQUHqw1uisv4I/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12638&bt=6319&cs=0&ft=GAAO2Inz7ThgkDVPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZmlpO2czM2loaWg5aDQzN0BpM3JrZXY5cjVnNzYzODU6NEBiNDJeXzUwXmAxXy01NDAyYSNsX2EyMmRrNWlhLS1kMy1zcw%3D%3D&vvpl=1&l=202511291908042D60A7003DDA98ED4FF4&btag=e000b0000",
+      "https://v16-cc.capcut.com/68a00f3a4a136dfbead73b55362a56fd/6935196b/video/tos/alisg/tos-alisg-ve-14178-sg/o0PJI2eUO7xcwSNrQDBwE4x3gQisBpNeKgBQZi/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12040&bt=6020&cs=0&ft=GAAO2Inz7ThB~gVPXq8Zmo&mime_type=video_mp4&qs=0&rc=aGg2ZzxmZDg7ZjczNzpoZEBpM2o5NnU5cmt3NzYzODU6NEAuMS8tLjYvXmExNC1gYC41YSM0LWJeMmQ0cWlhLS1kMy1zcw%3D%3D&vvpl=1&l=20251130140610E1C91419EEC7A9D4CBB5&btag=e000b8000",
+      "https://v16-cc.capcut.com/123a8c9c82f8635a74491d5b1e88b018/69351e30/video/tos/alisg/tos-alisg-ve-14178-sg/oshrhQcIMMTIQEpIPCLSb4AGAwghLDy5e8Vsee/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12186&bt=6093&cs=0&ft=GAAO2Inz7ThO6dVPXq8Zmo&mime_type=video_mp4&qs=0&rc=OjZpPDRlZGUzNGY1PGQ1Z0BpMzRrNHk5cjd4NzYzODU6NEAxNTRfYi0zXy8xMF8vLS0wYSNscWQxMmQ0NGlhLS1kMy1zcw%3D%3D&vvpl=1&l=20251130142641F1A2E4765E5D4CCC4066&btag=e000b8000",
+      "https://v16-cc.capcut.com/1b461af8172d2f8bac42d780cb636628/69351698/video/tos/alisg/tos-alisg-ve-14178-sg/ogHf2FfH3AimdD2SEt3Gfmss0oEYrkDAAQFrIe/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12562&bt=6281&cs=0&ft=GAAO2Inz7ThHggVPXq8Zmo&mime_type=video_mp4&qs=0&rc=O2U2Ojo3N2RpNWc0M2lnZkBpamxscXU5cnl3NzYzODU6NEBiL2M1Yi8yXy4xLS0uYzIzYSNqMWk2MmRza2lhLS1kMy1zcw%3D%3D&vvpl=1&l=202511301354224C7429914767AE0E9FE6&btag=e000b0000",
     ],
     videoReplaceUrls: [
       {
-        index: 0,
-        timeRange: [0, 10],
-        url: "https://v16-cc.capcut.com/399107f7e6d5ca605c5038fe6f4048ff/69341e3e/video/tos/alisg/tos-alisg-ve-14178-sg/o4RDodSEqvcG8Ce4AVg7ceIqLsbTAQVyBfywHI/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12440&bt=6220&cs=0&ft=GAAO2Inz7Thb67VPXq8Zmo&mime_type=video_mp4&qs=0&rc=Nzk2ODQ7Mzk8ZGg3OGY6OkBpamh3NXY5cmRoNzYzODU6NEA1LTI2LTIvNTUxNi8wMl8uYSNjZnNqMmRrNGlhLS1kMy1zcw%3D%3D&vvpl=1&l=20251129201444B0B10683A70BDEFFBB10&btag=e000b0000",
+        index: 1,
+        timeRange: [5, 10],
+        url: "https://v16-cc.capcut.com/0032a141d50551cd49e86f1fc04a5bfc/693523f3/video/tos/alisg/tos-alisg-ve-14178-sg/o8fwXTlbDgCEHKAr5eDJgSItVQIlN0TyeFOsRm/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13182&bt=6591&cs=0&ft=GAAO2Inz7ThnqdVPXq8Zmo&mime_type=video_mp4&qs=0&rc=OTg0NjtlN2ZkZjs5Omc6Z0BpajczdnY5cnN4NzYzODU6NEA2MWMwYTA1Xi4xLV5iNDZgYSNnXm9uMmRjZmlhLS1kMy1zcw%3D%3D&vvpl=1&l=20251130145126C2D7C8648BFEA8D76E9C&btag=e000b0000",
+      },
+      {
+        index: 2,
+        timeRange: [10, 15],
+        url: "https://v16-cc.capcut.com/17b3d7085ef8a3103ff8fe665fa66d0d/6935267b/video/tos/alisg/tos-alisg-ve-14178-sg/ogH85FIIQGAkZnrem1LAX7B8kffcFY3fGF6mg0/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12898&bt=6449&cs=0&ft=GAAO2Inz7ThJFdVPXq8Zmo&mime_type=video_mp4&qs=0&rc=MzU7Ojw6aTw2NTc6NDg2NUBpM3Zzdnc5cnV4NzYzODU6NEBgXi9eYTIxXl8xYi9eMjBfYSNtcG00MmQ0a2lhLS1kMy1zcw%3D%3D&vvpl=1&l=20251130150214D565515273E483C336EA&btag=e000b0000",
+      },
+      {
+        index: 3,
+        timeRange: [30, 40],
+        url: "https://v16-cc.capcut.com/8b95c80e98f07ef33ebe0ddda842a3c5/69351f0d/video/tos/alisg/tos-alisg-ve-14178-sg/owsZP4IAgHbFoEe5oCTWfVfBlRDCDCHEYQISOr/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12380&bt=6190&cs=0&ft=GAAO2Inz7ThrMdVPXq8Zmo&mime_type=video_mp4&qs=0&rc=Zzs7aTg6NGQ3aGZoPDQ1NEBpM3A4M3k5cnh4NzYzODU6NEBiNTBfNTEyNjQxNi4zYzZiYSNoZF80MmQ0NWlhLS1kMy1zcw%3D%3D&vvpl=1&l=20251130143027EF48D6FC0FE89ABFA7DB&btag=e000b0000",
       },
     ],
     switch: "无转场",
@@ -282,6 +293,7 @@ export default {
   // 自动化视频处理流程配置
   "merge-options": {
     name, // 对应 output/{name}/processed_data.json
+    highQuality: true, // 启用高质量模式（在GPU/内存允许下最大化质量）
   },
 
   // 视频帧提取和AI提示词生成配置
@@ -289,6 +301,7 @@ export default {
     videoPath: "input/get-promot-image-by-video/20251128-亚历山大二世.mp4", // 输入视频路径
     videoName: "20251128-亚历山大二世", // 视频名称，用于创建输出目录
     seconds: [0, 7, 14, 21, 28, 35, 42.5, 49, 56, 64.5, 70.5], // 提取视频帧的时间点（秒）
+    useAutoSeconds: true,
     // 豆包AI配置
     get_title_path: "https://www.doubao.com/chat/28205387237474562", // 图片标题内容获取
     get_promot_path: "https://www.doubao.com/chat/19187408061685250", // 豆包提示词反推页面
