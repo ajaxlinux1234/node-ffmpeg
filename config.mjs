@@ -14,8 +14,8 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1764486277263_replaced.mp4",
-    title: `文学巨匠鲁迅的一生`,
+    url: "output/merge-video/merged_1764603474490_merged.mp4",
+    title: `世界无产阶级伟大导师|马克思主义创始人之一|恩格斯的一生`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
 
@@ -74,48 +74,38 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1881年\n出生儒生家庭",
-      "1894年/13岁\n父亲病重家道中落\n变卖家产为生",
-      "1898年/18岁\n考入江南水师学堂\n接触西方科学思想",
-      "1902年/22岁\n前往日本仙台学医\n立志“救治国人身体”",
-      "1906年/25岁\n受日俄战争刺激\n决定弃医从文唤醒国民精神",
-      "1917年/37岁\n以“鲁迅”为笔名\n发表小说《狂人日记》",
-      "1921年/39岁\n出版《阿Q正传》\n深刻批判国民劣根性",
-      "1926年/45岁\n与师大学生许广平相恋\n成为鲁迅的文学创作伙伴",
-      "1930年/49岁\n担任左翼作家联盟常委\n开始培养青年作家",
-      "1936年/55岁\n身体状况日渐下降\n出版最后作品《故事新编》",
-      "1936年/55岁\n因病逝世\n逝世于上海",
+      "1820年\n出生厂主家庭",
+      "1837年/17岁\n辍学进入父亲工厂工作\n私下阅读革命文学",
+      "1841年/21岁\n在柏林炮兵部队服兵役\n到柏林大学旁听学习哲学",
+      "1844年/24岁\n在巴黎首次见到马克思\n深入会谈奠定革命友谊",
+      "1845年/25岁\n出版《英国工人阶级状况》\n揭露剥削下的工人惨状",
+      "1849年/29岁\n参加德国革命并指挥作战\n失败后流亡至瑞士",
+      "1850年/30岁\n为资助马克思研究\n重返曼彻斯特经商",
+      "1870年/50岁\n退出商界移居伦敦\n声援支持巴黎公社运动",
+      "1883年/63岁\n亲密战友马克思逝世\n继续整理出版《资本论》",
+      "1884年/64岁\n进行人类学研究\n探讨人类社会早期形态",
+      "1895年/75岁\n因食道癌逝世\n遗嘱要求将骨灰撒入大海",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/民国_start5s_clip.mp3",
+    "bg-music": "music/国际歌_start5.2s_clip.mp3",
     // Go West-Fancy
     // 西方神话_start2s_clip
     // 栀子花开_start25s_clip
     // 国际歌
+    // 国际歌_start5.2s_clip
     // 民国_start5s_clip
     // 屠洪刚 - 精忠报国_start25s_clip
   },
   "merge-video": {
     urls: [
-      "https://v16-cc.capcut.com/68a00f3a4a136dfbead73b55362a56fd/6935196b/video/tos/alisg/tos-alisg-ve-14178-sg/o0PJI2eUO7xcwSNrQDBwE4x3gQisBpNeKgBQZi/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12040&bt=6020&cs=0&ft=GAAO2Inz7ThB~gVPXq8Zmo&mime_type=video_mp4&qs=0&rc=aGg2ZzxmZDg7ZjczNzpoZEBpM2o5NnU5cmt3NzYzODU6NEAuMS8tLjYvXmExNC1gYC41YSM0LWJeMmQ0cWlhLS1kMy1zcw%3D%3D&vvpl=1&l=20251130140610E1C91419EEC7A9D4CBB5&btag=e000b8000",
-      "https://v16-cc.capcut.com/123a8c9c82f8635a74491d5b1e88b018/69351e30/video/tos/alisg/tos-alisg-ve-14178-sg/oshrhQcIMMTIQEpIPCLSb4AGAwghLDy5e8Vsee/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12186&bt=6093&cs=0&ft=GAAO2Inz7ThO6dVPXq8Zmo&mime_type=video_mp4&qs=0&rc=OjZpPDRlZGUzNGY1PGQ1Z0BpMzRrNHk5cjd4NzYzODU6NEAxNTRfYi0zXy8xMF8vLS0wYSNscWQxMmQ0NGlhLS1kMy1zcw%3D%3D&vvpl=1&l=20251130142641F1A2E4765E5D4CCC4066&btag=e000b8000",
-      "https://v16-cc.capcut.com/1b461af8172d2f8bac42d780cb636628/69351698/video/tos/alisg/tos-alisg-ve-14178-sg/ogHf2FfH3AimdD2SEt3Gfmss0oEYrkDAAQFrIe/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12562&bt=6281&cs=0&ft=GAAO2Inz7ThHggVPXq8Zmo&mime_type=video_mp4&qs=0&rc=O2U2Ojo3N2RpNWc0M2lnZkBpamxscXU5cnl3NzYzODU6NEBiL2M1Yi8yXy4xLS0uYzIzYSNqMWk2MmRza2lhLS1kMy1zcw%3D%3D&vvpl=1&l=202511301354224C7429914767AE0E9FE6&btag=e000b0000",
+      "https://v16-cc.capcut.com/1adebd4e289fe2fbb6a828b86f236c92/6936ea55/video/tos/alisg/tos-alisg-ve-14178-sg/oMILQIUEBXJeaBrYgifzNiQKpi0DdpB2A0wJgt/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11930&bt=5965&cs=0&ft=GAAO2Inz7Th0sfvPXq8Zmo&mime_type=video_mp4&qs=0&rc=NWg0NDg7OjdpaGRpZGY0NkBpM3J4M245cmR0NzYzODU6NEBiXzQ1Y15fXjExMGIxNjNiYSNsZm5uMmRjcmphLS1kMy1zcw%3D%3D&vvpl=1&l=20251201230933A219677554349D567846&btag=e00088000",
+      "https://v16-cc.capcut.com/bfa9314e0e0e6487df7dbf3248331431/6936eb22/video/tos/alisg/tos-alisg-ve-14178-sg/oMiEYWEt5A8bn6BCAwfqibGoQgILEHnhAtl0s7/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12414&bt=6207&cs=0&ft=GAAO2Inz7ThMW2vPXq8Zmo&mime_type=video_mp4&qs=0&rc=aThpaGQ7N2Y5ZzllOTVnZEBpM2UzcHM5cmp1NzYzODU6NEAuYS5jLV5fNWIxYWI1XjUvYSNpMW9hMmRzLWphLS1kMy1zcw%3D%3D&vvpl=1&l=202512012313286EC60A9BE68B1D313C6D&btag=e000b0000",
     ],
     videoReplaceUrls: [
       {
         index: 1,
         timeRange: [5, 10],
-        url: "https://v16-cc.capcut.com/0032a141d50551cd49e86f1fc04a5bfc/693523f3/video/tos/alisg/tos-alisg-ve-14178-sg/o8fwXTlbDgCEHKAr5eDJgSItVQIlN0TyeFOsRm/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13182&bt=6591&cs=0&ft=GAAO2Inz7ThnqdVPXq8Zmo&mime_type=video_mp4&qs=0&rc=OTg0NjtlN2ZkZjs5Omc6Z0BpajczdnY5cnN4NzYzODU6NEA2MWMwYTA1Xi4xLV5iNDZgYSNnXm9uMmRjZmlhLS1kMy1zcw%3D%3D&vvpl=1&l=20251130145126C2D7C8648BFEA8D76E9C&btag=e000b0000",
-      },
-      {
-        index: 2,
-        timeRange: [10, 15],
-        url: "https://v16-cc.capcut.com/17b3d7085ef8a3103ff8fe665fa66d0d/6935267b/video/tos/alisg/tos-alisg-ve-14178-sg/ogH85FIIQGAkZnrem1LAX7B8kffcFY3fGF6mg0/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12898&bt=6449&cs=0&ft=GAAO2Inz7ThJFdVPXq8Zmo&mime_type=video_mp4&qs=0&rc=MzU7Ojw6aTw2NTc6NDg2NUBpM3Zzdnc5cnV4NzYzODU6NEBgXi9eYTIxXl8xYi9eMjBfYSNtcG00MmQ0a2lhLS1kMy1zcw%3D%3D&vvpl=1&l=20251130150214D565515273E483C336EA&btag=e000b0000",
-      },
-      {
-        index: 3,
-        timeRange: [30, 40],
-        url: "https://v16-cc.capcut.com/8b95c80e98f07ef33ebe0ddda842a3c5/69351f0d/video/tos/alisg/tos-alisg-ve-14178-sg/owsZP4IAgHbFoEe5oCTWfVfBlRDCDCHEYQISOr/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12380&bt=6190&cs=0&ft=GAAO2Inz7ThrMdVPXq8Zmo&mime_type=video_mp4&qs=0&rc=Zzs7aTg6NGQ3aGZoPDQ1NEBpM3A4M3k5cnh4NzYzODU6NEBiNTBfNTEyNjQxNi4zYzZiYSNoZF80MmQ0NWlhLS1kMy1zcw%3D%3D&vvpl=1&l=20251130143027EF48D6FC0FE89ABFA7DB&btag=e000b0000",
+        url: "https://v16-cc.capcut.com/8d00423a6a5f16641043eb3bbf5483d8/6936f380/video/tos/alisg/tos-alisg-ve-14178-sg/oADlEQ2XEtiBYd7rsPUa3IIh0StEtii8FAz7R/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13258&bt=6629&cs=0&ft=GAAO2Inz7ThC_2vPXq8Zmo&mime_type=video_mp4&qs=0&rc=NzdpOTxkOGk7O2Q5ZDQ5Z0BpM21vcnY5cmd1NzYzODU6NEBhXjNeY2M0NmAxYGFhXmI1YSNuY2A1MmQ0Y2phLS1kMy1zcw%3D%3D&vvpl=1&l=20251201234915185470BE0B8297265A0B&btag=e000b0000",
       },
     ],
     switch: "无转场",
@@ -242,8 +232,8 @@ export default {
   },
   "clip-audio": [
     {
-      url: "music/民国.mp3",
-      start: 5,
+      url: "music/国际歌.mp3",
+      start: 5.2,
     },
   ],
   "clip-video": {
@@ -298,10 +288,10 @@ export default {
 
   // 视频帧提取和AI提示词生成配置
   "get-promot-image-by-video": {
-    videoPath: "input/get-promot-image-by-video/20251128-亚历山大二世.mp4", // 输入视频路径
-    videoName: "20251128-亚历山大二世", // 视频名称，用于创建输出目录
-    seconds: [0, 7, 14, 21, 28, 35, 42.5, 49, 56, 64.5, 70.5], // 提取视频帧的时间点（秒）
-    useAutoSeconds: true,
+    videoPath: "input/get-promot-image-by-video/20251201-恩格斯.mp4", // 输入视频路径
+    videoName: "20251201-恩格斯", // 视频名称，用于创建输出目录
+    useAutoSeconds: false, // 是否自动计算时间点（true: 自动，false: 使用手动配置的seconds）
+    seconds: [0.5, 5.5, 12.5, 19, 23, 29.5, 37, 43, 49, 56, 61.5], // 提取视频帧的时间点（秒），useAutoSeconds为false时使用
     // 豆包AI配置
     get_title_path: "https://www.doubao.com/chat/28205387237474562", // 图片标题内容获取
     get_promot_path: "https://www.doubao.com/chat/19187408061685250", // 豆包提示词反推页面
@@ -318,7 +308,8 @@ export default {
             .replaceAll(/\s+/g, "")
             .replaceAll("|", "\n")
             .replaceAll("\n无", "")
-            .replaceAll("/0岁", ""),
+            .replaceAll("/0岁", "")
+            .replaceAll("\n开启人生历程", ""),
         );
     },
     image_remove_words_fns: [
@@ -333,6 +324,7 @@ export default {
     ],
     // 可选配置
     shot: "运镜方式：镜头跟随图中主要人物，图中场景缓慢自然变成下一场景伴随着图中人物从当前场景缓慢变成下一个场景的人物，人物不要走动，人物只进行形态和样貌上的变化，场景变成下一场景，同时人物变换为下一场景的主要人物，动态转换流畅自然", // 默认镜头描述
+    defaultPrompt: "，", // 默认提示词，当无法获取AI生成的提示词时使用此默认值填充 processed_data.json 的 prompt 字段
     waitTime: 60000, // 登录等待时间（毫秒）
     pageLoadWaitTime: 3000, // 页面加载后等待时间（毫秒）
     uploadWaitTime: 5000, // 上传图片后等待时间（毫秒）
