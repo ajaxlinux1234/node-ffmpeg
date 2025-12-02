@@ -14,7 +14,7 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1764603474490_merged.mp4",
+    url: "output/merge-video/merged_1764604453633_replaced.mp4",
     title: `世界无产阶级伟大导师|马克思主义创始人之一|恩格斯的一生`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
@@ -74,17 +74,17 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1820年\n出生厂主家庭",
-      "1837年/17岁\n辍学进入父亲工厂工作\n私下阅读革命文学",
-      "1841年/21岁\n在柏林炮兵部队服兵役\n到柏林大学旁听学习哲学",
-      "1844年/24岁\n在巴黎首次见到马克思\n深入会谈奠定革命友谊",
-      "1845年/25岁\n出版《英国工人阶级状况》\n揭露剥削下的工人惨状",
-      "1849年/29岁\n参加德国革命并指挥作战\n失败后流亡至瑞士",
-      "1850年/30岁\n为资助马克思研究\n重返曼彻斯特经商",
-      "1870年/50岁\n退出商界移居伦敦\n声援支持巴黎公社运动",
-      "1883年/63岁\n亲密战友马克思逝世\n继续整理出版《资本论》",
-      "1884年/64岁\n进行人类学研究\n探讨人类社会早期形态",
-      "1895年/75岁\n因食道癌逝世\n遗嘱要求将骨灰撒入大海",
+      "1867年\n出生教师家庭",
+      "1884年/17岁\n以优异成绩从中学毕业\n做家庭教师积攒学费",
+      "1891年/24岁\n攒够积蓄继续求学\n进入巴黎大学物理系",
+      "1895年/28岁\n与皮埃尔・居里结婚\n开始科学生涯合作",
+      "1898年/31岁\n发现放射性元素钋和镭\n颠覆整个物理学界",
+      "1903年/36岁\n获得诺贝尔物理学奖\n成为首位女性得主",
+      "1906年/39岁\n成为巴黎大学首位女教授\n同年丈夫因车祸去世",
+      "1911年/44岁\n分离纯镭获诺贝尔化学奖\n成为唯一两获不同学科诺奖者",
+      "1914年/47岁\n第一次世界大战爆发\n组织移动X光车队救治伤员",
+      "1921年/54岁\n访问美国受总统接待\n接受公众捐赠的1克镭",
+      "1934年/67岁\n因长期辐射患白血病\n与世长辞",
     ],
     watermark: "@人物传记史",
     "bg-music": "music/国际歌_start5.2s_clip.mp3",
@@ -288,10 +288,11 @@ export default {
 
   // 视频帧提取和AI提示词生成配置
   "get-promot-image-by-video": {
-    videoPath: "input/get-promot-image-by-video/20251201-恩格斯.mp4", // 输入视频路径
-    videoName: "20251201-恩格斯", // 视频名称，用于创建输出目录
+    videoPath: "input/get-promot-image-by-video/20251202-居里夫人.mp4", // 输入视频路径
+    videoName: "20251202-居里夫人", // 视频名称，用于创建输出目录
+    useMoveVideo: true, // 是否从 E:/chromeDownload 移动最新的"人物传记史"开头的视频（配合 --name 参数使用）
     useAutoSeconds: false, // 是否自动计算时间点（true: 自动，false: 使用手动配置的seconds）
-    seconds: [0.5, 5.5, 12.5, 19, 23, 29.5, 37, 43, 49, 56, 61.5], // 提取视频帧的时间点（秒），useAutoSeconds为false时使用
+    seconds: [0.2, 4.5, 12, 18.5, 25, 30.5, 36.5, 42.5, 50, 56.5, 62], // 提取视频帧的时间点（秒），useAutoSeconds为false时使用
     // 豆包AI配置
     get_title_path: "https://www.doubao.com/chat/28205387237474562", // 图片标题内容获取
     get_promot_path: "https://www.doubao.com/chat/19187408061685250", // 豆包提示词反推页面
