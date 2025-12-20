@@ -14,8 +14,8 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1764604453633_replaced.mp4",
-    title: `世界无产阶级伟大导师|马克思主义创始人之一|恩格斯的一生`,
+    url: "output/merge-video/merged_1766242926267_replaced.mp4",
+    title: `最后一位参加过二战的总统|第四十一任美国总统|老布什的一生`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
 
@@ -57,7 +57,7 @@ export default {
     titleDuration: 10, // 全局标题显示时长（秒），不设置则贯穿整个视频
     endTitle: "", // 结尾标题
     // endTitle: "",
-    endTitleDuration: 4, // 结尾标题显示时长（秒）- 延长打字机音效时间
+    endTitleDuration: 2, // 结尾标题显示时长（秒）- 延长打字机音效时间
     endTitleAnimation: "typewriter", // 结尾标题动画效果：打字机效果
     endTitleSound: "typewriter", // 结尾标题声音效果：打字机声音
     disclaimerText: "", // 底部免责声明文字（30px斜体，底部10%位置）
@@ -74,21 +74,22 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1867年\n出生教师家庭",
-      "1884年/17岁\n以优异成绩从中学毕业\n做家庭教师积攒学费",
-      "1891年/24岁\n攒够积蓄继续求学\n进入巴黎大学物理系",
-      "1895年/28岁\n与皮埃尔・居里结婚\n开始科学生涯合作",
-      "1898年/31岁\n发现放射性元素钋和镭\n颠覆整个物理学界",
-      "1903年/36岁\n获得诺贝尔物理学奖\n成为首位女性得主",
-      "1906年/39岁\n成为巴黎大学首位女教授\n同年丈夫因车祸去世",
-      "1911年/44岁\n分离纯镭获诺贝尔化学奖\n成为唯一两获不同学科诺奖者",
-      "1914年/47岁\n第一次世界大战爆发\n组织移动X光车队救治伤员",
-      "1921年/54岁\n访问美国受总统接待\n接受公众捐赠的1克镭",
-      "1934年/67岁\n因长期辐射患白血病\n与世长辞",
+      "1924年\n出生上流家庭",
+      "1942年/18岁\n征兵站/海军航校应征入伍\n成为二战海军飞行员",
+      "1944年/20岁\n太平洋救援潜艇战机被击落\n幸存获救（战争英雄时刻）",
+      "1945年/21岁\n家乡教堂与芭芭拉·皮尔斯结婚",
+      "1966年/42岁\n德州竞选总部当选联邦众议员\n开启政治生涯",
+      "1971年/47岁\n联合国总部出任美国驻联合国大使",
+      "1976年/52岁\n中央情报局简报室出任中央情报局局长",
+      "1988年/64岁\n总统胜选集会当选美国第41任总统",
+      "1991年/67岁\n白宫椭圆形办公室领导多国联盟赢得海湾战争",
+      "2014年/90岁\n高空跳伞飞机舱门以跳伞方式庆祝90岁生日",
+      "2018年/94岁\n德州休斯顿家中逝世\n最后一位二战总统时代落幕",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/国际歌_start5.2s_clip.mp3",
+    "bg-music": "music/Go West-Fancy.mp3",
     // Go West-Fancy
+    // 美人吟_start12s_clip.mp3
     // 西方神话_start2s_clip
     // 栀子花开_start25s_clip
     // 国际歌
@@ -98,14 +99,19 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v16-cc.capcut.com/1adebd4e289fe2fbb6a828b86f236c92/6936ea55/video/tos/alisg/tos-alisg-ve-14178-sg/oMILQIUEBXJeaBrYgifzNiQKpi0DdpB2A0wJgt/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11930&bt=5965&cs=0&ft=GAAO2Inz7Th0sfvPXq8Zmo&mime_type=video_mp4&qs=0&rc=NWg0NDg7OjdpaGRpZGY0NkBpM3J4M245cmR0NzYzODU6NEBiXzQ1Y15fXjExMGIxNjNiYSNsZm5uMmRjcmphLS1kMy1zcw%3D%3D&vvpl=1&l=20251201230933A219677554349D567846&btag=e00088000",
-      "https://v16-cc.capcut.com/bfa9314e0e0e6487df7dbf3248331431/6936eb22/video/tos/alisg/tos-alisg-ve-14178-sg/oMiEYWEt5A8bn6BCAwfqibGoQgILEHnhAtl0s7/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12414&bt=6207&cs=0&ft=GAAO2Inz7ThMW2vPXq8Zmo&mime_type=video_mp4&qs=0&rc=aThpaGQ7N2Y5ZzllOTVnZEBpM2UzcHM5cmp1NzYzODU6NEAuYS5jLV5fNWIxYWI1XjUvYSNpMW9hMmRzLWphLS1kMy1zcw%3D%3D&vvpl=1&l=202512012313286EC60A9BE68B1D313C6D&btag=e000b0000",
+      "https://v16-cc.capcut.com/4a118eb6f9a226b4b9022e1410c604de/694fed00/video/tos/alisg/tos-alisg-ve-14178-sg/owIGEQAhEs8oGBB0XipufaiMxk57piSwoK1mA7/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12104&bt=6052&cs=0&ft=GAAO2Inz7ThdjvzPXq8Zmo&mime_type=video_mp4&qs=0&rc=aDs1Omc8NGQ5OzplNTlnNUBpanRqbXM5cm5lODYzODU6NEAyXl40LjRjNjYxMF8xLS1fYSNsaDRfMmRzMTBhLS1kMy1zcw%3D%3D&vvpl=1&l=202512202227511E567EF5CF68EF6CB1E7&btag=e000b8000",
+      "https://v16-cc.capcut.com/df5c9523400549b58169f330087460de/694ff071/video/tos/alisg/tos-alisg-ve-14178-sg/o0wKIDbL1gF5ETBAzfsjcuRWeY1NGeyCg03SDa/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12102&bt=6051&cs=0&ft=GAAO2Inz7ThM0vzPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZmQ8Ozs4NzplPDNnZjpkZkBpM3FqZng5cmtlODYzODU6NEAyXzJjNTYtXjIxLzEwMGA0YSMwbjRiMmRrXzBhLS1kMy1zcw%3D%3D&vvpl=1&l=202512202242322F926FB62E74E06F8FA9&btag=e000b8000",
     ],
     videoReplaceUrls: [
       {
+        index: 0,
+        timeRange: [20, 30],
+        url: "https://v16-cc.capcut.com/72b86719038cd0e18b8800ea2681de31/694ff272/video/tos/alisg/tos-alisg-ve-14178-sg/o8iE4bteQbnsgnjCyNZDfDwTfdbFglWAPsASIM/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12680&bt=6340&cs=0&ft=GAAO2Inz7ThGnvzPXq8Zmo&mime_type=video_mp4&qs=0&rc=NmQzMzhoaWdlOTo8ODg0OUBpM3Nrc205cnFlODYzODU6NEBjLjYyLjA2Xy0xXzMvLjMwYSNgYWdqMmRjYzBhLS1kMy1zcw%3D%3D&vvpl=1&l=202512202251202CA584819CC7EE82151E&btag=e000b0000",
+      },
+      {
         index: 1,
-        timeRange: [5, 10],
-        url: "https://v16-cc.capcut.com/8d00423a6a5f16641043eb3bbf5483d8/6936f380/video/tos/alisg/tos-alisg-ve-14178-sg/oADlEQ2XEtiBYd7rsPUa3IIh0StEtii8FAz7R/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13258&bt=6629&cs=0&ft=GAAO2Inz7ThC_2vPXq8Zmo&mime_type=video_mp4&qs=0&rc=NzdpOTxkOGk7O2Q5ZDQ5Z0BpM21vcnY5cmd1NzYzODU6NEBhXjNeY2M0NmAxYGFhXmI1YSNuY2A1MmQ0Y2phLS1kMy1zcw%3D%3D&vvpl=1&l=20251201234915185470BE0B8297265A0B&btag=e000b0000",
+        timeRange: [30, 35],
+        url: "https://v16-cc.capcut.com/dee0e4b09741cbd6718457f8751ae456/694ff3c2/video/tos/alisg/tos-alisg-ve-14178-sg/ooEG9Kyo6UviMU7ia6TO5EYuBQEaAiH5RdoDI/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13486&bt=6743&cs=0&ft=GAAO2Inz7ThkxvzPXq8Zmo&mime_type=video_mp4&qs=0&rc=OmU2aGQzODplOjppZztoM0BpMzd4eGw5cmZlODYzODU6NEA2Yl5fYi5jXy8xYDUvMl5fYSM0ZGRwMmRrZjBhLS1kMy1zcw%3D%3D&vvpl=1&l=20251220225701F7E460CA4E001075E0A9&btag=e000b0000",
       },
     ],
     switch: "无转场",
@@ -232,8 +238,8 @@ export default {
   },
   "clip-audio": [
     {
-      url: "music/国际歌.mp3",
-      start: 5.2,
+      url: "input/clip-audio/美人吟.mp3",
+      start: 12,
     },
   ],
   "clip-video": {
@@ -288,11 +294,13 @@ export default {
 
   // 视频帧提取和AI提示词生成配置
   "get-promot-image-by-video": {
-    videoPath: "input/get-promot-image-by-video/20251202-居里夫人.mp4", // 输入视频路径
-    videoName: "20251202-居里夫人", // 视频名称，用于创建输出目录
+    videoPath: "input/get-promot-image-by-video/20251220-曼德拉.mp4", // 输入视频路径
+    videoName: "20251220-曼德拉", // 视频名称，用于创建输出目录
     useMoveVideo: true, // 是否从 E:/chromeDownload 移动最新的"人物传记史"开头的视频（配合 --name 参数使用）
     useAutoSeconds: false, // 是否自动计算时间点（true: 自动，false: 使用手动配置的seconds）
-    seconds: [0.2, 4.5, 12, 18.5, 25, 30.5, 36.5, 42.5, 50, 56.5, 62], // 提取视频帧的时间点（秒），useAutoSeconds为false时使用
+    directDownload: false, // 直接下载模式：true时跳过视频帧提取，直接打开页面执行get_title_selector_fn生成processed_data.json
+    seconds: [0, 6.5, 12.5, 18.5, 24.5, 30.5, 37.5, 44.5, 50, 56.5, 62.5], // 提取视频帧的时间点（秒），useAutoSeconds为false时使用
+    // [1, 5.5, 13, 18, 24.5, 30.5, 37, 44, 50.5, 56.5, 62.5]
     // 豆包AI配置
     get_title_path: "https://www.doubao.com/chat/28205387237474562", // 图片标题内容获取
     get_promot_path: "https://www.doubao.com/chat/19187408061685250", // 豆包提示词反推页面
@@ -303,6 +311,7 @@ export default {
     get_title_selector_fn: () => {
       const historyNum = 11;
       return Array.from(document.querySelectorAll(".auto-hide-last-sibling-br"))
+        .filter((one) => /^\d/.test(one.innerText))
         .slice(-historyNum)
         .map((one) =>
           one.innerText
@@ -310,7 +319,8 @@ export default {
             .replaceAll("|", "\n")
             .replaceAll("\n无", "")
             .replaceAll("/0岁", "")
-            .replaceAll("\n开启人生历程", ""),
+            .replaceAll("\n开启人生历程", "")
+            .replaceAll("\n成长于", ""),
         );
     },
     image_remove_words_fns: [
@@ -325,10 +335,10 @@ export default {
     ],
     // 可选配置
     shot: "运镜方式：镜头跟随图中主要人物，图中场景缓慢自然变成下一场景伴随着图中人物从当前场景缓慢变成下一个场景的人物，人物不要走动，人物只进行形态和样貌上的变化，场景变成下一场景，同时人物变换为下一场景的主要人物，动态转换流畅自然", // 默认镜头描述
-    defaultPrompt: "，", // 默认提示词，当无法获取AI生成的提示词时使用此默认值填充 processed_data.json 的 prompt 字段
+    defaultPrompt: "", // 默认提示词，当无法获取AI生成的提示词时使用此默认值填充 processed_data.json 的 prompt 字段
     waitTime: 60000, // 登录等待时间（毫秒）
     pageLoadWaitTime: 3000, // 页面加载后等待时间（毫秒）
-    uploadWaitTime: 5000, // 上传图片后等待时间（毫秒）
+    uploadWaitTime: 8000, // 上传图片后等待时间（毫秒）
     sendWaitTime: 20000, // 发送后等待AI回复时间（毫秒）
     generateWaitTime: 30000, // 图片生成等待时间（毫秒）
     stepTimeout: 60, // 每步骤用户确认超时时间（秒）
@@ -337,7 +347,7 @@ export default {
     // getTitlePrompt: `按照"人物名称/国籍/年份|事情1|事情2"的格式识别输出图片中间的文本内容，并输出文本内容`,
     // getTitlePrompt: `按照"年份/年龄|事情1|事情2"的格式识别输出图片中间的文本内容`,
     getTitlePrompt: `按照"年份/年龄|事情1|事情2"的格式识别输出图片中间的文本内容`,
-    getPromotPrompt: `图片生成提示词反推，不要画面文字`,
+    getPromotPrompt: `图片生成提示词反推，不要画面文字，提示词要有画面色彩搭配`,
 
     // 自定义选择器函数（可选）
     img_upload_selector_fn: () =>
@@ -361,7 +371,7 @@ export default {
 
   // 视频去重配置
   "video-dedup": {
-    input: "outputUtils/刘强东.mp4", // 输入视频路径
+    input: "outputUtils/20251212-卡斯特罗.mp4", // 输入视频路径
     // output: "output/video-dedup/custom_output.mp4", // 输出路径（可选，不指定则自动生成）
 
     // 性能配置
@@ -506,7 +516,7 @@ export default {
       maxCrop: 5, // 最大裁剪像素 1-10
     },
 
-    quality: "low", // 视频质量: high, medium, low
+    quality: "original", // 视频质量: original/lossless (接近无损), high (高质量), medium (中等), low (低质量)
     keepAudio: true, // 是否保留音频
   },
 
