@@ -14,8 +14,8 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1766242926267_replaced.mp4",
-    title: `最后一位参加过二战的总统|第四十一任美国总统|老布什的一生`,
+    url: "output/merge-video/merged_1766319235773_replaced.mp4",
+    title: `苏联党和国家{{最高领导人}}|{{马克思主义}}哲学贯彻者|{{斯大林}}的一生`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
 
@@ -63,7 +63,7 @@ export default {
     disclaimerText: "", // 底部免责声明文字（30px斜体，底部10%位置）
     // 快乐传递者何炅
     // 国士无双袁隆平
-    titleAnimation: "sweep_rainbow", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
+    titleAnimation: "sweep_slow", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
     sectionTitleAnimation: "turbo", // 分镜字幕动画效果，可选值同titleAnimation
 
     // 视频质量配置
@@ -74,20 +74,21 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1924年\n出生上流家庭",
-      "1942年/18岁\n征兵站/海军航校应征入伍\n成为二战海军飞行员",
-      "1944年/20岁\n太平洋救援潜艇战机被击落\n幸存获救（战争英雄时刻）",
-      "1945年/21岁\n家乡教堂与芭芭拉·皮尔斯结婚",
-      "1966年/42岁\n德州竞选总部当选联邦众议员\n开启政治生涯",
-      "1971年/47岁\n联合国总部出任美国驻联合国大使",
-      "1976年/52岁\n中央情报局简报室出任中央情报局局长",
-      "1988年/64岁\n总统胜选集会当选美国第41任总统",
-      "1991年/67岁\n白宫椭圆形办公室领导多国联盟赢得海湾战争",
-      "2014年/90岁\n高空跳伞飞机舱门以跳伞方式庆祝90岁生日",
-      "2018年/94岁\n德州休斯顿家中逝世\n最后一位二战总统时代落幕",
+      "1878年\n出生鞋匠家庭",
+      "1899年/21岁\n第比利斯地下印刷所\n成为职业革命者",
+      "1917年/39岁\n彼得格勒斯莫尔尼宫\n参与领导十月革命",
+      "1922年/44岁\n克里姆林宫办公室\n当选苏共中央总书记",
+      "1928年/50岁\n巨型建设工地指挥部\n启动第一个五年计划\n推动工业化",
+      "1930年/52岁\n克里姆林宫书房\n著述“一国建成社会主义”书籍",
+      "1941年/63岁\n广播电台播音室\n发表卫国战争动员演说",
+      "1942年/64岁\n最高统帅部地下指挥部\n指挥斯大林格勒保卫战",
+      "1945年/67岁\n莫斯科红场列宁墓观礼台\n检阅胜利阅兵式",
+      "1950年/72岁\n莫斯科郊外别墅花园\n花园散步",
+      "1953年/74岁\n孔策沃别墅卧室逝世",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/Go West-Fancy.mp3",
+    "bg-music": "music/国际歌_start5.2s_clip.mp3",
+    // output/clip-audio/抗美援朝_start36s_53s.mp3
     // Go West-Fancy
     // 美人吟_start12s_clip.mp3
     // 西方神话_start2s_clip
@@ -99,19 +100,20 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v16-cc.capcut.com/4a118eb6f9a226b4b9022e1410c604de/694fed00/video/tos/alisg/tos-alisg-ve-14178-sg/owIGEQAhEs8oGBB0XipufaiMxk57piSwoK1mA7/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12104&bt=6052&cs=0&ft=GAAO2Inz7ThdjvzPXq8Zmo&mime_type=video_mp4&qs=0&rc=aDs1Omc8NGQ5OzplNTlnNUBpanRqbXM5cm5lODYzODU6NEAyXl40LjRjNjYxMF8xLS1fYSNsaDRfMmRzMTBhLS1kMy1zcw%3D%3D&vvpl=1&l=202512202227511E567EF5CF68EF6CB1E7&btag=e000b8000",
-      "https://v16-cc.capcut.com/df5c9523400549b58169f330087460de/694ff071/video/tos/alisg/tos-alisg-ve-14178-sg/o0wKIDbL1gF5ETBAzfsjcuRWeY1NGeyCg03SDa/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12102&bt=6051&cs=0&ft=GAAO2Inz7ThM0vzPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZmQ8Ozs4NzplPDNnZjpkZkBpM3FqZng5cmtlODYzODU6NEAyXzJjNTYtXjIxLzEwMGA0YSMwbjRiMmRrXzBhLS1kMy1zcw%3D%3D&vvpl=1&l=202512202242322F926FB62E74E06F8FA9&btag=e000b8000",
+      "https://v16-cc.capcut.com/1f1d2b3fb222b0fec340fc744215ca0c/69510b39/video/tos/alisg/tos-alisg-ve-14178-sg/owpRxwX0ExebBzl2IRHH0BNgQJiKsQfxTgyBhi/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12654&bt=6327&cs=0&ft=GAAO2Inz7TheWgzPXq8Zmo&mime_type=video_mp4&qs=0&rc=NDg0NDg8ZmZpO2lpZ2hnaEBpanFldmo5cjt3ODYzODU6NEBjYF4vX18vNTQxM2A2LTFeYSNhM2JmMmRzLjBhLS1kMy1zcw%3D%3D&vvpl=1&l=202512211849196D4F33D6D9FF9D2EC34C&btag=e000b0000",
+      "https://v16-cc.capcut.com/9735390d52bd3eeada9e0045e13d8ade/6951134d/video/tos/alisg/tos-alisg-ve-14178-sg/os2HFSwfIG07bL9RpggQeAD27NkjCOGTsILeTI/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12070&bt=6035&cs=0&ft=GAAO2Inz7ThbogzPXq8Zmo&mime_type=video_mp4&qs=0&rc=O2U5N2Q1Z2g2ODk1Nmk0OkBpajdneG45cjx3ODYzODU6NEAuL2EwLWI1XjAxYV40MDFgYSMwNjBzMmRrZTBhLS1kMy1zcw%3D%3D&vvpl=1&l=202512211923328494E9A564B0842A97C3&btag=e000b8000",
+      "https://v16-cc.capcut.com/b90cc60b415a9697bd974b041e83c322/695118e5/video/tos/alisg/tos-alisg-ve-14178-sg/oA9fQFDtJ2BAyEQjPHEIL4BN3QDgj2LXRpfo3x/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12242&bt=6121&cs=0&ft=GAAO2Inz7Th5BgzPXq8Zmo&mime_type=video_mp4&qs=0&rc=NDwzZzhpOjk2ZmhpODk1OUBpM3F2bHU5cjt3ODYzODU6NEAtY2NfLWMwNi8xM19jLzJfYSNoNG5jMmRzcDBhLS1kMy1zcw%3D%3D&vvpl=1&l=20251221194734F4F6AEEE67331F36E81C&btag=e000b8000",
     ],
     videoReplaceUrls: [
       {
         index: 0,
-        timeRange: [20, 30],
-        url: "https://v16-cc.capcut.com/72b86719038cd0e18b8800ea2681de31/694ff272/video/tos/alisg/tos-alisg-ve-14178-sg/o8iE4bteQbnsgnjCyNZDfDwTfdbFglWAPsASIM/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12680&bt=6340&cs=0&ft=GAAO2Inz7ThGnvzPXq8Zmo&mime_type=video_mp4&qs=0&rc=NmQzMzhoaWdlOTo8ODg0OUBpM3Nrc205cnFlODYzODU6NEBjLjYyLjA2Xy0xXzMvLjMwYSNgYWdqMmRjYzBhLS1kMy1zcw%3D%3D&vvpl=1&l=202512202251202CA584819CC7EE82151E&btag=e000b0000",
+        timeRange: [35, 40],
+        url: "https://v16-cc.capcut.com/9a302df8b1627c38a2cbdec05fc4f3b2/69511a40/video/tos/alisg/tos-alisg-ve-14178-sg/oY9eIgEDPDfDfniQ3S7Hsn2E7EFJsTbjsxCxTA/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13744&bt=6872&cs=0&ft=GAAO2Inz7ThCsgzPXq8Zmo&mime_type=video_mp4&qs=0&rc=OmhlNjo0NzU4ZjlnPDs5ZkBpMzpzd205cmZ3ODYzODU6NEBgMF9hY14zNmIxMGMzXjYzYSNvc2ZkMmRjczBhLS1kMy1zcw%3D%3D&vvpl=1&l=20251221195331B793EAE9FA03BD37222A&btag=e000b0000",
       },
       {
         index: 1,
-        timeRange: [30, 35],
-        url: "https://v16-cc.capcut.com/dee0e4b09741cbd6718457f8751ae456/694ff3c2/video/tos/alisg/tos-alisg-ve-14178-sg/ooEG9Kyo6UviMU7ia6TO5EYuBQEaAiH5RdoDI/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13486&bt=6743&cs=0&ft=GAAO2Inz7ThkxvzPXq8Zmo&mime_type=video_mp4&qs=0&rc=OmU2aGQzODplOjppZztoM0BpMzd4eGw5cmZlODYzODU6NEA2Yl5fYi5jXy8xYDUvMl5fYSM0ZGRwMmRrZjBhLS1kMy1zcw%3D%3D&vvpl=1&l=20251220225701F7E460CA4E001075E0A9&btag=e000b0000",
+        timeRange: [45, 50],
+        url: "https://v16-cc.capcut.com/abf094aeea4c03dad46be14358de3b78/69511990/video/tos/alisg/tos-alisg-ve-14178-sg/owepBHbEiAwiXJ3NVgBIRpRLJfuFBBQ62PkE3Q/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13498&bt=6749&cs=0&ft=GAAO2Inz7Th1XgzPXq8Zmo&mime_type=video_mp4&qs=0&rc=aTlkNzo1PDxpaDVoPGlkNkBpanFvdXQ5cjN3ODYzODU6NEBfLmNfXjI2NmIxLS0vLjE1YSNoY2Q1MmQ0cjBhLS1kMy1zcw%3D%3D&vvpl=1&l=20251221195035B100A1C8162F4B3EC13D&btag=e000b0000",
       },
     ],
     switch: "无转场",
@@ -238,8 +240,9 @@ export default {
   },
   "clip-audio": [
     {
-      url: "input/clip-audio/美人吟.mp3",
-      start: 12,
+      url: "input/clip-audio/抗美援朝.mp3",
+      start: 36,
+      duration: 53,
     },
   ],
   "clip-video": {
