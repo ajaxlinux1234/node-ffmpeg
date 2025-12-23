@@ -14,7 +14,7 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1766319235773_replaced.mp4",
+    url: "output/merge-video/merged_1766413042980_replaced.mp4",
     title: `苏联党和国家{{最高领导人}}|{{马克思主义}}哲学贯彻者|{{斯大林}}的一生`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
@@ -83,7 +83,7 @@ export default {
       "1941年/63岁\n广播电台播音室\n发表卫国战争动员演说",
       "1942年/64岁\n最高统帅部地下指挥部\n指挥斯大林格勒保卫战",
       "1945年/67岁\n莫斯科红场列宁墓观礼台\n检阅胜利阅兵式",
-      "1950年/72岁\n莫斯科郊外别墅花园\n花园散步",
+      "1950年/72岁\n莫斯科郊外别墅花园\n退休生活",
       "1953年/74岁\n孔策沃别墅卧室逝世",
     ],
     watermark: "@人物传记史",
@@ -100,20 +100,19 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v16-cc.capcut.com/1f1d2b3fb222b0fec340fc744215ca0c/69510b39/video/tos/alisg/tos-alisg-ve-14178-sg/owpRxwX0ExebBzl2IRHH0BNgQJiKsQfxTgyBhi/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12654&bt=6327&cs=0&ft=GAAO2Inz7TheWgzPXq8Zmo&mime_type=video_mp4&qs=0&rc=NDg0NDg8ZmZpO2lpZ2hnaEBpanFldmo5cjt3ODYzODU6NEBjYF4vX18vNTQxM2A2LTFeYSNhM2JmMmRzLjBhLS1kMy1zcw%3D%3D&vvpl=1&l=202512211849196D4F33D6D9FF9D2EC34C&btag=e000b0000",
-      "https://v16-cc.capcut.com/9735390d52bd3eeada9e0045e13d8ade/6951134d/video/tos/alisg/tos-alisg-ve-14178-sg/os2HFSwfIG07bL9RpggQeAD27NkjCOGTsILeTI/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12070&bt=6035&cs=0&ft=GAAO2Inz7ThbogzPXq8Zmo&mime_type=video_mp4&qs=0&rc=O2U5N2Q1Z2g2ODk1Nmk0OkBpajdneG45cjx3ODYzODU6NEAuL2EwLWI1XjAxYV40MDFgYSMwNjBzMmRrZTBhLS1kMy1zcw%3D%3D&vvpl=1&l=202512211923328494E9A564B0842A97C3&btag=e000b8000",
-      "https://v16-cc.capcut.com/b90cc60b415a9697bd974b041e83c322/695118e5/video/tos/alisg/tos-alisg-ve-14178-sg/oA9fQFDtJ2BAyEQjPHEIL4BN3QDgj2LXRpfo3x/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12242&bt=6121&cs=0&ft=GAAO2Inz7Th5BgzPXq8Zmo&mime_type=video_mp4&qs=0&rc=NDwzZzhpOjk2ZmhpODk1OUBpM3F2bHU5cjt3ODYzODU6NEAtY2NfLWMwNi8xM19jLzJfYSNoNG5jMmRzcDBhLS1kMy1zcw%3D%3D&vvpl=1&l=20251221194734F4F6AEEE67331F36E81C&btag=e000b8000",
+      "https://v16-cc.capcut.com/3bcaad4cc2fe96ea6009f47a36351554/69528670/video/tos/alisg/tos-alisg-ve-14178-sg/ocS2yEHDggdBKuzFfKpJBQN9IfJn8SEXUtHNEU/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11938&bt=5969&cs=0&ft=GAAO2Inz7ThsF-qPXq8Zmo&mime_type=video_mp4&qs=0&rc=OTQ0ZzQ3NDdnaTVoZjw3PEBpajNlc3g5cmVuODYzODU6NEBeYC00MDI0NjAxL2IwMTMvYSMwNG1zMmRjazFhLS1kMzFzcw%3D%3D&vvpl=1&l=202512222146487C1D0FD60AE922437812&btag=e00088000",
+      "https://v16-cc.capcut.com/6bd3f938203df1232aa605dc8854a9cd/6952863f/video/tos/alisg/tos-alisg-ve-14178-sg/ooYUPpsEA7Zi5Ll3iS2qUqaGiH6aJRDCBI4Qd/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12478&bt=6239&cs=0&ft=GAAO2Inz7ThKz-qPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZTs3NTplZTg3PDpnaTxpaUBpMzw0N3E5cmRuODYzODU6NEBgLzEyY2NgNmIxLTFeMS4xYSMwaWNqMmQ0azFhLS1kMy1zcw%3D%3D&vvpl=1&l=20251222214629EB94B6E91A329E51E151&btag=e000b0000",
     ],
     videoReplaceUrls: [
       {
         index: 0,
-        timeRange: [35, 40],
-        url: "https://v16-cc.capcut.com/9a302df8b1627c38a2cbdec05fc4f3b2/69511a40/video/tos/alisg/tos-alisg-ve-14178-sg/oY9eIgEDPDfDfniQ3S7Hsn2E7EFJsTbjsxCxTA/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13744&bt=6872&cs=0&ft=GAAO2Inz7ThCsgzPXq8Zmo&mime_type=video_mp4&qs=0&rc=OmhlNjo0NzU4ZjlnPDs5ZkBpMzpzd205cmZ3ODYzODU6NEBgMF9hY14zNmIxMGMzXjYzYSNvc2ZkMmRjczBhLS1kMy1zcw%3D%3D&vvpl=1&l=20251221195331B793EAE9FA03BD37222A&btag=e000b0000",
+        timeRange: [0, 5],
+        url: "https://v16-cc.capcut.com/f11591aab21debd6f23916b37e58bc88/69528a6f/video/tos/alisg/tos-alisg-ve-14178-sg/oAFf9L9SkbabDfSQEhjpFTTCgoJfEYzUsLhAID/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12342&bt=6171&cs=0&ft=GAAO2Inz7ThRw-qPXq8Zmo&mime_type=video_mp4&qs=0&rc=PDg3ODc0NWY4N2U3OTZnPEBpank5dmo5cm5uODYzODU6NEBiNDIyMWFgXy8xXmBiY2MuYSNkb2NmMmRrczFhLS1kMy1zcw%3D%3D&vvpl=1&l=20251222220416A4260F91D1D0DE563C8C&btag=e000b8000",
       },
       {
         index: 1,
-        timeRange: [45, 50],
-        url: "https://v16-cc.capcut.com/abf094aeea4c03dad46be14358de3b78/69511990/video/tos/alisg/tos-alisg-ve-14178-sg/owepBHbEiAwiXJ3NVgBIRpRLJfuFBBQ62PkE3Q/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13498&bt=6749&cs=0&ft=GAAO2Inz7Th1XgzPXq8Zmo&mime_type=video_mp4&qs=0&rc=aTlkNzo1PDxpaDVoPGlkNkBpanFvdXQ5cjN3ODYzODU6NEBfLmNfXjI2NmIxLS0vLjE1YSNoY2Q1MmQ0cjBhLS1kMy1zcw%3D%3D&vvpl=1&l=20251221195035B100A1C8162F4B3EC13D&btag=e000b0000",
+        timeRange: [5, 15],
+        url: "https://v16-cc.capcut.com/5a1e53f0e8ffe46d7c1f4806ab8ec574/69528cb3/video/tos/alisg/tos-alisg-ve-14178-sg/okxeSe3uMAKAfCBKfVxAAKiESAeDDpNppdhxag/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12600&bt=6300&cs=0&ft=GAAO2Inz7ThZdkqPXq8Zmo&mime_type=video_mp4&qs=0&rc=M2Q2aTQ4Nzg5O2Q6ZGc2ZEBpM2ppZHU5cjpvODYzODU6NEA0NDIxXzU2NmAxNWMyYWMyYSMvLWRyMmRrMTFhLS1kMy1zcw%3D%3D&vvpl=1&l=20251222221401588013AB1C34DC59E88E&btag=e000b0000",
       },
     ],
     switch: "无转场",
@@ -312,7 +311,7 @@ export default {
     get_promot: false,
     get_remove_words: false,
     get_title_selector_fn: () => {
-      const historyNum = 11;
+      const historyNum = 13;
       return Array.from(document.querySelectorAll(".auto-hide-last-sibling-br"))
         .filter((one) => /^\d/.test(one.innerText))
         .slice(-historyNum)
@@ -362,7 +361,7 @@ export default {
       ),
     input_selector_fn: () => document.querySelector("textarea"),
     get_promot_fn: () => {
-      const historyNum = 11; // 对应seconds数组长度
+      const historyNum = 13; // 对应seconds数组长度
       return Array.from(document.querySelectorAll(".auto-hide-last-sibling-br"))
         .slice(-historyNum)
         .map((one) => {
