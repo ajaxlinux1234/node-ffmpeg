@@ -14,8 +14,8 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1766474980158_merged.mp4",
-    title: `2025年向{{柬埔寨电诈重拳出击}}|一分钟了解|泰国总理{{阿努廷·参威拉军}}`,
+    url: "output/merge-video/merged_1766482332753_replaced.mp4",
+    title: `二五年向{{柬埔寨电诈重拳出击}}|一分钟了解|泰国总理{{阿努廷·参威拉军}}`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
 
@@ -64,7 +64,7 @@ export default {
     // 快乐传递者何炅
     // 国士无双袁隆平
     titleAnimation: "sweep_slow", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
-    sectionTitleAnimation: "turbo", // 分镜字幕动画效果，可选值同titleAnimation
+    sectionTitleAnimation: "particle_dust", // 分镜字幕动画效果，可选值同titleAnimation
 
     // 视频质量配置
     qualityMode: "high", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理), "turbo"(极速处理)
@@ -89,7 +89,7 @@ export default {
       "2025年末/59岁\n总理府办公室\n规划下一阶段持续打击与区域合作",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/国际歌_start5.2s_clip.mp3",
+    "bg-music": "music/Go West-Fancy.mp3",
     // output/clip-audio/抗美援朝_start36s_53s.mp3
     // Go West-Fancy
     // 美人吟_start12s_clip.mp3
@@ -104,6 +104,18 @@ export default {
     urls: [
       "https://v16-cc.capcut.com/51e236573f2f3d7c687083b38b4b7c89/69537b1f/video/tos/alisg/tos-alisg-ve-14178-sg/oQHNIpFRNMQjunVKBQDNEBSfJcpgQBh2dkE3fr/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11942&bt=5971&cs=0&ft=GAAO2Inz7ThfcRqPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZTQ1MzRmNjY8M2RpMzZoZUBpajp2Nnk5cnI3ODYzODU6NEBeMmM2MDBfXy8xYi5jLjQ1YSNobzNiMmRzLTJhLS1kMy1zcw%3D%3D&vvpl=1&l=202512231510470F292BE84F2A2EF46467&btag=e00088000",
       "https://v16-cc.capcut.com/5545090eb0039163564df8e6fb46aaf1/69537ae7/video/tos/alisg/tos-alisg-ve-14178-sg/okK7EOo2JEFNFQBffVIQYoDp6uJFEBFkBglBQS/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12170&bt=6085&cs=0&ft=GAAO2Inz7Th~cRqPXq8Zmo&mime_type=video_mp4&qs=0&rc=aTxlNTU1Zjw4Njk8Ozg7ZEBpajc2cHk5cms3ODYzODU6NEA0YGI0Ly5jNWExXy4yY2MvYSMxajIvMmRjLTJhLS1kMy1zcw%3D%3D&vvpl=1&l=2025122315101110461A9B6360BFECE0DF&btag=e000b8000",
+    ],
+    videoReplaceUrls: [
+      {
+        index: 0,
+        timeRange: [0, 5],
+        url: "https://v16-cc.capcut.com/a8f3355b557829ff60cd18f24eb3cc34/69539806/video/tos/alisg/tos-alisg-ve-14178-sg/oAf1K77GAQAiJmwiwiB9o0EXpIE6UXEcSiU7Zg/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13408&bt=6704&cs=0&ft=GAAO2Inz7ThlE8qPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZTM3PDU3ODZnMzplaThnOUBpM3dwO2o5cnc4ODYzODU6NEA2XjIzYjVeNWExL14zNDZjYSNeYTNlMmRzbjJhLS1kMy1zcw%3D%3D&vvpl=1&l=20251223171440FB0E258A7484DD11C1CC&btag=e000b0000",
+      },
+      {
+        index: 1,
+        timeRange: [10, 15],
+        url: "https://v16-cc.capcut.com/32842155dba05ce3bbe32f10ea8f93b6/69539545/video/tos/alisg/tos-alisg-ve-14178-sg/oIv7VhipNIBUb7QG1LMwfHio0KE2EI5AoErSWA/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13568&bt=6784&cs=0&ft=GAAO2Inz7Th8N8qPXq8Zmo&mime_type=video_mp4&qs=0&rc=aTYzNTU0PDloNDw2OmQ6NEBpamc4NHU5cmc4ODYzODU6NEAxM2JhMy0wNjMxMTAzNV8wYSMyXnNoMmRzaTJhLS1kMy1zcw%3D%3D&vvpl=1&l=202512231702566614C48FD3E99006B8AB&btag=e000b0000",
+      },
     ],
     switch: "无转场",
   },
