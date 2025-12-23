@@ -14,7 +14,7 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1766487765998_replaced.mp4",
+    url: "output/merge-video/merged_1766489289436_replaced.mp4",
     title: `二五年向{{柬埔寨电诈重拳出击}}|一分钟了解|泰国总理{{阿努廷·参威拉军}}`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
@@ -67,7 +67,7 @@ export default {
     sectionTitleAnimation: "particle_shatter", // 分镜字幕动画效果，可选值同titleAnimation
 
     // 视频质量配置
-    qualityMode: "turbo", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理), "turbo"(极速处理)
+    qualityMode: "high", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理), "turbo"(极速处理)
 
     // 性能优化配置
     enableSpeedOptimization: true, // 启用速度优化：多线程+预设优化
@@ -117,6 +117,7 @@ export default {
         url: "https://v16-cc.capcut.com/32842155dba05ce3bbe32f10ea8f93b6/69539545/video/tos/alisg/tos-alisg-ve-14178-sg/oIv7VhipNIBUb7QG1LMwfHio0KE2EI5AoErSWA/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13568&bt=6784&cs=0&ft=GAAO2Inz7Th8N8qPXq8Zmo&mime_type=video_mp4&qs=0&rc=aTYzNTU0PDloNDw2OmQ6NEBpamc4NHU5cmc4ODYzODU6NEAxM2JhMy0wNjMxMTAzNV8wYSMyXnNoMmRzaTJhLS1kMy1zcw%3D%3D&vvpl=1&l=202512231702566614C48FD3E99006B8AB&btag=e000b0000",
       },
     ],
+    useCacheVideo: true,
     switch: "无转场",
   },
   "extract-audio": {
