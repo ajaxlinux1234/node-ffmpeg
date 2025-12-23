@@ -14,8 +14,8 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1766413042980_replaced.mp4",
-    title: `苏联党和国家{{最高领导人}}|{{马克思主义}}哲学贯彻者|{{斯大林}}的一生`,
+    url: "output/merge-video/merged_1766474980158_merged.mp4",
+    title: `2025年向{{柬埔寨电诈重拳出击}}|一分钟了解|泰国总理{{阿努廷·参威拉军}}`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
 
@@ -74,17 +74,19 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1878年\n出生鞋匠家庭",
-      "1899年/21岁\n第比利斯地下印刷所\n成为职业革命者",
-      "1917年/39岁\n彼得格勒斯莫尔尼宫\n参与领导十月革命",
-      "1922年/44岁\n克里姆林宫办公室\n当选苏共中央总书记",
-      "1928年/50岁\n巨型建设工地指挥部\n启动第一个五年计划\n推动工业化",
-      "1930年/52岁\n克里姆林宫书房\n著述“一国建成社会主义”书籍",
-      "1941年/63岁\n广播电台播音室\n发表卫国战争动员演说",
-      "1942年/64岁\n最高统帅部地下指挥部\n指挥斯大林格勒保卫战",
-      "1945年/67岁\n莫斯科红场列宁墓观礼台\n检阅胜利阅兵式",
-      "1950年/72岁\n莫斯科郊外别墅花园\n退休生活",
-      "1953年/74岁\n孔策沃别墅卧室逝世",
+      "1966年\n出生富商家庭",
+      "1988年/22岁\n早期商业办公室\n完成学业，进入商界",
+      "2005年/39岁\n选举庆功现场\n首次当选国会议员，政治生涯起点",
+      "2011年/45岁\n内政部指挥中心\n担任内政部长，全面负责国内安全",
+      "2019年/53岁\n副总理办公室\n聚焦并研判跨境电诈威胁",
+      "2022年/56岁\n为泰党党代会\n当选党魁，成为政治核心",
+      "2023年/57岁\n泰国国会讲台\n当选并出任泰国总理",
+      "2024年/58岁\n总理府战略会议室\n初步部署跨境反诈合作框架",
+      "2025年初/59岁\n警方特别行动指挥中心\n授权成立跨部门联合行动组",
+      "2025年中/59岁\n总理办公室深夜\n批准具体跨境联合执法行动方案",
+      "2025年行动阶段/59岁\n国家反诈指挥中心\n实时听取前方联合执法汇报",
+      "2025年成果阶段/59岁\n政府新闻发布厅\n召开新闻发布会公布重大战果",
+      "2025年末/59岁\n总理府办公室\n规划下一阶段持续打击与区域合作",
     ],
     watermark: "@人物传记史",
     "bg-music": "music/国际歌_start5.2s_clip.mp3",
@@ -100,20 +102,8 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v16-cc.capcut.com/3bcaad4cc2fe96ea6009f47a36351554/69528670/video/tos/alisg/tos-alisg-ve-14178-sg/ocS2yEHDggdBKuzFfKpJBQN9IfJn8SEXUtHNEU/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11938&bt=5969&cs=0&ft=GAAO2Inz7ThsF-qPXq8Zmo&mime_type=video_mp4&qs=0&rc=OTQ0ZzQ3NDdnaTVoZjw3PEBpajNlc3g5cmVuODYzODU6NEBeYC00MDI0NjAxL2IwMTMvYSMwNG1zMmRjazFhLS1kMzFzcw%3D%3D&vvpl=1&l=202512222146487C1D0FD60AE922437812&btag=e00088000",
-      "https://v16-cc.capcut.com/6bd3f938203df1232aa605dc8854a9cd/6952863f/video/tos/alisg/tos-alisg-ve-14178-sg/ooYUPpsEA7Zi5Ll3iS2qUqaGiH6aJRDCBI4Qd/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12478&bt=6239&cs=0&ft=GAAO2Inz7ThKz-qPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZTs3NTplZTg3PDpnaTxpaUBpMzw0N3E5cmRuODYzODU6NEBgLzEyY2NgNmIxLTFeMS4xYSMwaWNqMmQ0azFhLS1kMy1zcw%3D%3D&vvpl=1&l=20251222214629EB94B6E91A329E51E151&btag=e000b0000",
-    ],
-    videoReplaceUrls: [
-      {
-        index: 0,
-        timeRange: [0, 5],
-        url: "https://v16-cc.capcut.com/f11591aab21debd6f23916b37e58bc88/69528a6f/video/tos/alisg/tos-alisg-ve-14178-sg/oAFf9L9SkbabDfSQEhjpFTTCgoJfEYzUsLhAID/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12342&bt=6171&cs=0&ft=GAAO2Inz7ThRw-qPXq8Zmo&mime_type=video_mp4&qs=0&rc=PDg3ODc0NWY4N2U3OTZnPEBpank5dmo5cm5uODYzODU6NEBiNDIyMWFgXy8xXmBiY2MuYSNkb2NmMmRrczFhLS1kMy1zcw%3D%3D&vvpl=1&l=20251222220416A4260F91D1D0DE563C8C&btag=e000b8000",
-      },
-      {
-        index: 1,
-        timeRange: [5, 15],
-        url: "https://v16-cc.capcut.com/5a1e53f0e8ffe46d7c1f4806ab8ec574/69528cb3/video/tos/alisg/tos-alisg-ve-14178-sg/okxeSe3uMAKAfCBKfVxAAKiESAeDDpNppdhxag/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12600&bt=6300&cs=0&ft=GAAO2Inz7ThZdkqPXq8Zmo&mime_type=video_mp4&qs=0&rc=M2Q2aTQ4Nzg5O2Q6ZGc2ZEBpM2ppZHU5cjpvODYzODU6NEA0NDIxXzU2NmAxNWMyYWMyYSMvLWRyMmRrMTFhLS1kMy1zcw%3D%3D&vvpl=1&l=20251222221401588013AB1C34DC59E88E&btag=e000b0000",
-      },
+      "https://v16-cc.capcut.com/51e236573f2f3d7c687083b38b4b7c89/69537b1f/video/tos/alisg/tos-alisg-ve-14178-sg/oQHNIpFRNMQjunVKBQDNEBSfJcpgQBh2dkE3fr/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11942&bt=5971&cs=0&ft=GAAO2Inz7ThfcRqPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZTQ1MzRmNjY8M2RpMzZoZUBpajp2Nnk5cnI3ODYzODU6NEBeMmM2MDBfXy8xYi5jLjQ1YSNobzNiMmRzLTJhLS1kMy1zcw%3D%3D&vvpl=1&l=202512231510470F292BE84F2A2EF46467&btag=e00088000",
+      "https://v16-cc.capcut.com/5545090eb0039163564df8e6fb46aaf1/69537ae7/video/tos/alisg/tos-alisg-ve-14178-sg/okK7EOo2JEFNFQBffVIQYoDp6uJFEBFkBglBQS/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12170&bt=6085&cs=0&ft=GAAO2Inz7Th~cRqPXq8Zmo&mime_type=video_mp4&qs=0&rc=aTxlNTU1Zjw4Njk8Ozg7ZEBpajc2cHk5cms3ODYzODU6NEA0YGI0Ly5jNWExXy4yY2MvYSMxajIvMmRjLTJhLS1kMy1zcw%3D%3D&vvpl=1&l=2025122315101110461A9B6360BFECE0DF&btag=e000b8000",
     ],
     switch: "无转场",
   },
