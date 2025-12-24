@@ -14,7 +14,7 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1766489289436_replaced.mp4",
+    url: "output/merge-video/merged_1766559069251_replaced.mp4",
     title: `二五年向{{柬埔寨电诈重拳出击}}|一分钟了解|泰国总理{{阿努廷·参威拉军}}`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
@@ -64,10 +64,10 @@ export default {
     // 快乐传递者何炅
     // 国士无双袁隆平
     titleAnimation: "sweep_slow", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
-    sectionTitleAnimation: "particle_shatter", // 分镜字幕动画效果，可选值同titleAnimation
+    sectionTitleAnimation: "none", // 分镜字幕动画效果，可选值同titleAnimation
 
     // 视频质量配置
-    qualityMode: "high", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理), "turbo"(极速处理)
+    qualityMode: "turbo", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理), "turbo"(极速处理)
 
     // 性能优化配置
     enableSpeedOptimization: true, // 启用速度优化：多线程+预设优化
