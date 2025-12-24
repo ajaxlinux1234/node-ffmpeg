@@ -74,22 +74,22 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1966年\n出生富商家庭",
-      "1988年/22岁\n早期商业办公室\n完成学业，进入商界",
-      "2005年/39岁\n选举庆功现场\n首次当选国会议员，政治生涯起点",
-      "2011年/45岁\n内政部指挥中心\n担任内政部长，全面负责国内安全",
-      "2019年/53岁\n副总理办公室\n聚焦并研判跨境电诈威胁",
-      "2022年/56岁\n为泰党党代会\n当选党魁，成为政治核心",
-      "2023年/57岁\n泰国国会讲台\n当选并出任泰国总理",
-      "2024年/58岁\n总理府战略会议室\n初步部署跨境反诈合作框架",
-      "2025年初/59岁\n警方特别行动指挥中心\n授权成立跨部门联合行动组",
-      "2025年中/59岁\n总理办公室深夜\n批准具体跨境联合执法行动方案",
-      "2025年行动阶段/59岁\n国家反诈指挥中心\n实时听取前方联合执法汇报",
-      "2025年成果阶段/59岁\n政府新闻发布厅\n召开新闻发布会公布重大战果",
-      "2025年末/59岁\n总理府办公室\n规划下一阶段持续打击与区域合作",
+      "1895年/0岁\n湖南溆浦家中\n出生",
+      "1912年/17岁\n长沙周南女校校园\n接受新式教育，思想启蒙",
+      "1916年/21岁\n溆浦女校教室\n回乡办学，实践教育救国与妇女解放",
+      "1919年/24岁\n长沙五四运动街头\n投身反帝反封建爱国运动",
+      "1919年/24岁\n长沙新民学会会场\n与早期共产主义者共同探索真理",
+      "1920年/25岁\n赴法邮轮甲板\n赴法勤工俭学，寻求马克思主义",
+      "1922年/27岁\n上海入党宣誓密室\n加入中国共产党",
+      "1923年/28岁\n上海丝厂门口\n领导女工运动，实践阶级斗争",
+      "1925年/30岁\n中共中央机关（上海/广州）\n主持全国妇女工作，成为妇女运动领袖",
+      "1927年/32岁\n武汉地下联络点阁楼\n大革命失败后坚持地下斗争",
+      "1928年3月/33岁\n汉口法租界街头\n不幸被捕，英勇不屈",
+      "1928年5月1日/33岁\n武汉监狱牢房\n狱中坚持斗争，纪念五一",
+      "1928年5月1日/33岁\n武汉刑场就义路上\n英勇就义，壮烈牺牲",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/Go West-Fancy.mp3",
+    "bg-music": "music/国际歌_start5.2s_clip.mp3",
     // output/clip-audio/抗美援朝_start36s_53s.mp3
     // Go West-Fancy
     // 美人吟_start12s_clip.mp3
@@ -102,19 +102,19 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v16-cc.capcut.com/51e236573f2f3d7c687083b38b4b7c89/69537b1f/video/tos/alisg/tos-alisg-ve-14178-sg/oQHNIpFRNMQjunVKBQDNEBSfJcpgQBh2dkE3fr/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11942&bt=5971&cs=0&ft=GAAO2Inz7ThfcRqPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZTQ1MzRmNjY8M2RpMzZoZUBpajp2Nnk5cnI3ODYzODU6NEBeMmM2MDBfXy8xYi5jLjQ1YSNobzNiMmRzLTJhLS1kMy1zcw%3D%3D&vvpl=1&l=202512231510470F292BE84F2A2EF46467&btag=e00088000",
-      "https://v16-cc.capcut.com/5545090eb0039163564df8e6fb46aaf1/69537ae7/video/tos/alisg/tos-alisg-ve-14178-sg/okK7EOo2JEFNFQBffVIQYoDp6uJFEBFkBglBQS/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12170&bt=6085&cs=0&ft=GAAO2Inz7Th~cRqPXq8Zmo&mime_type=video_mp4&qs=0&rc=aTxlNTU1Zjw4Njk8Ozg7ZEBpajc2cHk5cms3ODYzODU6NEA0YGI0Ly5jNWExXy4yY2MvYSMxajIvMmRjLTJhLS1kMy1zcw%3D%3D&vvpl=1&l=2025122315101110461A9B6360BFECE0DF&btag=e000b8000",
+      "https://v16-cc.capcut.com/0278c51fab4741f8ac4c02c025497ded/6954f0a9/video/tos/alisg/tos-alisg-ve-14178-sg/oIgsuLS32C05D9GvReewrgBAIg1HgldZP0vbTf/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11926&bt=5963&cs=0&ft=GAAO2Inz7ThlyOqPXq8Zmo&mime_type=video_mp4&qs=0&rc=NDs5NmY7NDdlNGkzM2hmN0BpM3h3dnE5cnV1ODYzODU6NEAyNWFiLWFgNmIxYWAvLmBgYSNgNGNiMmQ0XzJhLS1kMy1zcw%3D%3D&vvpl=1&l=2025122417443367D4CF03EF97FD13CC01&btag=e00088000",
+      "https://v16-cc.capcut.com/f97d23d476d2ead5e03cc3698656a929/6954f049/video/tos/alisg/tos-alisg-ve-14178-sg/o08LEdGQ0IoO76A2tApidRriEYBQDMGQTwfEbX/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12170&bt=6085&cs=0&ft=GAAO2Inz7ThKSOqPXq8Zmo&mime_type=video_mp4&qs=0&rc=NjpoZWg3NThoO2k2Mzc0NUBpM3Y0b3A5cjx1ODYzODU6NEAxXjYyYF41NTIxXjFjYzI1YSMwLm8uMmRzXzJhLS1kMy1zcw%3D%3D&vvpl=1&l=20251224174317720F2DD5A566D61D35BA&btag=e000b8000",
     ],
     videoReplaceUrls: [
       {
         index: 0,
         timeRange: [0, 5],
-        url: "https://v16-cc.capcut.com/a8f3355b557829ff60cd18f24eb3cc34/69539806/video/tos/alisg/tos-alisg-ve-14178-sg/oAf1K77GAQAiJmwiwiB9o0EXpIE6UXEcSiU7Zg/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13408&bt=6704&cs=0&ft=GAAO2Inz7ThlE8qPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZTM3PDU3ODZnMzplaThnOUBpM3dwO2o5cnc4ODYzODU6NEA2XjIzYjVeNWExL14zNDZjYSNeYTNlMmRzbjJhLS1kMy1zcw%3D%3D&vvpl=1&l=20251223171440FB0E258A7484DD11C1CC&btag=e000b0000",
+        url: "https://v16-cc.capcut.com/1e117a1f6d58f06d6e916aff57095d80/6954f4fd/video/tos/alisg/tos-alisg-ve-14178-sg/o44bIpbBYvQLniUAGEu5udgDaEih9n6VHiUKS/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13280&bt=6640&cs=0&ft=GAAO2Inz7ThwmOqPXq8Zmo&mime_type=video_mp4&qs=0&rc=NTY7NzpkNGY6Ojc3NDk0Z0BpMzxmPHc5cnV1ODYzODU6NEA0MDNhLmNjNWExXjFhNjQzYSNkaW82MmRraDJhLS1kMy1zcw%3D%3D&vvpl=1&l=20251224180336BBD81CE65F32E917EDA5&btag=e000b0000",
       },
       {
         index: 1,
-        timeRange: [10, 15],
-        url: "https://v16-cc.capcut.com/32842155dba05ce3bbe32f10ea8f93b6/69539545/video/tos/alisg/tos-alisg-ve-14178-sg/oIv7VhipNIBUb7QG1LMwfHio0KE2EI5AoErSWA/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13568&bt=6784&cs=0&ft=GAAO2Inz7Th8N8qPXq8Zmo&mime_type=video_mp4&qs=0&rc=aTYzNTU0PDloNDw2OmQ6NEBpamc4NHU5cmc4ODYzODU6NEAxM2JhMy0wNjMxMTAzNV8wYSMyXnNoMmRzaTJhLS1kMy1zcw%3D%3D&vvpl=1&l=202512231702566614C48FD3E99006B8AB&btag=e000b0000",
+        timeRange: [45, 55],
+        url: "https://v16-cc.capcut.com/895d59cac486717b26b83f0214bd9db6/6954f556/video/tos/alisg/tos-alisg-ve-14178-sg/oQoT2lE6hP890XgYsQVfdfAQDfbnFDggECVS3I/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12546&bt=6273&cs=0&ft=GAAO2Inz7ThcNOqPXq8Zmo&mime_type=video_mp4&qs=0&rc=NTU3ZGg3aWk3Zjc1PDY5Z0BpM2o1NXU5cml1ODYzODU6NEAuYy4xNDFgNi0xNi00YV8xYSNeMS9jMmRzaTJhLS1kMy1zcw%3D%3D&vvpl=1&l=20251224180500E8B8BAF34D93392137C3&btag=e000b0000",
       },
     ],
     useCacheVideo: true,
