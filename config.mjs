@@ -14,7 +14,7 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1766572058331_replaced.mp4",
+    url: "output/merge-video/merged_1766572861878_replaced.mp4",
     title: `建立{{世界上第一个}}社会主义国家|创立{{列宁主义}}|无产阶级导师{{列宁}}的一生`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
