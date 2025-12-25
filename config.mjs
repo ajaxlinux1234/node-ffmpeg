@@ -14,8 +14,8 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1766644002803_replaced.mp4",
-    title: `中共早期{{重要领导人}}|马克思主义{{中国化先驱}}|{{蔡和森同志}}的一生`,
+    url: "output/merge-video/merged_1766653051000_replaced.mp4",
+    title: `领导塞尔维亚维护主权|促进经济改革|一分钟看完武契奇的从政之路`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
 
@@ -74,22 +74,22 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1895年\n出生小职员家庭",
-      "1913年/18岁\n湖南省立第一师范\n求学\n接受新思想\n结识毛泽东等。",
-      "1918年/23岁\n长沙爱晚亭等地\n与毛泽东等共同创立革命团体“新民学会”。",
-      "1919年/24岁\n北京/上海\n积极组织并推动留法勤工俭学运动。",
-      "1920年/25岁\n法国蒙达尼公学\n在法期间“猛看猛译”马克思主义著作\n完成思想转变。",
-      "1921年/26岁\n法国华侨协社\n在通信和会议中\n最早系统提出建立中国共产党的主张。",
-      "1921年底/26岁\n法国马赛港\n因领导革命活动被法国政府驱逐遣返回国。",
-      "1922年/27岁\n上海中共二大会址\n当选中央委员\n参与起草党的第一个正式章程等重要文件。",
-      "1925年/30岁\n《向导》周报编辑部\n担任党中央机关报《向导》主编\n是出色的理论宣传家。",
-      "1927年/32岁\n武汉/上海秘密据点\n大革命失败后\n在白色恐怖下坚持地下斗争。",
-      "1931年初/36岁\n香港码头\n受党中央派遣\n前往香港指导广东省委工作。",
-      "1931年6月/36岁\n香港联络点外\n因叛徒出卖\n不幸被港英当局逮捕\n后引渡至广州。",
-      "1931年8月/36岁\n广州监狱刑场\n面对敌人酷刑和屠刀\n坚贞不屈\n壮烈牺牲。",
+      "1970年\n出生知识分子家庭",
+      "1998年/28岁\n塞尔维亚国家电视台导播间\n媒体生涯高峰\n担任新闻部长",
+      "2008年/38岁\n塞尔维亚进步党大会\n正式加入并领导新兴政治力量",
+      "2012年/42岁\n政府就职典礼\n出任第一副总理兼国防部长\n进入权力核心",
+      "2014年/44岁\n政党竞选总部\n领导进步党赢得议会选举胜利",
+      "2014年/44岁\n塞尔维亚国民议会\n出任政府总理\n开启经济改革议程",
+      "2015年/45岁\n巴黎联合国气候大会\n代表塞尔维亚参与重大国际协议签署",
+      "2017年/47岁\n国内重大基建工地\n连任总理\n强调并视察基础设施建设",
+      "2020年/50岁\n国家抗疫指挥部\n作为国家领导人\n主持应对全球公共卫生危机",
+      "2022年/52岁\n纽约联合国大会讲坛\n以总统身份\n在国际舞台坚定阐述国家主权立场",
+      "2023年/53岁\n贝尔格莱德经济论坛\n连任总统后\n大力推动吸引外资与经济增长",
+      "近期/54岁\n中资合作项目现场\n视察具体外商投资项目\n关注务实合作成果",
+      "进行时/54岁\n总统府办公室\n思考与规划国家未来发展战略",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/国际歌_start5.2s_clip.mp3",
+    "bg-music": "music/Go West-Fancy.mp3",
     // output/clip-audio/抗美援朝_start36s_53s.mp3
     // Go West-Fancy
     // 美人吟_start12s_clip.mp3
@@ -102,19 +102,34 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v16-cc.capcut.com/f20d56a2961ca9eb95c91840004d1d0e/69560704/video/tos/alisg/tos-alisg-ve-14178-sg/ow0lUPMMto5DiM5dBIAQadFiUMQEYRSBiz79z/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11964&bt=5982&cs=0&ft=GAAO2Inz7Thq-pSPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZGY3PDM7ZmZnOzg2Nzo0ZkBpanU5bW45cmtmODYzODU6NEBhLzAwMl81NTQxMC82NDU0YSNqXy1wMmQ0bDNhLS1kMy1zcw%3D%3D&vvpl=1&l=2025122513321280B55E1D1B8784BD8214&btag=e00088000",
-      "https://v16-cc.capcut.com/8da1b5caa1ccf8d09ca2de2e892b7c38/695606f0/video/tos/alisg/tos-alisg-ve-14178-sg/ogpTSmmmIyMgBPs2QLdZrBNggJFKfQfJdgmDxE/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12156&bt=6078&cs=0&ft=GAAO2Inz7Thq-pSPXq8Zmo&mime_type=video_mp4&qs=0&rc=OWU2ZmQ2Mzc6Ojc0Zmk3N0BpM21mNG05cmxmODYzODU6NEAyLjVfYjZeNl8xXjBeYjEtYSM1YzNfMmRzbDNhLS1kMy1zcw%3D%3D&vvpl=1&l=202512251332124D1164636EE73DB3C8A7&btag=e000b8000",
+      "https://v16-cc.capcut.com/f79241828cf778d24c610739a852fe85/69562a55/video/tos/alisg/tos-alisg-ve-14178-sg/owYzefQAQV3LSI73CYm28MeGdvGqGF6IfgilSZ/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11966&bt=5983&cs=0&ft=GAAO2Inz7Th0sBSPXq8Zmo&mime_type=video_mp4&qs=0&rc=MztlZzM5ZmllOTo0OWU5ZkBpanVtO3k5cnloODYzODU6NEAxLjQ1NTFiXy0xXy5eLWE1YSMxc2EvMmRzcTNhLS1kMzFzcw%3D%3D&vvpl=1&l=202512251602537B654C3182F0B8E6AADB&btag=e00088000",
+      "https://v16-cc.capcut.com/21fc9879366ca764e47eba184da359f5/6956298f/video/tos/alisg/tos-alisg-ve-14178-sg/owsOvegwqE3hmOhpN3Q3E7IMf72F9BBQxDyJTF/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12130&bt=6065&cs=0&ft=GAAO2Inz7ThC~BSPXq8Zmo&mime_type=video_mp4&qs=0&rc=N2lmOWQ3NmczaDY4aDc5NUBpamtvbnM5cnVoODYzODU6NEAwMWEuYjUtX2IxYGFeYV9eYSNvcTM2MmQ0cTNhLS1kMy1zcw%3D%3D&vvpl=1&l=202512251559558CA632AA7A17F4D3C36F&btag=e000b8000",
     ],
     videoReplaceUrls: [
       {
         index: 0,
         timeRange: [0, 5],
-        url: "https://v16-cc.capcut.com/2e7914675d4a055e05f7e6309bb71d3d/69560d5c/video/tos/alisg/tos-alisg-ve-14178-sg/ok5SEzUNB0piailizzYDPnITMEddR28AUDQtv/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13616&bt=6808&cs=0&ft=GAAO2Inz7Tho2FSPXq8Zmo&mime_type=video_mp4&qs=0&rc=NTU5M2g1MzpnaTg4N2VkZUBpanZoc3M5cm1nODYzODU6NEA1NWA1NDBiNS8xXl4zYDM0YSNoX25tMmRrMjNhLS1kMy1zcw%3D%3D&vvpl=1&l=202512251359519FCF203E22476AB888FC&btag=e000b0000",
+        url: "https://v16-cc.capcut.com/29db4d1b2a65612c3ec2fb0c1fb50ba5/69562c92/video/tos/alisg/tos-alisg-ve-14178-sg/o8fCRMgNPpogIgEl8evFD2qDBGElTEJMIoQNQB/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13808&bt=6904&cs=0&ft=GAAO2Inz7ThEdKSPXq8Zmo&mime_type=video_mp4&qs=0&rc=OGlmOjdlaDg4NDNnNWc1O0BpamZ0d245cjNpODYzODU6NEBiNS8zYTQ1NjYxNjQvMi8zYSNmcjAtMmRrMTNhLS1kMy1zcw%3D%3D&vvpl=1&l=2025122516130154943D66A34280D4588B&btag=e000b0000",
       },
       {
         index: 1,
-        timeRange: [15, 20],
-        url: "https://v16-cc.capcut.com/96553a68a8ee158392ae8e56041b517a/69560b77/video/tos/alisg/tos-alisg-ve-14178-sg/oMihPEw0pGMiAr0QixAmFE0AoCMfEzKO7GJwIB/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13648&bt=6824&cs=0&ft=GAAO2Inz7ThAKFSPXq8Zmo&mime_type=video_mp4&qs=0&rc=ODw5ZjQzO2Y7aDM2ZGk1OEBpamVkM2s5cnRnODYzODU6NEAwLS1hMDZfNWMxNGNhNTEuYSMxMi4wMmRjLjNhLS1kMy1zcw%3D%3D&vvpl=1&l=20251225135146D5320501F34C3CB1A2EE&btag=e000b0000",
+        timeRange: [5, 10],
+        url: "https://v16-cc.capcut.com/04702322c8c569dc33d4e8da8f54eff9/69562cff/video/tos/alisg/tos-alisg-ve-14178-sg/oQbNGK8MAIx1mflYf8TKpMfeMFn3ZQTIXQEjEA/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13504&bt=6752&cs=0&ft=GAAO2Inz7ThYjKSPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZDc4NThmNmRlNjo7ZmQ2NEBpM3lkdng5cnZpODYzODU6NEA2YTFfNl5fNS4xM19gNWM2YSMyc240MmRjMTNhLS1kMy1zcw%3D%3D&vvpl=1&l=20251225161450D92678316C75E4C2ABCB&btag=e000b0000",
+      },
+      {
+        index: 3,
+        timeRange: [20, 25],
+        url: "https://v16-cc.capcut.com/429cfe6de6a9cf3aadc4d303504b0688/69562df6/video/tos/alisg/tos-alisg-ve-14178-sg/oclpIMfY3GI99ANEB8sFeL2CbGAVREqCmeMejQ/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13626&bt=6813&cs=0&ft=GAAO2Inz7Th3eKSPXq8Zmo&mime_type=video_mp4&qs=0&rc=OGg6ZjQ1NGU4ZWQ2NmdmN0Bpanl3ZGo5cnRpODYzODU6NEBeNDAzXjBjXl4xLWNeY2BgYSMtcWlkMmQ0MzNhLS1kMy1zcw%3D%3D&vvpl=1&l=202512251618577BA1A61BB45D50D43F33&btag=e000b0000",
+      },
+      {
+        index: 4,
+        timeRange: [35, 40],
+        url: "https://v16-cc.capcut.com/f4e5e105d442d26ced2ed68637729eda/69562e2f/video/tos/alisg/tos-alisg-ve-14178-sg/owgYzWlqeFQXGLMeR8fTpAAAQ2ze4MXDQ0d3mp/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13462&bt=6731&cs=0&ft=GAAO2Inz7Thp6KSPXq8Zmo&mime_type=video_mp4&qs=0&rc=M2lkaGc3ZTQ1ZmhkaTg8OEBpMzhlb2w5cjtpODYzODU6NEAzLy81YmE0NjExMC0tYjAyYSNzNXByMmRjNDNhLS1kMy1zcw%3D%3D&vvpl=1&l=2025122516195496B4F51EC13F76CC8B1D&btag=e000b0000",
+      },
+      {
+        index: 5,
+        timeRange: [40, 45],
+        url: "https://v16-cc.capcut.com/f782827cf3c4c90ad7102ba45a46c152/69562b8a/video/tos/alisg/tos-alisg-ve-14178-sg/o0pI7KHQiiGwKpQwEEgBofQonW8Eh00MsAgPAQ/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13470&bt=6735&cs=0&ft=GAAO2Inz7ThQVKSPXq8Zmo&mime_type=video_mp4&qs=0&rc=OTNnNzY2NDs5OWdoZGU8ZUBpM3A1O245cnlpODYzODU6NEAvLTJeNl81XzYxNjU0L2FhYSM1ZC9sMmQ0LjNhLS1kMy1zcw%3D%3D&vvpl=1&l=20251225160837E106205BD101CC5AAE9C&btag=e000b0000",
       },
     ],
     useCacheVideo: false,
