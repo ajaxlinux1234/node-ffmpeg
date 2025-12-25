@@ -14,8 +14,8 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1766572861878_replaced.mp4",
-    title: `建立{{世界上第一个}}社会主义国家|创立{{列宁主义}}|无产阶级导师{{列宁}}的一生`,
+    url: "output/merge-video/merged_1766644002803_replaced.mp4",
+    title: `中共早期{{重要领导人}}|马克思主义{{中国化先驱}}|{{蔡和森同志}}的一生`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
 
@@ -74,19 +74,19 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1870年\n出生知识分子家庭",
-      "1887年/17岁\n喀山大学\n家庭悲剧\n政治觉醒",
-      "1895年/25岁\n圣彼得堡工人区\n创建“工人阶级解放斗争协会”",
-      "1900年/30岁\n慕尼黑印刷所\n创办《火星报》\n统一思想",
-      "1903年/33岁\n布鲁塞尔党代会\n布尔什维克派形成",
-      "1917年4月/47岁\n彼得格勒塔夫利达宫\n提出《四月提纲》",
-      "1917年11月/47岁\n斯莫尔尼宫\n领导十月武装起义",
-      "1918-1920年/48-50岁\n克里姆林宫\n领导苏维埃政权度过内战",
-      "1921年/51岁\n莫斯科大会\n推行新经济政策（NEP）",
-      "1922年/52岁\n戈尔基村书房\n重病，坚持理论工作",
-      "1923年/53岁\n戈尔基村病榻\n口授最后文章（《论合作社》等）",
-      "1924年1月20日/53岁\n戈尔基村卧室\n临终前的清醒与凝视",
-      "1924年1月21日/53岁\n戈尔基村卧室\n逝世",
+      "1895年\n出生小职员家庭",
+      "1913年/18岁\n湖南省立第一师范\n求学\n接受新思想\n结识毛泽东等。",
+      "1918年/23岁\n长沙爱晚亭等地\n与毛泽东等共同创立革命团体“新民学会”。",
+      "1919年/24岁\n北京/上海\n积极组织并推动留法勤工俭学运动。",
+      "1920年/25岁\n法国蒙达尼公学\n在法期间“猛看猛译”马克思主义著作\n完成思想转变。",
+      "1921年/26岁\n法国华侨协社\n在通信和会议中\n最早系统提出建立中国共产党的主张。",
+      "1921年底/26岁\n法国马赛港\n因领导革命活动被法国政府驱逐遣返回国。",
+      "1922年/27岁\n上海中共二大会址\n当选中央委员\n参与起草党的第一个正式章程等重要文件。",
+      "1925年/30岁\n《向导》周报编辑部\n担任党中央机关报《向导》主编\n是出色的理论宣传家。",
+      "1927年/32岁\n武汉/上海秘密据点\n大革命失败后\n在白色恐怖下坚持地下斗争。",
+      "1931年初/36岁\n香港码头\n受党中央派遣\n前往香港指导广东省委工作。",
+      "1931年6月/36岁\n香港联络点外\n因叛徒出卖\n不幸被港英当局逮捕\n后引渡至广州。",
+      "1931年8月/36岁\n广州监狱刑场\n面对敌人酷刑和屠刀\n坚贞不屈\n壮烈牺牲。",
     ],
     watermark: "@人物传记史",
     "bg-music": "music/国际歌_start5.2s_clip.mp3",
@@ -102,24 +102,19 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v16-cc.capcut.com/0278c51fab4741f8ac4c02c025497ded/6954f0a9/video/tos/alisg/tos-alisg-ve-14178-sg/oIgsuLS32C05D9GvReewrgBAIg1HgldZP0vbTf/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11926&bt=5963&cs=0&ft=GAAO2Inz7ThlyOqPXq8Zmo&mime_type=video_mp4&qs=0&rc=NDs5NmY7NDdlNGkzM2hmN0BpM3h3dnE5cnV1ODYzODU6NEAyNWFiLWFgNmIxYWAvLmBgYSNgNGNiMmQ0XzJhLS1kMy1zcw%3D%3D&vvpl=1&l=2025122417443367D4CF03EF97FD13CC01&btag=e00088000",
-      "https://v16-cc.capcut.com/f97d23d476d2ead5e03cc3698656a929/6954f049/video/tos/alisg/tos-alisg-ve-14178-sg/o08LEdGQ0IoO76A2tApidRriEYBQDMGQTwfEbX/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12170&bt=6085&cs=0&ft=GAAO2Inz7ThKSOqPXq8Zmo&mime_type=video_mp4&qs=0&rc=NjpoZWg3NThoO2k2Mzc0NUBpM3Y0b3A5cjx1ODYzODU6NEAxXjYyYF41NTIxXjFjYzI1YSMwLm8uMmRzXzJhLS1kMy1zcw%3D%3D&vvpl=1&l=20251224174317720F2DD5A566D61D35BA&btag=e000b8000",
+      "https://v16-cc.capcut.com/f20d56a2961ca9eb95c91840004d1d0e/69560704/video/tos/alisg/tos-alisg-ve-14178-sg/ow0lUPMMto5DiM5dBIAQadFiUMQEYRSBiz79z/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11964&bt=5982&cs=0&ft=GAAO2Inz7Thq-pSPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZGY3PDM7ZmZnOzg2Nzo0ZkBpanU5bW45cmtmODYzODU6NEBhLzAwMl81NTQxMC82NDU0YSNqXy1wMmQ0bDNhLS1kMy1zcw%3D%3D&vvpl=1&l=2025122513321280B55E1D1B8784BD8214&btag=e00088000",
+      "https://v16-cc.capcut.com/8da1b5caa1ccf8d09ca2de2e892b7c38/695606f0/video/tos/alisg/tos-alisg-ve-14178-sg/ogpTSmmmIyMgBPs2QLdZrBNggJFKfQfJdgmDxE/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12156&bt=6078&cs=0&ft=GAAO2Inz7Thq-pSPXq8Zmo&mime_type=video_mp4&qs=0&rc=OWU2ZmQ2Mzc6Ojc0Zmk3N0BpM21mNG05cmxmODYzODU6NEAyLjVfYjZeNl8xXjBeYjEtYSM1YzNfMmRzbDNhLS1kMy1zcw%3D%3D&vvpl=1&l=202512251332124D1164636EE73DB3C8A7&btag=e000b8000",
     ],
     videoReplaceUrls: [
       {
         index: 0,
         timeRange: [0, 5],
-        url: "https://v16-cc.capcut.com/1e117a1f6d58f06d6e916aff57095d80/6954f4fd/video/tos/alisg/tos-alisg-ve-14178-sg/o44bIpbBYvQLniUAGEu5udgDaEih9n6VHiUKS/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13280&bt=6640&cs=0&ft=GAAO2Inz7ThwmOqPXq8Zmo&mime_type=video_mp4&qs=0&rc=NTY7NzpkNGY6Ojc3NDk0Z0BpMzxmPHc5cnV1ODYzODU6NEA0MDNhLmNjNWExXjFhNjQzYSNkaW82MmRraDJhLS1kMy1zcw%3D%3D&vvpl=1&l=20251224180336BBD81CE65F32E917EDA5&btag=e000b0000",
+        url: "https://v16-cc.capcut.com/2e7914675d4a055e05f7e6309bb71d3d/69560d5c/video/tos/alisg/tos-alisg-ve-14178-sg/ok5SEzUNB0piailizzYDPnITMEddR28AUDQtv/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13616&bt=6808&cs=0&ft=GAAO2Inz7Tho2FSPXq8Zmo&mime_type=video_mp4&qs=0&rc=NTU5M2g1MzpnaTg4N2VkZUBpanZoc3M5cm1nODYzODU6NEA1NWA1NDBiNS8xXl4zYDM0YSNoX25tMmRrMjNhLS1kMy1zcw%3D%3D&vvpl=1&l=202512251359519FCF203E22476AB888FC&btag=e000b0000",
       },
       {
         index: 1,
-        timeRange: [5, 10],
-        url: "https://v16-cc.capcut.com/ad4e95524cae2f0bf00133dd4855ed5b/6954fbef/video/tos/alisg/tos-alisg-ve-14178-sg/ociiWQaBL4QEYnPia1IMAIPUdDLQiYBJw1UvE/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13682&bt=6841&cs=0&ft=GAAO2Inz7Thp9tqPXq8Zmo&mime_type=video_mp4&qs=0&rc=Omk1OjRkZTc3ZGQ5PDdnNkBpampucm85cnJ2ODYzODU6NEBfLTFiYDVjNTQxNDEuNjI2YSM0ZGpnMmQ0LzJhLS1kMy1zcw%3D%3D&vvpl=1&l=20251224183314C5D4E88BB2F4B01AC61D&btag=e000b0000",
-      },
-      {
-        index: 2,
-        timeRange: [45, 55],
-        url: "https://v16-cc.capcut.com/895d59cac486717b26b83f0214bd9db6/6954f556/video/tos/alisg/tos-alisg-ve-14178-sg/oQoT2lE6hP890XgYsQVfdfAQDfbnFDggECVS3I/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12546&bt=6273&cs=0&ft=GAAO2Inz7ThcNOqPXq8Zmo&mime_type=video_mp4&qs=0&rc=NTU3ZGg3aWk3Zjc1PDY5Z0BpM2o1NXU5cml1ODYzODU6NEAuYy4xNDFgNi0xNi00YV8xYSNeMS9jMmRzaTJhLS1kMy1zcw%3D%3D&vvpl=1&l=20251224180500E8B8BAF34D93392137C3&btag=e000b0000",
+        timeRange: [15, 20],
+        url: "https://v16-cc.capcut.com/96553a68a8ee158392ae8e56041b517a/69560b77/video/tos/alisg/tos-alisg-ve-14178-sg/oMihPEw0pGMiAr0QixAmFE0AoCMfEzKO7GJwIB/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13648&bt=6824&cs=0&ft=GAAO2Inz7ThAKFSPXq8Zmo&mime_type=video_mp4&qs=0&rc=ODw5ZjQzO2Y7aDM2ZGk1OEBpamVkM2s5cnRnODYzODU6NEAwLS1hMDZfNWMxNGNhNTEuYSMxMi4wMmRjLjNhLS1kMy1zcw%3D%3D&vvpl=1&l=20251225135146D5320501F34C3CB1A2EE&btag=e000b0000",
       },
     ],
     useCacheVideo: false,
