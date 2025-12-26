@@ -102,34 +102,19 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v16-cc.capcut.com/f79241828cf778d24c610739a852fe85/69562a55/video/tos/alisg/tos-alisg-ve-14178-sg/owYzefQAQV3LSI73CYm28MeGdvGqGF6IfgilSZ/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11966&bt=5983&cs=0&ft=GAAO2Inz7Th0sBSPXq8Zmo&mime_type=video_mp4&qs=0&rc=MztlZzM5ZmllOTo0OWU5ZkBpanVtO3k5cnloODYzODU6NEAxLjQ1NTFiXy0xXy5eLWE1YSMxc2EvMmRzcTNhLS1kMzFzcw%3D%3D&vvpl=1&l=202512251602537B654C3182F0B8E6AADB&btag=e00088000",
-      "https://v16-cc.capcut.com/21fc9879366ca764e47eba184da359f5/6956298f/video/tos/alisg/tos-alisg-ve-14178-sg/owsOvegwqE3hmOhpN3Q3E7IMf72F9BBQxDyJTF/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12130&bt=6065&cs=0&ft=GAAO2Inz7ThC~BSPXq8Zmo&mime_type=video_mp4&qs=0&rc=N2lmOWQ3NmczaDY4aDc5NUBpamtvbnM5cnVoODYzODU6NEAwMWEuYjUtX2IxYGFeYV9eYSNvcTM2MmQ0cTNhLS1kMy1zcw%3D%3D&vvpl=1&l=202512251559558CA632AA7A17F4D3C36F&btag=e000b8000",
+      "https://v16-cc.capcut.com/429b53fe9f2c4d021b67dab7a598be05/69579c76/video/tos/alisg/tos-alisg-ve-14178-sg/owcpTQDeIBBEdl5sf2NgEnNFnmO204vGcXFJUY/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11960&bt=5980&cs=0&ft=GAAO2Inz7ThHYbSPXq8Zmo&mime_type=video_mp4&qs=0&rc=aTU7NTY3ZTo5OGhmO2g2Z0BpM2lpZXY5cmc5ODYzODU6NEAvLS8zXmAzNTMxYS81YmI0YSNwcWZlMmRrMDRhLS1kMzFzcw%3D%3D&vvpl=1&l=20251226182206587FCEBC0DFFA4BDF3E6&btag=e00088000",
+      "https://v16-cc.capcut.com/d7fb3e10fd9151e0b42c942acb021032/69579c15/video/tos/alisg/tos-alisg-ve-14178-sg/oY8DFBv3m2r46yFcQgdvEfiyQwTepIN32B1Jgv/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12196&bt=6098&cs=0&ft=GAAO2Inz7ThlDbSPXq8Zmo&mime_type=video_mp4&qs=0&rc=NWk8aTZkO2U6Ozg5NzZmO0Bpand5eG85cnY5ODYzODU6NEAwXjE2YjJfX14xYF42Nl4vYSM1aXJxMmRrLzRhLS1kMy1zcw%3D%3D&vvpl=1&l=2025122618204904FD468E0C62779EF7A9&btag=e000b8000",
     ],
     videoReplaceUrls: [
       {
         index: 0,
-        timeRange: [0, 5],
-        url: "https://v16-cc.capcut.com/29db4d1b2a65612c3ec2fb0c1fb50ba5/69562c92/video/tos/alisg/tos-alisg-ve-14178-sg/o8fCRMgNPpogIgEl8evFD2qDBGElTEJMIoQNQB/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13808&bt=6904&cs=0&ft=GAAO2Inz7ThEdKSPXq8Zmo&mime_type=video_mp4&qs=0&rc=OGlmOjdlaDg4NDNnNWc1O0BpamZ0d245cjNpODYzODU6NEBiNS8zYTQ1NjYxNjQvMi8zYSNmcjAtMmRrMTNhLS1kMy1zcw%3D%3D&vvpl=1&l=2025122516130154943D66A34280D4588B&btag=e000b0000",
+        timeRange: [0, 15],
+        url: "https://v16-cc.capcut.com/d28696185aa57e96abd92ecc8b230fac/6957a034/video/tos/alisg/tos-alisg-ve-14178-sg/oo6EAyk0QGz2QCTBicjDfBwJWVNFgrmgWeMpI3/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12330&bt=6165&cs=0&ft=GAAO2Inz7ThySbSPXq8Zmo&mime_type=video_mp4&qs=0&rc=ODY6ODczZjZnOjYzNTRlM0BpM2s0cHM5cjg5ODYzODU6NEA1LV4vXjVeNTMxLjNgNWJfYSNgMXBlMmRjXzRhLS1kMy1zcw%3D%3D&vvpl=1&l=20251226183829024B29995FE59DACA518&btag=e000b8000",
       },
       {
         index: 1,
-        timeRange: [5, 10],
-        url: "https://v16-cc.capcut.com/04702322c8c569dc33d4e8da8f54eff9/69562cff/video/tos/alisg/tos-alisg-ve-14178-sg/oQbNGK8MAIx1mflYf8TKpMfeMFn3ZQTIXQEjEA/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13504&bt=6752&cs=0&ft=GAAO2Inz7ThYjKSPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZDc4NThmNmRlNjo7ZmQ2NEBpM3lkdng5cnZpODYzODU6NEA2YTFfNl5fNS4xM19gNWM2YSMyc240MmRjMTNhLS1kMy1zcw%3D%3D&vvpl=1&l=20251225161450D92678316C75E4C2ABCB&btag=e000b0000",
-      },
-      {
-        index: 3,
-        timeRange: [20, 25],
-        url: "https://v16-cc.capcut.com/429cfe6de6a9cf3aadc4d303504b0688/69562df6/video/tos/alisg/tos-alisg-ve-14178-sg/oclpIMfY3GI99ANEB8sFeL2CbGAVREqCmeMejQ/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13626&bt=6813&cs=0&ft=GAAO2Inz7Th3eKSPXq8Zmo&mime_type=video_mp4&qs=0&rc=OGg6ZjQ1NGU4ZWQ2NmdmN0Bpanl3ZGo5cnRpODYzODU6NEBeNDAzXjBjXl4xLWNeY2BgYSMtcWlkMmQ0MzNhLS1kMy1zcw%3D%3D&vvpl=1&l=202512251618577BA1A61BB45D50D43F33&btag=e000b0000",
-      },
-      {
-        index: 4,
-        timeRange: [35, 40],
-        url: "https://v16-cc.capcut.com/f4e5e105d442d26ced2ed68637729eda/69562e2f/video/tos/alisg/tos-alisg-ve-14178-sg/owgYzWlqeFQXGLMeR8fTpAAAQ2ze4MXDQ0d3mp/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13462&bt=6731&cs=0&ft=GAAO2Inz7Thp6KSPXq8Zmo&mime_type=video_mp4&qs=0&rc=M2lkaGc3ZTQ1ZmhkaTg8OEBpMzhlb2w5cjtpODYzODU6NEAzLy81YmE0NjExMC0tYjAyYSNzNXByMmRjNDNhLS1kMy1zcw%3D%3D&vvpl=1&l=2025122516195496B4F51EC13F76CC8B1D&btag=e000b0000",
-      },
-      {
-        index: 5,
-        timeRange: [40, 45],
-        url: "https://v16-cc.capcut.com/f782827cf3c4c90ad7102ba45a46c152/69562b8a/video/tos/alisg/tos-alisg-ve-14178-sg/o0pI7KHQiiGwKpQwEEgBofQonW8Eh00MsAgPAQ/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13470&bt=6735&cs=0&ft=GAAO2Inz7ThQVKSPXq8Zmo&mime_type=video_mp4&qs=0&rc=OTNnNzY2NDs5OWdoZGU8ZUBpM3A1O245cnlpODYzODU6NEAvLTJeNl81XzYxNjU0L2FhYSM1ZC9sMmQ0LjNhLS1kMy1zcw%3D%3D&vvpl=1&l=20251225160837E106205BD101CC5AAE9C&btag=e000b0000",
+        timeRange: [30, 35],
+        url: "https://v16-cc.capcut.com/c31256f3b35459983addcb5d6d8ce1f4/69579efa/video/tos/alisg/tos-alisg-ve-14178-sg/owDfESMCxFjQspXTkEEQTIbg1ZA8fXfOOZnIHM/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13664&bt=6832&cs=0&ft=GAAO2Inz7ThKIbSPXq8Zmo&mime_type=video_mp4&qs=0&rc=OTNkOWloN2ZpOmdpOjc6aUBpajVkOnk5cnQ5ODYzODU6NEBjMzAvMjAvX2AxMi0vMC4zYSNjMnNyMmRzNTRhLS1kMy1zcw%3D%3D&vvpl=1&l=202512261833255F36BBD15C7AD9AA3752&btag=e000b0000",
       },
     ],
     useCacheVideo: false,
