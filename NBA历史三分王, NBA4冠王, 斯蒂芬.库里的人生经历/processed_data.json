@@ -39,6 +39,20 @@
       "url": "https://v16-cc.capcut.com/4732f77f536a5a689dd3d3d8a5874703/695b779b/video/tos/alisg/tos-alisg-ve-14178-sg/oMr8ipAmeYnPKVYQGhAsOSieA4eel3gFnAQkI3/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13722&bt=6861&cs=0&ft=GAAO2Inz7Th5L4IPXq8Zmo&mime_type=video_mp4&qs=0&rc=OzkzM2dlZDk7aDdlM2Q7N0BpajR5ZGw5cjY2ODYzODU6NEA0MF9hYzQ2NWExMTY0M2JhYSNuMWc1MmRjbjZhLS1kMy1zcw%3D%3D&vvpl=1&l=202512291634307111E2B2DAD81EF08D9F&btag=e000b0000"
     }
   ],
+  "globalFontConfig": [
+    {
+      "style": {"color": "red", "fontSize": "40px"},
+      "font": "微软雅黑"
+    },
+    {
+      "style": {"color": "blue", "fontSize": "30px"},
+      "font": "微软雅黑"
+    },
+    {
+      "style": {"color": "yellow", "fontSize": "30px"},
+      "font": "微软雅黑"
+    }
+  ],
   "segments": [
     {
       "title": "1988年\n出生于NBA球员家庭\n继承篮球基因",
@@ -47,7 +61,7 @@
       "lines‌": "1988年阿克伦的新生命"
     },
     {
-      "title": "1990年代/10岁\n家中车库\n在简陋环境中\n打下无与伦比的投篮基础",
+      "title": "1998年/10岁\n家中车库\n在简陋环境中\n打下无与伦比的投篮基础",
       "prompt": "生成一张比例为9:16的写实风格图片，画面质感丰富，散发古典氛围。 以平视且略俯视角，确保构图完整，着重刻画其情感。画面主色调为棕色、红色与暗黄色，营造沉稳庄重之感，1990年代/10余岁\n家中车库\n在简陋环境中打下无与伦比的投篮基础。,画面提示：生成图片要符合实际生活场景，瘦弱的少年库里在自家老旧的车库里，对着父亲安装的篮筐一次又一次地练习投篮。他动作标准，表情专注，汗水浸湿了背心，地上散落着篮球。\n",
       "shot": "运镜方式：镜头跟随图中主要人物，图中场景缓慢自然变成下一场景伴随着图中人物从当前场景缓慢变成下一个场景的人物，人物先进行形态和样貌上的变化，然后场景变成下一场景，接着人物缓慢自然走到下一场景，动态转换流畅自然",
       "lines‌": "没人知道我能练多少球"

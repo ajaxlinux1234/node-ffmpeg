@@ -13,11 +13,28 @@ export default {
     "bg-music": "bg-music.mp3",
   },
   "history-person": {
-    name,
+    name: "NBA历史三分王, NBA4冠王, 斯蒂芬.库里的人生经历",
     url: "output/merge-video/merged_1767001039222_replaced.mp4",
     title: `美职篮{{历史三分王}}|美职篮4冠王|{{斯蒂芬.库里}}的人生经历`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
+
+    // 字体配置系统
+    globalFontConfig: [
+      // 全局字体配置，应用于所有分镜的对应行
+      {
+        style: { color: "white", fontSize: "60px", fontWeight: "bold" },
+        font: "宋体",
+      },
+      {
+        style: { color: "yellow", fontSize: "40px", fontWeight: "normal" },
+        font: "微软雅黑",
+      },
+    ],
+
+    // 分镜字体配置会从 processed_data.json 自动加载
+    // 每个分镜可以有自己的 fontConfig 数组，覆盖 globalFontConfig
+    // 如果分镜的行数超过 fontConfig 数组长度，剩余行使用最后一个 fontConfig
 
     // 方式一：手动配置 voiceList（原有方式）
     // voiceList: [
@@ -75,7 +92,7 @@ export default {
     sectionFirstTitleTime: 4,
     sectionTitle: [
       "1988年\n出生于NBA球员家庭\n继承篮球基因",
-      "1990年代/10岁\n家中车库\n在简陋环境中\n打下无与伦比的投篮基础",
+      "1998年/10岁\n家中车库\n在简陋环境中\n打下无与伦比的投篮基础",
       "2008年/20岁\nNCAA锦标赛球场\n以大学黑马之姿惊艳全美\n预示未来",
       "2009年/21岁\nNBA选秀后台\n以第7顺位开启职业生涯\n加盟金州勇士",
       "2013年/25岁\nNBA季后赛球场\n在季后赛舞台崭露头角\n证明大心脏属性",
