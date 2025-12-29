@@ -23,11 +23,34 @@ export default {
     globalFontConfig: [
       // 全局字体配置，应用于所有分镜的对应行
       {
-        style: { color: "white", fontSize: "60px", fontWeight: "bold" },
-        font: "宋体",
+        style: { color: "white", fontSize: "40px", fontWeight: "bold" },
+        font: "微软雅黑",
       },
       {
-        style: { color: "yellow", fontSize: "40px", fontWeight: "normal" },
+        style: { color: "white", fontSize: "35px", fontWeight: "normal" },
+        font: "微软雅黑",
+      },
+      {
+        style: { color: "red", fontSize: "30px", fontWeight: "bold" },
+        font: "微软雅黑",
+      },
+    ],
+
+    // 全局标题字体配置，应用于顶部全局标题的每一行
+    titleFontConfig: [
+      // 第一行：红色大字体粗体
+      {
+        style: { color: "white", fontSize: "45px", fontWeight: "bold" },
+        font: "微软雅黑",
+      },
+      // 第二行：蓝色中等字体正常
+      {
+        style: { color: "blue", fontSize: "40px", fontWeight: "normal" },
+        font: "微软雅黑",
+      },
+      // 第三行：黄色小字体粗体
+      {
+        style: { color: "yellow", fontSize: "35px", fontWeight: "bold" },
         font: "微软雅黑",
       },
     ],
