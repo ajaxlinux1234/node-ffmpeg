@@ -14,8 +14,8 @@ export default {
   },
   "history-person": {
     name,
-    url: "output/merge-video/merged_1766745896256_replaced.mp4",
-    title: `中共早期{{重要领导人}}|马克思主义{{中国化先驱}}|{{蔡和森同志}}的一生`,
+    url: "output/merge-video/merged_1767001039222_replaced.mp4",
+    title: `美职篮{{历史三分王}}|美职篮4冠王|{{斯蒂芬.库里}}的人生经历`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
 
@@ -74,22 +74,22 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitle: [
-      "1895年\n出生小职员家庭",
-      "1913年/18岁\n湖南省立第一师范\n求学\n接受新思想\n结识毛泽东等。",
-      "1918年/23岁\n长沙爱晚亭等地\n与毛泽东等共同创立革命团体“新民学会”。",
-      "1919年/24岁\n北京/上海\n积极组织并推动留法勤工俭学运动。",
-      "1920年/25岁\n法国蒙达尼公学\n在法期间“猛看猛译”马克思主义著作\n完成思想转变。",
-      "1921年/26岁\n法国华侨协社\n在通信和会议中\n最早系统提出建立中国共产党的主张。",
-      "1921年底/26岁\n法国马赛港\n因领导革命活动被法国政府驱逐遣返回国。",
-      "1922年/27岁\n上海中共二大会址\n当选中央委员\n参与起草党的第一个正式章程等重要文件。",
-      "1925年/30岁\n《向导》周报编辑部\n担任党中央机关报《向导》主编\n是出色的理论宣传家。",
-      "1927年/32岁\n武汉/上海秘密据点\n大革命失败后\n在白色恐怖下坚持地下斗争。",
-      "1931年初/36岁\n香港码头\n受党中央派遣\n前往香港指导广东省委工作。",
-      "1931年6月/36岁\n香港联络点外\n因叛徒出卖\n不幸被港英当局逮捕\n后引渡至广州。",
-      "1931年8月/36岁\n广州监狱刑场\n面对敌人酷刑和屠刀\n坚贞不屈\n壮烈牺牲。",
+      "1988年\n出生于NBA球员家庭\n继承篮球基因",
+      "1990年代/10岁\n家中车库\n在简陋环境中\n打下无与伦比的投篮基础",
+      "2008年/20岁\nNCAA锦标赛球场\n以大学黑马之姿惊艳全美\n预示未来",
+      "2009年/21岁\nNBA选秀后台\n以第7顺位开启职业生涯\n加盟金州勇士",
+      "2013年/25岁\nNBA季后赛球场\n在季后赛舞台崭露头角\n证明大心脏属性",
+      "2015年/27岁\n总决赛夺冠赛场\n赢得首冠与MVP\n开启勇士王朝序幕",
+      "2016年/28岁\n球队训练馆\n全票当选MVP\n并率队创73胜历史纪录",
+      "2017&2018年/29-30岁\n冠军颁奖礼\n建立四年三冠的勇士王朝\n达到团队荣誉顶峰",
+      "2019-2020年/31-32岁\n球场替补席\n遭遇严重伤病\n球队进入低谷\n经历生涯最大挫折",
+      "2021年/33岁\n纽约麦迪逊广场花园\n打破雷·阿伦纪录\n加冕NBA历史三分王",
+      "2022年/34岁\n波士顿客场夺冠夜\n率队从低谷重返巅峰\n赢得第四冠并首获FMVP",
+      "2020年代/30余岁\n社区篮球场\n积极投身慈善与社区活动\n树立优质榜样",
+      "至今/30余岁-37岁\n勇士队训练馆\n作为球队灵魂\n以极致的职业态度持续训练\n追求更多可能\n传奇仍在书写",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/国际歌_start5.2s_clip.mp3",
+    "bg-music": "music/Go West-Fancy.mp3",
     // output/clip-audio/抗美援朝_start36s_53s.mp3
     // Go West-Fancy
     // 美人吟_start12s_clip.mp3
@@ -102,22 +102,42 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v16-cc.capcut.com/429b53fe9f2c4d021b67dab7a598be05/69579c76/video/tos/alisg/tos-alisg-ve-14178-sg/owcpTQDeIBBEdl5sf2NgEnNFnmO204vGcXFJUY/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11960&bt=5980&cs=0&ft=GAAO2Inz7ThHYbSPXq8Zmo&mime_type=video_mp4&qs=0&rc=aTU7NTY3ZTo5OGhmO2g2Z0BpM2lpZXY5cmc5ODYzODU6NEAvLS8zXmAzNTMxYS81YmI0YSNwcWZlMmRrMDRhLS1kMzFzcw%3D%3D&vvpl=1&l=20251226182206587FCEBC0DFFA4BDF3E6&btag=e00088000",
-      "https://v16-cc.capcut.com/d7fb3e10fd9151e0b42c942acb021032/69579c15/video/tos/alisg/tos-alisg-ve-14178-sg/oY8DFBv3m2r46yFcQgdvEfiyQwTepIN32B1Jgv/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12196&bt=6098&cs=0&ft=GAAO2Inz7ThlDbSPXq8Zmo&mime_type=video_mp4&qs=0&rc=NWk8aTZkO2U6Ozg5NzZmO0Bpand5eG85cnY5ODYzODU6NEAwXjE2YjJfX14xYF42Nl4vYSM1aXJxMmRrLzRhLS1kMy1zcw%3D%3D&vvpl=1&l=2025122618204904FD468E0C62779EF7A9&btag=e000b8000",
+      "https://v16-cc.capcut.com/9b81334c458316f878eb2fcf48932265/695b710c/video/tos/alisg/tos-alisg-ve-14178-sg/oUC9bbVpVLqlcsGgQSIGeHeKICeJAx6DDgkpBT/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12102&bt=6051&cs=0&ft=GAAO2Inz7Th.t4IPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZmQ6NzM5ZTdlODw6NWQ0O0BpamRuM3k5cmc2ODYzODU6NEA1NjNjNjJeNjQxMDI0M2E2YSNmLmM0MmQ0YDZhLS1kMy1zcw%3D%3D&vvpl=1&l=20251229160611064495E14E13ACD9D973&btag=e000b8000",
+      "https://v16-cc.capcut.com/dd89d263ddaaf3274297bd4299617391/695b71ae/video/tos/alisg/tos-alisg-ve-14178-sg/o4fEI7tHI35URZuSMyAiE5QNwQiwA0GRq1Bqmi/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11976&bt=5988&cs=0&ft=GAAO2Inz7Th184IPXq8Zmo&mime_type=video_mp4&qs=0&rc=MzVpODxmZjM5Ojg8Mzs4M0BpM2Y2dXE5cnY2ODYzODU6NEA0NmI2XjQuNTIxXzM0YDAxYSMxXmYwMmRzYTZhLS1kMzFzcw%3D%3D&vvpl=1&l=20251229160843E14ABCE48D69AACED0E6&btag=e00088000",
     ],
     videoReplaceUrls: [
       {
-        index: 0,
-        timeRange: [0, 15],
-        url: "https://v16-cc.capcut.com/d28696185aa57e96abd92ecc8b230fac/6957a034/video/tos/alisg/tos-alisg-ve-14178-sg/oo6EAyk0QGz2QCTBicjDfBwJWVNFgrmgWeMpI3/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12330&bt=6165&cs=0&ft=GAAO2Inz7ThySbSPXq8Zmo&mime_type=video_mp4&qs=0&rc=ODY6ODczZjZnOjYzNTRlM0BpM2s0cHM5cjg5ODYzODU6NEA1LV4vXjVeNTMxLjNgNWJfYSNgMXBlMmRjXzRhLS1kMy1zcw%3D%3D&vvpl=1&l=20251226183829024B29995FE59DACA518&btag=e000b8000",
+        index: 1,
+        timeRange: [0, 5],
+        url: "https://v16-cc.capcut.com/e6b9882740700a6a169d36edce65d610/695b7324/video/tos/alisg/tos-alisg-ve-14178-sg/oQO9viA7iEZIwPqrRSfxOELGEKG30BoJAQ7JAl/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13460&bt=6730&cs=0&ft=GAAO2Inz7ThIo4IPXq8Zmo&mime_type=video_mp4&qs=0&rc=MzhoaTg6ODY0M2lnMzo4N0BpM2k5NHc5cjg2ODYzODU6NEBgMF8wMGMuNmExYmMtMWMvYSM0a2UtMmRzZTZhLS1kMy1zcw%3D%3D&vvpl=1&l=20251229161527CD973CC288FE8CDBED53&btag=e000b0000",
       },
       {
-        index: 1,
+        index: 2,
+        timeRange: [15, 20],
+        url: "https://v16-cc.capcut.com/93f5048574c44fd279508c044152b578/695b755e/video/tos/alisg/tos-alisg-ve-14178-sg/oUJ5nBL9NfIExQtpEjQFErFUIBBfZEcSYgDO2O/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13384&bt=6692&cs=0&ft=GAAO2Inz7ThXN4IPXq8Zmo&mime_type=video_mp4&qs=0&rc=Mzs5OmYzM2k0ZGlkaGlkOEBpM2tuM3k5cmw2ODYzODU6NEBiMDJhLWA2NTAxYS0vLi4yYSMvX2M0MmRzaTZhLS1kMy1zcw%3D%3D&vvpl=1&l=2025122916245743CDED4293316AE2B3B9&btag=e000b0000",
+      },
+      {
+        index: 3,
+        timeRange: [25, 30],
+        url: "https://v16-cc.capcut.com/898f09c980cd80754fdb0785fad3b30c/695b824b/video/tos/alisg/tos-alisg-ve-14178-sg/o05NEcoEL7SSUxBpAEwiNq8xIfRh0diACQP5SG/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13528&bt=6764&cs=0&ft=GAAO2Inz7ThPnRIPXq8Zmo&mime_type=video_mp4&qs=0&rc=NmY0OjtlNDs0PGdkOTllZ0BpM2c5M3M5cmg3ODYzODU6NEBfLTEwLzUvX18xMV40NDE2YSNiZmheMmRzYzZhLS1kMy1zcw%3D%3D&vvpl=1&l=20251229172006112A198C2D8EE5EDC5D7&btag=e000b0000",
+      },
+      {
+        index: 4,
         timeRange: [30, 35],
-        url: "https://v16-cc.capcut.com/c31256f3b35459983addcb5d6d8ce1f4/69579efa/video/tos/alisg/tos-alisg-ve-14178-sg/owDfESMCxFjQspXTkEEQTIbg1ZA8fXfOOZnIHM/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13664&bt=6832&cs=0&ft=GAAO2Inz7ThKIbSPXq8Zmo&mime_type=video_mp4&qs=0&rc=OTNkOWloN2ZpOmdpOjc6aUBpajVkOnk5cnQ5ODYzODU6NEBjMzAvMjAvX2AxMi0vMC4zYSNjMnNyMmRzNTRhLS1kMy1zcw%3D%3D&vvpl=1&l=202512261833255F36BBD15C7AD9AA3752&btag=e000b0000",
+        url: "https://v16-cc.capcut.com/e4db7c24f64a7e3a4a92d6c02feaa235/695b833a/video/tos/alisg/tos-alisg-ve-14178-sg/oAXFWI1SpbfxDfVgQ9aJiTkCgRk8IKzbs7eAQM/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13630&bt=6815&cs=0&ft=GAAO2Inz7ThKoRIPXq8Zmo&mime_type=video_mp4&qs=0&rc=OWVnOWczaDY3ODs0OTg1OUBpamlzcHk5cmQ3ODYzODU6NEBfYTAuYDExNTExMGJiNDFiYSNzcG5rMmRrZTZhLS1kMy1zcw%3D%3D&vvpl=1&l=202512291724047A9C52C2C49A89F8889F&btag=e000b0000",
+      },
+      {
+        index: 5,
+        timeRange: [35, 40],
+        url: "https://v16-cc.capcut.com/c79171b120ee2b135a8fdae08553f885/695b7de7/video/tos/alisg/tos-alisg-ve-14178-sg/owpcQfkOYBQQkNFJlB1IzsAgIU2Mgbf6CNhDEu/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13666&bt=6833&cs=0&ft=GAAO2Inz7ThmeRIPXq8Zmo&mime_type=video_mp4&qs=0&rc=NDs7N2Y0OjM5ZGhnZzVpOkBpajtzcGw5cnA3ODYzODU6NEAtXmEzMTAuXy8xYzQtYTYuYSNfaWBnMmQ0MzZhLS1kMy1zcw%3D%3D&vvpl=1&l=20251229170122643F61DD1ECAF1E6A380&btag=e000b0000",
+      },
+      {
+        index: 6,
+        timeRange: [40, 45],
+        url: "https://v16-cc.capcut.com/4732f77f536a5a689dd3d3d8a5874703/695b779b/video/tos/alisg/tos-alisg-ve-14178-sg/oMr8ipAmeYnPKVYQGhAsOSieA4eel3gFnAQkI3/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13722&bt=6861&cs=0&ft=GAAO2Inz7Th5L4IPXq8Zmo&mime_type=video_mp4&qs=0&rc=OzkzM2dlZDk7aDdlM2Q7N0BpajR5ZGw5cjY2ODYzODU6NEA0MF9hYzQ2NWExMTY0M2JhYSNuMWc1MmRjbjZhLS1kMy1zcw%3D%3D&vvpl=1&l=202512291634307111E2B2DAD81EF08D9F&btag=e000b0000",
       },
     ],
-    useCacheVideo: false,
+    useCacheVideo: true,
     switch: "无转场",
   },
   "extract-audio": {
