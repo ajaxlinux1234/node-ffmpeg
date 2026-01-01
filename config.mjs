@@ -14,8 +14,8 @@ export default {
   },
   "history-person": {
     name: "NBA历史三分王, NBA4冠王, 斯蒂芬.库里的人生经历",
-    url: "output/merge-video/merged_1767074454531_replaced.mp4",
-    title: `5金球+5欧冠+欧洲杯|欧国联+4金靴+历史射手王|足球传奇罗纳尔多的人生经历`,
+    url: "output/merge-video/merged_1767264850986_replaced.mp4",
+    title: `一百一十米栏{{奥运冠军}}|{{世界纪录}}保持者|中国田径{{里程碑}}|中国飞人{{刘翔}}的人生经历`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
 
@@ -23,37 +23,33 @@ export default {
     globalFontConfig: [
       // 全局字体配置，应用于所有分镜的对应行
       {
-        style: { color: "white", fontSize: "40px", fontWeight: "bold" },
-        font: "微软雅黑",
+        style: { color: "white", fontSize: "60px", fontWeight: "bold" },
+        font: "楷体",
       },
       {
-        style: { color: "white", fontSize: "35px", fontWeight: "normal" },
-        font: "微软雅黑",
-      },
-      {
-        style: { color: "red", fontSize: "30px", fontWeight: "bold" },
-        font: "微软雅黑",
+        style: { color: "yellow", fontSize: "40px", fontWeight: "normal" },
+        font: "楷体",
       },
     ],
 
     // 全局标题字体配置，应用于顶部全局标题的每一行
-    titleFontConfig: [
-      // 第一行：红色大字体粗体
-      {
-        style: { color: "white", fontSize: "45px", fontWeight: "bold" },
-        font: "微软雅黑",
-      },
-      // 第二行：蓝色中等字体正常
-      {
-        style: { color: "blue", fontSize: "40px", fontWeight: "normal" },
-        font: "微软雅黑",
-      },
-      // 第三行：黄色小字体粗体
-      {
-        style: { color: "yellow", fontSize: "35px", fontWeight: "bold" },
-        font: "微软雅黑",
-      },
-    ],
+    // titleFontConfig: [
+    //   // 第一行：红色大字体粗体
+    //   {
+    //     style: { color: "white", fontSize: "45px", fontWeight: "bold" },
+    //     font: "微软雅黑",
+    //   },
+    //   // 第二行：蓝色中等字体正常
+    //   {
+    //     style: { color: "blue", fontSize: "40px", fontWeight: "normal" },
+    //     font: "微软雅黑",
+    //   },
+    //   // 第三行：黄色小字体粗体
+    //   {
+    //     style: { color: "yellow", fontSize: "35px", fontWeight: "bold" },
+    //     font: "微软雅黑",
+    //   },
+    // ],
 
     // 分镜字体配置会从 processed_data.json 自动加载
     // 每个分镜可以有自己的 fontConfig 数组，覆盖 globalFontConfig
@@ -107,29 +103,28 @@ export default {
     sectionTitleAnimation: "none", // 分镜字幕动画效果，可选值同titleAnimation
 
     // 视频质量配置
-    qualityMode: "turbo", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理), "turbo"(极速处理)
+    qualityMode: "high", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理), "turbo"(极速处理)
 
     // 性能优化配置
     enableSpeedOptimization: true, // 启用速度优化：多线程+预设优化
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
+    sectionTitleInterval: 6, // 分镜字幕间隔时间（秒）
     sectionTitle: [
-      "1985年\n马德拉岛家中\n出生于葡萄牙一个普通家庭",
-      "1995年/10岁\n马德拉岛街头巷尾\n在街头足球中磨练出最初的技术与好胜心",
-      "1997年/12岁\n里斯本青训营宿舍\n独自离家\n在孤独与嘲笑中淬炼意志",
-      "2003年/18岁\n曼彻斯特老特拉福德球场\n加盟豪门曼联\n开启巨星之路\n继承传奇7号",
-      "2008年/23岁\n莫斯科欧冠决赛场\n赢得首个欧冠与首座金球奖\n登上首个巅峰",
-      "2009年/24岁\n马德里伯纳乌球场\n以创纪录身价转会皇马\n迎接更大挑战",
-      "2014年/29岁\n个人颁奖典礼或专访间\n四年内三夺金球\n进入与梅西的双骄时代",
-      "2016年/31岁\n法国欧洲杯决赛场\n以领袖身份带领葡萄牙国家队首夺大赛冠军",
-      "2018年/33岁\n都灵安联球场\n转会尤文\n在意甲延续统治力\n展示超凡身体状态",
-      "2021年/36岁\n比赛场或训练场\n超越比坎\n加冕足球官方比赛历史第一射手",
-      "2022年/37岁\n卡塔尔世界杯球场\n完成世界杯最后一舞\n告别欧洲主流联赛",
-      "2023年/38岁\n沙特阿拉伯球场\n加盟利雅得胜利\n将其影响力带至亚洲",
-      "至今/40岁\n私人训练基地\n以历史级自律保持身体状态\n定义“不老传奇”",
+      "1983年\n上海家中\n出生于上海一个普通家庭",
+      "1993年/10岁\n{{上海普陀少体校}}操场\n与跨栏项目结缘\n天赋初显",
+      "1999年/16岁\n上海专业田径训练场\n进入专业队\n开始系统严格的训练",
+      "2002年/19岁\n釜山亚运会田径场\n赢得{{首枚}}重要洲际赛事金牌\n崭露头角",
+      "2004年/21岁\n雅典奥林匹克体育场\n以{{12秒91}}平世界纪录的成绩\n夺得{{奥运金牌}}\n创造{{亚洲历史}}\n达到生涯第一个巅峰",
+      "2006年/23岁\n瑞士洛桑田径场\n以{{12秒88}}\n打破沉睡{{13年}}的世界纪录\n确立统治地位",
+      "2007年/24岁\n日本大阪长居体育场\n克服第九道不利道次夺冠\n集{{奥运}}冠军\n{{世锦赛}}冠军\n{{世界纪录}}保持者于一身\n实现{{“大满贯”}}",
+      "2008年/25岁\n鸟巢\n因右脚跟腱伤复发\n在亿万国人瞩目下于赛前退赛\n经历人生巨大转折",
+      "2012年/29岁\n伦敦奥运会体育场\n预赛中攻第一个栏时跟腱断裂\n坚持单脚跳完全程并亲吻栏架\n以悲壮方式告别奥运",
+      "2015年/32岁\n上海退役发布会\n正式宣布结束职业生涯\n深情告别赛道",
+      "2015年至今/32岁后\n日常生活场景\n退役后回归家庭与个人生活\n从事体育推广等工作\n享受平静\n完成从“飞人”到普通人的转身",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/Go West-Fancy.mp3",
+    "bg-music": "music/中国人.mp3",
     // output/clip-audio/抗美援朝_start36s_53s.mp3
     // Go West-Fancy
     // 美人吟_start12s_clip.mp3
@@ -142,19 +137,29 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v16-cc.capcut.com/a3bec3674c278413a97d00788a47f94f/695c9efc/video/tos/alisg/tos-alisg-ve-14178-sg/oM5VB6fDQIw6J5p2fZVuBUt2TBENbEROFQdBEg/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11962&bt=5981&cs=0&ft=GAAO2Inz7ThgIeIPXq8Zmo&mime_type=video_mp4&qs=0&rc=Zjo5OWc3ZmQ3Nzc3Nzk4ZkBpM2dlb3I5cmpwODYzODU6NEBjMC9jX142NS8xXzE1X2BfYSNrZ2NjMmRjNTZhLS1kMy1zcw%3D%3D&vvpl=1&l=20251230133412601AC98CCA7523883393&btag=e00088000",
-      "https://v16-cc.capcut.com/ce4f3ae18c6c78a06f4a23a14f0c24bc/695c9e9d/video/tos/alisg/tos-alisg-ve-14178-sg/ogOLQfPbDBtpF2W28TEZ2SIAUBQEewkgkPJnPN/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12158&bt=6079&cs=0&ft=GAAO2Inz7ThvkeIPXq8Zmo&mime_type=video_mp4&qs=0&rc=PDo6aTZkaDtoOTZmODMzM0BpM2l0OWw5cnlwODYzODU6NEA0YS5fYy8zXy0xXzIzLjM1YSNsNW5jMmQ0NDZhLS1kMy1zcw%3D%3D&vvpl=1&l=20251230133257C49865FCA83E889B128D&btag=e000b8000",
+      "https://v16-cc.capcut.com/3d50674bae1243cccf895bfee4c86c6c/695f7d61/video/tos/alisg/tos-alisg-ve-14178-sg/ogJpIBdHNtiIugrpukUFEKPVQBBfCeTWZgDQ2S/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11908&bt=5954&cs=0&ft=GAAO2Inz7ThfvRaPXq8Zmo&mime_type=video_mp4&qs=0&rc=NTg0NmY3Mzc1ZTQ6Zjc4N0BpanFoanA5cjo3ODYzODU6NEAtNWEvNWJfXzIxYy5fYC9gYSNfYzFoMmRjMl9hLS1kMzFzcw%3D%3D&vvpl=1&l=202601011747356B28340E09AEBE668F37&btag=e00088000",
+      "https://v16-cc.capcut.com/f8d2df716988a944180a4680f63f891a/695f7ed3/video/tos/alisg/tos-alisg-ve-14178-sg/osbDgHJswGSIeCEahaGIfQlUgriTIhLA9fKsMs/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12220&bt=6110&cs=0&ft=GAAO2Inz7ThlIRaPXq8Zmo&mime_type=video_mp4&qs=0&rc=Ojs1OjY2ZTtnODY1OTU6N0BpMzdkdHI5cmY3ODYzODU6NEAvMzMzYDIvXjAxMy40YjBjYSNnc2w1MmRrNV9hLS1kMy1zcw%3D%3D&vvpl=1&l=20260101175408E759E8866BCAC45F8C73&btag=e000b8000",
     ],
     videoReplaceUrls: [
       {
         index: 0,
-        timeRange: [10, 15],
-        url: "https://v16-cc.capcut.com/127f181df994d8477da2d1b7cc6be639/695ca15c/video/tos/alisg/tos-alisg-ve-14178-sg/o8DSHEZEAiEtBUYTzaBAYUvmyi5VQNDydi3Iy/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13850&bt=6925&cs=0&ft=GAAO2Inz7Tho1eIPXq8Zmo&mime_type=video_mp4&qs=0&rc=PDc4NzVkMzU4OmQ5ZzhmZkBpM3E7M3M5cm1wODYzODU6NEAxLWBgMWE1NWExXjYxM2JhYSMvNDNgMmRrYTZhLS1kMy1zcw%3D%3D&vvpl=1&l=20251230134455A465D5191C11C87F6CE8&btag=e000b0000",
+        timeRange: [0, 6],
+        url: "https://v16-cc.capcut.com/ae706e15f2622d6b03eaec1da6a723db/695f87e0/video/tos/alisg/tos-alisg-ve-14178-sg/o0bpAP1gJNuvgJwfgQF6VmQDPfnnIrkEB2BasI/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13128&bt=6564&cs=0&ft=GAAO2Inz7ThxJRaPXq8Zmo&mime_type=video_mp4&qs=0&rc=aGQ3aTs6NmQ7OzllaDc3aEBpam0zdnE5cm03ODYzODU6NEBfMS5hMTMuNmExNF9fMWNfYSNyNXJqMmRzbl9hLS1kMy1zcw%3D%3D&vvpl=1&l=20260101183258A5F67967CBD82484B1E8&btag=e000b0000",
       },
       {
         index: 1,
-        timeRange: [55, 65],
-        url: "https://v16-cc.capcut.com/c0bb68787b84183bda727441637160e8/695ca231/video/tos/alisg/tos-alisg-ve-14178-sg/oIjTEb7p0IoE7PA8ZAqi0VPiEGBQloGbRwfy6N/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13712&bt=6856&cs=0&ft=GAAO2Inz7ThzQeIPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZGc7NDtpOTZoZ2gzO2Y7OkBpajZzbXY5cjtwODYzODU6NEBjYl8yX2M1NjMxXzExNjVeYSNxazVmMmRzYzZhLS1kMy1zcw%3D%3D&vvpl=1&l=202512301348282B5911677BAB7E9100D6&btag=e000b0000",
+        timeRange: [6, 12],
+        url: "https://v16-cc.capcut.com/7a66cba2f520f61992b182734ca117a2/695f8819/video/tos/alisg/tos-alisg-ve-14178-sg/oYTVWYG1a9VpZOUYFKRDAJkXih6NivdIBQxiE/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=14046&bt=7023&cs=0&ft=GAAO2Inz7Th~ERaPXq8Zmo&mime_type=video_mp4&qs=0&rc=Z2kzPGU5OzllOTlnODU4PEBpam83ZGs5cjQ3ODYzODU6NEAwXzUxYzI1Xi4xLy5eLi82YSNycF5xMmRrb19hLS1kMy1zcw%3D%3D&vvpl=1&l=2026010118335556F5B3B5CC81586A7144&btag=e000b0000",
+      },
+      {
+        index: 2,
+        timeRange: [12, 18],
+        url: "https://v16-cc.capcut.com/456fecdba23fefdc883bc6c2a53d3389/695f858c/video/tos/alisg/tos-alisg-ve-14178-sg/ok7rQQ8i3DNwShJCekFjBJpg52dgCBMVIzfuWE/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13456&bt=6728&cs=0&ft=GAAO2Inz7ThP7RaPXq8Zmo&mime_type=video_mp4&qs=0&rc=Z2U5OzpmZDo0NmU6aTNpO0BpMzQ5bms5cnc3ODYzODU6NEA1Xy5iYTUuNWIxXjFhMmA2YSNjcTRsMmRzaV9hLS1kMy1zcw%3D%3D&vvpl=1&l=20260101182302C463719AE186113AA003&btag=e000b0000",
+      },
+      {
+        index: 3,
+        timeRange: [48, 54],
+        url: "https://v16-cc.capcut.com/4abf499272cb04a047ae7bf8c5ec650c/695f810a/video/tos/alisg/tos-alisg-ve-14178-sg/oEV0BpMxEG68QEQhwIiKqRoB9f4GqoyiA7AlWE/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13274&bt=6637&cs=0&ft=GAAO2Inz7ThjRRaPXq8Zmo&mime_type=video_mp4&qs=0&rc=Zjc5NjM4ZWRoPDZmOTw8OkBpMzk5eHY5cng3ODYzODU6NEAxMDQ1LTI0X14xXzQxMC1gYSMyaDNeMmRzYF9hLS1kMy1zcw%3D%3D&vvpl=1&l=20260101180348C4F1B5F8251B7B7174C9&btag=e000b0000",
       },
     ],
     useCacheVideo: true,
@@ -282,9 +287,8 @@ export default {
   },
   "clip-audio": [
     {
-      url: "input/clip-audio/抗美援朝.mp3",
-      start: 36,
-      duration: 53,
+      url: "music/中国人.mp3",
+      start: 72,
     },
   ],
   "clip-video": {
@@ -354,7 +358,7 @@ export default {
     get_promot: false,
     get_remove_words: false,
     get_title_selector_fn: () => {
-      const historyNum = 13;
+      const historyNum = 11;
       return Array.from(document.querySelectorAll(".auto-hide-last-sibling-br"))
         .filter((one) => /^\d/.test(one.innerText))
         .slice(-historyNum)
@@ -404,7 +408,7 @@ export default {
       ),
     input_selector_fn: () => document.querySelector("textarea"),
     get_promot_fn: () => {
-      const historyNum = 13; // 对应seconds数组长度
+      const historyNum = 11; // 对应seconds数组长度
       return Array.from(document.querySelectorAll(".auto-hide-last-sibling-br"))
         .slice(-historyNum)
         .map((one) => {
