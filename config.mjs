@@ -14,8 +14,8 @@ export default {
   },
   "history-person": {
     name: "NBA历史三分王, NBA4冠王, 斯蒂芬.库里的人生经历",
-    url: "output/merge-video/merged_1767264850986_replaced.mp4",
-    title: `一百一十米栏{{奥运冠军}}|{{世界纪录}}保持者|中国田径{{里程碑}}|中国飞人{{刘翔}}的人生经历`,
+    url: "output/merge-video/merged_1767429244428_replaced.mp4",
+    title: `{{二十座}}大满贯|{{五度}}荣膺劳伦斯奖|{{网球天王费德勒}}的人生经历`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
 
@@ -23,12 +23,12 @@ export default {
     globalFontConfig: [
       // 全局字体配置，应用于所有分镜的对应行
       {
-        style: { color: "white", fontSize: "60px", fontWeight: "bold" },
-        font: "楷体",
+        style: { color: "white", fontSize: "50px", fontWeight: "bold" },
+        font: "KaiTi",
       },
       {
         style: { color: "yellow", fontSize: "40px", fontWeight: "normal" },
-        font: "楷体",
+        font: "KaiTi",
       },
     ],
 
@@ -111,20 +111,20 @@ export default {
     sectionFirstTitleTime: 4,
     sectionTitleInterval: 6, // 分镜字幕间隔时间（秒）
     sectionTitle: [
-      "1983年\n上海家中\n出生于上海一个普通家庭",
-      "1993年/10岁\n{{上海普陀少体校}}操场\n与跨栏项目结缘\n天赋初显",
-      "1999年/16岁\n上海专业田径训练场\n进入专业队\n开始系统严格的训练",
-      "2002年/19岁\n釜山亚运会田径场\n赢得{{首枚}}重要洲际赛事金牌\n崭露头角",
-      "2004年/21岁\n雅典奥林匹克体育场\n以{{12秒91}}平世界纪录的成绩\n夺得{{奥运金牌}}\n创造{{亚洲历史}}\n达到生涯第一个巅峰",
-      "2006年/23岁\n瑞士洛桑田径场\n以{{12秒88}}\n打破沉睡{{13年}}的世界纪录\n确立统治地位",
-      "2007年/24岁\n日本大阪长居体育场\n克服第九道不利道次夺冠\n集{{奥运}}冠军\n{{世锦赛}}冠军\n{{世界纪录}}保持者于一身\n实现{{“大满贯”}}",
-      "2008年/25岁\n鸟巢\n因右脚跟腱伤复发\n在亿万国人瞩目下于赛前退赛\n经历人生巨大转折",
-      "2012年/29岁\n伦敦奥运会体育场\n预赛中攻第一个栏时跟腱断裂\n坚持单脚跳完全程并亲吻栏架\n以悲壮方式告别奥运",
-      "2015年/32岁\n上海退役发布会\n正式宣布结束职业生涯\n深情告别赛道",
-      "2015年至今/32岁后\n日常生活场景\n退役后回归家庭与个人生活\n从事体育推广等工作\n享受平静\n完成从“飞人”到普通人的转身",
+      "1981年\n瑞士巴塞尔家中\n出生于一个富裕的瑞士家庭",
+      "1993年/12岁\n瑞士当地网球俱乐部\n在俱乐部接受系统训练\n天赋与努力结合",
+      "1998年/17岁\n伦敦全英俱乐部\n赢得温网{{青少年组冠军}}\n初显巨星潜质",
+      "2001年/20岁\n温布尔登中心球场\n在温网第四轮\n击败球王{{桑普拉斯}}\n震惊{{网坛}}\n被誉为{{接班人}}",
+      "2003年/22岁\n温布尔登中心球场\n赢得个人{{首座}}大满贯单打冠军\n开启传奇之路",
+      "2007年/26岁\n各大赛事硬地/草地场\n建立绝对统治\n连续237周位居世界第一\n风格优雅华丽",
+      "2008年/27岁\n温布尔登中心球场\n与纳达尔上演被誉为\n{{“史上最伟大网球比赛”}}的温网决赛\n虽败犹荣",
+      "2009年/28岁\n巴黎罗兰·加洛斯\n在法网夺冠\n完成职业生涯{{“全满贯”}}伟业\n并在温网夺得{{第15冠}}\n超越桑普拉斯纪录",
+      "2012年/31岁\n温布尔登中心球场\n第七次赢得温网冠军\n追平桑普拉斯纪录\n并重返{{世界第一}}",
+      "2018年/37岁\n墨尔本公园球场\n伤愈复出后\n连续赢得澳网和温网冠军\n上演不可思议的{{“王者归来”}}",
+      "2022年/41岁\n伦敦O2体育馆\n在拉沃尔杯\n完成职业生涯最后一场比赛后\n正式退役",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/中国人.mp3",
+    "bg-music": "music/Go West-Fancy.mp3",
     // output/clip-audio/抗美援朝_start36s_53s.mp3
     // Go West-Fancy
     // 美人吟_start12s_clip.mp3
@@ -137,29 +137,34 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v16-cc.capcut.com/3d50674bae1243cccf895bfee4c86c6c/695f7d61/video/tos/alisg/tos-alisg-ve-14178-sg/ogJpIBdHNtiIugrpukUFEKPVQBBfCeTWZgDQ2S/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11908&bt=5954&cs=0&ft=GAAO2Inz7ThfvRaPXq8Zmo&mime_type=video_mp4&qs=0&rc=NTg0NmY3Mzc1ZTQ6Zjc4N0BpanFoanA5cjo3ODYzODU6NEAtNWEvNWJfXzIxYy5fYC9gYSNfYzFoMmRjMl9hLS1kMzFzcw%3D%3D&vvpl=1&l=202601011747356B28340E09AEBE668F37&btag=e00088000",
-      "https://v16-cc.capcut.com/f8d2df716988a944180a4680f63f891a/695f7ed3/video/tos/alisg/tos-alisg-ve-14178-sg/osbDgHJswGSIeCEahaGIfQlUgriTIhLA9fKsMs/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12220&bt=6110&cs=0&ft=GAAO2Inz7ThlIRaPXq8Zmo&mime_type=video_mp4&qs=0&rc=Ojs1OjY2ZTtnODY1OTU6N0BpMzdkdHI5cmY3ODYzODU6NEAvMzMzYDIvXjAxMy40YjBjYSNnc2w1MmRrNV9hLS1kMy1zcw%3D%3D&vvpl=1&l=20260101175408E759E8866BCAC45F8C73&btag=e000b8000",
+      "https://v16-cc.capcut.com/3da671c3d4aee92c95b3779ce5158f05/6962013a/video/tos/alisg/tos-alisg-ve-14178-sg/o0DnxRfZg7iMpF92el3BN3QiEWIBjQ4gJp6YIC/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11952&bt=5976&cs=0&ft=GAAO2Inz7Th4RplPXq8Zmo&mime_type=video_mp4&qs=0&rc=M2doODw5OWk6O2U7OjlkNEBpamtxeXU5cndmODYzODU6NEBfMTAwNi40NS8xNDUzNDJiYSM1NjBtMmRzYGBhLS1kMy1zcw%3D%3D&vvpl=1&l=202601031534408D06AAE1C367CF0DE4CB&btag=e00088000",
+      "https://v16-cc.capcut.com/559b1905b15fa56cbb13b493d20f7cad/69620125/video/tos/alisg/tos-alisg-ve-14178-sg/oU1QQIxxgNaEB5xxJFf9MpDBFaWbwE22pelFgY/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12222&bt=6111&cs=0&ft=GAAO2Inz7Th~RplPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZjhlODQ4aWU4NWlmOjgzPEBpM3JlaXI5cjRmODYzODU6NEBgYTI2LzQwNS0xXjYuYmNeYSNwampyMmRjYWBhLS1kMy1zcw%3D%3D&vvpl=1&l=2026010315344351C0BBE2FB2B48F1577F&btag=e000b8000",
     ],
     videoReplaceUrls: [
       {
-        index: 0,
-        timeRange: [0, 6],
-        url: "https://v16-cc.capcut.com/ae706e15f2622d6b03eaec1da6a723db/695f87e0/video/tos/alisg/tos-alisg-ve-14178-sg/o0bpAP1gJNuvgJwfgQF6VmQDPfnnIrkEB2BasI/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13128&bt=6564&cs=0&ft=GAAO2Inz7ThxJRaPXq8Zmo&mime_type=video_mp4&qs=0&rc=aGQ3aTs6NmQ7OzllaDc3aEBpam0zdnE5cm03ODYzODU6NEBfMS5hMTMuNmExNF9fMWNfYSNyNXJqMmRzbl9hLS1kMy1zcw%3D%3D&vvpl=1&l=20260101183258A5F67967CBD82484B1E8&btag=e000b0000",
-      },
-      {
         index: 1,
-        timeRange: [6, 12],
-        url: "https://v16-cc.capcut.com/7a66cba2f520f61992b182734ca117a2/695f8819/video/tos/alisg/tos-alisg-ve-14178-sg/oYTVWYG1a9VpZOUYFKRDAJkXih6NivdIBQxiE/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=14046&bt=7023&cs=0&ft=GAAO2Inz7Th~ERaPXq8Zmo&mime_type=video_mp4&qs=0&rc=Z2kzPGU5OzllOTlnODU4PEBpam83ZGs5cjQ3ODYzODU6NEAwXzUxYzI1Xi4xLy5eLi82YSNycF5xMmRrb19hLS1kMy1zcw%3D%3D&vvpl=1&l=2026010118335556F5B3B5CC81586A7144&btag=e000b0000",
+        timeRange: [0, 6],
+        url: "https://v16-cc.capcut.com/cdcfd7d4dc7ef6f86c548f8b47144303/69620c3f/video/tos/alisg/tos-alisg-ve-14178-sg/osvYjIVdvE0A856aDaJ5ri9UqQYRiiVVEjBbJ/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13220&bt=6610&cs=0&ft=GAAO2Inz7Th6DFlPXq8Zmo&mime_type=video_mp4&qs=0&rc=NDc5OWY2Nmk3PDhpZjg6ZkBpM3NkcHQ5cmVnODYzODU6NEBeYGJiNi8yXjExNF4yMl4xYSNyNGlyMmRrMGBhLS1kMy1zcw%3D%3D&vvpl=1&l=20260103162217C4820E231926DDE62224&btag=e000b0000",
       },
       {
         index: 2,
         timeRange: [12, 18],
-        url: "https://v16-cc.capcut.com/456fecdba23fefdc883bc6c2a53d3389/695f858c/video/tos/alisg/tos-alisg-ve-14178-sg/ok7rQQ8i3DNwShJCekFjBJpg52dgCBMVIzfuWE/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13456&bt=6728&cs=0&ft=GAAO2Inz7ThP7RaPXq8Zmo&mime_type=video_mp4&qs=0&rc=Z2U5OzpmZDo0NmU6aTNpO0BpMzQ5bms5cnc3ODYzODU6NEA1Xy5iYTUuNWIxXjFhMmA2YSNjcTRsMmRzaV9hLS1kMy1zcw%3D%3D&vvpl=1&l=20260101182302C463719AE186113AA003&btag=e000b0000",
+        url: "https://v16-cc.capcut.com/9e461cee9be435939f390cdee8963383/6962070f/video/tos/alisg/tos-alisg-ve-14178-sg/ogbQYFMejs5IDzkETfBCZVsfAgEdD18EKSm6Iw/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13368&bt=6684&cs=0&ft=GAAO2Inz7ThvpplPXq8Zmo&mime_type=video_mp4&qs=0&rc=Omk4ZDNlOmdnNTc1N2RpNkBpM2Q7ank5cnlmODYzODU6NEBeYjNiNTUyNTAxXjJiM2FiYSNsbGNwMmRrbGBhLS1kMy1zcw%3D%3D&vvpl=1&l=202601031600091FEC3AE2B7C85EEA003E&btag=e000b0000",
       },
       {
         index: 3,
-        timeRange: [48, 54],
-        url: "https://v16-cc.capcut.com/4abf499272cb04a047ae7bf8c5ec650c/695f810a/video/tos/alisg/tos-alisg-ve-14178-sg/oEV0BpMxEG68QEQhwIiKqRoB9f4GqoyiA7AlWE/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13274&bt=6637&cs=0&ft=GAAO2Inz7ThjRRaPXq8Zmo&mime_type=video_mp4&qs=0&rc=Zjc5NjM4ZWRoPDZmOTw8OkBpMzk5eHY5cng3ODYzODU6NEAxMDQ1LTI0X14xXzQxMC1gYSMyaDNeMmRzYF9hLS1kMy1zcw%3D%3D&vvpl=1&l=20260101180348C4F1B5F8251B7B7174C9&btag=e000b0000",
+        timeRange: [18, 24],
+        url: "https://v16-cc.capcut.com/6c6add321ef1ac620d0a3d89b624b208/69620c71/video/tos/alisg/tos-alisg-ve-14178-sg/ooAPQgelDMbeofJd0aX4DTSgisGAECqsIA8bxQ/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13258&bt=6629&cs=0&ft=GAAO2Inz7Th2YFlPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZDw4N2U3PGVlNDw4OWlnM0BpajQzZXk5cnJnODYzODU6NEAzMi4yMzNfXzAxYV41XzA2YSM0MHIvMmRjMGBhLS1kMy1zcw%3D%3D&vvpl=1&l=20260103162307654D5C8983494CFA2F43&btag=e000b0000",
+      },
+      {
+        index: 4,
+        timeRange: [24, 30],
+        url: "https://v16-cc.capcut.com/b0b71bed3ac80ae0bc864176770310d8/6962091a/video/tos/alisg/tos-alisg-ve-14178-sg/oIEBQfQdDBBpF8l2LYEzM8IpWBQEaeugqLJR6N/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13332&bt=6666&cs=0&ft=GAAO2Inz7ThglplPXq8Zmo&mime_type=video_mp4&qs=0&rc=Zmc6ZTw4PDdnaGk6aTllZUBpMztlbW85cjVmODYzODU6NEBjMl5eNi0uNS4xMDJeY2MzYSNjYmozMmRzcWBhLS1kMy1zcw%3D%3D&vvpl=1&l=20260103160852C6399CBA53AD9FF28C3E&btag=e000b0000",
+      },
+      {
+        index: 5,
+        timeRange: [54, 61],
+        url: "https://v16-cc.capcut.com/5b7da6978bdb4e4d7c26ef0b9901bb5e/6962056f/video/tos/alisg/tos-alisg-ve-14178-sg/ooY26tQAAK3LGIxj62mIFYe62fGVGFJIfgflgx/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13308&bt=6654&cs=0&ft=GAAO2Inz7ThZNplPXq8Zmo&mime_type=video_mp4&qs=0&rc=aWRkZzM8OWU2Njk6aDVpZUBpajdwNms5cndmODYzODU6NEAtL2MwMjAxNi4xMzI0Yi0yYSMuc2lgMmRrY2BhLS1kMy1zcw%3D%3D&vvpl=1&l=2026010315531266D3B6809A933CE0C691&btag=e000b0000",
       },
     ],
     useCacheVideo: true,
