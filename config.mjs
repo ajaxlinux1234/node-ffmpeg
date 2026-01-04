@@ -14,8 +14,8 @@ export default {
   },
   "history-person": {
     name: "NBA历史三分王, NBA4冠王, 斯蒂芬.库里的人生经历",
-    url: "output/merge-video/merged_1767429244428_replaced.mp4",
-    title: `{{二十座}}大满贯|{{五度}}荣膺劳伦斯奖|{{网球天王费德勒}}的人生经历`,
+    url: "output/merge-video/merged_1767521237298_replaced.mp4",
+    title: `出身贫寒,{{身有残疾}}|寒窗苦读,{{终成大器}}|第二十一任韩国总统{{李在明}}的人生经历`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
 
@@ -111,17 +111,16 @@ export default {
     sectionFirstTitleTime: 4,
     sectionTitleInterval: 6, // 分镜字幕间隔时间（秒）
     sectionTitle: [
-      "1981年\n瑞士巴塞尔家中\n出生于一个富裕的瑞士家庭",
-      "1993年/12岁\n瑞士当地网球俱乐部\n在俱乐部接受系统训练\n天赋与努力结合",
-      "1998年/17岁\n伦敦全英俱乐部\n赢得温网{{青少年组冠军}}\n初显巨星潜质",
-      "2001年/20岁\n温布尔登中心球场\n在温网第四轮\n击败球王{{桑普拉斯}}\n震惊{{网坛}}\n被誉为{{接班人}}",
-      "2003年/22岁\n温布尔登中心球场\n赢得个人{{首座}}大满贯单打冠军\n开启传奇之路",
-      "2007年/26岁\n各大赛事硬地/草地场\n建立绝对统治\n连续237周位居世界第一\n风格优雅华丽",
-      "2008年/27岁\n温布尔登中心球场\n与纳达尔上演被誉为\n{{“史上最伟大网球比赛”}}的温网决赛\n虽败犹荣",
-      "2009年/28岁\n巴黎罗兰·加洛斯\n在法网夺冠\n完成职业生涯{{“全满贯”}}伟业\n并在温网夺得{{第15冠}}\n超越桑普拉斯纪录",
-      "2012年/31岁\n温布尔登中心球场\n第七次赢得温网冠军\n追平桑普拉斯纪录\n并重返{{世界第一}}",
-      "2018年/37岁\n墨尔本公园球场\n伤愈复出后\n连续赢得澳网和温网冠军\n上演不可思议的{{“王者归来”}}",
-      "2022年/41岁\n伦敦O2体育馆\n在拉沃尔杯\n完成职业生涯最后一场比赛后\n正式退役",
+      "1964年\n庆尚北道安东农村\n出生于贫苦农民家庭\n排行第五",
+      "1977年/13岁\n棒球手套工厂\n因家贫辍学做童工\n左臂卷入机器致终身残疾",
+      "1982年/18岁\n自学备考的租住屋\n半工半读通过学历考试\n考入韩国中央大学法学院",
+      "1986年/22岁\n司法考试院房间\n通过第28届司法考试\n获得律师资格\n人生迎来转折",
+      "2010年/46岁\n城南市选举现场\n当选京畿道城南市市长\n开启地方行政生涯",
+      "2018年/54岁\n京畿道政府办公室\n当选并担任京畿道知事\n成为重要地方长官",
+      "2022年3月/58岁\n总统大选竞选总部\n作为共同民主党候选人参选\n以0.73%的微弱差距惜败",
+      "2024年/60岁\n国会前及釜山视察地\n作为党首\n进行绝食抗议",
+      "2025年6月4日凌晨/61岁\n首尔汝矣岛国会前\n在第21届总统选举中确定当选",
+      "2025年6月4日上午/61岁\n韩国国会大厅\n在国会正式宣誓就职\n任期于当地时间6月4日开始",
     ],
     watermark: "@人物传记史",
     "bg-music": "music/Go West-Fancy.mp3",
@@ -137,37 +136,18 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v16-cc.capcut.com/3da671c3d4aee92c95b3779ce5158f05/6962013a/video/tos/alisg/tos-alisg-ve-14178-sg/o0DnxRfZg7iMpF92el3BN3QiEWIBjQ4gJp6YIC/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11952&bt=5976&cs=0&ft=GAAO2Inz7Th4RplPXq8Zmo&mime_type=video_mp4&qs=0&rc=M2doODw5OWk6O2U7OjlkNEBpamtxeXU5cndmODYzODU6NEBfMTAwNi40NS8xNDUzNDJiYSM1NjBtMmRzYGBhLS1kMy1zcw%3D%3D&vvpl=1&l=202601031534408D06AAE1C367CF0DE4CB&btag=e00088000",
-      "https://v16-cc.capcut.com/559b1905b15fa56cbb13b493d20f7cad/69620125/video/tos/alisg/tos-alisg-ve-14178-sg/oU1QQIxxgNaEB5xxJFf9MpDBFaWbwE22pelFgY/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12222&bt=6111&cs=0&ft=GAAO2Inz7Th~RplPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZjhlODQ4aWU4NWlmOjgzPEBpM3JlaXI5cjRmODYzODU6NEBgYTI2LzQwNS0xXjYuYmNeYSNwampyMmRjYWBhLS1kMy1zcw%3D%3D&vvpl=1&l=2026010315344351C0BBE2FB2B48F1577F&btag=e000b8000",
+      "https://v16-cc.capcut.com/bc19fe85b1566cc0552283e17366f55f/69636830/video/tos/alisg/tos-alisg-ve-14178-sg/oMrtM85dsQKgIYLOegSAWCwaQzTFbs5eFDJeu9/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11950&bt=5975&cs=0&ft=GAAO2Inz7ThPE0lPXq8Zmo&mime_type=video_mp4&qs=0&rc=MzNoNDlpaGZoZDppODhmaEBpam1odXE5cnU1ODYzODU6NEA2MC41NF8xXzAxX15eLzMwYSNrcC40MmRrbmFhLS1kMy1zcw%3D%3D&vvpl=1&l=202601041706147B5B5C5778BB14B1EB29&btag=e00088000",
+      "https://v16-cc.capcut.com/e6d6616ee4f4cbb0a08c925a2d106ace/696365ff/video/tos/alisg/tos-alisg-ve-14178-sg/owFWjQoB0AK6AiciiJHRIGIT7AOafrrwBEE2Fy/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12420&bt=6210&cs=0&ft=GAAO2Inz7Th.P0lPXq8Zmo&mime_type=video_mp4&qs=0&rc=PDtoOGg4Omc8OzZlPDw0Z0BpajNzanQ5cnM1ODYzODU6NEAuX2MwMzFjXjAxLV5iXzMxYSMvbDY2MmRjamFhLS1kMy1zcw%3D%3D&vvpl=1&l=202601041657234E641E36888A087AFFD3&btag=e000b0000",
+      "https://v16-cc.capcut.com/c44dc163123d333a069a6e125e4b7b42/69636d86/video/tos/alisg/tos-alisg-ve-14178-sg/o0aegWDQyEpEF9rL4QfBJR23v9t4Mj2iNEBTxI/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12948&bt=6474&cs=0&ft=GAAO2Inz7Th8A4lPXq8Zmo&mime_type=video_mp4&qs=0&rc=OzVlNzk8Nzw4Nzc2aTU1NkBpamdkaXg5cnc2ODYzODU6NEAvMWFfXmNgNTQxMDYtMDAxYSM2a2hoMmRrMmFhLS1kMy1zcw%3D%3D&vvpl=1&l=20260104172936AFB197461F242AB20A84&btag=e000b0000",
     ],
     videoReplaceUrls: [
       {
-        index: 1,
+        index: 0,
         timeRange: [0, 6],
-        url: "https://v16-cc.capcut.com/cdcfd7d4dc7ef6f86c548f8b47144303/69620c3f/video/tos/alisg/tos-alisg-ve-14178-sg/osvYjIVdvE0A856aDaJ5ri9UqQYRiiVVEjBbJ/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13220&bt=6610&cs=0&ft=GAAO2Inz7Th6DFlPXq8Zmo&mime_type=video_mp4&qs=0&rc=NDc5OWY2Nmk3PDhpZjg6ZkBpM3NkcHQ5cmVnODYzODU6NEBeYGJiNi8yXjExNF4yMl4xYSNyNGlyMmRrMGBhLS1kMy1zcw%3D%3D&vvpl=1&l=20260103162217C4820E231926DDE62224&btag=e000b0000",
-      },
-      {
-        index: 2,
-        timeRange: [12, 18],
-        url: "https://v16-cc.capcut.com/9e461cee9be435939f390cdee8963383/6962070f/video/tos/alisg/tos-alisg-ve-14178-sg/ogbQYFMejs5IDzkETfBCZVsfAgEdD18EKSm6Iw/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13368&bt=6684&cs=0&ft=GAAO2Inz7ThvpplPXq8Zmo&mime_type=video_mp4&qs=0&rc=Omk4ZDNlOmdnNTc1N2RpNkBpM2Q7ank5cnlmODYzODU6NEBeYjNiNTUyNTAxXjJiM2FiYSNsbGNwMmRrbGBhLS1kMy1zcw%3D%3D&vvpl=1&l=202601031600091FEC3AE2B7C85EEA003E&btag=e000b0000",
-      },
-      {
-        index: 3,
-        timeRange: [18, 24],
-        url: "https://v16-cc.capcut.com/6c6add321ef1ac620d0a3d89b624b208/69620c71/video/tos/alisg/tos-alisg-ve-14178-sg/ooAPQgelDMbeofJd0aX4DTSgisGAECqsIA8bxQ/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13258&bt=6629&cs=0&ft=GAAO2Inz7Th2YFlPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZDw4N2U3PGVlNDw4OWlnM0BpajQzZXk5cnJnODYzODU6NEAzMi4yMzNfXzAxYV41XzA2YSM0MHIvMmRjMGBhLS1kMy1zcw%3D%3D&vvpl=1&l=20260103162307654D5C8983494CFA2F43&btag=e000b0000",
-      },
-      {
-        index: 4,
-        timeRange: [24, 30],
-        url: "https://v16-cc.capcut.com/b0b71bed3ac80ae0bc864176770310d8/6962091a/video/tos/alisg/tos-alisg-ve-14178-sg/oIEBQfQdDBBpF8l2LYEzM8IpWBQEaeugqLJR6N/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13332&bt=6666&cs=0&ft=GAAO2Inz7ThglplPXq8Zmo&mime_type=video_mp4&qs=0&rc=Zmc6ZTw4PDdnaGk6aTllZUBpMztlbW85cjVmODYzODU6NEBjMl5eNi0uNS4xMDJeY2MzYSNjYmozMmRzcWBhLS1kMy1zcw%3D%3D&vvpl=1&l=20260103160852C6399CBA53AD9FF28C3E&btag=e000b0000",
-      },
-      {
-        index: 5,
-        timeRange: [54, 61],
-        url: "https://v16-cc.capcut.com/5b7da6978bdb4e4d7c26ef0b9901bb5e/6962056f/video/tos/alisg/tos-alisg-ve-14178-sg/ooY26tQAAK3LGIxj62mIFYe62fGVGFJIfgflgx/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13308&bt=6654&cs=0&ft=GAAO2Inz7ThZNplPXq8Zmo&mime_type=video_mp4&qs=0&rc=aWRkZzM8OWU2Njk6aDVpZUBpajdwNms5cndmODYzODU6NEAtL2MwMjAxNi4xMzI0Yi0yYSMuc2lgMmRrY2BhLS1kMy1zcw%3D%3D&vvpl=1&l=2026010315531266D3B6809A933CE0C691&btag=e000b0000",
+        url: "https://v16-cc.capcut.com/72ff093c5a2c8b420aefeee2768c64a2/69636f7c/video/tos/alisg/tos-alisg-ve-14178-sg/o0ATjIGkSDYP04VlbGCqlf0tLAnggReTesHyoA/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13084&bt=6542&cs=0&ft=GAAO2Inz7ThJO4lPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZThlOGY8OWg6aDVpNDdlNUBpM3g3O3M5cnQ2ODYzODU6NEAyYmJeLTItXmMxXzExYGIwYSMtZWNiMmRrNmFhLS1kMy1zcw%3D%3D&vvpl=1&l=2026010417375894A0676E79F42023DE26&btag=e000b0000",
       },
     ],
-    useCacheVideo: true,
+    useCacheVideo: false,
     switch: "无转场",
   },
   "extract-audio": {
@@ -363,7 +343,7 @@ export default {
     get_promot: false,
     get_remove_words: false,
     get_title_selector_fn: () => {
-      const historyNum = 11;
+      const historyNum = 10;
       return Array.from(document.querySelectorAll(".auto-hide-last-sibling-br"))
         .filter((one) => /^\d/.test(one.innerText))
         .slice(-historyNum)
@@ -413,7 +393,7 @@ export default {
       ),
     input_selector_fn: () => document.querySelector("textarea"),
     get_promot_fn: () => {
-      const historyNum = 11; // 对应seconds数组长度
+      const historyNum = 10; // 对应seconds数组长度
       return Array.from(document.querySelectorAll(".auto-hide-last-sibling-br"))
         .slice(-historyNum)
         .map((one) => {
