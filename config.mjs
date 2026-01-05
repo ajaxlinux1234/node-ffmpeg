@@ -14,8 +14,8 @@ export default {
   },
   "history-person": {
     name: "NBA历史三分王, NBA4冠王, 斯蒂芬.库里的人生经历",
-    url: "output/merge-video/merged_1767521237298_replaced.mp4",
-    title: `出身贫寒,{{身有残疾}}|寒窗苦读,{{终成大器}}|第二十一任韩国总统{{李在明}}的人生经历`,
+    url: "output/merge-video/merged_1767532870923_replaced.mp4",
+    title: `出身贫寒,{{手臂遭残疾}}|寒窗苦读,{{终成大器}}|第二十一任韩国总统{{李在明}}|人生经历`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
 
@@ -110,17 +110,18 @@ export default {
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
     sectionFirstTitleTime: 4,
     sectionTitleInterval: 6, // 分镜字幕间隔时间（秒）
+    sectionLastTitleOffset: 3, // 最后一个分镜提前显示时间（秒）
     sectionTitle: [
-      "1964年\n庆尚北道安东农村\n出生于贫苦农民家庭\n排行第五",
-      "1977年/13岁\n棒球手套工厂\n因家贫辍学做童工\n左臂卷入机器致终身残疾",
-      "1982年/18岁\n自学备考的租住屋\n半工半读通过学历考试\n考入韩国中央大学法学院",
-      "1986年/22岁\n司法考试院房间\n通过第28届司法考试\n获得律师资格\n人生迎来转折",
-      "2010年/46岁\n城南市选举现场\n当选京畿道城南市市长\n开启地方行政生涯",
-      "2018年/54岁\n京畿道政府办公室\n当选并担任京畿道知事\n成为重要地方长官",
-      "2022年3月/58岁\n总统大选竞选总部\n作为共同民主党候选人参选\n以0.73%的微弱差距惜败",
-      "2024年/60岁\n国会前及釜山视察地\n作为党首\n进行绝食抗议",
-      "2025年6月4日凌晨/61岁\n首尔汝矣岛国会前\n在第21届总统选举中确定当选",
-      "2025年6月4日上午/61岁\n韩国国会大厅\n在国会正式宣誓就职\n任期于当地时间6月4日开始",
+      "1964年\n庆尚北道安东农村\n出生于{{贫苦农民家庭}}\n排行第五",
+      "1977年/13岁\n棒球手套工厂\n因家贫辍学做童工\n左臂卷入机器致{{终身残疾}}",
+      "1982年/18岁\n自学备考的租住屋\n半工半读通过学历考试\n考入韩国{{中央大学法学院}}",
+      "1986年/22岁\n司法考试院房间\n通过第28届司法考试\n获得{{律师资格}}\n人生迎来转折",
+      "2010年/46岁\n城南市选举现场\n当选{{京畿道城南市市长}}\n开启地方行政生涯",
+      "2018年/54岁\n京畿道政府办公室\n当选并担任{{京畿道知事}}\n成为重要地方长官",
+      "2022年3月/58岁\n总统大选竞选总部\n作为共同民主党候选人参选\n以{{0.73%}}的微弱差距惜败",
+      "2024年/60岁\n国会前及釜山视察地\n作为党首\n进行{{绝食抗议}}",
+      "2025年6月4日凌晨/61岁\n首尔汝矣岛国会前\n在第21届总统选举中{{确定当选}}",
+      "2025年6月4日上午/61岁\n韩国国会大厅\n在国会正式宣誓就职\n任期于当地时间{{6月4日}}开始",
     ],
     watermark: "@人物传记史",
     "bg-music": "music/Go West-Fancy.mp3",
@@ -147,7 +148,7 @@ export default {
         url: "https://v16-cc.capcut.com/72ff093c5a2c8b420aefeee2768c64a2/69636f7c/video/tos/alisg/tos-alisg-ve-14178-sg/o0ATjIGkSDYP04VlbGCqlf0tLAnggReTesHyoA/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13084&bt=6542&cs=0&ft=GAAO2Inz7ThJO4lPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZThlOGY8OWg6aDVpNDdlNUBpM3g3O3M5cnQ2ODYzODU6NEAyYmJeLTItXmMxXzExYGIwYSMtZWNiMmRrNmFhLS1kMy1zcw%3D%3D&vvpl=1&l=2026010417375894A0676E79F42023DE26&btag=e000b0000",
       },
     ],
-    useCacheVideo: false,
+    useCacheVideo: true,
     switch: "无转场",
   },
   "extract-audio": {
