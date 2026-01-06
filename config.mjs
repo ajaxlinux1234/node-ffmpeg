@@ -99,7 +99,7 @@ export default {
     disclaimerText: "", // 底部免责声明文字（30px斜体，底部10%位置）
     // 快乐传递者何炅
     // 国士无双袁隆平
-    titleAnimation: "sweep_slow", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
+    titleAnimation: "sweep_diamond", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
     sectionTitleAnimation: "none", // 分镜字幕动画效果，可选值同titleAnimation
 
     // 视频质量配置
@@ -137,15 +137,19 @@ export default {
   },
   "merge-video": {
     urls: [
-      "https://v16-cc.capcut.com/bc19fe85b1566cc0552283e17366f55f/69636830/video/tos/alisg/tos-alisg-ve-14178-sg/oMrtM85dsQKgIYLOegSAWCwaQzTFbs5eFDJeu9/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11950&bt=5975&cs=0&ft=GAAO2Inz7ThPE0lPXq8Zmo&mime_type=video_mp4&qs=0&rc=MzNoNDlpaGZoZDppODhmaEBpam1odXE5cnU1ODYzODU6NEA2MC41NF8xXzAxX15eLzMwYSNrcC40MmRrbmFhLS1kMy1zcw%3D%3D&vvpl=1&l=202601041706147B5B5C5778BB14B1EB29&btag=e00088000",
-      "https://v16-cc.capcut.com/e6d6616ee4f4cbb0a08c925a2d106ace/696365ff/video/tos/alisg/tos-alisg-ve-14178-sg/owFWjQoB0AK6AiciiJHRIGIT7AOafrrwBEE2Fy/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12420&bt=6210&cs=0&ft=GAAO2Inz7Th.P0lPXq8Zmo&mime_type=video_mp4&qs=0&rc=PDtoOGg4Omc8OzZlPDw0Z0BpajNzanQ5cnM1ODYzODU6NEAuX2MwMzFjXjAxLV5iXzMxYSMvbDY2MmRjamFhLS1kMy1zcw%3D%3D&vvpl=1&l=202601041657234E641E36888A087AFFD3&btag=e000b0000",
-      "https://v16-cc.capcut.com/c44dc163123d333a069a6e125e4b7b42/69636d86/video/tos/alisg/tos-alisg-ve-14178-sg/o0aegWDQyEpEF9rL4QfBJR23v9t4Mj2iNEBTxI/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12948&bt=6474&cs=0&ft=GAAO2Inz7Th8A4lPXq8Zmo&mime_type=video_mp4&qs=0&rc=OzVlNzk8Nzw4Nzc2aTU1NkBpamdkaXg5cnc2ODYzODU6NEAvMWFfXmNgNTQxMDYtMDAxYSM2a2hoMmRrMmFhLS1kMy1zcw%3D%3D&vvpl=1&l=20260104172936AFB197461F242AB20A84&btag=e000b0000",
+      "https://v16-cc.capcut.com/8d971fbd082074e7138e60f9f3a981c5/6965d55a/video/tos/alisg/tos-alisg-ve-14178-sg/ocEJL3I59ihWb9D8Bgf8FENQgGQ51PenBIXpA2/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12552&bt=6276&cs=0&ft=GAAO2Inz7Th4NVDPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZjY4NTZpOTY6ZzRlaGc7OkBpM3ZxNXg5cjw7ODYzODU6NEBjYTExYV5iX2MxXzExLzQ0YSNzcGxlMmRzMGJhLS1kMy1zcw%3D%3D&vvpl=1&l=20260106131704B8A095033FBD9C3C21CB&btag=e000b0000",
+      "https://v16-cc.capcut.com/10692d88c548dddf78a4384b2a61bc59/6965d374/video/tos/alisg/tos-alisg-ve-14178-sg/o4s0rQBTIAAiHB33f7GwEgviXkcvwHKxOjPEom/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12584&bt=6292&cs=0&ft=GAAO2Inz7Thp_VDPXq8Zmo&mime_type=video_mp4&qs=0&rc=PGQ2PDY6NTtlNDY5ODUzPEBpamR3dXE5cnE8ODYzODU6NEBgLl41Mi9fNTUxYDVfXzBiYSMwMy80MmRzZWJhLS1kMy1zcw%3D%3D&vvpl=1&l=202601061308586EF4FCC1770D9E21A084&btag=e000b0000",
+      "https://v16-cc.capcut.com/bef1d2c792ed3f14c38a4b131459abea/6965d493/video/tos/alisg/tos-alisg-ve-14178-sg/oYETbBEcsJqexKD6CAfgFVbgQPIDgHdeDTuSms/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12638&bt=6319&cs=0&ft=GAAO2Inz7ThvbVDPXq8Zmo&mime_type=video_mp4&qs=0&rc=OzYzZWlmPGczM2Y6NjM1OUBpMzZpaXA5cnk8ODYzODU6NEBfNmM2Y14xX2MxYjNhYzU2YSNkaGcyMmRrZ2JhLS1kMy1zcw%3D%3D&vvpl=1&l=20260106131345233F6402BCD7402B5F3D&btag=e000b0000",
+      "https://v16-cc.capcut.com/3eceab78c93a2d7e347362c9a7e1fb5b/6965d716/video/tos/alisg/tos-alisg-ve-14178-sg/ogPcgexIGDiSLXrsF5IOTeQRuCgIfE9AIFTikb/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12566&bt=6283&cs=0&ft=GAAO2Inz7ThcpVDPXq8Zmo&mime_type=video_mp4&qs=0&rc=OTpmMzQ5NzQ0ODM4ZDo7aEBpM3Jxc2w5cjM8ODYzODU6NEA0LWBgMjRgXi4xNS81MC4wYSNlcS80MmRrbWJhLS1kMy1zcw%3D%3D&vvpl=1&l=20260106132428D79E89FC6C2C9E23D9EC&btag=e000b0000",
+      "https://v16-cc.capcut.com/753f41a11d1493ed8053efac27860cc2/6965d84a/video/tos/alisg/tos-alisg-ve-14178-sg/oYgeiA24n3BAfGYmbOclUAsbZefYFqAG3zc35F/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12590&bt=6295&cs=0&ft=GAAO2Inz7Th8uVDPXq8Zmo&mime_type=video_mp4&qs=0&rc=Nmc8NTo2PGVoaWlpNWQ7NUBpanJ5bms5cmc8ODYzODU6NEAvLmFgYC5fNTMxYmI1Y2FfYSMycC9sMmRrb2JhLS1kMy1zcw%3D%3D&vvpl=1&l=20260106132936F8A5BED79EB56AC072F0&btag=e000b0000",
+      "https://v16-cc.capcut.com/e4eeba219e2a56acfa115f10e6620489/6965df9c/video/tos/alisg/tos-alisg-ve-14178-sg/owkshQgMAX0CrmKX88STDBbtgbyeeuRfU7Jl4o/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=11970&bt=5985&cs=0&ft=GAAO2Inz7ThbOjDPXq8Zmo&mime_type=video_mp4&qs=0&rc=Nzk3ZGhoNzg4NmdkPDllNUBpMzhlcXc5cnFkODYzODU6NEAvLjItLzMwNl4xNWFjYC4xYSNwMnFpMmRjNmJhLS1kMzFzcw%3D%3D&vvpl=1&l=202601061400209451C932A8A53F3AB107&btag=e00088000",
+      "https://v16-cc.capcut.com/aa53478312a0aafdd2036cac0b8cddfb/6965e643/video/tos/alisg/tos-alisg-ve-14178-sg/oUi8BOfDQIxDJKp2jqkg5XfKcB7N3EuHFQEzEg/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13464&bt=6732&cs=0&ft=GAAO2Inz7ThuzjDPXq8Zmo&mime_type=video_mp4&qs=0&rc=aWZpNDNpZmY7PGRkZjtkZkBpM3l2eXI5cmZkODYzODU6NEBjLjE0YTYvX2IxLTQtMTYyYSNkXmRsMmRza2JhLS1kMy1zcw%3D%3D&vvpl=1&l=2026010614291882F3B88A445485314A7B&btag=e000b0000",
     ],
     videoReplaceUrls: [
       {
         index: 0,
-        timeRange: [0, 6],
-        url: "https://v16-cc.capcut.com/72ff093c5a2c8b420aefeee2768c64a2/69636f7c/video/tos/alisg/tos-alisg-ve-14178-sg/o0ATjIGkSDYP04VlbGCqlf0tLAnggReTesHyoA/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13084&bt=6542&cs=0&ft=GAAO2Inz7ThJO4lPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZThlOGY8OWg6aDVpNDdlNUBpM3g3O3M5cnQ2ODYzODU6NEAyYmJeLTItXmMxXzExYGIwYSMtZWNiMmRrNmFhLS1kMy1zcw%3D%3D&vvpl=1&l=2026010417375894A0676E79F42023DE26&btag=e000b0000",
+        timeRange: [50, 60],
+        url: "https://v16-cc.capcut.com/b5358e161f8d4e79372c74159cd3693c/6965e1d4/video/tos/alisg/tos-alisg-ve-14178-sg/osYKivapBGDjn5cwV0UciQiEdsPv1idIHyRcA/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12590&bt=6295&cs=0&ft=GAAO2Inz7ThNTjDPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZzRnOTc4O2k5Zjw0ZTpkZEBpM2ZtNGo5cmlkODYzODU6NEBiLy4yLS4uXi4xYV9hNTI1YSMyX2dlMmRrYmJhLS1kMy1zcw%3D%3D&vvpl=1&l=20260106141018CC3838F0C1D9364ED076&btag=e000b0000",
       },
     ],
     useCacheVideo: true,
@@ -355,17 +359,17 @@ export default {
             .replaceAll("\n无", "")
             .replaceAll("/0岁", "")
             .replaceAll("\n开启人生历程", "")
-            .replaceAll("\n成长于", ""),
+            .replaceAll("\n成长于", "")
         );
     },
     image_remove_words_fns: [
       () =>
         Array.from(document.querySelectorAll("button")).find((one) =>
-          one.innerText.includes("技能"),
+          one.innerText.includes("技能")
         ),
       () =>
         Array.from(document.querySelectorAll("button")).find((one) =>
-          one.innerText.includes("技能"),
+          one.innerText.includes("技能")
         ),
     ],
     // 可选配置
@@ -390,7 +394,7 @@ export default {
       document.querySelector('button[data-testid="upload_file_button"]'),
     file_upload: () =>
       document.querySelector(
-        'div[data-testid="upload_file_panel_upload_item"]',
+        'div[data-testid="upload_file_panel_upload_item"]'
       ),
     input_selector_fn: () => document.querySelector("textarea"),
     get_promot_fn: () => {
