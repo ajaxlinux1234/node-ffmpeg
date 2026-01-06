@@ -14,8 +14,8 @@ export default {
   },
   "history-person": {
     name: "NBA历史三分王, NBA4冠王, 斯蒂芬.库里的人生经历",
-    url: "output/merge-video/merged_1767532870923_replaced.mp4",
-    title: `出身贫寒,{{手臂遭残疾}}|寒窗苦读,{{终成大器}}|第二十一任韩国总统{{李在明}}|人生经历`,
+    url: "output/merge-video/merged_1767688518061_replaced.mp4",
+    title: `华夏五千年|十大美女盘点`,
     titleLineBreak: "|", // history-person 标题使用 | 作为换行符
     useBabyCry: false,
 
@@ -23,11 +23,15 @@ export default {
     globalFontConfig: [
       // 全局字体配置，应用于所有分镜的对应行
       {
-        style: { color: "white", fontSize: "50px", fontWeight: "bold" },
+        style: { color: "white", fontSize: "60px", fontWeight: "bold" },
         font: "KaiTi",
       },
       {
         style: { color: "yellow", fontSize: "40px", fontWeight: "normal" },
+        font: "KaiTi",
+      },
+      {
+        style: { color: "black", fontSize: "40px", fontWeight: "normal" },
         font: "KaiTi",
       },
     ],
@@ -99,32 +103,32 @@ export default {
     disclaimerText: "", // 底部免责声明文字（30px斜体，底部10%位置）
     // 快乐传递者何炅
     // 国士无双袁隆平
-    titleAnimation: "sweep_diamond", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
+    titleAnimation: "ghost", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
     sectionTitleAnimation: "none", // 分镜字幕动画效果，可选值同titleAnimation
 
     // 视频质量配置
-    qualityMode: "high", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理), "turbo"(极速处理)
+    qualityMode: "turbo", // 可选值: "high"(高质量,接近无损), "balanced"(平衡), "fast"(快速处理), "turbo"(极速处理)
 
     // 性能优化配置
     enableSpeedOptimization: true, // 启用速度优化：多线程+预设优化
     skipTempCleanup: false, // 跳过临时文件清理以节省时间
-    sectionFirstTitleTime: 4,
-    sectionTitleInterval: 6, // 分镜字幕间隔时间（秒）
-    sectionLastTitleOffset: 3, // 最后一个分镜提前显示时间（秒）
+    sectionFirstTitleTime: 5,
+    sectionTitleInterval: 11, // 分镜字幕间隔时间（秒）
+    sectionLastTitleOffset: 5, // 最后一个分镜提前显示时间（秒）
     sectionTitle: [
-      "1964年\n庆尚北道安东农村\n出生于{{贫苦农民家庭}}\n排行第五",
-      "1977年/13岁\n棒球手套工厂\n因家贫辍学做童工\n左臂卷入机器致{{终身残疾}}",
-      "1982年/18岁\n自学备考的租住屋\n半工半读通过学历考试\n考入韩国{{中央大学法学院}}",
-      "1986年/22岁\n司法考试院房间\n通过第28届司法考试\n获得{{律师资格}}\n人生迎来转折",
-      "2010年/46岁\n城南市选举现场\n当选{{京畿道城南市市长}}\n开启地方行政生涯",
-      "2018年/54岁\n京畿道政府办公室\n当选并担任{{京畿道知事}}\n成为重要地方长官",
-      "2022年3月/58岁\n总统大选竞选总部\n作为共同民主党候选人参选\n以{{0.73%}}的微弱差距惜败",
-      "2024年/60岁\n国会前及釜山视察地\n作为党首\n进行{{绝食抗议}}",
-      "2025年6月4日凌晨/61岁\n首尔汝矣岛国会前\n在第21届总统选举中{{确定当选}}",
-      "2025年6月4日上午/61岁\n韩国国会大厅\n在国会正式宣誓就职\n任期于当地时间{{6月4日}}开始",
+      "西施\n公元前489年\n春秋越国若耶溪畔",
+      "王昭君\n公元前33年\n汉匈和亲北行马车中",
+      "赵飞燕\n公元前18年\n西汉皇宫水晶盘上",
+      "貂蝉\n公元192年\n东汉司徒府后花园月下",
+      "甄宓\n公元204年\n三国魏洛水之畔",
+      "冯小怜\n公元570年\n北齐宫廷",
+      "杨玉环\n公元744年\n唐代华清宫温泉花苑",
+      "周娥皇\n公元965年\n南唐宫廷内",
+      "李师师\n公元1110年\n北宋汴京樊楼雅间",
+      "陈圆圆\n公元1644年\n明末清初江南庭园",
     ],
     watermark: "@人物传记史",
-    "bg-music": "music/Go West-Fancy.mp3",
+    "bg-music": "music/美人吟_start12s_clip.mp3",
     // output/clip-audio/抗美援朝_start36s_53s.mp3
     // Go West-Fancy
     // 美人吟_start12s_clip.mp3
@@ -148,8 +152,23 @@ export default {
     videoReplaceUrls: [
       {
         index: 0,
+        timeRange: [15, 20],
+        url: "https://v16-cc.capcut.com/43d3302650b1308d6fef04c5e16187b7/6965ff16/video/tos/alisg/tos-alisg-ve-14178-sg/oYxVcYVKaHw7zQUGENIDAFCviX5EiPdIBQ5iE/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13596&bt=6798&cs=0&ft=GAAO2Inz7Th-MpDPXq8Zmo&mime_type=video_mp4&qs=0&rc=N2lmOmU6MzppNWgzNGhnaEBpamo0eHM5cnFmODYzODU6NEA0YWIuXjRgNWExLjYtXzI2YSMwLm1wMmQ0NWJhLS1kMy1zcw%3D%3D&vvpl=1&l=202601061615133B22B5314CDDA70E99C9&btag=e000b0000",
+      },
+      {
+        index: 1,
+        timeRange: [45, 50],
+        url: "https://v16-cc.capcut.com/c4fad36ad0ebce5f787f8dd41e7d91c0/6965ffca/video/tos/alisg/tos-alisg-ve-14178-sg/o4Zo5NJGMQgJAEIpKXFfBBgf2i0bUsQVJID626/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13622&bt=6811&cs=0&ft=GAAO2Inz7ThQ4pDPXq8Zmo&mime_type=video_mp4&qs=0&rc=NjYzNDtnZDQzM2ZkMzM8Z0BpM3UzZXc5cmhmODYzODU6NEAzMzYvLjI2Nl8xYGMzY2NhYSNfNjEyMmRrXmJhLS1kMy1zcw%3D%3D&vvpl=1&l=202601061618134D37F2EC8E93690F8B15&btag=e000b0000",
+      },
+      {
+        index: 2,
         timeRange: [50, 60],
         url: "https://v16-cc.capcut.com/b5358e161f8d4e79372c74159cd3693c/6965e1d4/video/tos/alisg/tos-alisg-ve-14178-sg/osYKivapBGDjn5cwV0UciQiEdsPv1idIHyRcA/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=12590&bt=6295&cs=0&ft=GAAO2Inz7ThNTjDPXq8Zmo&mime_type=video_mp4&qs=0&rc=ZzRnOTc4O2k5Zjw0ZTpkZEBpM2ZtNGo5cmlkODYzODU6NEBiLy4yLS4uXi4xYV9hNTI1YSMyX2dlMmRrYmJhLS1kMy1zcw%3D%3D&vvpl=1&l=20260106141018CC3838F0C1D9364ED076&btag=e000b0000",
+      },
+      {
+        index: 3,
+        timeRange: [85, 90],
+        url: "https://v16-cc.capcut.com/08b6f7df1c5c6bedb799917d33519cad/6965f24b/video/tos/alisg/tos-alisg-ve-14178-sg/oQp3fbDu5t1D8FTbSiy7eQgsAIJcCWSEEJ5WEe/?a=513641&bti=PDk6QC0yM2A%3D&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&br=13428&bt=6714&cs=0&ft=GAAO2Inz7ThPnNDPXq8Zmo&mime_type=video_mp4&qs=0&rc=OzNmZzw7NWRpNzo3aDxpNUBpamxxbHY5cmhlODYzODU6NEBjYDU1LzAtNi8xYjVfLy00YSNwcW1sMmRzY2JhLS1kMy1zcw%3D%3D&vvpl=1&l=20260106152038213E31271D33BA067AC1&btag=e000b0000",
       },
     ],
     useCacheVideo: true,
