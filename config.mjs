@@ -31,7 +31,7 @@ export default {
         font: "KaiTi",
       },
       {
-        style: { color: "black", fontSize: "40px", fontWeight: "normal" },
+        style: { color: "red", fontSize: "40px", fontWeight: "normal" },
         font: "KaiTi",
       },
     ],
@@ -103,7 +103,7 @@ export default {
     disclaimerText: "", // 底部免责声明文字（30px斜体，底部10%位置）
     // 快乐传递者何炅
     // 国士无双袁隆平
-    titleAnimation: "ghost", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
+    titleAnimation: "ripple", // 可选值: "flash", "fade", "scale", "slide", "none", "sweep_fast", "sweep_slow", "sweep_pulse", "sweep_rainbow", "sweep_wave", "sweep_laser", "sweep_glow", "sweep_neon", "sweep_electric", "sweep_diamond"
     sectionTitleAnimation: "none", // 分镜字幕动画效果，可选值同titleAnimation
 
     // 视频质量配置
@@ -116,16 +116,16 @@ export default {
     sectionTitleInterval: 11, // 分镜字幕间隔时间（秒）
     sectionLastTitleOffset: 5, // 最后一个分镜提前显示时间（秒）
     sectionTitle: [
-      "西施\n公元前489年\n春秋越国若耶溪畔",
-      "王昭君\n公元前33年\n汉匈和亲北行马车中",
-      "赵飞燕\n公元前18年\n西汉皇宫水晶盘上",
-      "貂蝉\n公元192年\n东汉司徒府后花园月下",
-      "甄宓\n公元204年\n三国魏洛水之畔",
-      "冯小怜\n公元570年\n北齐宫廷",
-      "杨玉环\n公元744年\n唐代华清宫温泉花苑",
-      "周娥皇\n公元965年\n南唐宫廷内",
-      "李师师\n公元1110年\n北宋汴京樊楼雅间",
-      "陈圆圆\n公元1644年\n明末清初江南庭园",
+      "妇好\n商朝\n约前1200年/约30岁\n商朝征伐军阵前\n中国历史上有据可查的第一位女性军事统帅与祭司",
+      "花木兰\n南北朝\n约5世纪/约20岁\n北魏深夜闺房中\n替父从军的文化英雄\n勇敢与孝道的化身",
+      "荀灌\n西晋\n公元315年/13岁\n襄阳城下月夜中\n少年英雄\n十三岁突围搬救兵\n智勇解围城之困",
+      "冼夫人\n南北朝至隋\n约公元550年/约35岁\n岭南部族大会\n杰出的政治家和军事家\n维护岭南安定统一\n寿终正寝",
+      "平阳昭公主\n唐初\n公元617年/约20岁\n娘子关关隘上\n唐朝开国公主\n组建“娘子军”\n镇守要隘\n功勋卓著",
+      "梁红玉\n南宋\n公元1130年/约30岁\n长江战船船头\n抗金名将\n擂鼓战金山\n激励士气\n大破敌军",
+      "唐赛儿\n明朝\n公元1420年/约30岁\n山东起义山岗\n明初农民起义领袖\n反抗暴政\n震动朝廷",
+      "秦良玉\n明末\n公元1630年/53岁\n石柱宣慰司城头\n史上唯一凭战功封侯、载入正史将相列传的女将军",
+      "王聪儿\n清朝\n公元1798年/22岁\n湖北郧西悬崖边\n白莲教起义女首领\n率军转战\n最终宁死不降",
+      "冯婉贞\n清朝\n公元1860年/约19岁\n北京谢庄树林\n组织乡民\n英勇抗击英法联军\n保卫家园",
     ],
     watermark: "@人物传记史",
     "bg-music": "music/美人吟_start12s_clip.mp3",
@@ -367,7 +367,7 @@ export default {
     get_promot: false,
     get_remove_words: false,
     get_title_selector_fn: () => {
-      const historyNum = 10;
+      const historyNum = 6;
       return Array.from(document.querySelectorAll(".auto-hide-last-sibling-br"))
         .filter((one) => /^\d/.test(one.innerText))
         .slice(-historyNum)
@@ -417,7 +417,7 @@ export default {
       ),
     input_selector_fn: () => document.querySelector("textarea"),
     get_promot_fn: () => {
-      const historyNum = 10; // 对应seconds数组长度
+      const historyNum = 6; // 对应seconds数组长度
       return Array.from(document.querySelectorAll(".auto-hide-last-sibling-br"))
         .slice(-historyNum)
         .map((one) => {
